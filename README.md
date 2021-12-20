@@ -1,2 +1,2 @@
 # BelajarVueJs
-belajar vue js
+Mencoba belajar menggunakan VueJS
