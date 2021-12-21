@@ -17,13 +17,12 @@
     </div>
   </nav>
 </div>
-<div>
-  <h1>test</h1>
-</div>
   <router-view/>
 </template>
 
+<script>
 
+</script>
 
 <style>
 #app {

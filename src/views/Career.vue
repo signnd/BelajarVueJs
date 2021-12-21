@@ -1,5 +1,10 @@
 <template>
-    <div class="career">
-        <h1>Career</h1>
-    </div>
+<h1>Career page</h1>
 </template>
+    
+<script>
+
+</script>
+    
+<style lang="css">
+</style> 
