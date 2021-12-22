@@ -11,22 +11,22 @@
         <div class="carousel-item active">
           <img class="d-block w-100 " :src="images.cover1" alt="First slide">
           <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
-            <h1 class="font-weight-bold">Judul</h1>
-            <p>Pada suatu hari</p>
+              <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
+              <p style="font-size:2vw;">Pada suatu hari</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" :src="images.cover1" alt="Second slide">
           <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
-            <h1 class="font-weight-bold">Judul</h1>
-            <p>Pada suatu hari</p>
+            <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
+            <p style="font-size:2vw;">Pada suatu hari</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" :src="images.cover1" alt="Third slide">
           <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
-            <h1 class="font-weight-bold">Judul</h1>
-            <p>Pada suatu hari</p>
+            <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
+            <p style="font-size:2vw;">Pada suatu hari</p>
           </div>
         </div>
       </div>
@@ -43,7 +43,13 @@
 
   <!--  -->
   <section>
-      <div id="bg" class="p-3 mb-2 bg-primary text-white fw-bold">Work In Progress</div>
+    <div class="containter">
+      <div class="d-flex p-2 bg-primary text-white text-middle font-weight-bold">Work In Progress</div>
+    </div>
+  </section>
+
+  <section>
+
   </section>
 </template>
     
@@ -68,11 +74,12 @@ export default {
 }
 
 .carousel-caption{
-  top: 200px;
+  position: absolute;
+  top: 100px;
 }
 
 .carousel-inner .carousel-item{
-  height: 550px;
+  height: 100%;
 }
 
 
