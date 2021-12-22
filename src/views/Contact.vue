@@ -2,6 +2,7 @@
 <section>
 <div class="contact" id="contact">
     <h1 class="mt-5">Hubungi kami</h1>
+    <h1 class="mt-5">TES</h1>
     <h5 align="left" class="mt-2">Maaf kami belum bisa dihubungi</h5>
   </div>
 </section>
