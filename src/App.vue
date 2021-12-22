@@ -1,7 +1,7 @@
 <template>
   <!-- Navbar atas -->
   <div class="header-area" id="nav">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
       <div class="container">
         <nav class="navbar navbar-white bg-white">
           <a class="navbar-brand my-1" href="/">
@@ -17,9 +17,11 @@
             <router-link to="/" class="nav-item nav-link fs-4 mx-2 nav-fill active">Home</router-link>
             <router-link to="/Doctors" class="nav-item nav-link fs-4 mx-2">Doctors</router-link>            
             <router-link to="/Contact" class="nav-item nav-link fs-4 mx-2">Contact</router-link>            
-            <router-link to="/About" class="nav-item nav-link fs-4 mx-2">About</router-link>
-            <form class="form-inline my-4 my-lg-1">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <router-link to="/About" class="nav-item nav-link fs-4 mx-2 mr-5">About</router-link>
+
+            <!-- Search bar -->
+            <form class="form-inline my-2 my-lg-1">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search">
               <button class="btn btn-outline-primary my-sm-0" type="submit">Search</button>
             </form>
           </div>
@@ -76,4 +78,5 @@ export default {
 .container{
   color: white;
 }
+
 </style>
