@@ -43,7 +43,7 @@
 
   <!--  -->
   <section>
-    <div class="containter">
+    <div class="container">
       <div class="d-flex p-2 bg-primary text-white text-middle font-weight-bold">Work In Progress</div>
     </div>
   </section>
