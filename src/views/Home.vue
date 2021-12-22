@@ -11,21 +11,21 @@
         <div class="carousel-item active">
           <img class="d-block w-100 " :src="images.cover1" alt="First slide">
           <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
-            <h1>Judul</h1>
+            <h1 class="font-weight-bold">Judul</h1>
             <p>Pada suatu hari</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" :src="images.cover1" alt="Second slide">
           <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
-            <h1>Judul</h1>
+            <h1 class="font-weight-bold">Judul</h1>
             <p>Pada suatu hari</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" :src="images.cover1" alt="Third slide">
           <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
-            <h1>Judul</h1>
+            <h1 class="font-weight-bold">Judul</h1>
             <p>Pada suatu hari</p>
           </div>
         </div>
@@ -43,7 +43,7 @@
 
   <!--  -->
   <section>
-    <h1>Blm isi</h1>
+      <div id="bg" class="p-3 mb-2 bg-primary text-white fw-bold">Work In Progress</div>
   </section>
 </template>
     
@@ -67,14 +67,6 @@ export default {
   color: rgb(0, 0, 0);
 }
 
-.judul1 {
-  position: absolute;
-  top: 35%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  font-size: 50px;
-}
-
 .carousel-caption{
   top: 200px;
 }
@@ -82,4 +74,6 @@ export default {
 .carousel-inner .carousel-item{
   height: 550px;
 }
+
+
 </style> 

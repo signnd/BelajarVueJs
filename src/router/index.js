@@ -4,8 +4,8 @@ import {
 } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Career from '../views/Career.vue'
-import Login from '../views/Login.vue'
+import Contact from '../views/Contact.vue'
+import Doctors from '../views/Doctors.vue'
 const routes = 
 [
   {
@@ -19,14 +19,14 @@ const routes =
     component: About
   },
   {
-      path: '/career',
-      name: 'Career',
-      component: Career
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
   },
     {
-      path: '/Login',
-      name: 'Login',
-      component: Login
+      path: '/doctors',
+      name: 'Doctors',
+      component: Doctors
   }
 ]
 
