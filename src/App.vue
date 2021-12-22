@@ -14,6 +14,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav my-1">
+            <router-link to="/" class="nav-item nav-link fs-4 mx-2" active>Home</router-link>
             <router-link to="/Doctors" class="nav-item nav-link fs-4 mx-2">Doctors</router-link>            
             <router-link to="/Contact" class="nav-item nav-link fs-4 mx-2">Contact</router-link>            
             <router-link to="/About" class="nav-item nav-link fs-4 mx-2">About</router-link>
