@@ -1,7 +1,7 @@
 <template>
   <!-- Navbar atas -->
   <div class="header-area" id="nav">
-    <nav class="navbar navbar-expand-lg navbar-white bg-white navbar-fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-fixed-top">
       <div class="container">
         <nav class="navbar navbar-white bg-white">
           <a class="navbar-brand my-1" href="/">
