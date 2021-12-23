@@ -76,8 +76,15 @@ export default {
   top: 160px;
 }
 
-.carousel-inner .carousel-item{
-  height: 100%;
+.carousel .carousel-item {
+  height: 600px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
 }
 
 
