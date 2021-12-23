@@ -15,7 +15,6 @@
           </div>
         </div>
         <div class="carousel-item">
-<<<<<<< HEAD
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="Second slide">
           <div class="carousel-caption d-block text-dark text-left align-middle">
             <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
@@ -25,10 +24,6 @@
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="Third slide">
           <div class="carousel-caption d-block text-dark text-left align-middle">
-=======
-          <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
->>>>>>> upstream/main
             <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
             <p style="font-size:2vw;">Pada suatu hari</p>
           </div>
