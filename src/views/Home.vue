@@ -15,14 +15,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="Second slide">
-          <div class="carousel-caption d-block text-dark text-left align-middle">
-            <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
-            <p style="font-size:2vw;">Pada suatu hari</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="Third slide">
+          <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
           <div class="carousel-caption d-block text-dark text-left align-middle">
             <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
             <p style="font-size:2vw;">Pada suatu hari</p>
@@ -42,7 +35,7 @@
 
   <!-- Flexbox -->
   <section>
-      <div class="d-block p-2 bg-primary text-white text-middle font-weight-bold">Work In Progress</div>
+      <div class="d-flex p-2 bg-primary text-white text-middle font-weight-bold">Work In Progress</div>
   </section>
 
   <section>
@@ -73,7 +66,7 @@ export default {
 
 .carousel-caption{
   position: absolute;
-  top:10em;
+  top: 160px;
 }
 
 .carousel .carousel-item {
