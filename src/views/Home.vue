@@ -70,7 +70,7 @@ export default {
 }
 
 .carousel .carousel-item {
-  height: 600px;
+  height: 385px;
 }
 
 .carousel-item img {
