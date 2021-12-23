@@ -5,7 +5,6 @@
       <ol class="carousel-indicators">
         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
         <li data-target="#slideshow" data-slide-to="1"></li>
-        <li data-target="#slideshow" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -16,6 +15,7 @@
           </div>
         </div>
         <div class="carousel-item">
+<<<<<<< HEAD
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="Second slide">
           <div class="carousel-caption d-block text-dark text-left align-middle">
             <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
@@ -25,6 +25,10 @@
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="Third slide">
           <div class="carousel-caption d-block text-dark text-left align-middle">
+=======
+          <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
+>>>>>>> upstream/main
             <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
             <p style="font-size:2vw;">Pada suatu hari</p>
           </div>
@@ -57,7 +61,8 @@ export default {
     data() {
         return {
             images: {
-                cover1: require('@/assets/hero/hero.png')
+                cover1: require('@/assets/hero/hero.png'),
+                cover2: require('@/assets/hero/hero2.jpg')
             }
         }
     }
@@ -77,7 +82,7 @@ export default {
 }
 
 .carousel .carousel-item {
-  height: 600px;
+  height: 385px;
 }
 
 .carousel-item img {
