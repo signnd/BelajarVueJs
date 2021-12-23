@@ -10,8 +10,8 @@
   </section>
   <!-- Content -->
   <section>
-      <h5 align="middle" class="mt-5">Website ini mulai dibangun pada Desember 2021</h5>
-  </section>
+      <h5 align="middle" class="my-5">Website ini mulai dibangun pada Desember 2021</h5>
+  </section>>
 </template>
 
 
@@ -20,7 +20,8 @@ export default {
     data() {
         return {
             images: {
-                cover1: require('@/assets/hero/hero2.png')
+                cover1: require('@/assets/hero/flat.png'),
+                cover2: require('@/assets/gallery/section_bg01.png')
             }
         }
     }
@@ -28,6 +29,10 @@ export default {
 </script>
 
 <style>
+.container{
+  position: relative;
+}
+
 .container-fluid {
   overflow: hidden;
   position: relative;
