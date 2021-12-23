@@ -14,10 +14,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav my-1">
-            <router-link to="/" class="nav-item nav-link fs-4 mx-2 nav-fill active">Home</router-link>
-            <router-link to="/Doctors" class="nav-item nav-link fs-4 mx-2">Doctors</router-link>            
-            <router-link to="/Contact" class="nav-item nav-link fs-4 mx-2">Contact</router-link>            
-            <router-link to="/About" class="nav-item nav-link fs-4 mx-2 mr-5">About</router-link>
+            <router-link to="/" class="nav-item nav-link fs-4 mx-2 nav-fill active" data-toggle="collapse" data-target="#navbarSupportedContent">Home</router-link>
+            <router-link to="/Doctors" class="nav-item nav-link fs-4 mx-2" data-toggle="collapse" data-target="#navbarSupportedContent">Doctors</router-link>            
+            <router-link to="/Contact" class="nav-item nav-link fs-4 mx-2" data-toggle="collapse" data-target="#navbarSupportedContent">Contact</router-link>            
+            <router-link to="/About" class="nav-item nav-link fs-4 mx-2 mr-5" data-toggle="collapse" data-target="#navbarSupportedContent">About</router-link>
 
             <!-- Search bar -->
             <form class="form-inline my-2 my-lg-1">
