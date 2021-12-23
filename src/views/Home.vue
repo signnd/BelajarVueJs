@@ -10,21 +10,21 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
-          <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
+          <div class="carousel-caption d-block text-dark text-left align-middle">
               <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
               <p style="font-size:2vw;">Pada suatu hari</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="Second slide">
-          <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
+          <div class="carousel-caption d-block text-dark text-left align-middle">
             <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
             <p style="font-size:2vw;">Pada suatu hari</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block text-dark text-left align-middle">
+          <div class="carousel-caption d-block text-dark text-left align-middle">
             <h1 class="font-weight-bold" style="font-size:7vw;">Judul</h1>
             <p style="font-size:2vw;">Pada suatu hari</p>
           </div>
@@ -43,7 +43,7 @@
 
   <!-- Flexbox -->
   <section>
-      <div class="d-flex p-2 bg-primary text-white text-middle font-weight-bold">Work In Progress</div>
+      <div class="d-block p-2 bg-primary text-white text-middle font-weight-bold">Work In Progress</div>
   </section>
 
   <section>
@@ -73,7 +73,7 @@ export default {
 
 .carousel-caption{
   position: absolute;
-  top: 160px;
+  top:10em;
 }
 
 .carousel .carousel-item {
