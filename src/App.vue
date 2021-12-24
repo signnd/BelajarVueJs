@@ -8,16 +8,30 @@
             <img :src="images.logo" height="38" alt="logo">
           </a>
         </nav>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav my-1">
-            <router-link to="/" class="nav-item nav-link fs-4 mx-2 nav-fill active" data-toggle="collapse" data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Doctors" class="nav-item nav-link fs-4 mx-2" data-toggle="collapse" data-target="#navbarSupportedContent">Doctors</router-link>            
-            <router-link to="/Contact" class="nav-item nav-link fs-4 mx-2" data-toggle="collapse" data-target="#navbarSupportedContent">Contact</router-link>            
-            <router-link to="/About" class="nav-item nav-link fs-4 mx-2 mr-5" data-toggle="collapse" data-target="#navbarSupportedContent">About</router-link>
+            <!-- Nav Link Fullscreen -->
+            <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-2 nav-fill active"
+              data-target="#navbarSupportedContent">Home</router-link>
+            <router-link to="/Doctors" class="d-none d-sm-block nav-item nav-link navbar-collapse fs-4 mx-2"
+              data-target="#navbarSupportedContent">Doctors</router-link>
+            <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-2"
+              data-target="#navbarSupportedContent">Contact</router-link>
+            <router-link to="/About" class="nav-item nav-link fs-4 mx-2 mr-5" data-target="#navbarSupportedContent">
+              About</router-link>
+
+            <!-- Nav Link Collapsed -->
+            <router-link to="/" class="d-block d-sm-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Home</router-link>
+            <router-link to="/Doctors" class="d-block d-sm-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Doctors</router-link>
+            <router-link to="/Contact" class="d-block d-sm-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Contact</router-link>
+            <router-link to="/About" class="d-block d-sm-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">About</router-link>
 
             <!-- Search bar -->
             <form class="form-inline my-2 my-lg-1">
@@ -42,6 +56,13 @@ export default {
         }
     }
 }
+
+ $(function(){ 
+     var navMain = $(".navbar-collapse");
+     navMain.on("click", "a:not([data-toggle])", null, function () {
+         navMain.collapse('hide');
+     });
+ });
 </script>
 
 <style>
@@ -79,4 +100,4 @@ export default {
   color: white;
 }
 
-</style>
+</style>z
