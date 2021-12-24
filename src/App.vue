@@ -36,8 +36,9 @@
 
             <!-- Search bar -->
             <form class="form-inline my-2 my-lg-1">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search">
-              <button class="btn btn-outline-primary my-sm-0" type="submit">Search</button>
+              <input class="d-lg-none d-xl-block form-control mr-sm-2 mx-2" type="search" placeholder="Search">
+              <input class="d-none d-lg-block d-xl-none form-control mr-sm-2 mx-2" type="search" placeholder="Enter to Search">
+              <button class="d-lg-none d-xl-block btn btn-outline-primary my-sm-0" type="submit">Search</button>
             </form>
           </div>
         </div>
