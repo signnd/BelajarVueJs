@@ -1,13 +1,18 @@
 <template>
   <div class="contact">
-    <section class="section pb-5">
-
+    <section>
       <!--Section heading-->
-      <h2 class="section-heading h1 pt-4">Contact us</h2>
-      <p class="section-description pb-4">Mikirin text apa diisi</p>
+      <div class="contacthead" id="contacthead">
+        <div class="container-fluid p-0">
+          <img :src="images.cover1" alt="contacthead" class="w-100">
+          <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
+        </div>
+      </div>
+    </section>
 
       <!-- Google Maps -->
-      <div class="container col-lg-7">
+      <section>
+      <div class="container col-lg-7 pt-5">
         <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
           <iframe src="https://maps.google.com/maps?q=Bamboomedia&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"
             style="border:0" allowfullscreen></iframe>
@@ -24,14 +29,14 @@
 
           <div class="col-md-4">
             <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
-            <p>+ 01 234 567 89</p>
-            <p>Mon - Sat, 8:00-18:00</p>
+            <p>+62 361 265521</p>
+            <p>Mon - Fri, 9:00-17:00<br>Sat 9:00-13:00</p>
           </div>
 
           <div class="col-md-4">
             <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
             <p>pryandika7@gmail.com</p>
-            <p>ngrmertha@gmail.com</p>
+            <p>ngrmerthaj@gmail.com</p>
           </div>
         </div>
       </div>
@@ -40,25 +45,50 @@
 </template>
 
 <script>
+export default {
+    data() {
+        return {
+            images: {
+                cover1: require('@/assets/hero/flat.png'),
+                cover2: require('@/assets/gallery/section_bg01.png')
+            }
+        }
+    }
+}
 </script>
 
 <style>
-.contact {
-  padding:60px;
+.container{
+  position: relative;
 }
 
-  .map-container-6{
+.container-fluid {
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+
+}
+
+.centered{  
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.map-container-6{
   overflow:hidden;
   padding-bottom:56.25%;
   position:relative;
   height:0;
-  }
+}
 
-  .map-container-6 iframe{
+.map-container-6 iframe{
   left:0;
   top:0;
   height:100%;
   width:100%;
   position:absolute;
-  }
+}
 </style>
