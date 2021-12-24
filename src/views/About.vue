@@ -11,7 +11,7 @@
   <!-- Content -->
   <section>
       <h5 align="middle" class="my-5">Website ini mulai dibangun pada Desember 2021</h5>
-  </section>>
+  </section>
 </template>
 
 
