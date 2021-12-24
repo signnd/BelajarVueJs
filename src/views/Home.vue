@@ -100,8 +100,8 @@ export default {
 }
 
 .carousel {
-  width:1600px;
-  height:600px;
+  width:unset;
+  height:unset;
 }
 
 .carousel-caption{
