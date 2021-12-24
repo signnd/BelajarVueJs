@@ -114,19 +114,16 @@ export default {
     min-height: 300px;
 }
 
-.row {
-  margin-left: 10px;
-}
-
 .card {
-  width: 18em;
-  margin-left: 10px;
+  width: 10em;
   margin-top: 10px;
+  padding-block-start: 5pt;
+  padding-inline: 5pt;
 }
 
 .card-img-top {
   padding-inline: 5px;
-  padding-block: 5px ;
+  padding-block: 5px;
 }
 
 .card-title {
