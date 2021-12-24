@@ -34,34 +34,44 @@
   </section>
 
   <section>
+    <div class="container d-flex justify-content-center">
     <div class="row">
-      <div class="container ml-2 mt-4" style="width: 600px">
+      <div class="container mt-4" style="width: 800px;">
         <div class="card-group">
           <div class="card" style="width=100px;">
           <img class="card-img-top" :src="images.card1" alt="Card image 1">
             <div class="card-body">
-              <h5 class="card-title">Card 1</h5>
-              <p class="card-text">Card text 1</p>
-              <router-link to="/" class="btn btn-primary">Link</router-link>
+              <h5 class="card-title">Mitra handal kami</h5>
+              <p class="card-text">Pilih dari 17 rumah sakit kami yang tersebar di seluruh Bali.</p>
+              <router-link to="/About" class="btn btn-outline-primary">Tentang kami</router-link>
             </div>
           </div>
         <div class="card">
           <img class="card-img-top" :src="images.card2" alt="Card image 2">
             <div class="card-body">
-              <h5 class="card-title">Card 2</h5>
-              <p class="card-text">Card text 2</p>
-              <router-link to="/" class="btn btn-primary">Link</router-link>
+              <h5 class="card-title">Biaya terjangkau</h5>
+              <p class="card-text">Menerima asuransi & BPJS untuk meringankan biaya Anda.</p>
+              <router-link to="/Contact" class="btn btn-outline-primary">Kontak kami</router-link>
+            </div>
+          </div>
+          <div class="card">
+          <img class="card-img-top" :src="images.card3" alt="Card image 2">
+            <div class="card-body">
+              <h5 class="card-title">Pelayanan profesional</h5>
+              <p class="card-text">Ratusan dokter yang berpengalaman di bidangnya.</p>
+              <router-link to="/Doctors" class="btn btn-outline-primary">Cari dokter</router-link>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
   </section>
 
-  <!-- Flexbox -->
+  <!-- Flexbox
   <section>
       <div class="d-flex p-2 bg-primary text-white text-middle font-weight-bold">Work In Progress</div>
-  </section>
+  </section> -->
 
 </template>
     
@@ -95,13 +105,11 @@ export default {
 }
 
 .carousel .carousel-item {
-  height: 600px;
+  height: 450px;
 }
 
 .carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position:relative;
     min-height: 300px;
 }
 
@@ -116,8 +124,8 @@ export default {
 }
 
 .card-img-top {
-  padding-inline: 10px;
-  padding-block: 10px ;
+  padding-inline: 5px;
+  padding-block: 5px ;
 }
 
 .card-title {
@@ -129,6 +137,5 @@ export default {
   font-family:Calibri, sans-serif;
   font-weight:normal;
 }
-
 
 </style>

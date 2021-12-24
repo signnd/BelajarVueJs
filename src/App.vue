@@ -1,5 +1,6 @@
 <template>
   <!-- Navbar atas -->
+  <section>
   <div class="header-area" id="nav">
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
       <div class="container">
@@ -16,11 +17,11 @@
             <!-- Nav Link Fullscreen -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-2 nav-fill active"
               data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Doctors" class="d-none d-sm-block nav-item nav-link navbar-collapse fs-4 mx-2"
+            <router-link to="/Doctors" class="nav-item nav-link navbar-collapse fs-4 mx-2"
               data-target="#navbarSupportedContent">Doctors</router-link>
             <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-2"
               data-target="#navbarSupportedContent">Contact</router-link>
-            <router-link to="/About" class="nav-item nav-link fs-4 mx-2 mr-5" data-target="#navbarSupportedContent">
+            <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-2" data-target="#navbarSupportedContent">
               About</router-link>
 
             <!-- Nav Link Collapsed -->
@@ -43,7 +44,14 @@
       </div>
     </nav>
   </div>
+  </section>
   <router-view />
+
+  <section>
+    <div class="footer">
+      (C) 2021-2022
+    </div>
+  </section>
 </template>
 
 <script>
@@ -98,6 +106,10 @@ export default {
 
 .container{
   color: white;
+}
+
+.footer {
+  padding-block: 2em;
 }
 
 </style>z
