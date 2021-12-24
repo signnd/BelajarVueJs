@@ -35,8 +35,9 @@
 
   <section>
     <div class="row">
-      <div class="container mt-3" style="width: 600px">
-          <div class="card" style="width=100px; padding-right=15px;">
+      <div class="container ml-2 mt-4" style="width: 600px">
+        <div class="card-group">
+          <div class="card" style="width=100px;">
           <img class="card-img-top" :src="images.card1" alt="Card image 1">
             <div class="card-body">
               <h5 class="card-title">Card 1</h5>
@@ -45,13 +46,14 @@
             </div>
           </div>
         <div class="card">
-          <img class="card-img-top" :src="images.card1" alt="Card image 1">
+          <img class="card-img-top" :src="images.card2" alt="Card image 2">
             <div class="card-body">
-              <h5 class="card-title">Card 1</h5>
-              <p class="card-text">Card text 1</p>
+              <h5 class="card-title">Card 2</h5>
+              <p class="card-text">Card text 2</p>
               <router-link to="/" class="btn btn-primary">Link</router-link>
             </div>
           </div>
+        </div>
       </div>
     </div>
   </section>
@@ -71,7 +73,9 @@ export default {
             images: {
                 cover1: require('@/assets/hero/hero.png'),
                 cover2: require('@/assets/hero/hero2.jpg'),
-                card1: require('@/assets/gallery/blog1.png')
+                card1: require('@/assets/gallery/blog1.png'),
+                card2: require('@/assets/gallery/blog2.png'),
+                card3: require('@/assets/gallery/blog3.png')
             }
         }
     }
@@ -111,5 +115,20 @@ export default {
   margin-top: 10px;
 }
 
+.card-img-top {
+  padding-inline: 10px;
+  padding-block: 10px ;
+}
 
-</style> 
+.card-title {
+  font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
+  font-weight:bold;
+}
+
+.card-text {
+  font-family:Calibri, sans-serif;
+  font-weight:normal;
+}
+
+
+</style>
