@@ -8,7 +8,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover1" alt="First slide">
+          <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
           <div class="carousel-caption d-block text-dark text-left align-middle">
               <h1 class="font-weight-bold" style="font-size:7vw;">Slide 1</h1>
               <p style="font-size:2vw;">Kami adalah website medis</p>
@@ -99,13 +99,14 @@ export default {
   color: rgb(0, 0, 0);
 }
 
+.carousel {
+  width:1600px;
+  height:600px;
+}
+
 .carousel-caption{
   position: absolute;
   top: 160px;
-}
-
-.carousel .carousel-item {
-  height: 450px;
 }
 
 .carousel-item img {
