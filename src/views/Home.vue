@@ -18,7 +18,7 @@
           <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
           <div class="carousel-caption d-block text-dark text-left align-middle">
             <h1 class="font-weight-bold" style="font-size:7vw;">Slide 2</h1>
-            <p style="font-size:2vw;">Yuk berwisata medis</p>
+            <p style="font-size:2vw;">Berwisata medis bersama kami</p>
           </div>
         </div>
       </div>
@@ -34,36 +34,34 @@
   </section>
 
   <section>
-    <div class="container d-flex justify-content-center">
-    <div class="row">
-      <div class="container mt-4" style="width: 800px;">
+    <div class="container d-flex">
+      <div class="container mt-5 align-items-center" style="width: 900px;">
         <div class="card-group">
-          <div class="card" style="width=100px;">
+          <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card1" alt="Card image 1">
             <div class="card-body">
               <h5 class="card-title">Mitra handal kami</h5>
-              <p class="card-text">Pilih dari 17 rumah sakit kami yang tersebar di seluruh Bali.</p>
-              <router-link to="/About" class="btn btn-outline-primary">Tentang kami</router-link>
+              <p class="card-text">Tersedia 17 rumah sakit mitra yang tersebar di seluruh Bali.</p>
+              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">Tentang kami</router-link>
             </div>
           </div>
-        <div class="card">
+        <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card2" alt="Card image 2">
             <div class="card-body">
               <h5 class="card-title">Biaya terjangkau</h5>
               <p class="card-text">Menerima asuransi & BPJS untuk meringankan biaya Anda.</p>
-              <router-link to="/Contact" class="btn btn-outline-primary">Kontak kami</router-link>
+              <router-link to="/Contact" class="btn d-block btn-outline-primary text-wrap">Kontak kami</router-link>
             </div>
           </div>
-          <div class="card">
+          <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card3" alt="Card image 2">
             <div class="card-body">
               <h5 class="card-title">Pelayanan profesional</h5>
               <p class="card-text">Ratusan dokter yang berpengalaman di bidangnya.</p>
-              <router-link to="/Doctors" class="btn btn-outline-primary">Cari dokter</router-link>
+              <router-link to="/Doctors" class="btn d-block btn-outline-primary text-wrap">Cari dokter</router-link>
             </div>
           </div>
         </div>
-      </div>
     </div>
     </div>
   </section>
@@ -114,16 +112,13 @@ export default {
     min-height: 300px;
 }
 
-.card {
-  width: 10em;
-  margin-top: 10px;
-  padding-block-start: 5pt;
-  padding-inline: 5pt;
+.carousel-caption {
+  padding-inline-end: 15rem;
 }
 
 .card-img-top {
-  padding-inline: 5px;
-  padding-block: 5px;
+  padding-inline: 4pt;
+  padding-block: 4pt;
 }
 
 .card-title {
@@ -135,5 +130,6 @@ export default {
   font-family:Calibri, sans-serif;
   font-weight:normal;
 }
+
 
 </style>
