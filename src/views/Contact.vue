@@ -1,47 +1,40 @@
 <template>
-  <div class="contact">
-    <section>
+  <section>
+    <div class="contact">
       <!--Section heading-->
       <div class="contacthead" id="contacthead">
         <div class="container-fluid p-0">
           <img :src="images.cover1" alt="contacthead" class="w-100">
-          <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
+          <h1 class="d-none d-lg-block mt-5 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
+          <p class="d-none d-lg-block mt-5 pt-5 centered text-black style t-pos" style="font-size:1vw;">Anda dapat menghubungi kami melalui beberapa kontak yang kami berikan</p>
+           <!-- Header Small Screen -->
+          <h1 class="d-block d-lg-none text-center pt-2"> Contact Us</h1>
+          <p class="d-block d-lg-none text-center px-2">Anda dapat menghubungi kami melalui beberapa kontak yang kami berikan</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-      <!-- Google Maps -->
-      <section>
-      <div class="container col-lg-7 pt-5">
-        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
-          <iframe src="https://maps.google.com/maps?q=Bamboomedia&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"
-            style="border:0" allowfullscreen></iframe>
-        </div>
-        <br>
-
-        <!--Deskripsi-->
-        <div class="row text-center">
-          <div class="col-md-4">
-            <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
-            <p>Jalan Merdeka No. 45</p>
-            <p>Kota Denpasar, Bali</p>
-          </div>
-
-          <div class="col-md-4">
-            <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
-            <p>+62 361 265521</p>
-            <p>Mon - Fri, 9:00-17:00<br>Sat 9:00-13:00</p>
-          </div>
-
-          <div class="col-md-4">
-            <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
-            <p>pryandika7@gmail.com</p>
-            <p>ngrmerthaj@gmail.com</p>
+<!-- Flex -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="d-none d-md-block col">
+        Blm isi konten
+      </div>
+      <!-- Small Screen Map -->
+      <div class="col">
+        <div class="container-map col-lg-11 py-3">
+          <div id="map-container-google-11" class="z-depth-1-half map-container-6 map-height container-map"
+            style="height: 400px">
+            <iframe src="https://maps.google.com/maps?q=Bamboomedia&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"
+              style="border:0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
+</section>
 </template>
 
 <script>
@@ -67,7 +60,25 @@ export default {
   position: relative;
   text-align: left;
   width: 100%;
+}
 
+.container-map{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .centered{  
@@ -90,5 +101,9 @@ export default {
   height:100%;
   width:100%;
   position:absolute;
+}
+
+.t-pos{
+  height: 6px;
 }
 </style>
