@@ -6,35 +6,86 @@
         <div class="container-fluid p-0">
           <img :src="images.cover1" alt="contacthead" class="w-100">
           <h1 class="d-none d-lg-block mt-5 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
-          <p class="d-none d-lg-block mt-5 pt-5 centered text-black style t-pos" style="font-size:1vw;">Anda dapat menghubungi kami melalui beberapa kontak yang kami berikan</p>
-           <!-- Header Small Screen -->
+          <p class="d-none d-lg-block mt-5 pt-5 centered text-black style t-pos" style="font-size:1vw;">Anda dapat
+            menghubungi kami melalui beberapa kontak yang kami berikan</p>
+          <!-- Header Small Screen -->
           <h1 class="d-block d-lg-none text-center pt-2"> Contact Us</h1>
-          <p class="d-block d-lg-none text-center px-2">Anda dapat menghubungi kami melalui beberapa kontak yang kami berikan</p>
+          <p class="d-block d-lg-none text-center px-2">Anda dapat menghubungi kami melalui beberapa kontak yang kami
+            berikan</p>
         </div>
       </div>
     </div>
   </section>
-
-<!-- Flex -->
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="d-none d-md-block col">
-        Blm isi konten
-      </div>
-      <!-- Small Screen Map -->
-      <div class="col">
-        <div class="container-map col-lg-11 py-3">
-          <div id="map-container-google-11" class="z-depth-1-half map-container-6 map-height container-map"
-            style="height: 400px">
-            <iframe src="https://maps.google.com/maps?q=Bamboomedia&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"
-              style="border:0" allowfullscreen></iframe>
+  
+  <section>
+    <!-- Whole Card -->
+    <div class="container">
+      <div class="card my-3">
+        <div class="card-body">
+          <div class="row">
+            <div class="d-none d-sm-block col">
+              <!-- Card -->
+              <div class="card my-3">
+                <div class="card-body">
+                  <b>Alamat:</b>
+                  <br>
+                  Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.
+                </div>
+              </div>
+              <div class="card my-3">
+                <div class="card-body">
+                  <b>Email:</b>
+                  <br>
+                  info@bamboomedia.net
+                </div>
+              </div>
+              <div class="card my-3">
+                <div class="card-body">
+                  <b>Telp:</b>
+                  <br>
+                  +62 361 265521
+                </div>
+              </div>
+            </div>
+            <!-- Map -->
+            <div class="col">
+              <div class="iframe-container col-lg-12 py-3">
+                <div id="map-container-google-11" class="z-depth-1-half map-container-6 map-height"
+                  style="height: 400px">
+                  <iframe src="https://maps.google.com/maps?q=Bamboomedia&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Another Card -->
+        <div class="d-block d-sm-none container">
+          <div class="card my-3">
+            <div class="card-body">
+              <b>Alamat:</b>
+              <br>
+              Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.
+            </div>
+          </div>
+          <div class="card my-3">
+            <div class="card-body">
+              <b>Email:</b>
+              <br>
+              info@bamboomedia.net
+            </div>
+          </div>
+          <div class="card my-3">
+            <div class="card-body">
+              <b>Telp:</b>
+              <br>
+              +62 361 265521
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </template>
 
 <script>
@@ -62,7 +113,7 @@ export default {
   width: 100%;
 }
 
-.container-map{
+.iframe-container{
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;

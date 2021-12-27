@@ -102,7 +102,7 @@ export default {
 }
 
 #nav form{
-    color: #6ec3ff;
+  color: #6ec3ff;
 }
 
 .container{
@@ -110,7 +110,9 @@ export default {
 }
 
 .footer {
-  padding-block: 2em;
+  padding-block: 1em;
+  color: white;
+  background-color: #6ec3ff;
 }
 
 </style>z
