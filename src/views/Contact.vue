@@ -23,7 +23,7 @@
       <div class="card my-3">
         <div class="card-body">
           <div class="row">
-            <div class="d-none d-sm-block col">
+            <div class="d-none d-lg-block col">
               <!-- Card -->
               <div class="card my-3">
                 <div class="card-body">
@@ -60,7 +60,7 @@
           </div>
         </div>
         <!-- Another Card -->
-        <div class="d-block d-sm-none container">
+        <div class="d-block d-lg-none container">
           <div class="card my-3">
             <div class="card-body">
               <b>Alamat:</b>
