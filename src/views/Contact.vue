@@ -58,6 +58,14 @@ export default {
 </script>
 
 <style>
+<<<<<<< Updated upstream
+=======
+.bi {
+  font-size:2rem;
+  align-self: center;
+}
+
+>>>>>>> Stashed changes
 .container{
   position: relative;
 }
