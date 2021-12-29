@@ -1,12 +1,11 @@
 <template>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <!-- Navbar atas -->
   <section>
   <div class="header-area" id="nav">
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
       <div class="container">
         <nav class="navbar navbar-white bg-white">
-          <a class="navbar-brand my-1 mx-4" href="/">
+          <a class="navbar-brand my-1" href="/">
             <img :src="images.logo" height="38" alt="logo">
           </a>
         </nav>
@@ -16,13 +15,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav my-1">
             <!-- Nav Link Fullscreen -->
-            <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
+            <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-2 nav-fill active"
               data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Doctors" class="nav-item nav-link navbar-collapse fs-4 mx-3"
+            <router-link to="/Doctors" class="nav-item nav-link navbar-collapse fs-4 mx-2"
               data-target="#navbarSupportedContent">Doctors</router-link>
-            <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
+            <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-2"
               data-target="#navbarSupportedContent">Contact</router-link>
-            <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" data-target="#navbarSupportedContent">
+            <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-2" data-target="#navbarSupportedContent">
               About</router-link>
 
             <!-- Nav Link Collapsed -->
@@ -36,9 +35,9 @@
               data-target="#navbarSupportedContent">About</router-link>
 
             <!-- Search bar -->
-            <form class="form-inline my-2 px-2 my-lg-1">
+            <form class="form-inline my-2 my-lg-1">
               <input class="d-lg-none d-xl-block form-control mr-sm-2 mx-2" type="search" placeholder="Search">
-              <input class="d-none d-lg-block d-xl-none form-control mr-sm-2" type="search" placeholder="Enter to Search">
+              <input class="d-none d-lg-block d-xl-none form-control mr-sm-2 mx-2" type="search" placeholder="Enter to Search">
               <button class="d-lg-none d-xl-block btn btn-outline-primary my-2 mx-2" type="submit">Search</button>
             </form>
           </div>
@@ -57,18 +56,7 @@
 
   <section>
     <div class="footer">
-      <div class="d-block d-sm-none">© 2021 - 2022 Medical Tourism<br><br>
-        <router-link to="/">Home</router-link> • <router-link to="/Doctors">Doctors</router-link> • 
-        <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
-      </div>
-      <div class="d-none d-sm-block d-md-block d-lg-none">
-        <div class="text-center">© 2021 - 2022 Medical Tourism • 
-          <router-link to="/">Home</router-link> • <router-link to="/Doctors">Doctors</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
-        </div>
-      </div>
-      <div class="d-none d-lg-block d-xl-block d-xxl-block">
-        <div class="text-center">© 2021 - 2022 Medical Tourism</div>
-      </div>
+      © 2021-2022
     </div>
   </section>
 </template>
@@ -84,12 +72,21 @@ export default {
     }
 }
 
-$(function(){ 
+
+ $(function(){ 
      var navMain = $(".navbar-collapse");
      navMain.on("click", "a:not([data-toggle])", null, function () {
          navMain.collapse('hide');
      });
-  });
+ });
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > $(document).height() - $(window).height() - 100) {
+        $('#toTopBtn').fadeIn();
+    } else {
+        $('#toTopBtn').fadeOut();
+    }
+});
 
 $('#toTopBtn').click(function(){
     $('html, body').animate({scrollTop : 0},800);
@@ -133,10 +130,9 @@ $('#toTopBtn').click(function(){
 }
 
 .footer {
-  padding-block: 2em;
-  padding-inline: 2em;
-  color:black;
-  background-color: #dddddd;
+  padding-block: 1em;
+  color: white;
+  background-color: #6ec3ff;
 }
 
 .fsma {
@@ -148,4 +144,51 @@ $('#toTopBtn').click(function(){
 }
 
 
-</style>z
+#toTopBtn {
+  position: fixed;
+  bottom: 26px;
+  right: 39px;
+  z-index: 98;
+  padding: 21px;
+  background-color: rgb(110, 195, 255)
+}
+
+.js .cd-top--fade-out {
+  opacity: .5
+}
+
+.js .cd-top--is-visible {
+  visibility: visible;
+  opacity: 1
+}
+
+.js .cd-top {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s, visibility .3s, background-color .3s
+}
+
+.cd-top {
+  position: fixed;
+  bottom: 20px;
+  bottom: var(--cd-back-to-top-margin);
+  right: 20px;
+  right: var(--cd-back-to-top-margin);
+  display: inline-block;
+  height: 40px;
+  height: var(--cd-back-to-top-size);
+  width: 40px;
+  width: var(--cd-back-to-top-size);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+  background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+  background-color: hsla(5, 76%, 62%, .8);
+  background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+}
+
+.scroll {
+  color: #fff;
+  margin-top: 100px
+}
+
+
+</style>
