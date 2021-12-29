@@ -3,15 +3,13 @@
     <div class="contact">
       <!--Section heading-->
       <div class="contacthead" id="contacthead">
-        <div class="container-fluid p-0">
+        <div class="container-fluid px-0">
           <img :src="images.cover1" alt="contacthead" class="w-100">
-          <h1 class="d-none d-lg-block mt-5 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
-          <p class="d-none d-lg-block mt-5 pt-5 centered text-black style t-pos" style="font-size:1vw;">Anda dapat
-            menghubungi kami melalui beberapa kontak yang kami berikan</p>
+          <h1 class="d-block d-sm-block d-md-block d-lg-block pb-5 mt-5 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
+          <p class="d-none d-lg-block mt-5 centered text-black style t-pos" style="font-size:1.15em;">Anda dapat
+            menghubungi kami melalui:</p>
           <!-- Header Small Screen -->
-          <h1 class="d-block d-lg-none text-center pt-2"> Contact Us</h1>
-          <p class="d-block d-lg-none text-center px-2">Anda dapat menghubungi kami melalui beberapa kontak yang kami
-            berikan</p>
+          <p class="d-block d-lg-none text-center my-2">Anda dapat menghubungi kami melalui:</p>
         </div>
       </div>
     </div>
@@ -27,23 +25,30 @@
               <!-- Card -->
               <div class="card my-3">
                 <div class="card-body">
-                  <b>Alamat:</b>
-                  <br>
-                  Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.
+                <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="col my-auto">Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.</div>
+                </div></div>
+              </div>
+              <div class="card my-3">
+                <div class="card-body">
+                  <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
+                  <div class="col my-auto">info@bamboomedia.net</div></div>
                 </div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
-                  <b>Email:</b>
-                  <br>
-                  info@bamboomedia.net
+                  <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="col my-auto">+62 361 265521</div></div>
                 </div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
-                  <b>Telp:</b>
-                  <br>
-                  +62 361 265521
+                  <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-whatsapp"></i></div>
+                  <div class="col my-auto">+6282146633466</div></div>
                 </div>
               </div>
             </div>
@@ -59,28 +64,35 @@
             </div>
           </div>
         </div>
-        <!-- Another Card -->
+        <!-- Card in smaller screen -->
         <div class="d-block d-lg-none container">
           <div class="card my-3">
             <div class="card-body">
-              <b>Alamat:</b>
-              <br>
-              Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.
+              <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="col my-auto">Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.</div>
+                </div></div>
+          </div>
+          <div class="card my-3">
+            <div class="card-body">
+              <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
+                  <div class="col my-auto">info@bamboomedia.net</div></div>
             </div>
           </div>
           <div class="card my-3">
             <div class="card-body">
-              <b>Email:</b>
-              <br>
-              info@bamboomedia.net
+              <div class="row align-center">
+              <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
+              <div class="col my-auto">+62 361 265521</div></div>
             </div>
           </div>
           <div class="card my-3">
-            <div class="card-body">
-              <b>Telp:</b>
-              <br>
-              +62 361 265521
-            </div>
+                <div class="card-body">
+                  <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-whatsapp"></i></div>
+                  <div class="col my-auto">+62 821-4663-3466</div></div>
+                </div>
           </div>
         </div>
       </div>
@@ -102,6 +114,19 @@ export default {
 </script>
 
 <style>
+.bi {
+  font-size:2rem;
+  align-self: center;
+}
+
+.card-icon{
+  margin:0em;
+}
+
+.card-info{
+  
+}
+
 .container{
   position: relative;
 }
@@ -155,6 +180,6 @@ export default {
 }
 
 .t-pos{
-  height: 6px;
+  height: 0px;
 }
 </style>
