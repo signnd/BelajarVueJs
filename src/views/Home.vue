@@ -35,7 +35,7 @@
 
   <section>
     <div class="container d-flex">
-      <div class="container mt-5 align-items-center" style="width: 900px;">
+      <div class="container my-5 align-items-center" style="width: 900px;">
         <div class="card-group">
           <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card1" alt="Card image 1">
@@ -65,12 +65,6 @@
     </div>
     </div>
   </section>
-
-  <!-- Flexbox
-  <section>
-      <div class="d-flex p-2 bg-primary text-white text-middle font-weight-bold">Work In Progress</div>
-  </section> -->
-
 </template>
     
     
