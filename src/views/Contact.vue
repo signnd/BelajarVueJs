@@ -27,7 +27,7 @@
                 <div class="card-body">
                 <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto">Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.</div>
+                  <div class="col my-auto">Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali</div>
                 </div></div>
               </div>
               <div class="card my-3">
@@ -48,7 +48,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-whatsapp"></i></div>
-                  <div class="col my-auto">+6282146633466</div></div>
+                  <div class="col my-auto">+62 821-4663-3466</div></div>
                 </div>
               </div>
             </div>
