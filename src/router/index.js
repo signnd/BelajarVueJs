@@ -6,6 +6,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import Doctors from '../views/Doctors.vue'
+import TestApi from '../views/TestApi.vue'
 const routes = 
 [
   {
@@ -27,7 +28,13 @@ const routes =
       path: '/doctors',
       name: 'Doctors',
       component: Doctors
-  }
+  },
+  {
+    path: '/Api',
+    name: 'Api',
+    component: TestApi
+}
+
 ]
 
 const router = createRouter({
