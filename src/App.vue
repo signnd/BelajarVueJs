@@ -72,12 +72,21 @@ export default {
     }
 }
 
-$(function(){ 
+
+ $(function(){ 
      var navMain = $(".navbar-collapse");
      navMain.on("click", "a:not([data-toggle])", null, function () {
          navMain.collapse('hide');
      });
-  });
+ });
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > $(document).height() - $(window).height() - 100) {
+        $('#toTopBtn').fadeIn();
+    } else {
+        $('#toTopBtn').fadeOut();
+    }
+});
 
 $('#toTopBtn').click(function(){
     $('html, body').animate({scrollTop : 0},800);
@@ -172,20 +181,5 @@ $('#toTopBtn').click(function(){
   margin-top: 100px
 }
 
-.fade-in {
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.5s;
-}
 
-@keyframes fadeInOpacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-</style>
+</style>z
