@@ -72,6 +72,7 @@ export default {
          navMain.collapse('hide');
      });
  });
+
 </script>
 
 <style>
@@ -115,4 +116,4 @@ export default {
   background-color: #6ec3ff;
 }
 
-</style>z
+</style>

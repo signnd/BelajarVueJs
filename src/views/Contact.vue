@@ -67,28 +67,4 @@ export default {
   position: relative;
   text-align: left;
   width: 100%;
-
-}
-
-.centered{  
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.map-container-6{
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;
-}
-
-.map-container-6 iframe{
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:absolute;
-}
 </style>
