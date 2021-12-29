@@ -26,13 +26,13 @@
               About</router-link>
 
             <!-- Nav Link Collapsed -->
-            <router-link to="/" class="d-none fs-4 mx-2" data-toggle="collapse"
+            <router-link to="/" class="d-block d-sm-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Doctors" class="d-none fs-4 mx-2" data-toggle="collapse"
+            <router-link to="/Doctors" class="d-block d-sm-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Doctors</router-link>
-            <router-link to="/Contact" class="d-none fs-4 mx-2" data-toggle="collapse"
+            <router-link to="/Contact" class="d-block d-sm-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Contact</router-link>
-            <router-link to="/About" class="d-none fs-4 mx-2" data-toggle="collapse"
+            <router-link to="/About" class="d-block d-sm-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">About</router-link>
 
             <!-- Search bar -->
@@ -114,7 +114,7 @@ export default {
 }
 
 #nav form{
-  color: #6ec3ff;
+    color: #6ec3ff;
 }
 
 .container{
