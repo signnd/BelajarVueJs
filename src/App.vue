@@ -48,6 +48,12 @@
   </section>
   <router-view />
 
+  <!-- Top Page Button -->
+  <section>
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+      data-abc="true"></a>
+  </section>
+
   <section>
     <div class="footer">
       (C) 2021-2022
@@ -66,13 +72,17 @@ export default {
     }
 }
 
- $(function(){ 
+$(function(){ 
      var navMain = $(".navbar-collapse");
      navMain.on("click", "a:not([data-toggle])", null, function () {
          navMain.collapse('hide');
      });
- });
+  });
 
+$('#toTopBtn').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+});
 </script>
 
 <style>
@@ -86,27 +96,27 @@ export default {
 
 #nav {
   padding: 10px;
-  }
+}
 
 #nav a {
   font-weight: bold;
   color: #2c3e50;
-  
+
 }
 
 #nav a.router-link-exact-active {
   color: #6ec3ff;
 }
 
-#nav a:hover{
+#nav a:hover {
   color: #6ec3ff;
 }
 
-#nav form{
+#nav form {
   color: #6ec3ff;
 }
 
-.container{
+.container {
   color: white;
 }
 
@@ -116,4 +126,13 @@ export default {
   background-color: #6ec3ff;
 }
 
-</style>
+.fsma {
+  text-align: center;
+}
+
+.fmed {
+  text-align: center;
+}
+
+
+</style>z
