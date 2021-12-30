@@ -3,45 +3,101 @@
     <section>
       <!--Section heading-->
       <div class="contacthead" id="contacthead">
-        <div class="container-fluid p-0">
+        <div class="container-fluid px-0">
           <img :src="images.cover1" alt="contacthead" class="w-100">
-          <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
-        </div>
-      </div>
-    </section>
-
-      <!-- Google Maps -->
-      <section>
-      <div class="container col-lg-7 pt-5">
-        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
-          <iframe src="https://maps.google.com/maps?q=Bamboomedia&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"
-            style="border:0" allowfullscreen></iframe>
-        </div>
-        <br>
-
-        <!--Deskripsi-->
-        <div class="row text-center">
-          <div class="col-md-4">
-            <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
-            <p>Jalan Merdeka No. 45</p>
-            <p>Kota Denpasar, Bali</p>
-          </div>
-
-          <div class="col-md-4">
-            <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
-            <p>+62 361 265521</p>
-            <p>Mon - Fri, 9:00-17:00<br>Sat 9:00-13:00</p>
-          </div>
-
-          <div class="col-md-4">
-            <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
-            <p>pryandika7@gmail.com</p>
-            <p>ngrmerthaj@gmail.com</p>
-          </div>
+          <h1 class="d-block d-sm-block d-md-block d-lg-block pb-5 mt-5 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
+          <p class="d-none d-lg-block mt-5 centered text-black style t-pos" style="font-size:1.15em;">Anda dapat
+            menghubungi kami melalui:</p>
+          <!-- Header Small Screen -->
+          <p class="d-block d-lg-none text-center my-2">Anda dapat menghubungi kami melalui:</p>
         </div>
       </div>
     </section>
   </div>
+  
+  <section>
+    <!-- Whole Card -->
+    <div class="container">
+      <div class="card my-3">
+        <div class="card-body">
+          <div class="row">
+            <div class="d-none d-lg-block col">
+              <!-- Card -->
+              <div class="card my-3">
+                <div class="card-body">
+                <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="col my-auto">Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali</div>
+                </div></div>
+              </div>
+              <div class="card my-3">
+                <div class="card-body">
+                  <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
+                  <div class="col my-auto">info@bamboomedia.net</div></div>
+                </div>
+              </div>
+              <div class="card my-3">
+                <div class="card-body">
+                  <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="col my-auto">+62 361 265521</div></div>
+                </div>
+              </div>
+              <div class="card my-3">
+                <div class="card-body">
+                  <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-whatsapp"></i></div>
+                  <div class="col my-auto">+62 821-4663-3466</div></div>
+                </div>
+              </div>
+            </div>
+            <!-- Map -->
+            <div class="col">
+              <div class="iframe-container col-lg-12 py-3">
+                <div id="map-container-google-11" class="z-depth-1-half map-container-6 map-height"
+                  style="height: 400px">
+                  <iframe src="https://maps.google.com/maps?q=Bamboomedia&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card in smaller screen -->
+        <div class="d-block d-lg-none container">
+          <div class="card my-3">
+            <div class="card-body">
+              <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="col my-auto">Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.</div>
+                </div></div>
+          </div>
+          <div class="card my-3">
+            <div class="card-body">
+              <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
+                  <div class="col my-auto">info@bamboomedia.net</div></div>
+            </div>
+          </div>
+          <div class="card my-3">
+            <div class="card-body">
+              <div class="row align-center">
+              <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
+              <div class="col my-auto">+62 361 265521</div></div>
+            </div>
+          </div>
+          <div class="card my-3">
+                <div class="card-body">
+                  <div class="row align-center">
+                  <div class="col-1 mr-3"><i class="bi bi-whatsapp"></i></div>
+                  <div class="col my-auto">+62 821-4663-3466</div></div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
 </template>
 
 <script>
@@ -58,6 +114,11 @@ export default {
 </script>
 
 <style>
+.bi {
+  font-size:2rem;
+  align-self: center;
+}
+
 .container{
   position: relative;
 }
@@ -67,4 +128,32 @@ export default {
   position: relative;
   text-align: left;
   width: 100%;
+
+}
+
+.centered{  
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.map-container-6{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+
+.map-container-6 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+.t-pos{
+  height: 0px;
+}
 </style>

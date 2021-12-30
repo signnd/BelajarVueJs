@@ -37,8 +37,8 @@
             <!-- Search bar -->
             <form class="form-inline my-2 my-lg-1">
               <input class="d-lg-none d-xl-block form-control mr-sm-2 mx-2" type="search" placeholder="Search">
-              <input class="d-none d-lg-block d-xl-none form-control mr-sm-2 mx-2" type="search" placeholder="Enter to Search">
-              <button class="d-lg-none d-xl-block btn btn-outline-primary my-sm-0" type="submit">Search</button>
+              <input class="d-none d-lg-block d-xl-none form-control mr-sm-2" type="search" placeholder="Enter to Search">
+              <button class="d-lg-none d-xl-block btn btn-outline-primary my-2 mx-2" type="submit">Search</button>
             </form>
           </div>
         </div>
@@ -50,7 +50,18 @@
 
   <section>
     <div class="footer">
-      (C) 2021-2022
+      <div class="d-block d-sm-none">© 2021 - 2022 Medical Tourism<br><br>
+        <router-link to="/">Home</router-link> • <router-link to="/Doctors">Doctors</router-link> • 
+        <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
+      </div>
+      <div class="d-none d-sm-block d-md-block d-lg-none">
+        <div class="text-center">© 2021 - 2022 Medical Tourism • 
+          <router-link to="/">Home</router-link> • <router-link to="/Doctors">Doctors</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
+        </div>
+      </div>
+      <div class="d-none d-lg-block d-xl-block d-xxl-block">
+        <div class="text-center">© 2021 - 2022 Medical Tourism</div>
+      </div>
     </div>
   </section>
 </template>
@@ -103,7 +114,7 @@ export default {
 }
 
 #nav form{
-  color: #6ec3ff;
+    color: #6ec3ff;
 }
 
 .container{
