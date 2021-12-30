@@ -119,6 +119,10 @@ export default {
   align-self: center;
 }
 
+.card-icon{
+  margin:0em;
+}
+
 .container{
   position: relative;
 }
