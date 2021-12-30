@@ -5,7 +5,4 @@
 </script>
 
 <style>
-</template>
-
-<script>
 </style>
