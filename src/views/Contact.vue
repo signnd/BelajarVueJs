@@ -1,6 +1,6 @@
 <template>
-  <div class="contact">
-    <section>
+  <section>
+    <div class="contact">
       <!--Section heading-->
       <div class="contacthead" id="contacthead">
         <div class="container-fluid px-0">
@@ -12,8 +12,8 @@
           <p class="d-block d-lg-none text-center my-2">Anda dapat menghubungi kami melalui:</p>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
   
   <section>
     <!-- Whole Card -->
@@ -97,7 +97,7 @@
         </div>
       </div>
     </div>
-</section>
+  </section>
 </template>
 
 <script>
@@ -119,6 +119,10 @@ export default {
   align-self: center;
 }
 
+.card-icon{
+  margin:0em;
+}
+
 .container{
   position: relative;
 }
@@ -128,7 +132,25 @@ export default {
   position: relative;
   text-align: left;
   width: 100%;
+}
 
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .centered{  
