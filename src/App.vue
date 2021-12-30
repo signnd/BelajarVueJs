@@ -16,13 +16,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav my-1">
             <!-- Nav Link Fullscreen -->
-            <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-2 nav-fill active"
+            <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
               data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Doctors" class="nav-item nav-link navbar-collapse fs-4 mx-2"
+            <router-link to="/Doctors" class="nav-item nav-link navbar-collapse fs-4 mx-3"
               data-target="#navbarSupportedContent">Doctors</router-link>
-            <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-2"
+            <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
               data-target="#navbarSupportedContent">Contact</router-link>
-            <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-2" data-target="#navbarSupportedContent">
+            <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" data-target="#navbarSupportedContent">
               About</router-link>
 
             <!-- Nav Link Collapsed -->
