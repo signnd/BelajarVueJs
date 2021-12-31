@@ -11,6 +11,11 @@
   <section>
       <h5 align="middle" class="my-5">Coming soon</h5>
   </section>
+
+  <section>
+  <h1>Tes perubahan</h1>
+  </section>
+
 </template>
 
 <script>
