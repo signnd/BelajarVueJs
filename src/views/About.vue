@@ -12,8 +12,8 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col pt-3 mt-3 my-5">
-          <img :src="a" alt="logo" style="">
+        <div class="col pt-0 mx-5 my-5 mt-3">
+          <img :src="images.about" alt="logo" style="">
         </div>
         <div class="col pt-3">
           <div class="text-left">
@@ -85,6 +85,7 @@ export default {
             images: {
                 cover1: require('@/assets/hero/flat.png'),
                 cover2: require('@/assets/gallery/section_bg01.png'),
+                about: require('@/assets/gallery/popular_sub3.png'),
                 logo: require('@/assets/logo/logo.png')
             }
         }
