@@ -8,6 +8,14 @@
     <b>Feels like {{feels_like}} °C, with {{weather}}. </b>
     <br>
   </div>
+
+<nav aria-label="breadcrumb" class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Api</li>
+  </ol>
+</nav>
+
 </template>
 
 <script>
@@ -42,4 +50,8 @@ export default {
 </script>
 
 <style>
+.breadcrumb{
+  margin-bottom: 0;
+  background-color: white;
+}
 </style>
