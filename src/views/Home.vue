@@ -33,6 +33,60 @@
     </div>
   </section>
 
+  <!-- Search Doctors Lg -->
+  <form class="d-none d-md-block">
+    <div class="container-fluid form-row f-color px-5">
+      <div class="col-3 ml-5">
+        <select class="form-control form-control-md">
+          <option hidden>Lokasi</option>
+          <option>Denpasar</option>
+          <option>Tabanan</option>
+          <option>Lokasi</option>
+          <option>Klungkung</option>
+          <option>Gianyar</option>
+          <option>Buleleng</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <select class="form-control form-control-md">
+          <option hidden>Kategori</option>
+          <option>Klinik</option>
+          <option>Rumah Sakit</option>
+          <option>Apotek</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <input class="form-control mr-2" type="search" placeholder="Search">
+      </div>
+      <div class="col-2">
+        <router-link :to="{name: 'Doctors'}">
+          <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
+        </router-link>
+      </div>
+    </div>
+
+</form>
+<div class="container d-block d-md-none pt-3">
+  <select class="form-control form-control-md">
+    <option hidden>Lokasi</option>
+    <option>Denpasar</option>
+    <option>Tabanan</option>
+    <option>Klungkung</option>
+    <option>Gianyar</option>
+    <option>Buleleng</option>
+  </select>
+  <select class="form-control form-control-md my-3">
+    <option hidden>Kategori</option>
+    <option>Klinik</option>
+    <option>Rumah Sakit</option>
+    <option>Apotek</option>
+  </select>
+  <input class="form-control mb-3" type="search" placeholder="Search">
+  <router-link :to="{name: 'Doctors'}">
+    <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
+  </router-link>
+</div>
+
   <section>
     <div class="container d-flex">
       <div class="container my-5 align-items-center" style="width: 900px;">
@@ -132,6 +186,11 @@ export default {
   color: rgb(0, 0, 0);
 }
 
+.container-fluid{
+   padding: 0;
+   margin: 0;
+}
+
 .carousel {
   width:unset;
   height:unset;
@@ -166,6 +225,7 @@ export default {
   font-weight:normal;
 }
 
+
 .service-title {
   font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
   font-weight:bold;
@@ -178,5 +238,9 @@ export default {
   text-align: center;
 }
 
-
+.f-color{
+  padding-block: 1em;
+  color: #6ec3ff;
+  background-color: #6ec3ff;
+}
 </style>
