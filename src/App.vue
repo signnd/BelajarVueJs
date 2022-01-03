@@ -6,8 +6,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
       <div class="container">
         <nav class="navbar navbar-white bg-white">
-          <a class="navbar-brand my-1" href="/">
-            <img :src="images.logo" height="38" alt="logo">
+          <a class="navbar-brand my-0" href="/">
+            <img :src="images.logo" height="45" alt="logo">
           </a>
         </nav>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -50,10 +50,12 @@
   <router-view />
 
   <!-- Top Page Button -->
-  <section>
-    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
-      data-abc="true"></a>
-  </section>
+  <go-top
+    :right="10"
+    :bottom="10"
+    bg-color="#66f"
+    box-shadow="0 0 0 transparent">
+  </go-top>
 
 
   <section>
@@ -75,13 +77,17 @@
 </template>
 
 <script>
+import GoTop from './component/GoTop.vue'
 export default {
     data() {
         return {
             images: {
-                logo: require('@/assets/logo/logo.png')
+                logo: require('@/assets/logo/logo-real-a.jpeg')
             }
         }
+    },
+    components: {
+      GoTop
     }
 }
 
@@ -92,10 +98,6 @@ $(function(){
      });
   });
 
-$('#toTopBtn').click(function(){
-    $('html, body').animate({scrollTop : 0},800);
-    return false;
-});
 </script>
 
 <style>

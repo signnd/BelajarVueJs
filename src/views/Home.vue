@@ -65,6 +65,40 @@
     </div>
     </div>
   </section>
+
+<section>
+  <h2 class="font-weight-bold text-center pb-3">Layanan kami</h2>
+</section>
+
+<section>
+  <div class="container d-flex">
+      <div class="container my-5 align-items-center" style="width: 900px;">
+        <div class="card-group">
+          <div class="card" style="width:auto;">
+          <i class="fas fa-notes-medical"></i>
+            <div class="card-body">
+              <h5 class="service-title">Medical training</h5>
+              <p class="service-text">Pelatihan tentang Kesehatan</p>
+            </div>
+          </div>
+          <div class="card" style="width:auto;">
+          <i class="fas fa-stethoscope"></i>
+            <div class="card-body">
+              <h5 class="service-title">Medical research</h5>
+              <p class="service-text">Penelitian tentang kesehatan</p>
+            </div>
+          </div>
+          <div class="card" style="width:auto;">
+          <i class="fas fa-heart"></i>
+            <div class="card-body">
+              <h5 class="service-title">Medical advisor</h5>
+              <p class="service-text">Konsultasi medis dengan ahli</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
 </template>
     
     
@@ -85,6 +119,13 @@ export default {
 </script>
     
 <style lang="css">
+.fas {
+  font-size:6em;
+  color:rgb(85, 189, 253);
+  margin-block: 2rem;
+  margin-inline: auto;
+}
+
 .container {
   position: relative;
   text-align: left;
@@ -123,6 +164,18 @@ export default {
 .card-text {
   font-family:Calibri, sans-serif;
   font-weight:normal;
+}
+
+.service-title {
+  font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
+  font-weight:bold;
+  text-align: center;
+}
+
+.service-text {
+  font-family:Calibri, sans-serif;
+  font-weight:normal;
+  text-align: center;
 }
 
 
