@@ -274,7 +274,7 @@ export default {
 
 .vue-go-top-enter-active,
 .vue-go-top-leave-active {
-  transition: opacity .3s, transform .3s;
+  transition: opacity .1s, transform .1s;
 }
 .vue-go-top-enter,
 .vue-go-top-leave-to {
