@@ -33,7 +33,7 @@
     </div>
   </section>
 
-  <!-- Search Doctors Lg -->
+  <!-- Search Members Lg -->
   <form class="d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
@@ -59,7 +59,7 @@
         <input class="form-control mr-2" type="search" placeholder="Search">
       </div>
       <div class="col-2">
-        <router-link :to="{name: 'Doctors'}">
+        <router-link :to="{name: ''}">
           <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
         </router-link>
       </div>
@@ -81,7 +81,7 @@
     <option>Apotek</option>
   </select>
   <input class="form-control mb-3" type="search" placeholder="Search">
-  <router-link :to="{name: 'Doctors'}">
+  <router-link :to="{name: 'Members'}">
     <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
   </router-link>
 </div>
@@ -111,7 +111,7 @@
             <div class="card-body">
               <h5 class="card-title">Pelayanan profesional</h5>
               <p class="card-text">Ratusan dokter yang berpengalaman di bidangnya.</p>
-              <router-link to="/Doctors" class="btn d-block btn-outline-primary text-wrap">Cari dokter</router-link>
+              <router-link to="/Members" class="btn d-block btn-outline-primary text-wrap">Cari dokter</router-link>
             </div>
           </div>
         </div>
