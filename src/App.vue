@@ -51,8 +51,8 @@
 
   <!-- Top Page Button -->
   <go-top
-    :right="150"
-    :bottom="150"
+    :right="10"
+    :bottom="10"
     bg-color="#66f"
     box-shadow="0 0 0 transparent">
   </go-top>
