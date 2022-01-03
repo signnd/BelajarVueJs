@@ -6,8 +6,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
       <div class="container">
         <nav class="navbar navbar-white bg-white">
-          <a class="navbar-brand my-1" href="/">
-            <img :src="images.logo" height="38" alt="logo">
+          <a class="navbar-brand my-0" href="/">
+            <img :src="images.logo" height="45" alt="logo">
           </a>
         </nav>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -82,7 +82,7 @@ export default {
     data() {
         return {
             images: {
-                logo: require('@/assets/logo/logo.png')
+                logo: require('@/assets/logo/logo-real-a.jpeg')
             }
         }
     },
