@@ -13,9 +13,9 @@
     <div class="container">
       <div class="row">
         <div class="col pt-0 mx-5 my-5 mt-3">
-          <img :src="images.about" alt="logo" style="">
+          <img :src="images.about" alt="logo" style="img-fluid">
         </div>
-        <div class="col pt-3">
+        <div class="col pt-5">
           <div class="text-left">
             <h2>About <span class="t-color">Medical</span></h2>
             <p>Asosiasi Wisata Medis Indonesia<br>Cinta Indonesia Cinta Wisata Medis Bangsa</p>
