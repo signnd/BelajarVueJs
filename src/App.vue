@@ -50,10 +50,12 @@
   <router-view />
 
   <!-- Top Page Button -->
-  <section>
-    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
-      data-abc="true"></a>
-  </section>
+  <go-top
+    :right="150"
+    :bottom="150"
+    bg-color="#66f"
+    box-shadow="0 0 0 transparent">
+  </go-top>
 
 
   <section>
@@ -75,6 +77,7 @@
 </template>
 
 <script>
+import GoTop from './component/GoTop.vue'
 export default {
     data() {
         return {
@@ -82,6 +85,9 @@ export default {
                 logo: require('@/assets/logo/logo.png')
             }
         }
+    },
+    components: {
+      GoTop
     }
 }
 
@@ -92,10 +98,6 @@ $(function(){
      });
   });
 
-$('#toTopBtn').click(function(){
-    $('html, body').animate({scrollTop : 0},800);
-    return false;
-});
 </script>
 
 <style>
