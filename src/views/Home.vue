@@ -64,7 +64,6 @@
         </router-link>
       </div>
     </div>
-
 </form>
 <div class="container d-block d-md-none pt-3">
   <select class="form-control form-control-md">
