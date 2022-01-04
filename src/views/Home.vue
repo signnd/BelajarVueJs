@@ -144,7 +144,7 @@
               <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.
 </p>
           </div>
-          <div class="col-5">
+          <div class="col-5 mb-4">
           <i class="fas fa-heart"></i>
               <h5 class="service-title">Medical advisor</h5>
               <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
