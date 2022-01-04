@@ -60,17 +60,17 @@
 
   <section>
     <div class="footer">
-      <div class="d-block d-sm-none">© 2021 - 2022 Medical Tourism<br><br>
+      <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Medical Tourism <br><br>
         <router-link to="/">Home</router-link> • <router-link to="/Members">Members</router-link> • 
         <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
       </div>
       <div class="d-none d-sm-block d-md-block d-lg-none">
-        <div class="text-center">© 2021 - 2022 Medical Tourism • 
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Medical Tourism • 
           <router-link to="/">Home</router-link> • <router-link to="/Members">Members</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
         </div>
       </div>
       <div class="d-none d-lg-block d-xl-block d-xxl-block">
-        <div class="text-center">© 2021 - 2022 Medical Tourism</div>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Medical Tourism</div>
       </div>
     </div>
   </section>
