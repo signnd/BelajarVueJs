@@ -56,7 +56,7 @@
         </select>
       </div>
       <div class="col-3">
-        <input class="form-control mr-2" type="search" placeholder="Search">
+        <input class="form-control mr-2" type="search" placeholder="Pencarian">
       </div>
       <div class="col-2">
         <router-link :to="{name: 'Members'}">
@@ -124,33 +124,33 @@
 </section>
 
 <section>
-  <div class="container d-flex">
-      <div class="container my-5 align-items-center" style="width: 900px;">
-        <div class="card-group">
-          <div class="card" style="width:auto;">
+  <div class="container">
+        <div class="row d-flex">
+          <div class="col-5">
+          <i class="fas fa-plane-departure"></i>
+              <h5 class="service-title">Medical Tourism Guidelines</h5>
+              <p class="service-text">Panduan untuk seseorang yang membutuhkan perawatan medis.</p>
+          </div>
+          <div class="col-5">
           <i class="fas fa-notes-medical"></i>
-            <div class="card-body">
-              <h5 class="service-title">Medical training</h5>
-              <p class="service-text">Pelatihan tentang Kesehatan</p>
-            </div>
+          <div>
+            <h5 class="service-title">Medical training</h5>
+            <p class="service-text">Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.</p>
           </div>
-          <div class="card" style="width:auto;">
+          </div>
+          <div class="col-5">
           <i class="fas fa-stethoscope"></i>
-            <div class="card-body">
               <h5 class="service-title">Medical research</h5>
-              <p class="service-text">Penelitian tentang kesehatan</p>
-            </div>
+              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.
+</p>
           </div>
-          <div class="card" style="width:auto;">
+          <div class="col-5">
           <i class="fas fa-heart"></i>
-            <div class="card-body">
               <h5 class="service-title">Medical advisor</h5>
-              <p class="service-text">Konsultasi medis dengan ahli</p>
-            </div>
+              <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
           </div>
         </div>
       </div>
-  </div>
 </section>
 </template>
     
@@ -177,6 +177,11 @@ export default {
   color:rgb(85, 189, 253);
   margin-block: 2rem;
   margin-inline: auto;
+}
+
+.col-5{
+  margin-inline: auto;
+  text-align: center;
 }
 
 .container {
