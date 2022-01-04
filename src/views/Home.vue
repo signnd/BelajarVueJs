@@ -59,7 +59,7 @@
         <input class="form-control mr-2" type="search" placeholder="Pencarian">
       </div>
       <div class="col-2">
-        <router-link :to="{name: 'Doctors'}">
+        <router-link :to="{name: 'Members'}">
           <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
         </router-link>
       </div>
