@@ -33,6 +33,60 @@
     </div>
   </section>
 
+  <!-- Search Doctors Lg -->
+  <form class="d-none d-md-block">
+    <div class="container-fluid form-row f-color px-5">
+      <div class="col-3 ml-5">
+        <select class="form-control form-control-md">
+          <option hidden>Lokasi</option>
+          <option>Denpasar</option>
+          <option>Tabanan</option>
+          <option>Lokasi</option>
+          <option>Klungkung</option>
+          <option>Gianyar</option>
+          <option>Buleleng</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <select class="form-control form-control-md">
+          <option hidden>Kategori</option>
+          <option>Klinik</option>
+          <option>Rumah Sakit</option>
+          <option>Apotek</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <input class="form-control mr-2" type="search" placeholder="Pencarian">
+      </div>
+      <div class="col-2">
+        <router-link :to="{name: 'Doctors'}">
+          <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
+        </router-link>
+      </div>
+    </div>
+
+</form>
+<div class="container d-block d-md-none pt-3">
+  <select class="form-control form-control-md">
+    <option hidden>Lokasi</option>
+    <option>Denpasar</option>
+    <option>Tabanan</option>
+    <option>Klungkung</option>
+    <option>Gianyar</option>
+    <option>Buleleng</option>
+  </select>
+  <select class="form-control form-control-md my-3">
+    <option hidden>Kategori</option>
+    <option>Klinik</option>
+    <option>Rumah Sakit</option>
+    <option>Apotek</option>
+  </select>
+  <input class="form-control mb-3" type="search" placeholder="Pencarian">
+  <router-link :to="{name: 'Doctors'}">
+    <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
+  </router-link>
+</div>
+
   <section>
     <div class="container d-flex">
       <div class="container my-5 align-items-center" style="width: 900px;">
@@ -65,6 +119,40 @@
     </div>
     </div>
   </section>
+
+<section>
+  <h2 class="font-weight-bold text-center pb-3">Layanan kami</h2>
+</section>
+
+<section>
+  <div class="container">
+        <div class="row d-flex">
+          <div class="col-5">
+          <i class="fas fa-plane-departure"></i>
+              <h5 class="service-title">Medical Tourism Guidelines</h5>
+              <p class="service-text">Panduan untuk seseorang yang membutuhkan perawatan medis.</p>
+          </div>
+          <div class="col-5">
+          <i class="fas fa-notes-medical"></i>
+          <div>
+            <h5 class="service-title">Medical training</h5>
+            <p class="service-text">Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.</p>
+          </div>
+          </div>
+          <div class="col-5">
+          <i class="fas fa-stethoscope"></i>
+              <h5 class="service-title">Medical research</h5>
+              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.
+</p>
+          </div>
+          <div class="col-5">
+          <i class="fas fa-heart"></i>
+              <h5 class="service-title">Medical advisor</h5>
+              <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
+          </div>
+        </div>
+      </div>
+</section>
 </template>
     
     
@@ -85,10 +173,27 @@ export default {
 </script>
     
 <style lang="css">
+.fas {
+  font-size:6em;
+  color:rgb(85, 189, 253);
+  margin-block: 2rem;
+  margin-inline: auto;
+}
+
+.col-5{
+  margin-inline: auto;
+  text-align: center;
+}
+
 .container {
   position: relative;
   text-align: left;
   color: rgb(0, 0, 0);
+}
+
+.container-fluid{
+   padding: 0;
+   margin: 0;
 }
 
 .carousel {
@@ -126,4 +231,21 @@ export default {
 }
 
 
+.service-title {
+  font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
+  font-weight:bold;
+  text-align: center;
+}
+
+.service-text {
+  font-family:Calibri, sans-serif;
+  font-weight:normal;
+  text-align: center;
+}
+
+.f-color{
+  padding-block: 1em;
+  color: #6ec3ff;
+  background-color: #6ec3ff;
+}
 </style>
