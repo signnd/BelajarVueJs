@@ -33,7 +33,7 @@
     </div>
   </section>
 
-  <!-- Search Members Lg -->
+  <!-- Search Members & Categories Lg -->
   <form class="d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
@@ -64,6 +64,7 @@
       </div>
     </div>
 </form>
+  <!-- Search Members & Categories SM -->
 <div class="container d-block d-md-none pt-3">
   <select class="form-control form-control-md">
     <option hidden>Lokasi</option>
