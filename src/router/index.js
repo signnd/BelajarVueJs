@@ -5,7 +5,7 @@ import {
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
-import Doctors from '../views/Doctors.vue'
+import Members from '../views/Members.vue'
 import TestApi from '../views/TestApi.vue'
 const routes = 
 [
@@ -25,9 +25,9 @@ const routes =
       component: Contact
   },
     {
-      path: '/doctors',
-      name: 'Doctors',
-      component: Doctors
+      path: '/members',
+      name: 'Members',
+      component: Members
   },
     {
       path: '/api',
