@@ -41,7 +41,6 @@
           <option hidden>Lokasi</option>
           <option>Denpasar</option>
           <option>Tabanan</option>
-          <option>Lokasi</option>
           <option>Klungkung</option>
           <option>Gianyar</option>
           <option>Buleleng</option>
