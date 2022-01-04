@@ -50,12 +50,13 @@
   <router-view />
 
   <!-- Top Page Button -->
-  <go-top
-    :right="10"
-    :bottom="10"
-    bg-color="#66f"
-    box-shadow="0 0 0 transparent">
-  </go-top>
+  <section>
+  <transition>
+    <div id="pagetop" v-show="scY > 300" @click="toTop">
+      <button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-chevron-double-up px-1"></i></button>
+    </div>
+  </transition>
+  </section>
 
 
   <section>
@@ -83,11 +84,29 @@ export default {
         return {
             images: {
                 logo: require('@/assets/logo/logo-real-a.jpeg')
-            }
+            },
+            scTimer: 0,
+            scY: 0,
         }
     },
-    components: {
-      GoTop
+    mounted() {
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+      handleScroll: function () {
+        if (this.scTimer) return;
+        this.scTimer = setTimeout(() => {
+          this.scY = window.scrollY;
+          clearTimeout(this.scTimer);
+          this.scTimer = 0;
+        }, 20);
+      },
+      toTop: function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
     }
 }
 
@@ -107,6 +126,12 @@ $(function(){
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#pagetop {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
 }
 
 #nav {
