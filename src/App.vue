@@ -18,8 +18,8 @@
             <!-- Nav Link Fullscreen -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
               data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Doctors" class="nav-item nav-link navbar-collapse fs-4 mx-3"
-              data-target="#navbarSupportedContent">Doctors</router-link>
+            <router-link to="/Members" class="nav-item nav-link navbar-collapse fs-4 mx-3"
+              data-target="#navbarSupportedContent">Members</router-link>
             <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
               data-target="#navbarSupportedContent">Contact</router-link>
             <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" data-target="#navbarSupportedContent">
@@ -28,8 +28,8 @@
             <!-- Nav Link Collapsed -->
             <router-link to="/" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Doctors" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Doctors</router-link>
+            <router-link to="/Members" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Members</router-link>
             <router-link to="/Contact" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Contact</router-link>
             <router-link to="/About" class="d-none fs-4 mx-2" data-toggle="collapse"
@@ -60,17 +60,17 @@
 
   <section>
     <div class="footer">
-      <div class="d-block d-sm-none">© 2021 - 2022 Medical Tourism<br><br>
-        <router-link to="/">Home</router-link> • <router-link to="/Doctors">Doctors</router-link> • 
+      <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Medical Tourism <br><br>
+        <router-link to="/">Home</router-link> • <router-link to="/Members">Members</router-link> • 
         <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
       </div>
       <div class="d-none d-sm-block d-md-block d-lg-none">
-        <div class="text-center">© 2021 - 2022 Medical Tourism • 
-          <router-link to="/">Home</router-link> • <router-link to="/Doctors">Doctors</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Medical Tourism • 
+          <router-link to="/">Home</router-link> • <router-link to="/Members">Members</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
         </div>
       </div>
       <div class="d-none d-lg-block d-xl-block d-xxl-block">
-        <div class="text-center">© 2021 - 2022 Medical Tourism</div>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Medical Tourism</div>
       </div>
     </div>
   </section>
