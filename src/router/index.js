@@ -7,6 +7,9 @@ import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import Members from '../views/Members.vue'
 import TestApi from '../views/TestApi.vue'
+import Blog from '../views/Blog.vue'
+import Destination from '../views/Destination.vue'
+import Services from '../views/Services.vue'
 const routes = 
 [
   {
@@ -33,7 +36,23 @@ const routes =
       path: '/api',
       name: 'api',
       component: TestApi
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: Blog
+    },
+    {
+      path: '/destination',
+      name: 'Destination',
+      component: Destination
+    },
+    {
+      path: '/services',
+      name: 'services',
+      component: Services
     }
+    
 ]
 
 const router = createRouter({
