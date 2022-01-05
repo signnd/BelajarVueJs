@@ -9,27 +9,27 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
-          <div class="carousel-caption d-block text-dark text-left align-middle">
-              <h1 class="font-weight-bold" style="font-size:7vw;">Slide 1</h1>
+          <div class="carousel-caption text-dark">
+              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 1</h1>
               <p style="font-size:2vw;">Kami adalah website medis</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
-          <div class="carousel-caption d-block text-dark text-left align-middle">
-            <h1 class="font-weight-bold" style="font-size:7vw;">Slide 2</h1>
-            <p style="font-size:2vw;">Berwisata medis bersama kami</p>
+          <div class="carousel-caption text-dark">
+              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 2</h1>
+              <p style="font-size:2vw;">Berwisata medis bersama kami</p>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+        <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
     </div>
   </section>
 
@@ -141,8 +141,7 @@
           <div class="col-5">
           <i class="fas fa-stethoscope"></i>
               <h5 class="service-title">Medical research</h5>
-              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.
-</p>
+              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.</p>
           </div>
           <div class="col-5 mb-4">
           <i class="fas fa-heart"></i>
@@ -200,18 +199,32 @@ export default {
   height:unset;
 }
 
-.carousel-caption{
-  position: absolute;
-  top: 160px;
-}
-
 .carousel-item img {
-    position:relative;
-    min-height: 300px;
+  position:relative;
+  min-width: 100%;
+  width: 100%;
 }
 
 .carousel-caption {
   padding-inline-end: 15rem;
+  width: 500px;
+  left: 15%;
+  top: 50% !important;
+  transform: translateY(-60%);
+  text-align: left;
+  bottom: initial;
+}
+
+.carousel-control-prev{
+  margin-top: 50px;
+  width:20%;
+  height: auto;
+}
+
+.carousel-control-next{
+  margin-top: 50px;
+  width:20%;
+  height: auto;   
 }
 
 .card-img-top {
