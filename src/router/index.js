@@ -10,6 +10,9 @@ import TestApi from '../views/TestApi.vue'
 import Blog from '../views/Blog.vue'
 import Destination from '../views/Destination.vue'
 import Services from '../views/Services.vue'
+import RSUPSanglah from '../views/Members/rsup-sanglah.vue'
+import RSUBM from '../views/Members/rsu-balimandara.vue'
+import RSMBM from '../views/Members/rsm-balimandara.vue'
 const routes = 
 [
   {
@@ -53,6 +56,21 @@ const routes =
       component: Services
     }
     
+  {
+    path: '/members/rsup-sanglah',
+    name: 'members/rsup-sanglah',
+    component: RSUPSanglah
+  },
+  {
+    path: '/members/rsu-balimandara',
+    name: 'members/rsu-balimandara',
+    component: RSUBM
+  },
+  {
+    path: '/members/rsm-balimandara',
+    name: 'members/rsm-balimandara',
+    component: RSMBM
+  }
 ]
 
 const router = createRouter({
