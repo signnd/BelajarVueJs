@@ -18,12 +18,19 @@
             <!-- Nav Link Fullscreen -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
               data-target="#navbarSupportedContent">Home</router-link>
+            <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+              data-target="#navbarSupportedContent">About</router-link>
+             <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+              data-target="#navbarSupportedContent">Services</router-link>
             <router-link to="/Members" class="nav-item nav-link navbar-collapse fs-4 mx-3"
               data-target="#navbarSupportedContent">Members</router-link>
+            <router-link to="/Destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+              data-target="#navbarSupportedContent">Destination</router-link>
+            <router-link to="/Blog" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+              data-target="#navbarSupportedContent">Blog</router-link>
             <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
               data-target="#navbarSupportedContent">Contact</router-link>
-            <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" data-target="#navbarSupportedContent">
-              About</router-link>
+              
 
             <!-- Nav Link Collapsed -->
             <router-link to="/" class="d-none fs-4 mx-2" data-toggle="collapse"
@@ -34,6 +41,12 @@
               data-target="#navbarSupportedContent">Contact</router-link>
             <router-link to="/About" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">About</router-link>
+            <router-link to="/Blog" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Blog</router-link>
+            <router-link to="/Destination" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Destination</router-link>
+            <router-link to="/Services" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Services</router-link>
           </div>
         </div>
       </div>
