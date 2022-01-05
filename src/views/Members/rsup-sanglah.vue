@@ -4,7 +4,7 @@
     <div class="about" id="about">
       <div class="container-fluid p-0">
         <img :src="images.cover1" alt="habout" class="w-100">
-        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">RSUP Sanglah</h1>
+        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Halaman rumah sakit</h1>
       </div>
     </div>
   </section>
