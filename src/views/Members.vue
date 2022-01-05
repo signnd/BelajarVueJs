@@ -53,28 +53,33 @@
     <div class="container my-5 align-items-center" style="width: 900px;">
       <div class="card-group">
         <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <img class="card-img-top" :src="images.rssanglah" alt="RSUP Sanglah">
           <div class="card-body text-center">
             <h5 class="card-title">RSUP Sanglah</h5>
             <p class="card-text">Deskripsi</p>
-              <router-link to="/Members/rsup-sanglah" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+              <router-link to="/Members/rs-member" class="btn d-block btn-primary text-wrap gap-2">Detail</router-link>
+              <div class="pt-2"></div>
+              <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
           </div>
         </div>
         <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <img class="card-img-top" :src="images.rsubm" alt="RSU Bali Mandara">
           <div class="card-body text-center">
             <h5 class="card-title">RSU Bali Mandara</h5>
             <p class="card-text">Deskripsi</p>
-            <router-link to="/Members/rsu-balimandara" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
-
+            <router-link to="/Members/rs-member" class="btn d-block btn-primary text-wrap">Detail</router-link>
+            <div class="pt-2"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
           </div>
         </div>
         <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <img class="card-img-top" :src="images.rsmbm" alt="RS Mata Bali Mandara">
           <div class="card-body text-center">
             <h5 class="card-title">RS Mata Bali Mandara</h5>
             <p class="card-text">Deskripsi</p>
-            <router-link to="/Members/rsm-balimandara" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Members/rs-member" class="btn d-block btn-primary text-wrap">Detail</router-link>
+            <div class="pt-2"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
           </div>
         </div>
       </div>
@@ -87,33 +92,33 @@
     <div class="container my-5 align-items-center" style="width: 900px;">
       <div class="card-group">
         <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <img class="card-img-top" :src="images.rsptnunud" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RSPTN Unud</h5>
             <p class="card-text">Deskripsi</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Reservasi
-            </button>
+            <router-link to="/Members/rs-member" class="btn d-block btn-primary text-wrap">Detail</router-link>
+            <div class="pt-2"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
           </div>
         </div>
         <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <img class="card-img-top" :src="images.rsmangusadabadung" alt="RS Mangusada Ubung">
           <div class="card-body text-center">
             <h5 class="card-title">RS Mangusada Badung</h5>
             <p class="card-text">Deskripsi</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Reservasi
-            </button>
+            <router-link to="/Members/rs-member" class="btn d-block btn-primary text-wrap">Detail</router-link>
+            <div class="pt-2"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
           </div>
         </div>
         <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <img class="card-img-top" :src="images.bimcnusadua" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS BIMC Nusa Dua</h5>
             <p class="card-text">Deskripsi</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Reservasi
-            </button>
+            <router-link to="/Members/rs-member" class="btn d-block btn-primary text-wrap">Detail</router-link>
+            <div class="pt-2"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
           </div>
         </div>
       </div>
@@ -126,33 +131,33 @@
     <div class="container my-5 align-items-center" style="width: 900px;">
       <div class="card-group">
         <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <img class="card-img-top" :src="images.bimckuta" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS BIMC Kuta</h5>
             <p class="card-text">Deskripsi</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Reservasi
-            </button>
+            <router-link to="/Members/rs-member" class="btn d-block btn-primary text-wrap">Detail</router-link>
+            <div class="pt-2"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
           </div>
         </div>
         <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <img class="card-img-top" :src="images.rssiloamkuta" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS Siloam Kuta</h5>
             <p class="card-text">Deskripsi</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Reservasi
-            </button>
+            <router-link to="/Members/rs-member" class="btn d-block btn-primary text-wrap">Detail</router-link>
+            <div class="pt-2"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
           </div>
         </div>
         <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <img class="card-img-top" :src="images.bros" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">Bali Royal Hospital (BROS)</h5>
             <p class="card-text">Deskripsi</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Reservasi
-            </button>
+            <router-link to="/Members/rs-member" class="btn d-block btn-primary text-wrap">Detail</router-link>
+            <div class="pt-2"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
           </div>
         </div>
       </div>
@@ -323,7 +328,16 @@ export default {
             images: {
                 cover1: require('@/assets/hero/flat.png'),
                 cover2: require('@/assets/gallery/section_bg01.png'),
-                placeholder: require('@/assets/placeholder.png'),    
+                placeholder: require('@/assets/placeholder.png'),  
+                rssanglah: require('@/assets/rumahsakit/rs-sanglah.jpg'), 
+                rsubm: require('@/assets/rumahsakit/rsu-bali-mandara.jpg'),
+                rsmbm: require('@/assets/rumahsakit/rs-mata-bali-mandara.jpg'), 
+                bimckuta: require('@/assets/rumahsakit/bimc-kuta.jpg'),
+                bimcnusadua: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'),
+                bros: require('@/assets/rumahsakit/bros.jpg'),
+                rsmangusadabadung: require('@/assets/rumahsakit/rs-mangusada-badung.jpeg'),
+                rssiloamkuta: require('@/assets/rumahsakit/rs-siloam-kuta-2.jpg'),
+                rsptnunud: require('@/assets/rumahsakit/rsptn-unud.jpeg'),
                 apple: require('@/assets/modal/apple.png'), 
                 playstore: require('@/assets/modal/playstore.png'), 
                 speedid: require('@/assets/modal/SpeedID.png')            
@@ -343,7 +357,12 @@ export default {
   position: relative;
   text-align: left;
   width: 100%;
+}
 
+.card-img-top {
+  width:inherit;
+  height:28vh;
+  object-fit: cover;
 }
 
 .centered{  
