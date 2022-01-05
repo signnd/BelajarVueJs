@@ -9,31 +9,31 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
-          <div class="carousel-caption d-block text-dark text-left align-middle">
-              <h1 class="font-weight-bold" style="font-size:7vw;">Slide 1</h1>
+          <div class="carousel-caption text-dark">
+              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 1</h1>
               <p style="font-size:2vw;">Kami adalah website medis</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
-          <div class="carousel-caption d-block text-dark text-left align-middle">
-            <h1 class="font-weight-bold" style="font-size:7vw;">Slide 2</h1>
-            <p style="font-size:2vw;">Berwisata medis bersama kami</p>
+          <div class="carousel-caption text-dark">
+              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 2</h1>
+              <p style="font-size:2vw;">Berwisata medis bersama kami</p>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+        <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
     </div>
   </section>
 
-  <!-- Search Members Lg -->
+  <!-- Search Members & Categories Lg -->
   <form class="d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
@@ -41,7 +41,6 @@
           <option hidden>Lokasi</option>
           <option>Denpasar</option>
           <option>Tabanan</option>
-          <option>Lokasi</option>
           <option>Klungkung</option>
           <option>Gianyar</option>
           <option>Buleleng</option>
@@ -65,6 +64,7 @@
       </div>
     </div>
 </form>
+  <!-- Search Members & Categories SM -->
 <div class="container d-block d-md-none pt-3">
   <select class="form-control form-control-md">
     <option hidden>Lokasi</option>
@@ -141,10 +141,9 @@
           <div class="col-5">
           <i class="fas fa-stethoscope"></i>
               <h5 class="service-title">Medical research</h5>
-              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.
-</p>
+              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.</p>
           </div>
-          <div class="col-5">
+          <div class="col-5 mb-4">
           <i class="fas fa-heart"></i>
               <h5 class="service-title">Medical advisor</h5>
               <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
@@ -152,23 +151,57 @@
         </div>
       </div>
 </section>
+
+<!-- Popular Destination -->
+<section>
+  <div class="destination">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col ">
+          <p v-if="selectedImage"><img style="width:100%" :src="selectedImage" alt="random"></p>
+        </div>
+        <div class="col-5 ml-4 text-left">
+          <br><br>
+          <h3 class="">Member Lainnya </h3>
+          <router-link to="/Members" class="btn btn-outline-primary text-wrap">Lihat Semua ►</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </template>
     
     
 <script>
 export default {
-    data() {
-        return {
-            images: {
-                cover1: require('@/assets/hero/hero.png'),
-                cover2: require('@/assets/hero/hero2.jpg'),
-                card1: require('@/assets/gallery/blog1.png'),
-                card2: require('@/assets/gallery/blog2.png'),
-                card3: require('@/assets/gallery/blog3.png')
-            }
-        }
+  data() {
+    return {
+      images: {
+        cover1: require('@/assets/hero/hero.png'),
+        cover2: require('@/assets/hero/hero2.jpg'),
+        card1: require('@/assets/gallery/blog1.png'),
+        card2: require('@/assets/gallery/blog2.png'),
+        card3: require('@/assets/gallery/blog3.png')
+      },
+      imgRs: [
+      'https://picsum.photos/600/200',
+      'https://picsum.photos/600/200',
+      'https://picsum.photos/600/200'
+      ],
+      selectedImage: null
     }
+  },
+  methods: {
+    randomItem(items) {
+      return items[Math.floor(Math.random() * items.length)];
+    }
+  },
+  created() {
+    this.selectedImage = this.randomItem(this.imgRs)
+  }
 }
+
 </script>
     
 <style lang="css">
@@ -200,18 +233,32 @@ export default {
   height:unset;
 }
 
-.carousel-caption{
-  position: absolute;
-  top: 160px;
-}
-
 .carousel-item img {
-    position:relative;
-    min-height: 300px;
+  position:relative;
+  min-width: 100%;
+  width: 100%;
 }
 
 .carousel-caption {
   padding-inline-end: 15rem;
+  width: 500px;
+  left: 15%;
+  top: 50% !important;
+  transform: translateY(-60%);
+  text-align: left;
+  bottom: initial;
+}
+
+.carousel-control-prev{
+  margin-top: 50px;
+  width:20%;
+  height: auto;
+}
+
+.carousel-control-next{
+  margin-top: 50px;
+  width:20%;
+  height: auto;   
 }
 
 .card-img-top {
@@ -246,5 +293,9 @@ export default {
   padding-block: 1em;
   color: #6ec3ff;
   background-color: #6ec3ff;
+}
+
+.bg-popular{
+  background-color: #c6e7ff;
 }
 </style>
