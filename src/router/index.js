@@ -54,8 +54,7 @@ const routes =
       path: '/services',
       name: 'services',
       component: Services
-    }
-    
+    },
   {
     path: '/members/rsup-sanglah',
     name: 'members/rsup-sanglah',
