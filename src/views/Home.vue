@@ -185,20 +185,17 @@ export default {
         card3: require('@/assets/gallery/blog3.png')
       },
       imgRs: [
-      'https://picsum.photos/600/200',
-      'https://picsum.photos/600/200',
-      'https://picsum.photos/600/200'
+        require('@/assets/rumahsakit/rs-sanglah.jpg'),
+        require('@/assets/rumahsakit/bros.jpg'),
+        require('@/assets/rumahsakit/rs-siloam-kuta-2.jpg')
       ],
       selectedImage: null
     }
   },
-  methods: {
-    randomItem(items) {
-      return items[Math.floor(Math.random() * items.length)];
-    }
-  },
   created() {
-    this.selectedImage = this.randomItem(this.imgRs)
+    const idx = Math.floor(Math.random() * this.imgRs.length)
+    this.selectedImage = this.imgRs[idx]
+    return
   }
 }
 
