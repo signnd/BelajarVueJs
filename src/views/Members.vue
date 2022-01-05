@@ -3,7 +3,7 @@
     <div class="members" id="members">
       <div class="container-fluid p-0">
         <img :src="images.cover1" alt="habout" class="w-100">
-        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Our Members</h1>
+        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">BMTA Members</h1>
       </div>
     </div>
 </section>
@@ -47,8 +47,6 @@
 <br>
 <br>
 
-<h2 class="font-weight-bold text-center pb-3">Result</h2>
-
 <!-- Rumah Sakit Placeholder -->
 <section>
   <div class="container d-flex">
@@ -57,7 +55,41 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Rumah Sakit 1</h5>
+            <h5 class="card-title">RSUP Sanglah</h5>
+            <p class="card-text">Deskripsi</p>
+              <router-link to="/Members/rsup-sanglah" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+          </div>
+        </div>
+        <div class="card" style="width:auto;">
+          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">RSU Bali Mandara</h5>
+            <p class="card-text">Deskripsi</p>
+            <router-link to="/Members/rsu-balimandara" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+
+          </div>
+        </div>
+        <div class="card" style="width:auto;">
+          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">RS Mata Bali Mandara</h5>
+            <p class="card-text">Deskripsi</p>
+            <router-link to="/Members/rsm-balimandara" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container d-flex">
+    <div class="container my-5 align-items-center" style="width: 900px;">
+      <div class="card-group">
+        <div class="card" style="width:auto;">
+          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">RSPTN Unud</h5>
             <p class="card-text">Deskripsi</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Reservasi
@@ -67,7 +99,7 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Rumah Sakit 2</h5>
+            <h5 class="card-title">RS Mangusada Badung</h5>
             <p class="card-text">Deskripsi</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Reservasi
@@ -77,7 +109,7 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Rumah Sakit 3</h5>
+            <h5 class="card-title">RS BIMC Nusa Dua</h5>
             <p class="card-text">Deskripsi</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Reservasi
@@ -96,7 +128,7 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Rumah Sakit 4</h5>
+            <h5 class="card-title">RS BIMC Kuta</h5>
             <p class="card-text">Deskripsi</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Reservasi
@@ -106,7 +138,7 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Rumah Sakit 5</h5>
+            <h5 class="card-title">RS Siloam Kuta</h5>
             <p class="card-text">Deskripsi</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Reservasi
@@ -116,7 +148,7 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Rumah Sakit 6</h5>
+            <h5 class="card-title">Bali Royal Hospital (BROS)</h5>
             <p class="card-text">Deskripsi</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Reservasi
@@ -135,7 +167,7 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Rumah Sakit 7</h5>
+            <h5 class="card-title">RS Prima Medika</h5>
             <p class="card-text">Deskripsi</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Reservasi
@@ -145,7 +177,7 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Rumah Sakit 8</h5>
+            <h5 class="card-title">RS Kasih Ibu Denpasar</h5>
             <p class="card-text">Deskripsi</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Reservasi
@@ -155,7 +187,74 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
           <div class="card-body text-center">
-            <h5 class="card-title">Rumah Sakit 9</h5>
+            <h5 class="card-title">RS Kasih Ibu Saba</h5>
+            <p class="card-text">Deskripsi</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+              Reservasi
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container d-flex">
+    <div class="container my-5 align-items-center" style="width: 900px;">
+      <div class="card-group">
+        <div class="card" style="width:auto;">
+          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">RS Khusus Mata Ramata</h5>
+            <p class="card-text">Deskripsi</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+              Reservasi
+            </button>
+          </div>
+        </div>
+        <div class="card" style="width:auto;">
+          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">RS Bhayangkara</h5>
+            <p class="card-text">Deskripsi</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+              Reservasi
+            </button>
+          </div>
+        </div>
+        <div class="card" style="width:auto;">
+          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Klinik Penta Medika</h5>
+            <p class="card-text">Deskripsi</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+              Reservasi
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container d-flex">
+    <div class="container my-5 align-items-center" style="width: 500px;">
+      <div class="card-group">
+        <div class="card" style="width:auto;">
+          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dental 911 Clinic</h5>
+            <p class="card-text">Deskripsi</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+              Reservasi
+            </button>
+          </div>
+        </div>
+        <div class="card" style="width:auto;">
+          <img class="card-img-top" :src="images.placeholder" alt="Card image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Assist 211</h5>
             <p class="card-text">Deskripsi</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Reservasi
