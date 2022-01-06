@@ -154,15 +154,14 @@
 
 <!-- Popular Destination -->
 <section>
-  <div class="destination">
     <div class="container-fluid">
+        <div class="destination">
       <div class="row">
-        <div class="col ">
-          <p v-if="selectedImage"><img style="width:100%" :src="selectedImage" alt="random"></p>
+        <div class="col">
+          <p v-if="selectedImage"><img class="dest-img" :src="selectedImage" alt="random"></p>
         </div>
-        <div class="col-5 ml-4 text-left">
-          <br><br>
-          <h3 class="">Destination Lainnya </h3>
+        <div class="col-4 ml-4 mt-5 pt-3 text-left">
+          <h3 class="text-black font-weight-bold">Destinasi Lainnya </h3>
           <router-link to="/Destination" class="btn btn-outline-primary text-wrap">Lihat Semua ►</router-link>
         </div>
       </div>
@@ -185,9 +184,10 @@ export default {
         card3: require('@/assets/gallery/blog3.png')
       },
       imgRs: [
-        require('@/assets/rumahsakit/rs-sanglah.jpg'),
-        require('@/assets/rumahsakit/bros.jpg'),
-        require('@/assets/rumahsakit/rs-siloam-kuta-2.jpg')
+        require('@/assets/rumahsakit/bimc-nusa-dua.jpg'),
+        require('@/assets/rumahsakit/bimc-kuta.jpg'),
+        require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'),
+        require('@/assets/rumahsakit/BROS.jpg'),
       ],
       selectedImage: null
     }
@@ -273,7 +273,6 @@ export default {
   font-weight:normal;
 }
 
-
 .service-title {
   font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
   font-weight:bold;
@@ -292,7 +291,16 @@ export default {
   background-color: #6ec3ff;
 }
 
-.bg-popular{
-  background-color: #c6e7ff;
+.destination{
+  background-color: #eaf6ff;
+}
+
+
+.dest-img{
+  position:relative;
+  min-width: 100%;
+  width: 100%;
+  max-height: 60%;  
+  background-color: white;
 }
 </style>
