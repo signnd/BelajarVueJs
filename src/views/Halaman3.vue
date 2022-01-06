@@ -1,6 +1,6 @@
 <template>
  <section>
-   <div class="blog" id="blog">
+   <div class="halaman3" id="halaman3">
       <div class="container-fluid p-0">
         <img :src="images.cover1" alt="habout" class="w-100">
         <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Our Blogs</h1>
@@ -16,14 +16,14 @@
          <div class="card"> 
            <div class="p-3 mb-2 bg-info text-black">
           <div class="card" style="width:auto;">
-            <img class="card-img-top" :src="images.gambar1" alt="Card image 1">
+            <img class="card-img-top" :src="images.gambar1" alt="Card image 5">
               <div class="card-body">
-                <h5 class="card-title">Kewajiban Rumah Sakit kepada Pasien dan Masyarakat</h5>
-                <p class="card-text">Rumah  Sakit adalah institusi pelayanan kesehatan yang menyelenggarakan pelayanan kesehatan perorangan secara paripurna    yang menyediakan pelayanan rawat inap, rawat jalan, dan gawat darurat. Pasien adalah setiap orang yang melakukan konsultasi masalah kesehatannya untuk memperoleh pelayanan kesehatan yang  diperlukan, baik secara langsung maupun tidak langsung di Rumah Sakit.  </p>
-                  <router-link to="/rumahsakit" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>                
+                <h5 class="card-title">Artikel Belum Tersedia</h5>
+                <p class="card-text">
+                  <router-link to="/kosong" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link> kosong </p>
                 <div class="row">
                 <div class="col">
-                 Info Rumah Sakit
+                 Info Kesehatan
                </div>
                 </div>
               </div>
@@ -37,31 +37,30 @@
 
         <div class="card" style="width:auto;">
        <div class="card">
-          <img class="card-img-top" :src="images.gambar2" alt="Card image 2">
+          <img class="card-img-top" :src="images.card2" alt="Card image 6">
             <div class="card-body">
-             <h5 class="card-title">Cara Mencuci Tangan Yang Benar</h5>
-              <p class="card-text">Salah satu perilaku hidup bersih dan sehat (PHBS) yang selalu digaungkan sejak lama untuk menjaga kesehatan dan kebersihan pribadi adalah mencuci tangan. Perilaku ini seharusnya menjadi kebiasaan yang sangat baik, karena selain untuk menjaga kesehatan dan kebersihan, agama juga mengajarkannya.</p>
-                  <router-link to="/kesehatan" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>                
+             <h5 class="card-title">Artikel Belum Tersedia</h5>
+              <p class="card-text">Kosong</p>
+                  <router-link to="/about" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>                
                   <div class="col">
-                   Info Kesehatan
+                   Info Rumah Sakit
                    </div>
             </div>
        </div>
+  
+       
 <br>
 <br>
-
-
-
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
              <li class="page-item disabled">
-               <a class="page-link" href="#" tabindex="-1">Previous</a>
+               <a class="page-link" href="/Halaman2" tabindex="-1">Previous</a>
                  </li>
                    <li class="page-item"><a class="page-link" href="Blog">1</a></li>
-                  <li class="page-item"><a class="page-link" href="Halaman2">2</a></li>
-                <li class="page-item"><a class="page-link" href="Halaman3">3</a></li>
+                  <li class="page-item"><a class="page-link" href="Blog/Halaman2">2</a></li>
+                <li class="page-item"><a class="page-link" href="Blog/Halaman3">3</a></li>
              <li class="page-item">
-           <a class="page-link" href="/Halaman2">Next</a>
+           <a class="page-link" href="/destination">Next</a>
 
           </li>
          </ul>
@@ -72,11 +71,8 @@
              </div>
                </div>
                 </div>
-    </div>
 </div>
-  
-
-
+   </div>
 
 
 
@@ -84,6 +80,7 @@
 
 
   </section>
+
   </template>
 
 
@@ -96,9 +93,7 @@ export default {
                 cover1: require('@/assets/hero/flat.png'),
                 cover2: require('@/assets/gallery/section_bg01.png'),
                 about: require('@/assets/gallery/popular_sub3.png'),
-                logo: require('@/assets/logo/logo.png'),
-                gambar1: require('@/assets/logo/rumah-sakit.jpg'),
-                gambar2: require('@/assets/logo/mencuci.jpg')
+                logo: require('@/assets/logo/logo.png')
             }
         }
     }
