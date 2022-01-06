@@ -153,22 +153,8 @@
 </section>
 
 <!-- Popular Destination -->
-<section>
-    <div class="container-fluid">
-        <div class="destination">
-      <div class="row">
-        <div class="col">
-          <p v-if="selectedImage"><img class="dest-img" :src="selectedImage" alt="random"></p>
-        </div>
-        <div class="col-4 ml-4 mt-5 pt-3 text-left">
-          <h3 class="text-black font-weight-bold">Destinasi Lainnya </h3>
-          <router-link to="/Destination" class="btn btn-outline-primary text-wrap">Lihat Semua ►</router-link>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    <h1>{{selectedBanner.label}}</h1>
+            <img :src="selectedBanner.img">
 </template>
     
     
@@ -183,19 +169,18 @@ export default {
         card2: require('@/assets/gallery/blog2.png'),
         card3: require('@/assets/gallery/blog3.png')
       },
-      imgRs: [
-        require('@/assets/rumahsakit/bimc-nusa-dua.jpg'),
-        require('@/assets/rumahsakit/bimc-kuta.jpg'),
-        require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'),
-        require('@/assets/rumahsakit/bros.jpg'),
-      ],
-      selectedImage: null
+    banners: [
+        {img: require('@/assets/rumahsakit/rsptn-unud.jpeg'), label: 'unud'},
+        {img: require('@/assets/rumahsakit/rs-sanglah.jpg'), label: 'sanglah'},
+    ],
+    selectedBanner: ''
     }
   },
-  created() {
-    const idx = Math.floor(Math.random() * this.imgRs.length)
-    this.selectedImage = this.imgRs[idx]
-    return
+  created (){
+    const idx = Math.floor(Math.random() * this.banners.length)
+    this.selectedBanner = this.banners[idx]
+
+    console.log(this.selectedBanner)
   }
 }
 
