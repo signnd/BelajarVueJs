@@ -153,8 +153,27 @@
 </section>
 
 <!-- Popular Destination -->
-    <h1>{{selectedBanner.label}}</h1>
-            <img :src="selectedBanner.img">
+<section>
+  <div class="container-fluid">
+    <div class="destination">
+      <div class="row">
+        <div class="col">
+          <img class="dest-img" :src="selectedBanner.img">
+        </div>
+        <div class="col-4 mt-3 pt-3 text-left mr-5">
+          <h2 class="text-black font-weight-bold">{{selectedBanner.label}}</h2>
+          <p class="text-black text-justify">{{selectedBanner.deskripsi}}</p>
+          <br>
+          <h4 class="text-black">Destinasi Lainnya </h4>
+          <router-link to="/Destination" class="btn btn-outline-primary text-wrap">Lihat Semua ►</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+    
 </template>
     
     
@@ -170,8 +189,11 @@ export default {
         card3: require('@/assets/gallery/blog3.png')
       },
     banners: [
-        {img: require('@/assets/rumahsakit/rsptn-unud.jpeg'), label: 'unud'},
-        {img: require('@/assets/rumahsakit/rs-sanglah.jpg'), label: 'sanglah'},
+        {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
+        {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Siloam Kuta', deskripsi: 'Rumah Sakit Kasih Ibu Saba berdiri pada tahun 2016 dibawah naungan Kasih Ibu Hospital Group. Rumah Sakit Kasih Ibu memiliki Visi menjadi Rumah Sakit pilihan utama di Bali, pelayanan yang lengkap dan berkualitas, mengutamakan keselamatan pasien & sentuhan kasih. Dengan Misi meningkatkan manajemen secara profesional, memberi pelayanan yang ramah, mengembangkan SDM yang berkualitas, meningkatkan pelayanan dengan mengutamakan keselamatan pasien, dan menyediakan sarana prasarana yang canggih.'},
+        {img: require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'), label: 'RS Kasih Ibu Saba', deskripsi: 'Rumah Sakit Kasih Ibu Saba berdiri pada tahun 2016 dibawah naungan Kasih Ibu Hospital Group. Rumah Sakit Kasih Ibu memiliki Visi menjadi Rumah Sakit pilihan utama di Bali, pelayanan yang lengkap dan berkualitas, mengutamakan keselamatan pasien & sentuhan kasih. Dengan Misi meningkatkan manajemen secara profesional, memberi pelayanan yang ramah, mengembangkan SDM yang berkualitas, meningkatkan pelayanan dengan mengutamakan keselamatan pasien, dan menyediakan sarana prasarana yang canggih.'},
+        {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Kuta', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
+        {img: require('@/assets/rumahsakit/bros.jpg'), label: 'Rumah Sakit BROS', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
     ],
     selectedBanner: ''
     }
@@ -183,7 +205,6 @@ export default {
     console.log(this.selectedBanner)
   }
 }
-
 </script>
     
 <style lang="css">
@@ -284,8 +305,7 @@ export default {
 .dest-img{
   position:relative;
   min-width: 100%;
-  width: 100%;
-  max-height: 60%;  
+  min-height: 100%;
   background-color: white;
 }
 </style>
