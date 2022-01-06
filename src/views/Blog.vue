@@ -12,6 +12,7 @@
     <div class="container-fluid ml-5 my-5 pt-5 mt-5 align-items-center" style="width: 1000px;">
       <h1 class="">Artikel Kami</h1>
         <div class="card-group">
+         <div class="card"> 
           <div class="card" style="width:auto;">
             <img class="card-img-top" :src="images.card1" alt="Card image 1">
               <div class="card-body">
@@ -24,10 +25,10 @@
                </div>
                 </div>
               </div>
+          </div>
 
 
-
-        <div class="card" style="width:auto;">
+       <div class="card">
           <img class="card-img-top" :src="images.card1" alt="Card image 2">
             <div class="card-body">
              <h5 class="card-title">Artikel Belum Tersedia</h5>
@@ -36,10 +37,11 @@
                   <div class="col">
                    Info Rumah Sakit
                    </div>
+            </div>
+       </div>
 
 
-
-          <div class="card" style="width:auto;">
+       <div class="card">
             <img class="card-img-top" :src="images.card1" alt="Card image 3">
               <div class="card-body">
                 <h5 class="card-title">Artikel Belum Tersedia</h5>
@@ -48,17 +50,20 @@
              <div class="col">
            Info 
           </div>
+          </div>
+       </div>
 
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
              <li class="page-item disabled">
                <a class="page-link" href="#" tabindex="-1">Previous</a>
                  </li>
-                   <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                   <li class="page-item"><a class="page-link" href="Blog">1</a></li>
+                  <li class="page-item"><a class="page-link" href="Blog2">2</a></li>
+                <li class="page-item"><a class="page-link" href="Blog3">3</a></li>
              <li class="page-item">
-           <a class="page-link" href="#">Next</a>
+           <a class="page-link" href="/destination">Next</a>
+           
           </li>
          </ul>
         </nav>
@@ -66,16 +71,15 @@
            </div>
             </div>
              </div>
-               </div>
-                </div>
-               </div>
-              </div>
-          
-           
+             
+               
+      
 
   </section>
 
   </template>
+
+  
 
 <script>
 export default {
@@ -95,3 +99,4 @@ export default {
 <style>
 
 </style>
+
