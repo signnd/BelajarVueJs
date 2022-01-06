@@ -22,8 +22,6 @@
               data-target="#navbarSupportedContent">About</router-link>
              <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">Services</router-link>
-            <router-link to="/Members" class="nav-item nav-link navbar-collapse fs-4 mx-3"
-              data-target="#navbarSupportedContent">Members</router-link>
             <router-link to="/Destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">Destination</router-link>
             <router-link to="/Blog" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
@@ -35,8 +33,6 @@
             <!-- Nav Link Collapsed -->
             <router-link to="/" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Members" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Members</router-link>
             <router-link to="/Contact" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Contact</router-link>
             <router-link to="/About" class="d-none fs-4 mx-2" data-toggle="collapse"
@@ -68,12 +64,12 @@
   <section>
     <div class="footer">
       <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Medical Tourism <br><br>
-        <router-link to="/">Home</router-link> • <router-link to="/Members">Members</router-link> • 
+        <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • 
         <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
       </div>
       <div class="d-none d-sm-block d-md-block d-lg-none">
         <div class="text-center">© 2021 - {{new Date().getFullYear()}} Medical Tourism • 
-          <router-link to="/">Home</router-link> • <router-link to="/Members">Members</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
+          <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
         </div>
       </div>
       <div class="d-none d-lg-block d-xl-block d-xxl-block">
