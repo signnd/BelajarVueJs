@@ -272,7 +272,7 @@ export default {
 
 .f-color{
   padding-block: 1em;
-  color: #6ec3ff;
+  color: black;
   background-color: #6ec3ff;
 }
 
