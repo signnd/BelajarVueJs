@@ -33,7 +33,7 @@
     </div>
   </section>
 
-  <!-- Search Members & Categories Lg -->
+  <!-- Search Destination & Categories Lg -->
   <form class="d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
@@ -58,13 +58,13 @@
         <input class="form-control mr-2" type="search" placeholder="Pencarian">
       </div>
       <div class="col-2">
-        <router-link :to="{name: 'Members'}">
+        <router-link :to="{name: 'Destination'}">
           <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
         </router-link>
       </div>
     </div>
 </form>
-  <!-- Search Members & Categories SM -->
+  <!-- Search Destination & Categories SM -->
 <div class="container d-block d-md-none pt-3">
   <select class="form-control form-control-md">
     <option hidden>Lokasi</option>
@@ -81,7 +81,7 @@
     <option>Apotek</option>
   </select>
   <input class="form-control mb-3" type="search" placeholder="Search">
-  <router-link :to="{name: 'Members'}">
+  <router-link :to="{name: 'Destination'}">
     <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
   </router-link>
 </div>
@@ -111,7 +111,7 @@
             <div class="card-body">
               <h5 class="card-title">Pelayanan profesional</h5>
               <p class="card-text">Ratusan dokter yang berpengalaman di bidangnya.</p>
-              <router-link to="/Members" class="btn d-block btn-outline-primary text-wrap">Cari dokter</router-link>
+              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">Cari dokter</router-link>
             </div>
           </div>
         </div>
@@ -153,23 +153,8 @@
 </section>
 
 <!-- Popular Destination -->
-<section>
-  <div class="destination">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col ">
-          <p v-if="selectedImage"><img style="width:100%" :src="selectedImage" alt="random"></p>
-        </div>
-        <div class="col-5 ml-4 text-left">
-          <br><br>
-          <h3 class="">Member Lainnya </h3>
-          <router-link to="/Members" class="btn btn-outline-primary text-wrap">Lihat Semua ►</router-link>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    <h1>{{selectedBanner.label}}</h1>
+            <img :src="selectedBanner.img">
 </template>
     
     
@@ -184,18 +169,18 @@ export default {
         card2: require('@/assets/gallery/blog2.png'),
         card3: require('@/assets/gallery/blog3.png')
       },
-      imgRs: [
-        require('@/assets/rumahsakit/rs-sanglah.jpg'),
-        require('@/assets/rumahsakit/bros.jpg'),
-        require('@/assets/rumahsakit/rs-siloam-kuta-2.jpg')
-      ],
-      selectedImage: null
+    banners: [
+        {img: require('@/assets/rumahsakit/rsptn-unud.jpeg'), label: 'unud'},
+        {img: require('@/assets/rumahsakit/rs-sanglah.jpg'), label: 'sanglah'},
+    ],
+    selectedBanner: ''
     }
   },
-  created() {
-    const idx = Math.floor(Math.random() * this.imgRs.length)
-    this.selectedImage = this.imgRs[idx]
-    return
+  created (){
+    const idx = Math.floor(Math.random() * this.banners.length)
+    this.selectedBanner = this.banners[idx]
+
+    console.log(this.selectedBanner)
   }
 }
 
@@ -273,7 +258,6 @@ export default {
   font-weight:normal;
 }
 
-
 .service-title {
   font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
   font-weight:bold;
@@ -288,11 +272,20 @@ export default {
 
 .f-color{
   padding-block: 1em;
-  color: #6ec3ff;
+  color: black;
   background-color: #6ec3ff;
 }
 
-.bg-popular{
-  background-color: #c6e7ff;
+.destination{
+  background-color: #eaf6ff;
+}
+
+
+.dest-img{
+  position:relative;
+  min-width: 100%;
+  width: 100%;
+  max-height: 60%;  
+  background-color: white;
 }
 </style>

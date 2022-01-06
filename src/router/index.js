@@ -5,27 +5,26 @@ import {
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
-import Members from '../views/Members.vue'
 import TestApi from '../views/TestApi.vue'
 import Blog from '../views/Blog.vue'
 import Destination from '../views/Destination.vue'
 import Services from '../views/Services.vue'
-import RSUPSanglah from '../views/Members/rsup-sanglah.vue'
-import RSUBM from '../views/Members/rsu-balimandara.vue'
-import RSMBM from '../views/Members/rsm-balimandara.vue'
-import RSPTNUnud from '../views/Members/rsptn-unud.vue'
-import RSMangusadaBadung from '../views/Members/rs-mangusada-badung.vue'
-import RSBIMCNusadua from '../views/Members/rs-bimc-nusadua.vue'
-import RSBIMCKuta from '../views/Members/rs-bimc-kuta.vue'
-import BROS from '../views/Members/bros.vue'
-import RSPrimaMedika from '../views/Members/rs-primamedika.vue'
-import RSKasihIbuDps from '../views/Members/rs-kasihibu-dps.vue'
-import RSKasihIbuSaba from '../views/Members/rs-kasihibu-saba.vue'
-import RSRamata from '../views/Members/rs-ramata.vue'
-import RSBhayangkara from '../views/Members/rs-bhayangkara.vue'
-import KlinikPentaMedika from '../views/Members/klinik-pentamedika.vue'
-import Dental911Clinic from '../views/Members/dental911clinic.vue'
-import Assist211 from '../views/Members/assist211.vue'
+import RSUPSanglah from '../views/Destination/rsup-sanglah.vue'
+import RSUBM from '../views/Destination/rsu-balimandara.vue'
+import RSMBM from '../views/Destination/rsm-balimandara.vue'
+import RSPTNUnud from '../views/Destination/rsptn-unud.vue'
+import RSMangusadaBadung from '../views/Destination/rs-mangusada-badung.vue'
+import RSBIMCNusadua from '../views/Destination/rs-bimc-nusadua.vue'
+import RSBIMCKuta from '../views/Destination/rs-bimc-kuta.vue'
+import BROS from '../views/Destination/bros.vue'
+import RSPrimaMedika from '../views/Destination/rs-primamedika.vue'
+import RSKasihIbuDps from '../views/Destination/rs-kasihibu-dps.vue'
+import RSKasihIbuSaba from '../views/Destination/rs-kasihibu-saba.vue'
+import RSRamata from '../views/Destination/rs-ramata.vue'
+import RSBhayangkara from '../views/Destination/rs-bhayangkara.vue'
+import KlinikPentaMedika from '../views/Destination/klinik-pentamedika.vue'
+import Dental911Clinic from '../views/Destination/dental911clinic.vue'
+import Assist211 from '../views/Destination/assist211.vue'
 
 const routes = 
 [
@@ -43,11 +42,6 @@ const routes =
       path: '/contact',
       name: 'Contact',
       component: Contact
-  },
-    {
-      path: '/members',
-      name: 'Members',
-      component: Members
   },
     {
       path: '/api',
@@ -69,11 +63,11 @@ const routes =
       name: 'services',
       component: Services
     },
-  //   { path: '/members/rsup-sanglah', name: 'members/rsup-sanglah', component: RSUPSanglah },
+  //   { path: '/Destination/rsup-sanglah', name: 'Destination/rsup-sanglah', component: RSUPSanglah },
   // nanti struktur link untuk RS sanglah pake yang kayak di atas
-  { path: '/members/rs-member', name: 'members/rsup-sanglah', component: RSUPSanglah }, //temporary page
-  { path: '/members/rsu-balimandara', name: 'members/rsu-balimandara', component: RSUBM },
-  { path: '/members/rsm-balimandara', name: 'members/rsm-balimandara', component: RSMBM },
+  { path: '/Destination/rs-member', name: 'Destination/rsup-sanglah', component: RSUPSanglah }, //temporary page
+  { path: '/Destination/rsu-balimandara', name: 'Destination/rsu-balimandara', component: RSUBM },
+  { path: '/Destination/rsm-balimandara', name: 'Destination/rsm-balimandara', component: RSMBM },
 
 ]
 
