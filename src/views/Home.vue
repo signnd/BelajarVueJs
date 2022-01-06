@@ -151,23 +151,54 @@
         </div>
       </div>
 </section>
+
+<!-- Popular Destination -->
+<section>
+  <div class="destination">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col ">
+          <p v-if="selectedImage"><img style="width:100%" :src="selectedImage" alt="random"></p>
+        </div>
+        <div class="col-5 ml-4 text-left">
+          <br><br>
+          <h3 class="">Member Lainnya </h3>
+          <router-link to="/Members" class="btn btn-outline-primary text-wrap">Lihat Semua ►</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </template>
     
     
 <script>
 export default {
-    data() {
-        return {
-            images: {
-                cover1: require('@/assets/hero/hero.png'),
-                cover2: require('@/assets/hero/hero2.jpg'),
-                card1: require('@/assets/gallery/blog1.png'),
-                card2: require('@/assets/gallery/blog2.png'),
-                card3: require('@/assets/gallery/blog3.png')
-            }
-        }
+  data() {
+    return {
+      images: {
+        cover1: require('@/assets/hero/hero.png'),
+        cover2: require('@/assets/hero/hero2.jpg'),
+        card1: require('@/assets/gallery/blog1.png'),
+        card2: require('@/assets/gallery/blog2.png'),
+        card3: require('@/assets/gallery/blog3.png')
+      },
+      imgRs: [
+        require('@/assets/rumahsakit/rs-sanglah.jpg'),
+        require('@/assets/rumahsakit/bros.jpg'),
+        require('@/assets/rumahsakit/rs-siloam-kuta-2.jpg')
+      ],
+      selectedImage: null
     }
+  },
+  created() {
+    const idx = Math.floor(Math.random() * this.imgRs.length)
+    this.selectedImage = this.imgRs[idx]
+    return
+  }
 }
+
 </script>
     
 <style lang="css">
@@ -259,5 +290,9 @@ export default {
   padding-block: 1em;
   color: #6ec3ff;
   background-color: #6ec3ff;
+}
+
+.bg-popular{
+  background-color: #c6e7ff;
 }
 </style>
