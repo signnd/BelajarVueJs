@@ -63,6 +63,12 @@
 
   <section>
     <div class="footer">
+      <div class="row justify-content-center">
+      <div class="col-1"><i class="bi bi-facebook"></i></div>
+      <div class="col-1"><i class="bi bi-whatsapp"></i></div>
+      <div class="col-1"><i class="bi bi-instagram"></i></div>
+      </div>
+      <div class="py-2"></div>
       <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Medical Tourism <br><br>
         <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • 
         <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
@@ -137,7 +143,6 @@ $(function(){
 }
 
 #nav {
-  padding: 10px;
 }
 
 #nav a {
@@ -163,9 +168,9 @@ $(function(){
 }
 
 .footer {
-  padding-block: 1em;
-  color: white;
+  color: black;
   background-color: #6ec3ff;
+  padding-block: 2em;
 }
 
 .fsma {

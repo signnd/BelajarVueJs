@@ -187,7 +187,7 @@ export default {
         require('@/assets/rumahsakit/bimc-nusa-dua.jpg'),
         require('@/assets/rumahsakit/bimc-kuta.jpg'),
         require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'),
-        require('@/assets/rumahsakit/BROS.jpg'),
+        require('@/assets/rumahsakit/bros.jpg'),
       ],
       selectedImage: null
     }
@@ -287,7 +287,7 @@ export default {
 
 .f-color{
   padding-block: 1em;
-  color: #6ec3ff;
+  color: black;
   background-color: #6ec3ff;
 }
 
