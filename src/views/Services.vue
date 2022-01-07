@@ -1,0 +1,86 @@
+<template>
+<section>
+    <div class="services" id="services">
+      <div class="container-fluid p-0">
+        <img :src="images.cover1" alt="services" class="w-100">
+        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Services</h1>
+      </div>
+    </div>
+</section>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Services</li>
+  </ol>
+</nav>
+
+    <div class="container">
+        <div class="row d-flex">
+          <div class="col-5">
+          <i class="fas fa-plane-departure"></i>
+              <h5 class="service-title">Medical Tourism Guidelines</h5>
+              <p class="service-text">Panduan untuk seseorang yang membutuhkan perawatan medis.</p>
+          </div>
+          <div class="col-5">
+          <i class="fas fa-notes-medical"></i>
+          <div>
+            <h5 class="service-title">Medical training</h5>
+            <p class="service-text">Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.</p>
+          </div>
+          </div>
+          <div class="col-5">
+          <i class="fas fa-stethoscope"></i>
+              <h5 class="service-title">Medical research</h5>
+              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.</p>
+          </div>
+          <div class="col-5 mb-4">
+          <i class="fas fa-heart"></i>
+              <h5 class="service-title">Medical advisor</h5>
+              <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
+          </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            images: {
+                cover1: require('@/assets/hero/flat.png'),
+                cover2: require('@/assets/gallery/section_bg01.png'),
+                placeholder: require('@/assets/placeholder.png'),  
+            }
+        }
+    }
+}
+</script>
+
+<style>
+.container{
+  position: relative;
+  display:inline-block;
+}
+
+.container-fluid {
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.service-title {
+  font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
+  font-weight:bold;
+  text-align: center;
+}
+
+.service-text {
+  font-family:Calibri, sans-serif;
+  font-weight:normal;
+  text-align: center;
+}
+
+
+</style>
