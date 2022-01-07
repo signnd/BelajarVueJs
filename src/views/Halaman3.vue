@@ -57,8 +57,8 @@
                <a class="page-link" href="/Halaman2" tabindex="-1">Previous</a>
                  </li>
                    <li class="page-item"><a class="page-link" href="Blog">1</a></li>
-                  <li class="page-item"><a class="page-link" href="Blog/Halaman2">2</a></li>
-                <li class="page-item"><a class="page-link" href="Blog/Halaman3">3</a></li>
+                  <li class="page-item"><a class="page-link" href="Halaman2">2</a></li>
+                <li class="page-item"><a class="page-link" href="Halaman3">3</a></li>
              <li class="page-item">
            <a class="page-link" href="/destination">Next</a>
 

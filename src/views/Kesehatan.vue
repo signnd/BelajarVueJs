@@ -3,7 +3,7 @@
   <section>
     <div class="rumahsakit" id="rumahsakit">
       <div class="container-fluid p-0">
-        <img :src="images.cover1" alt="habout" class="w-100">
+        <img :src="images.cover1" alt="habout" class="w-100" >
         <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Kesehatan</h1>
       </div>
     </div>
@@ -19,8 +19,8 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col pt-0 mx-5 my-5 mt-3">
-          <img :src="images.about" alt="logo" style="img-fluid">
+        <div class="col pt-0 mx-5 my-5 mt-3" >
+          <img :src="images.about" style="width: 600px;">
         </div>
         <div class="col pt-5">
           <div class="text-left">

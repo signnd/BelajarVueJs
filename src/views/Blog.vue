@@ -16,9 +16,9 @@
          <div class="card"> 
            <div class="p-3 mb-2 bg-info text-black">
           <div class="card" style="width:auto;">
-            <img class="card-img-top" :src="images.gambar1" alt="Card image 1">
+            <img class="card-img-top"  :src="images.gambar1" alt="Card image 1">
               <div class="card-body">
-                <h5 class="card-title">Kewajiban Rumah Sakit kepada Pasien dan Masyarakat</h5>
+                <router-link class="text-black" to="/Olahraga"><b>Kewajiban Rumah Sakit kepada Pasien dan Masyarakat</b></router-link>
                 <p class="card-text">Rumah  Sakit adalah institusi pelayanan kesehatan yang menyelenggarakan pelayanan kesehatan perorangan secara paripurna    yang menyediakan pelayanan rawat inap, rawat jalan, dan gawat darurat. Pasien adalah setiap orang yang melakukan konsultasi masalah kesehatannya untuk memperoleh pelayanan kesehatan yang  diperlukan, baik secara langsung maupun tidak langsung di Rumah Sakit.  </p>
                   <router-link to="/rumahsakit" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>                
                 <div class="row">
@@ -39,7 +39,7 @@
        <div class="card">
           <img class="card-img-top" :src="images.gambar2" alt="Card image 2">
             <div class="card-body">
-             <h5 class="card-title">Cara Mencuci Tangan Yang Benar</h5>
+             <router-link class="text-black" to="/Olahraga"><b >Cara Mencuci Tangan Yang Benar</b></router-link>
               <p class="card-text">Salah satu perilaku hidup bersih dan sehat (PHBS) yang selalu digaungkan sejak lama untuk menjaga kesehatan dan kebersihan pribadi adalah mencuci tangan. Perilaku ini seharusnya menjadi kebiasaan yang sangat baik, karena selain untuk menjaga kesehatan dan kebersihan, agama juga mengajarkannya.</p>
                   <router-link to="/kesehatan" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>                
                   <div class="col">

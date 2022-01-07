@@ -18,12 +18,12 @@
           <div class="card" style="width:auto;">
             <img class="card-img-top" :src="images.gambar3" alt="Card image 3">
               <div class="card-body">
-                <h5 class="card-title">Artikel Belum Tersedia</h5>
-                <p class="card-text">
-                  <router-link to="/Olahraga" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link> kosong </p>
+                 <router-link class="text-black" to="/Olahraga"><b>Beragam Manfaat Olahraga untuk Kesehatan Fisik dan Mental</b></router-link>
+                <p class="card-text">Ada beragam manfaat olahraga yang bisa Anda peroleh, mulai dari memelihara fungsi organ hingga meningkatkan stamina dan daya tahan tubuh. Tak hanya bermanfaat untuk kesehatan fisik, olahraga juga baik untuk kesehatan mental Anda.
+                  <router-link to="/Olahraga" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link></p>
                 <div class="row">
                 <div class="col">
-                 Info Kesehatan
+                 Info Manfaat Olahraga
                </div>
                 </div>
               </div>
@@ -37,13 +37,13 @@
 
         <div class="card" style="width:auto;">
        <div class="card">
-          <img class="card-img-top" :src="images.card2" alt="Card image 4">
+          <img class="card-img-top" :src="images.gambar4" alt="Card image 4">
             <div class="card-body">
-             <h5 class="card-title">Artikel Belum Tersedia</h5>
-              <p class="card-text">Kosong</p>
+             <router-link class="text-black" to="/Olahraga"><b>5 CARA TETAP PRODUKTIF SAAT BEKERJA DARI RUMAH</b></router-link>
+              <p class="card-text">Sebagai langkah mencegah penyebaran COVID-19, pemerintah mengimbau masyarakat untuk membatasi aktivitas dengan tetap berada di rumah. Imbauan ini mendorong banyak perusahaan menerapkan sistem kerja dari rumah atau work from home.</p>
                   <router-link to="/about" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>                
                   <div class="col">
-                   Info Rumah Sakit
+                   Info Kesehatan
                    </div>
             </div>
        </div>
@@ -58,8 +58,8 @@
                <a class="page-link" href="/Blog" tabindex="-1">Previous</a>
                  </li>
                    <li class="page-item"><a class="page-link" href="Blog">1</a></li>
-                  <li class="page-item"><a class="page-link" href="Blog/Halaman2">2</a></li>
-                <li class="page-item"><a class="page-link" href="Blog/Halaman3">3</a></li>
+                  <li class="page-item"><a class="page-link" href="Halaman2">2</a></li>
+                <li class="page-item"><a class="page-link" href="Halaman3">3</a></li>
              <li class="page-item">
            <a class="page-link" href="/Halaman3">Next</a>
 
@@ -97,7 +97,8 @@ export default {
                 cover2: require('@/assets/gallery/section_bg01.png'),
                 about: require('@/assets/gallery/popular_sub3.png'),
                 logo: require('@/assets/logo/logo.png'),
-                gambar3: require('@/assets/logo/olahraga.jpg')
+                gambar3: require('@/assets/logo/olahraga.jpg'),
+                gambar4: require('@/assets/logo/kesehatanrumah.jpg')
             }
         }
     }
