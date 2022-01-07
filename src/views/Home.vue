@@ -87,6 +87,7 @@
 </div>
 
   <section>
+    <h2 class="pt-5 font-weight-bold">Keunggulan Kami</h2>
     <div class="container d-flex">
       <div class="container my-5 align-items-center" style="width: 900px;">
         <div class="card-group">
@@ -152,28 +153,298 @@
       </div>
 </section>
 
+
+
 <!-- Popular Destination -->
+<h2 class="font-weight-bold ">Destinasi Populer</h2>
+<div id="stripes" class="d-none d-lg-block">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 <section>
-  <div class="container-fluid">
+  <div class="container-fluid d-none d-lg-block">
     <div class="destination">
       <div class="row">
         <div class="col">
           <img class="dest-img" :src="selectedBanner.img">
         </div>
-        <div class="col-4 mt-3 pt-3 text-left mr-5">
-          <h2 class="text-black font-weight-bold">{{selectedBanner.label}}</h2>
-          <p class="text-black text-justify">{{selectedBanner.deskripsi}}</p>
+        <div class="col-4 mt-3 pt-3 text-left mr-5 destination">
+          <h2 class="text-black font-weight-bold mx-3 dest-text">{{selectedBanner.label}}</h2>
+          <p class="text-black text-justify mx-3 dest-text">{{selectedBanner.deskripsi}}</p>
           <br>
-          <h4 class="text-black">Destinasi Lainnya </h4>
-          <router-link to="/Destination" class="btn btn-outline-primary text-wrap">Lihat Semua ►</router-link>
+          <h4 class="text-black ml-3">Destinasi Lainnya </h4>
+          <router-link to="/Destination" class="btn btn-outline-primary text-wrap ml-3 dest-text">Lihat Semua ►</router-link>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<section>
+  <div class="d-block d-lg-none">
+  <div class="container-fluid">
+    <img class="dest-img" :src="selectedBanner.img">
+      </div>
+    <div class="container destination">
+      <h2 class="text-black font-weight-bold dest-text pt-4">{{selectedBanner.label}}</h2>
+      <p class="text-black text-justify dest-text">{{selectedBanner.deskripsi}}</p>
+      <br>
+      <h4 class="text-black">Destinasi Lainnya </h4>
+      <router-link to="/Destination" class="btn btn-outline-primary text-wrap dest-text">Lihat Semua ►
+      </router-link>
+      <div class="pb-2"></div>
+    </div>
+  </div>
+</section>
+<div class="d-none d-sm-block">
+<br><br><br><br><br><br>
+</div>
+
+<div class="d-block d-sm-none">
+<br><br>
+</div>
+
+
+<section>
+  <h2 class="font-weight-bold">Our Team</h2>
+<!-- Carousel wrapper -->
+<div
+  id="carouselMultiItemExample"
+  class="carousel slide carousel-dark text-center"
+  data-ride="carousel"
+>
+  <!-- Controls -->
+  <div class="d-flex justify-content-center mb-4">
+    <button
+      class="carousel-control-prev position-relative"
+      type="button"
+      data-target="#carouselMultiItemExample"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next position-relative"
+      type="button"
+      data-target="#carouselMultiItemExample"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Inner -->
+  <div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <img
+                :src="images.team1"
+                class="card-img-top"
+                alt="Waterfall"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dr. Ida Ayu Oka Purnamawati</h5>
+                <p class="card-text">
+                  Sekertaris
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="card">
+              <img
+                :src="images.team2"
+                class="card-img-top"
+                alt="Sunset Over the Sea"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dr. I Gede Wiryana Patra Jaya</h5>
+                <p class="card-text">
+                  Ketua
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="card">
+              <img
+                :src="images.team3"
+                class="card-img-top"
+                alt="Sunset over the Sea"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Putu Deddy Suhartawan</h5>
+                <p class="card-text">
+                  Sekertaris 2
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12">
+            <div class="card">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"
+                class="card-img-top"
+                alt="Fissure in Sandstone"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dr. Tony Sukentro SpB</h5>
+                <p class="card-text">
+                  Bendahara
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="card">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/185.webp"
+                class="card-img-top"
+                alt="Storm Clouds"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dr. dr. Reza Yuridian Purwoko, SpKK RSA</h5>
+                <p class="card-text">
+                  Sekertaris
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="card">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/186.webp"
+                class="card-img-top"
+                alt="Hot Air Balloons"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dr. Haekal Yassier Anshari, M. Biomed (AAM)</h5>
+                <p class="card-text">
+                  Sie Marketing
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <div class="card">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/187.webp"
+                class="card-img-top"
+                alt="Peaks Against the Starry Sky"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dr. Vito A. Damay, SpJP(K), MKes, FIHA, FICA, FAsCC</h5>
+                <p class="card-text">
+                  Sie Publikasi
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+            <div class="card">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/188.webp"
+                class="card-img-top"
+                alt="Bridge Over Water"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dr. Andry Edwin Dahlan, M.Par</h5>
+                <p class="card-text">
+                  Sie Inovasi dan Teknologi
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+            <div class="card">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/189.webp"
+                class="card-img-top"
+                alt="Purbeck Heritage Coast"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ogy Winenriandhika</h5>
+                <p class="card-text">
+                  Wakil Ketua 2
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Inner -->
+</div>
+<!-- Carousel wrapper -->
+  
+</section>
+<br><br><br>
+
+
+<!-- Video -->
+<div class="container-fluid d-none d-md-block">
+  <div class="background-video">
+    <div class="row">
+      <div class="col-4 center-block text-center">
+        <h2 class="ml-4 pt-5 mt-3 text-white font-weight-bold ">Galeri Video</h2>
+        <p class="ml-4 h4 text-white">Video Member dari BMTA</p>
+      </div>
+      <div class="col">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/PfW9niHeexI" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="background-video-sm text-center d-block d-md-none">
+    <h2 class="text-white font-weight-bold ">Galeri Video</h2>
+    <p class="h4 text-white">Video Member dari BMTA</p>
+  </div>
+  <div class="embed-responsive embed-responsive-16by9 d-block d-md-none">
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/PfW9niHeexI" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
 <br>
 <br>
-    
 </template>
     
     
@@ -186,7 +457,10 @@ export default {
         cover2: require('@/assets/hero/hero2.jpg'),
         card1: require('@/assets/gallery/blog1.png'),
         card2: require('@/assets/gallery/blog2.png'),
-        card3: require('@/assets/gallery/blog3.png')
+        card3: require('@/assets/gallery/blog3.png'),
+        team1: require('@/assets/Team/dr ida ayu oka purnamawati.jpg'),
+        team2: require('@/assets/Team/Dr.i gede wiryana patra jaya.jpg'),
+        team3: require('@/assets/Team/PUTU-DEDDY-SUHARTAWAN-B.BUS-MKTG.jpg')
       },
     banners: [
         {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
@@ -203,6 +477,13 @@ export default {
     this.selectedBanner = this.banners[idx]
 
     console.log(this.selectedBanner)
+  },
+  computed: {
+    heroImage() {
+      return {
+        backgroundImage: `url${require('../assets/gallery/section_bg02.png')}`
+      };
+    }
   }
 }
 </script>
@@ -301,11 +582,179 @@ export default {
   background-color: #eaf6ff;
 }
 
-
 .dest-img{
   position:relative;
   min-width: 100%;
   min-height: 100%;
-  background-color: white;
+}
+
+.dest-text{
+  position:relative;
+  min-width: 100%;
+  width: 100%;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 48em) {
+  .col {
+    flex: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+#stripes{
+width:100%;
+height: 100%;
+overflow: hidden;
+transform-origin: 100;
+transform: skewY(-5deg);
+background: -webkit-linear-gradient(300deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%);
+background: linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%);
+}
+
+#stripes, #stripes span{
+  position: absolute;
+}
+
+#stripes span{
+  height: 40px;
+}
+
+#stripes :nth-child(1){
+  width: 50%;
+  left: 50%;
+  top:40px;
+  background:#4c29ff;
+}
+
+#stripes :nth-child(2){
+  width: 14%;
+  right: 0;
+  bottom:40px;
+  background: #2be7ff;
+}
+
+#stripes :nth-child(3){
+  width: 25%;
+  bottom: 0;
+  right: 0;
+  background: #a1ffc8;
+}
+
+@media (min-width:670px){
+    #stripes{
+    height: 80%;
+  }
+
+  #stripes span{
+    height:150px;
+  }
+  #stripes :nth-child(1){
+    top: 0;
+  }
+  #stripes :nth-child(2){
+    width: 16.66667%;
+    top: 300px;
+    bottom: auto;
+    background: #0dcfff;
+  }
+  #stripes :nth-child(3){
+    width: 33.33333%;
+    right: auto;
+    background: #11bdff;
+  }
+}
+@media only screen and (max-width: 1600px){
+    #stripes{
+    height: 75%;
+  }
+
+  #stripes :nth-child(1){
+    top: 0;
+  }
+  #stripes :nth-child(2){
+    width: 16.66667%;
+    top: 300px;
+    bottom: auto;
+    background: #0dcfff;
+  }
+  #stripes :nth-child(3){
+    width: 33.33333%;
+    right: auto;
+    background: #11bdff;
+  }
+}
+
+@media only screen and (max-width: 1450px){
+    #stripes{
+    height: 65%;
+  }
+
+  #stripes :nth-child(1){
+    top: 0;
+  }
+  #stripes :nth-child(2){
+    width: 16.66667%;
+    top: 300px;
+    bottom: auto;
+    background: #0dcfff;
+  }
+  #stripes :nth-child(3){
+    width: 33.33333%;
+    right: auto;
+    background: #11bdff;
+  }
+}
+
+
+@media only screen and (max-width: 1300px){
+    #stripes{
+    height: 55%;
+  }
+
+  #stripes :nth-child(1){
+    top: 0;
+  }
+  #stripes :nth-child(2){
+    width: 16.66667%;
+    top: 300px;
+    bottom: auto;
+    background: #0dcfff;
+  }
+  #stripes :nth-child(3){
+    width: 33.33333%;
+    right: auto;
+    background: #11bdff;
+  }
+}
+
+@media only screen and (max-width: 1100px){
+    #stripes{
+    height: 50%;
+  }
+
+  #stripes :nth-child(1){
+    top: 0;
+  }
+  #stripes :nth-child(2){
+    width: 16.66667%;
+    top: 300px;
+    bottom: auto;
+    background: #0dcfff;
+  }
+  #stripes :nth-child(3){
+    width: 33.33333%;
+    right: auto;
+    background: #11bdff;
+  }
+}
+
+.background-video{
+  background: url('../assets/gallery/section_bg02.png');
+}
+
+.background-video-sm{
+  padding-block: 1em;
+  background: url('../assets/gallery/section_bg02.png');
 }
 </style>

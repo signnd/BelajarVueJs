@@ -8,7 +8,7 @@
     </div>
 </section>
 
-<nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Services</li>
@@ -80,6 +80,11 @@ export default {
   font-family:Calibri, sans-serif;
   font-weight:normal;
   text-align: center;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    background-color: white;
 }
 
 
