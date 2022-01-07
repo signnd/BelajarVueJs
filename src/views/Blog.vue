@@ -6,14 +6,22 @@
         <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Our Blogs</h1>
       </div>
     </div>
-    <div class="p-3 mb-2 bg-info text-black">
+
+    <nav aria-label="breadcrumb" class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+  </ol>
+</nav>
+    
+    <div class="p-3 mb-2 text-black">
       <div class="container">
         <div class="container-fluid d-flex">
           <div class="container-fluid ml-5 mx-auto my-5 pt-5 mt-5 align-items-center" style="width: 700px;">
             <h1 class="text-center">Artikel Kami</h1>
             <div class="card-group">
               <div class="card">
-                <div class="p-3 mb-2 bg-info text-black">
+                <div class="p-3 mb-2 text-black">
                   <div class="card" style="width:auto;">
                     <img class="card-img-top" :src="images.gambar1" alt="Card image 1">
                     <div class="card-body">
