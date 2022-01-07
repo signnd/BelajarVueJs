@@ -18,29 +18,31 @@
             <!-- Nav Link Fullscreen -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
               data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Members" class="nav-item nav-link navbar-collapse fs-4 mx-3"
-              data-target="#navbarSupportedContent">Members</router-link>
+            <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+              data-target="#navbarSupportedContent">About</router-link>
+             <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+              data-target="#navbarSupportedContent">Services</router-link>
+            <router-link to="/Destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+              data-target="#navbarSupportedContent">Destination</router-link>
+            <router-link to="/Blog" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+              data-target="#navbarSupportedContent">Blog</router-link>
             <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
               data-target="#navbarSupportedContent">Contact</router-link>
-            <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" data-target="#navbarSupportedContent">
-              About</router-link>
+              
 
             <!-- Nav Link Collapsed -->
             <router-link to="/" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Members" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Members</router-link>
             <router-link to="/Contact" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Contact</router-link>
             <router-link to="/About" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">About</router-link>
-
-            <!-- Search bar -->
-            <form class="form-inline my-2 my-lg-1">
-              <input class="d-lg-none d-xl-block form-control mr-sm-2 mx-2" type="search" placeholder="Search">
-              <input class="d-none d-lg-block d-xl-none form-control mr-sm-2" type="search" placeholder="Enter to Search">
-              <button class="d-lg-none d-xl-block btn btn-outline-primary my-2 mx-2" type="submit">Search</button>
-            </form>
+            <router-link to="/Blog" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Blog</router-link>
+            <router-link to="/Destination" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Destination</router-link>
+            <router-link to="/Services" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Services</router-link>
           </div>
         </div>
       </div>
@@ -50,27 +52,34 @@
   <router-view />
 
   <!-- Top Page Button -->
-  <go-top
-    :right="10"
-    :bottom="10"
-    bg-color="#66f"
-    box-shadow="0 0 0 transparent">
-  </go-top>
+  <section>
+  <transition>
+    <div id="pagetop" v-show="scY > 300" @click="toTop">
+      <button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-chevron-double-up px-1"></i></button>
+    </div>
+  </transition>
+  </section>
 
 
   <section>
     <div class="footer">
-      <div class="d-block d-sm-none">© 2021 - 2022 Medical Tourism<br><br>
-        <router-link to="/">Home</router-link> • <router-link to="/Members">Members</router-link> • 
+        <div class="d-flex justify-content-center">
+          <div class="col-1"><a class="text-dark" href="https://facebook.com"><i class="bi bi-facebook"></i></a></div>
+          <div class="col-1"><a class="text-dark" href="https://whatsapp.com"><i class="bi bi-whatsapp"></i></a></div>
+          <div class="col-1"><a class="text-dark" href="https://instagram.com"><i class="bi bi-instagram"></i></a></div>
+        </div>
+      <div class="py-2"></div>
+      <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Medical Tourism <br><br>
+        <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • 
         <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
       </div>
       <div class="d-none d-sm-block d-md-block d-lg-none">
-        <div class="text-center">© 2021 - 2022 Medical Tourism • 
-          <router-link to="/">Home</router-link> • <router-link to="/Members">Members</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Medical Tourism <br>
+          <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
         </div>
       </div>
       <div class="d-none d-lg-block d-xl-block d-xxl-block">
-        <div class="text-center">© 2021 - 2022 Medical Tourism</div>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Medical Tourism</div>
       </div>
     </div>
   </section>
@@ -83,11 +92,29 @@ export default {
         return {
             images: {
                 logo: require('@/assets/logo/logo-real-a.jpeg')
-            }
+            },
+            scTimer: 0,
+            scY: 0,
         }
     },
-    components: {
-      GoTop
+    mounted() {
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+      handleScroll: function () {
+        if (this.scTimer) return;
+        this.scTimer = setTimeout(() => {
+          this.scY = window.scrollY;
+          clearTimeout(this.scTimer);
+          this.scTimer = 0;
+        }, 20);
+      },
+      toTop: function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
     }
 }
 
@@ -109,8 +136,10 @@ $(function(){
   color: #2c3e50;
 }
 
-#nav {
-  padding: 10px;
+#pagetop {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
 }
 
 #nav a {
@@ -132,13 +161,13 @@ $(function(){
 }
 
 .container {
-  color: white;
+  color:white;
 }
 
 .footer {
-  padding-block: 1em;
-  color: white;
+  color: black;
   background-color: #6ec3ff;
+  padding-block: 2em;
 }
 
 .fsma {
