@@ -14,6 +14,7 @@
   </ol>
 </nav>
 
+
 <!-- Search Destination & Categories Lg -->
   <form class="d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
@@ -80,9 +81,21 @@
           <div class="card-body text-center">
             <h5 class="card-title">RSUP Sanglah</h5>
             <p class="card-text">Deskripsi</p>
-              <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap gap-2">Detail</router-link>
-              <div class="pt-2"></div>
-              <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
+            </router-link>
+            <div class="py-1"></div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <button class="btn w-100 btn-primary" data-toggle="modal"
+                    data-target="#exampleModalCenter">Reservasi</button>
+                </div>
+                <div class="col">
+                  <button class="btn w-100 btn-primary" data-toggle="modal"
+                    data-target="#exampleModalCenter">Jadwal</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -90,9 +103,19 @@
           <div class="card-body text-center">
             <h5 class="card-title">RSU Bali Mandara</h5>
             <p class="card-text">Deskripsi</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -100,15 +123,25 @@
           <div class="card-body text-center">
             <h5 class="card-title">RS Mata Bali Mandara</h5>
             <p class="card-text">Deskripsi</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+  </section>
 
 <section>
   <div class="container d-flex">
@@ -121,7 +154,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -131,7 +173,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -141,7 +192,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -160,7 +220,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -170,7 +239,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -180,7 +258,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -199,7 +286,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -209,7 +305,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -219,7 +324,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -238,7 +352,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -248,7 +371,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -258,7 +390,16 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -276,22 +417,22 @@
             <p class="card-text">Deskripsi</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+              <div class="col">
+                <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Jadwal</button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.assist" alt="Card image 1">
-          <div class="card-body text-center">
-            <h5 class="card-title">Assist 221</h5>
-            <p class="card-text">Deskripsi</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
-            <div class="pt-2"></div>
-            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Reservasi</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </section>
 
   <!-- Modal -->
@@ -410,5 +551,10 @@ export default {
 
 .logo-download{
  width: 100%;
+}
+
+.nopadding{
+  padding: 0;
+  margin: 0;
 }
 </style>
