@@ -8,8 +8,6 @@ import Contact from '../views/Contact.vue'
 import TestApi from '../views/TestApi.vue'
 import Blogkw1 from '../views/Blogkw1.vue'
 import Blog from '../views/Blog.vue'
-import Halaman2 from '../views/Halaman2.vue'
-import Halaman3 from '../views/Halaman3.vue'
 import Rumahsakit from '../views/Rumahsakit.vue'
 import Destination from '../views/Destination.vue'
 import Services from '../views/Services.vue'
@@ -68,16 +66,6 @@ const routes =
       path: '/services',
       name: 'services',
       component: Services
-    },
-    {
-      path: '/halaman2',
-      name: 'halaman2',
-      component: Halaman2
-    },
-    {
-      path: '/halaman3',
-      name: 'halaman3',
-      component: Halaman3
     },
     {
       path: '/rumahsakit',
