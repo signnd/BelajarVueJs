@@ -6,19 +6,20 @@
         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
         <li data-target="#slideshow" data-slide-to="1"></li>
       </ol>
+      <br>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
           <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 1</h1>
-              <p style="font-size:2vw;">Kami adalah website medis</p>
+              <h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1>
+              <p calss="text-justify" style="font-size:2vw;">Berwisata medis bersama kami</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
           <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 2</h1>
-              <p style="font-size:2vw;">Berwisata medis bersama kami</p>
+              <h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1>
+              <p class="" style="font-size:2vw;">Berwisata medis bersama kami</p>
           </div>
         </div>
       </div>
@@ -475,8 +476,8 @@ export default {
 
       },
     banners: [
-        {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
-        {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Siloam Kuta', deskripsi: 'Rumah Sakit Kasih Ibu Saba berdiri pada tahun 2016 dibawah naungan Kasih Ibu Hospital Group. Rumah Sakit Kasih Ibu memiliki Visi menjadi Rumah Sakit pilihan utama di Bali, pelayanan yang lengkap dan berkualitas, mengutamakan keselamatan pasien & sentuhan kasih. Dengan Misi meningkatkan manajemen secara profesional, memberi pelayanan yang ramah, mengembangkan SDM yang berkualitas, meningkatkan pelayanan dengan mengutamakan keselamatan pasien, dan menyediakan sarana prasarana yang canggih.'},
+        {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Siloam Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
+        {img: require('@/assets/rumahsakit/rs-siloam-kuta.jpg'), label: 'BIMC Siloam Kuta', deskripsi: 'Rumah Sakit Bali International Medical Centre (BIMC) Siloam Kuta adalah pusat pelayanan medis dan gawat darurat 24 jam yang berstandar internasional. Lokasinya yang strategis di daerah Kuta menjadikannya sebagai pusat pelayanan kesehatan pilihan yang mudah diakses baik oleh penduduk setempat maupun para wisatawan.'},
         {img: require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'), label: 'RS Kasih Ibu Saba', deskripsi: 'Rumah Sakit Kasih Ibu Saba berdiri pada tahun 2016 dibawah naungan Kasih Ibu Hospital Group. Rumah Sakit Kasih Ibu memiliki Visi menjadi Rumah Sakit pilihan utama di Bali, pelayanan yang lengkap dan berkualitas, mengutamakan keselamatan pasien & sentuhan kasih. Dengan Misi meningkatkan manajemen secara profesional, memberi pelayanan yang ramah, mengembangkan SDM yang berkualitas, meningkatkan pelayanan dengan mengutamakan keselamatan pasien, dan menyediakan sarana prasarana yang canggih.'},
         {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Kuta', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
         {img: require('@/assets/rumahsakit/bros.jpg'), label: 'Rumah Sakit BROS', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
@@ -537,12 +538,36 @@ export default {
 
 .carousel-caption {
   padding-inline-end: 15rem;
-  width: 500px;
+  width: 700px !important;
   left: 15%;
   top: 50% !important;
   transform: translateY(-60%);
   text-align: left;
   bottom: initial;
+}
+
+@media only screen and (max-width: 1000px){
+  .carousel-caption {
+    padding-inline-end: 15rem;
+    width: 500px !important;
+    left: 15%;
+    top: 50% !important;
+    transform: translateY(-60%);
+    text-align: left;
+    bottom: initial;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .carousel-caption {
+    padding-inline-end: 15rem;
+    width: 390px !important;
+    left: 15%;
+    top: 50% !important;
+    transform: translateY(-60%);
+    text-align: left;
+    bottom: initial;
+  }
 }
 
 .carousel .carousel-indicators li {
