@@ -188,20 +188,28 @@
   <div class="container-fluid">
     <img class="dest-img" :src="selectedBanner.img">
       </div>
-    <div class="container">
+    <div class="container destination">
       <h2 class="text-black font-weight-bold dest-text pt-4">{{selectedBanner.label}}</h2>
       <p class="text-black text-justify dest-text">{{selectedBanner.deskripsi}}</p>
       <br>
       <h4 class="text-black">Destinasi Lainnya </h4>
       <router-link to="/Destination" class="btn btn-outline-primary text-wrap dest-text">Lihat Semua ►
       </router-link>
+      <div class="pb-2"></div>
     </div>
   </div>
 </section>
+<div class="d-none d-sm-block">
 <br><br><br><br><br><br>
+</div>
+
+<div class="d-block d-sm-none">
+<br><br>
+</div>
+
 
 <section>
-  <h2>Our Team</h2>
+  <h2 class="font-weight-bold">Our Team</h2>
 <!-- Carousel wrapper -->
 <div
   id="carouselMultiItemExample"
@@ -217,12 +225,28 @@
           <div class="col-lg-4">
             <div class="card">
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp"
+                :src="images.team1"
                 class="card-img-top"
                 alt="Waterfall"
               />
               <div class="card-body">
-                <h5 class="card-title">DR.Dr. Taufik Jasmaan. SpOG</h5>
+                <h5 class="card-title">Dr. Ida Ayu Oka Purnamawati</h5>
+                <p class="card-text">
+                  Sekertaris
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="card">
+              <img
+                :src="images.team2"
+                class="card-img-top"
+                alt="Sunset Over the Sea"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dr. I Gede Wiryana Patra Jaya</h5>
                 <p class="card-text">
                   Ketua
                 </p>
@@ -233,30 +257,14 @@
           <div class="col-lg-4 d-none d-lg-block">
             <div class="card">
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
-                class="card-img-top"
-                alt="Sunset Over the Sea"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Zicky Yombana, SpS</h5>
-                <p class="card-text">
-                  Wakil Ketua
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 d-none d-lg-block">
-            <div class="card">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/183.webp"
+                :src="images.team3"
                 class="card-img-top"
                 alt="Sunset over the Sea"
               />
               <div class="card-body">
-                <h5 class="card-title">Nurhadi Yudiyantho, S.E.,Ak</h5>
+                <h5 class="card-title">Putu Deddy Suhartawan</h5>
                 <p class="card-text">
-                  Wakil Ketua 2
+                  Sekertaris 2
                 </p>
               </div>
             </div>
@@ -464,6 +472,7 @@ export default {
         team2: require('@/assets/Team/Dr.i gede wiryana patra jaya.jpg'),
         team3: require('@/assets/Team/PUTU-DEDDY-SUHARTAWAN-B.BUS-MKTG.jpg'),
         placeholder: require('@/assets/placeholder.png')
+
       },
     banners: [
         {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},

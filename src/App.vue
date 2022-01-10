@@ -43,6 +43,16 @@
               data-target="#navbarSupportedContent">Destination</router-link>
             <router-link to="/Services" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Services</router-link>
+            <router-link to="/Halaman2" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Halaman2</router-link>
+            <router-link to="/Halaman3" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Halaman3</router-link>
+            <router-link to="/Rumahsakit" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Rumahsakit</router-link>
+            <router-link to="/Kesehatan" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Kesehatan</router-link>
+            <router-link to="/Olahraga" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Olahraga</router-link>
           </div>
         </div>
       </div>
@@ -69,17 +79,17 @@
           <div class="col-1"><a class="text-dark" href="https://instagram.com"><i class="bi bi-instagram"></i></a></div>
         </div>
       <div class="py-2"></div>
-      <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Medical Tourism <br><br>
+      <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}}Bali Medical Tourism Association<br><br>
         <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • 
         <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
       </div>
       <div class="d-none d-sm-block d-md-block d-lg-none">
-        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Medical Tourism <br>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}}Bali Medical Tourism Association<br>
           <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
         </div>
       </div>
       <div class="d-none d-lg-block d-xl-block d-xxl-block">
-        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Medical Tourism</div>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Bali Medical Tourism Association</div>
       </div>
     </div>
   </section>
