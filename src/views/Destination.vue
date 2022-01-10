@@ -2,8 +2,8 @@
 <section>
     <div class="destination" id="destination">
       <div class="container-fluid p-1">
-        <img :src="images.cover1" alt="habout" class="w-100">
-        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">BMTA Destination</h1>
+        <img :src="images.cover1" alt="habout" class="w-100 pt-5">
+        <h1 class="mt-5 centered text-black style fw-bold pt-3" style="font-size:3vw;">BMTA Destination</h1>
       </div>
     </div>
 </section>
@@ -88,12 +88,12 @@
               <div class="row">
                 <div class="col">
                   <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#exampleModalCenter">Reservasi</button>
+                    data-target="#Reservasi">Reservasi</button>
                 </div>
                 <div class="py-1 d-block d-sm-block d-md-none"></div>
                 <div class="col">
                   <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#exampleModalCenter">Jadwal</button>
+                    data-target="#Jadwal">Jadwal</button>
                 </div>
               </div>
             </div>
@@ -110,12 +110,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -131,12 +131,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -160,12 +160,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -180,12 +180,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -200,12 +200,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -229,12 +229,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -249,12 +249,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -269,12 +269,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -298,12 +298,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -318,12 +318,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -338,12 +338,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -367,12 +367,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -387,12 +387,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -407,12 +407,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">#Jadwal</button>
               </div>
             </div>
           </div>
@@ -435,12 +435,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
@@ -456,22 +456,24 @@
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#exampleModalCenter">Reservasi</button>
+                  data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Jadwal</button>
+                  data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
           </div>
-        </div>
+         </div>
       </div>
     </div>
   </div>
 </section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+<!-- Modal Reservasi -->
+<section>
+  <div class="modal fade" id="Reservasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -484,7 +486,8 @@
         <img :src="images.speedid" alt="speedid" class="speedid-size pt-3">
         <div class="modal-body">
           <h4 class="font-weight-bold">
-            Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari rumah sakit "Rumah Sakit Ini" pada fitur SpeedQ.
+            Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari rumah sakit "Rumah Sakit Ini"
+            pada fitur SpeedQ.
           </h4>
           <br>
           <h5 class="text-left">Belum Install?</h5>
@@ -514,8 +517,55 @@
       </div>
     </div>
   </div>
+</section>
 
-  
+<!-- Modal Jadwal -->
+<section>
+  <div class="modal fade" id="Jadwal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Jadwal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <img :src="images.speedid" alt="speedid" class="speedid-size pt-3">
+        <div class="modal-body">
+          <h4 class="font-weight-bold">
+            Mohon maaf, jadwal belum tersedia.
+          </h4>
+          <hr>
+          <br>
+          <h5 class="text-left">Belum Install SpeedID?</h5>
+          <ol class="text-left">
+            <li>Download SpeedID</li>
+            <li>Klik SpeedQ</li>
+            <li>Cari Lokasi yang Anda Inginkan</li>
+            <li>Tambahkan "Rumah Sakit Ini" ke Favorite (Klik ★)</li>
+            <li>Pilih Dokter dan Hari Layanan</li>
+            <li>Tiket Anda di My-Ticket</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <div class="containe">
+            <div class="row">
+              <div class="col">
+                <a href="https://play.google.com/store/apps/details?id=com.bamboomedia.speedid&hl=in&gl=US"
+                  target="_blank"><img :src="images.playstore" alt="playstore" class="logo-download"></a>
+              </div>
+              <div class="col">
+                <a href="https://apps.apple.com/id/app/speedid/id1439413446" target="_blank"><img :src="images.apple"
+                    alt="apple" class="logo-download"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 </template>
@@ -546,7 +596,7 @@ export default {
                 assist: require('@/assets/rumahsakit/assist-221.jpg'),
                 apple: require('@/assets/modal/apple.png'), 
                 playstore: require('@/assets/modal/playstore.png'), 
-                speedid: require('@/assets/modal/SpeedID.png')            
+                speedid: require('@/assets/modal/SpeedID.png')           
             }
         }
     }
@@ -591,5 +641,11 @@ export default {
 .nopadding{
   padding: 0;
   margin: 0;
+}
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 </style>
