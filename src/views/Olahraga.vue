@@ -15,6 +15,10 @@
     <li class="breadcrumb-item active" aria-current="page">Olahraga</li>
   </ol>
   
+<div class="pr-5 text-right">
+            <a href="https://www.facebook.com/" class="get-qoute"><i class="fa fa-share"></i>share</a>
+        </div>
+
 </nav>
   <section>
     <div class="container">
