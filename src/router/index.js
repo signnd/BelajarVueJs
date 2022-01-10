@@ -6,9 +6,8 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import TestApi from '../views/TestApi.vue'
+import Blogkw1 from '../views/Blogkw1.vue'
 import Blog from '../views/Blog.vue'
-import Halaman2 from '../views/Halaman2.vue'
-import Halaman3 from '../views/Halaman3.vue'
 import Rumahsakit from '../views/Rumahsakit.vue'
 import Destination from '../views/Destination.vue'
 import Services from '../views/Services.vue'
@@ -69,16 +68,6 @@ const routes =
       component: Services
     },
     {
-      path: '/halaman2',
-      name: 'halaman2',
-      component: Halaman2
-    },
-    {
-      path: '/halaman3',
-      name: 'halaman3',
-      component: Halaman3
-    },
-    {
       path: '/rumahsakit',
       name: 'rumahsakit',
       component: Rumahsakit
@@ -92,6 +81,11 @@ const routes =
       path: '/olahraga',
       name: 'olahraga',
       component: Olahraga
+    },
+    {
+      path: '/blogkw1',
+      name: 'blogkw1',
+      component: Blogkw1
     },
   //   { path: '/Destination/rsup-sanglah', name: 'Destination/rsup-sanglah', component: RSUPSanglah },
   // nanti struktur link untuk RS sanglah pake yang kayak di atas

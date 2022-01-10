@@ -6,19 +6,20 @@
         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
         <li data-target="#slideshow" data-slide-to="1"></li>
       </ol>
+      <br>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
           <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 1</h1>
-              <p style="font-size:2vw;">Kami adalah website medis</p>
+              <h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1>
+              <p calss="text-justify" style="font-size:2vw;">Berwisata medis bersama kami</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
           <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 2</h1>
-              <p style="font-size:2vw;">Berwisata medis bersama kami</p>
+              <h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1>
+              <p class="" style="font-size:2vw;">Berwisata medis bersama kami</p>
           </div>
         </div>
       </div>
@@ -217,7 +218,7 @@
   data-ride="carousel"
 >
   <!-- Inner -->
-  <div class="carousel-inner py-4">
+  <div class="carousel-inner">
     <!-- Single item -->
     <div class="carousel-item active">
       <div class="container">
@@ -238,7 +239,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4">
             <div class="card">
               <img
                 :src="images.team2"
@@ -254,7 +255,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4">
             <div class="card">
               <img
                 :src="images.team3"
@@ -293,7 +294,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4">
             <div class="card">
               <img
                 :src="images.placeholder"
@@ -301,7 +302,7 @@
                 alt="Storm Clouds"
               />
               <div class="card-body">
-                <h5 class="card-title">Dr. dr. Reza Yuridian Purwoko, SpKK RSA</h5>
+                <h5 class="card-title">Dr. Reza Yuridian Purwok</h5>
                 <p class="card-text">
                   Sekertaris
                 </p>
@@ -309,7 +310,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4">
             <div class="card">
               <img
                 :src="images.placeholder"
@@ -317,7 +318,7 @@
                 alt="Hot Air Balloons"
               />
               <div class="card-body">
-                <h5 class="card-title">Dr. Haekal Yassier Anshari, M. Biomed (AAM)</h5>
+                <h5 class="card-title">Dr. Haekal Yassier Anshari</h5>
                 <p class="card-text">
                   Sie Marketing
                 </p>
@@ -340,7 +341,7 @@
                 alt="Peaks Against the Starry Sky"
               />
               <div class="card-body">
-                <h5 class="card-title">Dr. Vito A. Damay, SpJP(K), MKes, FIHA, FICA, FAsCC</h5>
+                <h5 class="card-title">Dr. Vito A. Damay, SpJP(K)</h5>
                 <p class="card-text">
                   Sie Publikasi
                 </p>
@@ -348,7 +349,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+          <div class="col-lg-4 mb-4 mb-lg-0">
             <div class="card">
               <img
                 :src="images.placeholder"
@@ -364,7 +365,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+          <div class="col-lg-4 mb-4 mb-lg-0">
             <div class="card">
               <img
                 :src="images.placeholder"
@@ -383,7 +384,7 @@
       </div>
     </div>
   </div>
-
+  <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
         <li data-target="#slideshow" data-slide-to="1"></li>
@@ -413,9 +414,129 @@
   <!-- Inner -->
 </div>
 <!-- Carousel wrapper -->
-  
 </section>
 <br><br><br>
+
+<section>
+  <h2 class="font-weight-bold">Our Partners</h2>
+<!-- Carousel wrapper -->
+    <!-- Indicators -->
+    <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
+        <!-- Controls -->
+  <div class="d-flex justify-content-center mb-4">
+    <a class="carousel-control-prev position-relative" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next position-relative" type="button" data-target="#carouselMultiItemPartner" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-google"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-microsoft"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-paypal"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+       <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-aws"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-chrome"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-vuejs"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-github"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+       <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-android"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-facebook"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Inner -->
+  <div class="py-4"></div>
+</div>
+<!-- Carousel wrapper -->
+</section>
 
 
 <!-- Video -->
@@ -475,10 +596,10 @@ export default {
 
       },
     banners: [
-        {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
-        {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Siloam Kuta', deskripsi: 'Rumah Sakit Kasih Ibu Saba berdiri pada tahun 2016 dibawah naungan Kasih Ibu Hospital Group. Rumah Sakit Kasih Ibu memiliki Visi menjadi Rumah Sakit pilihan utama di Bali, pelayanan yang lengkap dan berkualitas, mengutamakan keselamatan pasien & sentuhan kasih. Dengan Misi meningkatkan manajemen secara profesional, memberi pelayanan yang ramah, mengembangkan SDM yang berkualitas, meningkatkan pelayanan dengan mengutamakan keselamatan pasien, dan menyediakan sarana prasarana yang canggih.'},
+        {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Siloam Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
+        {img: require('@/assets/rumahsakit/rs-siloam-kuta.jpg'), label: 'BIMC Siloam Kuta', deskripsi: 'Rumah Sakit Bali International Medical Centre (BIMC) Siloam Kuta adalah pusat pelayanan medis dan gawat darurat 24 jam yang berstandar internasional. Lokasinya yang strategis di daerah Kuta menjadikannya sebagai pusat pelayanan kesehatan pilihan yang mudah diakses baik oleh penduduk setempat maupun para wisatawan.'},
         {img: require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'), label: 'RS Kasih Ibu Saba', deskripsi: 'Rumah Sakit Kasih Ibu Saba berdiri pada tahun 2016 dibawah naungan Kasih Ibu Hospital Group. Rumah Sakit Kasih Ibu memiliki Visi menjadi Rumah Sakit pilihan utama di Bali, pelayanan yang lengkap dan berkualitas, mengutamakan keselamatan pasien & sentuhan kasih. Dengan Misi meningkatkan manajemen secara profesional, memberi pelayanan yang ramah, mengembangkan SDM yang berkualitas, meningkatkan pelayanan dengan mengutamakan keselamatan pasien, dan menyediakan sarana prasarana yang canggih.'},
-        {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Kuta', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
+        {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Kuta', deskripsi: 'Rumah Sakit Bali International Medical Centre (BIMC) Kuta adalah pusat pelayanan medis dan gawat darurat 24 jam yang berstandar internasional. Lokasinya yang strategis di daerah Kuta menjadikannya sebagai pusat pelayanan kesehatan pilihan yang mudah diakses baik oleh penduduk setempat maupun para wisatawan.'},
         {img: require('@/assets/rumahsakit/bros.jpg'), label: 'Rumah Sakit BROS', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
     ],
     selectedBanner: ''
@@ -501,7 +622,7 @@ export default {
 </script>
     
 <style lang="css">
-.fas {
+.fas, .fab, .far {
   font-size:6em;
   color:rgb(85, 189, 253);
   margin-block: 2rem;
@@ -537,12 +658,36 @@ export default {
 
 .carousel-caption {
   padding-inline-end: 15rem;
-  width: 500px;
+  width: 700px !important;
   left: 15%;
   top: 50% !important;
   transform: translateY(-60%);
   text-align: left;
   bottom: initial;
+}
+
+@media only screen and (max-width: 1000px){
+  .carousel-caption {
+    padding-inline-end: 15rem;
+    width: 500px !important;
+    left: 15%;
+    top: 50% !important;
+    transform: translateY(-60%);
+    text-align: left;
+    bottom: initial;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .carousel-caption {
+    padding-inline-end: 15rem;
+    width: 390px !important;
+    left: 15%;
+    top: 50% !important;
+    transform: translateY(-60%);
+    text-align: left;
+    bottom: initial;
+  }
 }
 
 .carousel .carousel-indicators li {

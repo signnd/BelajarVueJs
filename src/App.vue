@@ -39,15 +39,13 @@
               data-target="#navbarSupportedContent">About</router-link>
             <router-link to="/Blog" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Blog</router-link>
+              <router-link to="/Blogkw1" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Blogkw1</router-link>
             <router-link to="/Destination" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Destination</router-link>
             <router-link to="/Services" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Services</router-link>
-            <router-link to="/Halaman2" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Halaman2</router-link>
             <router-link to="/Halaman3" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Halaman3</router-link>
-            <router-link to="/Rumahsakit" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Rumahsakit</router-link>
             <router-link to="/Kesehatan" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Kesehatan</router-link>
