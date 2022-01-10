@@ -6,7 +6,6 @@
         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
         <li data-target="#slideshow" data-slide-to="1"></li>
       </ol>
-      <br>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
@@ -391,7 +390,7 @@
         <li data-target="#slideshow" data-slide-to="2"></li>
       </ol>
   <!-- Controls -->
-  <div class="d-flex justify-content-center mb-4">
+  <div class="d-flex justify-content-center">
     <button
       class="carousel-control-prev position-relative"
       type="button"
@@ -420,50 +419,42 @@
 <section>
   <h2 class="font-weight-bold">Our Partners</h2>
 <!-- Carousel wrapper -->
-    <!-- Indicators -->
-    <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
-        <!-- Controls -->
-  <div class="d-flex justify-content-center mb-4">
-    <a class="carousel-control-prev position-relative" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </a>
-    <a class="carousel-control-next position-relative" type="button" data-target="#carouselMultiItemPartner" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </a>
-  </div>
+  <!-- Controls -->
+  <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
 
   <!-- Inner -->
   <div class="carousel-inner">
+      <div class="d-flex justify-content-center position-relative">
+      <a class="carousel-control-prev" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" type="button" data-target="#carouselMultiItemPartner" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+      </a>
+  </div>
     <!-- Single item -->
     <div class="carousel-item active">
-      <div class="container">
+      <div class="container d-sm-block">
         <div class="row">
-          <div class="col-lg-3">
-            <div class="card">
+          <div class="col-sm-4 lg-4">
+            <div class="card border-0">
               <i class="fas fa-dollar-sign"></i>
             </div>
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
+          <div class="col-sm-4 lg-4">
+            <div class="card border-0">
               <i class="fab fa-google"></i>
             </div>
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
+          <div class="col-sm-4 lg-4">
+            <div class="card border-0">
               <i class="fab fa-microsoft"></i>
             </div>
           </div>
-
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-paypal"></i>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -472,26 +463,21 @@
     <div class="carousel-item">
       <div class="container">
         <div class="row">
-       <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-aws"></i>
-            </div>
-          </div>
 
-          <div class="col-lg-3">
-            <div class="card">
+          <div class="col-sm-4 lg-4">
+            <div class="card border-0">
               <i class="fab fa-chrome"></i>
             </div>
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
+          <div class="col-sm-4 lg-4">
+            <div class="card border-0">
               <i class="fab fa-vuejs"></i>
             </div>
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
+          <div class="col-sm-4 lg-4">
+            <div class="card border-0">
               <i class="fab fa-github"></i>
             </div>
           </div>
@@ -504,26 +490,21 @@
     <div class="carousel-item">
       <div class="container">
         <div class="row">
-       <div class="col-lg-3">
-            <div class="card">
+       <div class="col-sm-4 lg-4">
+            <div class="card border-0">
               <i class="fab fa-whatsapp"></i>
             </div>
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-android"></i>
-            </div>
-          </div>
 
-          <div class="col-lg-3">
-            <div class="card">
+          <div class="col-sm-4 lg-4">
+            <div class="card border-0">
               <i class="fab fa-facebook"></i>
             </div>
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
+          <div class="col-sm-4 lg-4">
+            <div class="card border-0">
               <i class="fab fa-instagram"></i>
             </div>
           </div>
@@ -700,13 +681,13 @@ export default {
 }
 
 .carousel-control-prev{
-  margin-top: 50px;
+  margin-top: 10px;
   width:20%;
-  height: auto;
+  height:0px;
 }
 
 .carousel-control-next{
-  margin-top: 50px;
+  margin-top: 0px;
   width:20%;
   height: auto;   
 }
