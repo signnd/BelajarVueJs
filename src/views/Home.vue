@@ -216,27 +216,6 @@
   class="carousel slide carousel-dark text-center"
   data-ride="carousel"
 >
-  <!-- Controls -->
-  <div class="d-flex justify-content-center mb-4">
-    <button
-      class="carousel-control-prev position-relative"
-      type="button"
-      data-target="#carouselMultiItemExample"
-      data-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next position-relative"
-      type="button"
-      data-target="#carouselMultiItemExample"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
   <!-- Inner -->
   <div class="carousel-inner py-4">
     <!-- Single item -->
@@ -301,7 +280,7 @@
           <div class="col-lg-4 col-md-12">
             <div class="card">
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"
+                :src="images.placeholder"
                 class="card-img-top"
                 alt="Fissure in Sandstone"
               />
@@ -317,7 +296,7 @@
           <div class="col-lg-4 d-none d-lg-block">
             <div class="card">
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/185.webp"
+                :src="images.placeholder"
                 class="card-img-top"
                 alt="Storm Clouds"
               />
@@ -333,7 +312,7 @@
           <div class="col-lg-4 d-none d-lg-block">
             <div class="card">
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/186.webp"
+                :src="images.placeholder"
                 class="card-img-top"
                 alt="Hot Air Balloons"
               />
@@ -356,7 +335,7 @@
           <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
             <div class="card">
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/187.webp"
+                :src="images.placeholder"
                 class="card-img-top"
                 alt="Peaks Against the Starry Sky"
               />
@@ -372,7 +351,7 @@
           <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
             <div class="card">
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/188.webp"
+                :src="images.placeholder"
                 class="card-img-top"
                 alt="Bridge Over Water"
               />
@@ -388,7 +367,7 @@
           <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
             <div class="card">
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/189.webp"
+                :src="images.placeholder"
                 class="card-img-top"
                 alt="Purbeck Heritage Coast"
               />
@@ -404,6 +383,33 @@
       </div>
     </div>
   </div>
+
+      <ol class="carousel-indicators">
+        <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+        <li data-target="#slideshow" data-slide-to="1"></li>
+        <li data-target="#slideshow" data-slide-to="2"></li>
+      </ol>
+  <!-- Controls -->
+  <div class="d-flex justify-content-center mb-4">
+    <button
+      class="carousel-control-prev position-relative"
+      type="button"
+      data-target="#carouselMultiItemExample"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next position-relative"
+      type="button"
+      data-target="#carouselMultiItemExample"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
   <!-- Inner -->
 </div>
 <!-- Carousel wrapper -->
@@ -417,13 +423,14 @@
   <div class="background-video">
     <div class="row">
       <div class="col-4 center-block text-center">
-        <h2 class="ml-4 pt-5 mt-3 text-white font-weight-bold ">Galeri Video</h2>
-        <p class="ml-4 h4 text-white">Video Member dari BMTA</p>
+        <h2 class="ml-4 pt-5 mt-3 text-white font-weight-bold ">Video</h2>
+        <p class="ml-4 h4 text-white">Groundbreaking Rumah Sakit Internasional Bali</p>
       </div>
       <div class="col">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe width="640" height="360" src="https://www.youtube.com/embed/PfW9niHeexI" title="YouTube video player"
-            frameborder="0"
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/Y1wC9GU00hg?controls=0&amp;start=585&end=717;"
+            title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
@@ -431,20 +438,23 @@
     </div>
   </div>
 </div>
+<!-- Small Video -->
 <div class="container-fluid">
   <div class="background-video-sm text-center d-block d-md-none">
-    <h2 class="text-white font-weight-bold ">Galeri Video</h2>
-    <p class="h4 text-white">Video Member dari BMTA</p>
+    <h2 class="text-white font-weight-bold ">Video</h2>
+    <p class="h4 text-white">Groundbreaking Rumah Sakit Internasional Bali</p>
   </div>
   <div class="embed-responsive embed-responsive-16by9 d-block d-md-none">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/PfW9niHeexI" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1wC9GU00hg?controls=0&amp;start=585&end=717;"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
   </div>
 </div>
 
 <br>
 <br>
+
 </template>
     
     
@@ -460,7 +470,9 @@ export default {
         card3: require('@/assets/gallery/blog3.png'),
         team1: require('@/assets/Team/dr ida ayu oka purnamawati.jpg'),
         team2: require('@/assets/Team/Dr.i gede wiryana patra jaya.jpg'),
-        team3: require('@/assets/Team/PUTU-DEDDY-SUHARTAWAN-B.BUS-MKTG.jpg')
+        team3: require('@/assets/Team/PUTU-DEDDY-SUHARTAWAN-B.BUS-MKTG.jpg'),
+        placeholder: require('@/assets/placeholder.png')
+
       },
     banners: [
         {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
@@ -531,6 +543,15 @@ export default {
   transform: translateY(-60%);
   text-align: left;
   bottom: initial;
+}
+
+.carousel .carousel-indicators li {
+  background-color: #fff;
+  background-color: rgba(70, 70, 70, 0.25);
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #444;
 }
 
 .carousel-control-prev{
