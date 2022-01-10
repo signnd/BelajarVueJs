@@ -455,8 +455,7 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
-                <button data-target="#Reservasi">Reservasi</button>
+                  data-target="#exampleModalCenter">Reservasi</button>  
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
