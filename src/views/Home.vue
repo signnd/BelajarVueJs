@@ -6,13 +6,12 @@
         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
         <li data-target="#slideshow" data-slide-to="1"></li>
       </ol>
-      <br>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
           <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1>
-              <p calss="text-justify" style="font-size:2vw;">Berwisata medis bersama kami</p>
+              <h1 class="font-weight-bold" style="font-size:5vw;">WELCOME</h1>
+              <p calss="text-justify" style="font-size:2vw;">Selamat datang di website BMTA</p>
           </div>
         </div>
         <div class="carousel-item">
@@ -157,7 +156,7 @@
 
 
 <!-- Popular Destination -->
-<h2 class="font-weight-bold ">Destinasi Populer</h2>
+<h2 class="font-weight-bold py-3">Destinasi Populer</h2>
 <div id="stripes" class="d-none d-lg-block">
   <span></span>
   <span></span>
