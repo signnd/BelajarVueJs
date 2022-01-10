@@ -90,6 +90,7 @@
                   <button class="btn w-100 btn-primary" data-toggle="modal"
                     data-target="#Reservasi">Reservasi</button>
                 </div>
+                <div class="py-1 d-block d-sm-block d-md-none"></div>
                 <div class="col">
                   <button class="btn w-100 btn-primary" data-toggle="modal"
                     data-target="#Jadwal">Jadwal</button>
@@ -111,6 +112,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -131,6 +133,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -159,6 +162,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -178,6 +182,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -197,6 +202,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -225,6 +231,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -244,6 +251,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -263,6 +271,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -291,6 +300,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -310,6 +320,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -329,6 +340,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -357,6 +369,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -376,6 +389,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -395,6 +409,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">#Jadwal</button>
@@ -408,7 +423,7 @@
 </section>
 <section>
   <div class="container d-flex">
-    <div class="container my-5 align-items-center" style="width: 500px;">
+    <div class="container my-5 align-items-center" style="width: 600px;">
       <div class="card-group">
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.dentalclinic" alt="Card image 1">
@@ -422,6 +437,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -439,6 +455,7 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
+                  data-target="#exampleModalCenter">Reservasi</button>
                   data-target="#Reservasi">Reservasi</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>

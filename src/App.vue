@@ -14,7 +14,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav my-1">
+          <div class="navbar-nav">
             <!-- Nav Link Fullscreen -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
               data-target="#navbarSupportedContent">Home</router-link>
@@ -56,6 +56,7 @@
       </div>
     </nav>
   </div>
+  <br>
   </section>
   <router-view />
 
