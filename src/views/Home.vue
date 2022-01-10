@@ -416,6 +416,128 @@
 </section>
 <br><br><br>
 
+<section>
+  <h2 class="font-weight-bold">Our Partners</h2>
+<!-- Carousel wrapper -->
+    <!-- Indicators -->
+    <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
+        <!-- Controls -->
+  <div class="d-flex justify-content-center mb-4">
+    <a class="carousel-control-prev position-relative" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next position-relative" type="button" data-target="#carouselMultiItemPartner" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-google"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-microsoft"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-paypal"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+       <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-aws"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-chrome"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-vuejs"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-github"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+       <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-android"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-facebook"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Inner -->
+  <div class="py-4"></div>
+</div>
+<!-- Carousel wrapper -->
+</section>
+
+
 <!-- Video -->
 <div class="container-fluid d-none d-md-block">
   <div class="background-video">
@@ -499,7 +621,7 @@ export default {
 </script>
     
 <style lang="css">
-.fas {
+.fas, .fab, .far {
   font-size:6em;
   color:rgb(85, 189, 253);
   margin-block: 2rem;
