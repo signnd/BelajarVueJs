@@ -7,12 +7,13 @@
       </div>
     </div>
           
-        
-<br>
-<br>
 
+<br>
+<br>
+ <h1> Our <span class="card-text t-color"> <b> Blogs </b> </span> </h1>
 
  <div
+
   id="carouselMultiItemExample"
   class="carousel slide carousel-dark text-center"
   data-ride="carousel"
@@ -39,7 +40,7 @@
     </button>
   </div>
   <!-- Inner -->
-  <div class="carousel-inner py-4">
+  <div class="carousel-inner">
     <!-- Single item -->
     <div class="carousel-item active">
       <div class="container">
@@ -52,7 +53,7 @@
                 alt="Card image 1"
               />
               <div class="card-body">
-                 <router-link to="/Olahraga"><b>Kewajiban Rumah Sakit kepada Pasien dan Masyarakat</b></router-link>
+                 <router-link to="/Rumahsakit"><b>Kewajiban Rumah Sakit kepada Pasien dan Masyarakat</b></router-link>
                  <br>
                  <br>
                 <p class="card-text">Rumah  Sakit adalah institusi pelayanan kesehatan yang menyelenggarakan pelayanan kesehatan perorangan secara paripurna    yang menyediakan pelayanan rawat inap, rawat jalan, dan gawat darurat. Pasien adalah setiap orang yang melakukan konsultasi masalah kesehatannya untuk memperoleh pelayanan kesehatan yang  diperlukan, baik secara langsung maupun tidak langsung di Rumah Sakit.  </p>
@@ -73,7 +74,7 @@
                 alt="Card image 2"
               />
               <div class="card-body">
-                   <router-link to="/Olahraga"><b class="text-black">Cara Mencuci Tangan Yang Benar</b></router-link>
+                   <router-link to="/Kesehatan"><b class="text-black">Cara Mencuci Tangan Yang Benar</b></router-link>
                    <br>
                    <br>
                    <br>
@@ -83,6 +84,7 @@
                 <br>
                 <br>
                 <br>
+
              
               <router-link to="/kesehatan" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>  
              
@@ -131,7 +133,7 @@
                 alt="Card image 4"
               />
               <div class="card-body">
-                <router-link class="text-black" to="/Olahraga"><b>5 CARA TETAP PRODUKTIF SAAT BEKERJA DARI RUMAH</b></router-link>
+                <router-link class="text-black" to="/about"><b>5 CARA TETAP PRODUKTIF SAAT BEKERJA DARI RUMAH</b></router-link>
                 <br>
                 <br>
                 <p class="card-text">Sebagai langkah mencegah penyebaran COVID-19, pemerintah mengimbau masyarakat untuk membatasi aktivitas dengan tetap berada di rumah. Imbauan ini mendorong banyak perusahaan menerapkan sistem kerja dari rumah atau work from home.</p>
@@ -157,7 +159,7 @@
                 alt="Card image 5"
               />
               <div class="card-body">
-                <router-link class="text-black" to="/Olahraga"><b>Lingkungan Bersih Ciptakan Hidup Sehat</b></router-link>
+                <router-link class="text-black" to="/about"><b>Lingkungan Bersih Ciptakan Hidup Sehat</b></router-link>
                 <br>
                 <br>
                 <p class="card-text">Lingkungan adalah kombinasi antara kondisi fisik yang mencakup keadaan sumber daya alam, serta flora dan fauna yang tumbuh di darat maupun di dalam laut. Lingkungan terdiri dari dua komponen biotik ( segala sesuatu yang bernyawa) dan abiotik ( segala yang tidak bernyawa ).</p>
@@ -170,7 +172,6 @@
                   <div class="col">
                    Info Lingkungan
                    </div>
-              
               </div>
             </div>
           </div>
@@ -183,7 +184,7 @@
                 alt="Card image 6"
               />
               <div class="card-body">
-                <router-link class="text-black" to="/Olahraga"><b>Kapankah Kita Periksakan Kesehatan Jantung?</b></router-link>
+                <router-link class="text-black" to="/about"><b>Kapankah Kita Periksakan Kesehatan Jantung?</b></router-link>
                 <br>
                 <br>
                 <p class="card-text">Risiko penyakit jantung terbagi dalam 4 kategori, mulai dari rendah, sedang, tinggi, dan sangat tinggi. Yang termasuk dalam risiko SANGAT TINGGI meliputi mereka yang memiliki riwayat serangan jantung, operasi jantung, stroke, gangguan peredaran darah pada anggota gerak, hasil pemeriksaan kateterisasi jantung atau CT-scan pembuluh darah dengan penyempitan bermakna, diabetes melitus lebih dari 20 tahun atau dengan komplikasi, gangguan ginjal berat, gangguan kolesterol genetik.</p>
@@ -201,14 +202,6 @@
   </div>
  
    
-             
-
-
-
-
-
-
-
   </section>
   </template>
 
