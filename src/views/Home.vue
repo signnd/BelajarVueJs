@@ -144,7 +144,7 @@
               <h5 class="service-title">Medical research</h5>
               <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.</p>
           </div>
-          <div class="col-5 mb-4">
+          <div class="col-5 mb-3">
           <i class="fas fa-heart"></i>
               <h5 class="service-title">Medical advisor</h5>
               <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
@@ -154,62 +154,8 @@
 </section>
 
 
-
-<!-- Popular Destination -->
-<h2 class="font-weight-bold py-3">Destinasi Populer</h2>
-<div id="stripes" class="d-none d-lg-block">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
 <section>
-  <div class="container-fluid d-none d-lg-block">
-    <div class="destination">
-      <div class="row">
-        <div class="col">
-          <img class="dest-img" :src="selectedBanner.img">
-        </div>
-        <div class="col-4 mt-3 pt-3 text-left mr-5 destination">
-          <h2 class="text-black font-weight-bold mx-3 dest-text">{{selectedBanner.label}}</h2>
-          <p class="text-black text-justify mx-3 dest-text">{{selectedBanner.deskripsi}}</p>
-          <br>
-          <h4 class="text-black ml-3">Destinasi Lainnya </h4>
-          <router-link to="/Destination" class="btn btn-outline-primary text-wrap ml-3 dest-text">Lihat Semua ►</router-link>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="d-block d-lg-none">
-  <div class="container-fluid">
-    <img class="dest-img" :src="selectedBanner.img">
-      </div>
-    <div class="container destination">
-      <h2 class="text-black font-weight-bold dest-text pt-4">{{selectedBanner.label}}</h2>
-      <p class="text-black text-justify dest-text">{{selectedBanner.deskripsi}}</p>
-      <br>
-      <h4 class="text-black">Destinasi Lainnya </h4>
-      <router-link to="/Destination" class="btn btn-outline-primary text-wrap dest-text">Lihat Semua ►
-      </router-link>
-      <div class="pb-2"></div>
-    </div>
-  </div>
-</section>
-<div class="d-none d-sm-block">
-<br><br><br><br><br><br>
-</div>
-
-<div class="d-block d-sm-none">
-<br><br>
-</div>
-
-
-<section>
-  <h2 class="font-weight-bold">Our Team</h2>
+  <h2 class="font-weight-bold pb-3">Our Team</h2>
 <!-- Carousel wrapper -->
 <div
   id="carouselMultiItemExample"
@@ -217,7 +163,7 @@
   data-ride="carousel"
 >
   <!-- Inner -->
-  <div class="carousel-inner">
+  <div class="carousel-inner pb-5">
     <!-- Single item -->
     <div class="carousel-item active">
       <div class="container">
@@ -272,149 +218,63 @@
         </div>
       </div>
     </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-12">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Fissure in Sandstone"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Tony Sukentro SpB</h5>
-                <p class="card-text">
-                  Bendahara
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Storm Clouds"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Reza Yuridian Purwok</h5>
-                <p class="card-text">
-                  Sekertaris
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Hot Air Balloons"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Haekal Yassier Anshari</h5>
-                <p class="card-text">
-                  Sie Marketing
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Peaks Against the Starry Sky"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Vito A. Damay, SpJP(K)</h5>
-                <p class="card-text">
-                  Sie Publikasi
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Bridge Over Water"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Andry Edwin Dahlan, M.Par</h5>
-                <p class="card-text">
-                  Sie Inovasi dan Teknologi
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Purbeck Heritage Coast"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Ogy Winenriandhika</h5>
-                <p class="card-text">
-                  Wakil Ketua 2
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#slideshow" data-slide-to="0" class="active"></li>
-        <li data-target="#slideshow" data-slide-to="1"></li>
-        <li data-target="#slideshow" data-slide-to="2"></li>
-      </ol>
-  <!-- Controls -->
-  <div class="d-flex justify-content-center">
-    <button
-      class="carousel-control-prev position-relative"
-      type="button"
-      data-target="#carouselMultiItemExample"
-      data-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next position-relative"
-      type="button"
-      data-target="#carouselMultiItemExample"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
   <!-- Inner -->
 </div>
 <!-- Carousel wrapper -->
 </section>
-<br><br><br>
+
+<!-- Popular Destination -->
+<h2 class="font-weight-bold py-3">Destinasi Populer</h2>
+<div id="stripes" class="d-none d-lg-block">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<section>
+  <div class="container-fluid d-none d-lg-block">
+    <div class="destination">
+      <div class="row">
+        <div class="col">
+          <img class="dest-img" :src="selectedBanner.img">
+        </div>
+        <div class="col-4 mt-3 pt-3 text-left mr-5 destination">
+          <h2 class="text-black font-weight-bold mx-3 dest-text">{{selectedBanner.label}}</h2>
+          <p class="text-black text-justify mx-3 dest-text">{{selectedBanner.deskripsi}}</p>
+          <br>
+          <h4 class="text-black ml-3">Destinasi Lainnya </h4>
+          <router-link to="/Destination" class="btn btn-outline-primary text-wrap ml-3 dest-text">Lihat Semua ►</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="d-block d-lg-none">
+  <div class="container-fluid">
+    <img class="dest-img" :src="selectedBanner.img">
+      </div>
+    <div class="container destination">
+      <h2 class="text-black font-weight-bold dest-text pt-4">{{selectedBanner.label}}</h2>
+      <p class="text-black text-justify dest-text">{{selectedBanner.deskripsi}}</p>
+      <br>
+      <h4 class="text-black">Destinasi Lainnya </h4>
+      <router-link to="/Destination" class="btn btn-outline-primary text-wrap dest-text">Lihat Semua ►
+      </router-link>
+      <div class="pb-2"></div>
+    </div>
+  </div>
+</section>
+<div class="d-none d-sm-block">
+<br><br><br><br><br><br>
+</div>
+
+<div class="d-block d-sm-none">
+<br><br>
+</div>
 
 <section>
   <h2 class="font-weight-bold">Our Partners</h2>
@@ -423,7 +283,7 @@
   <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
 
   <!-- Inner -->
-  <div class="carousel-inner">
+  <div class="carousel-inner pb-5">
       <div class="d-flex justify-content-center position-relative">
       <a class="carousel-control-prev" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -449,7 +309,6 @@
               <i class="fab fa-google"></i>
             </div>
           </div>
-
           <div class="col-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-microsoft"></i>
@@ -470,13 +329,12 @@
             </div>
           </div>
 
-          <div class="col-block col-sm-4 col-lg-4">
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
             <div class="card border-0">
               <i class="fab fa-vuejs"></i>
             </div>
           </div>
-
-          <div class="col-block col-sm-4 col-lg-4">
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
             <div class="card border-0">
               <i class="fab fa-github"></i>
             </div>
@@ -495,20 +353,17 @@
               <i class="fab fa-whatsapp"></i>
             </div>
           </div>
-
-
-          <div class="col-block col-sm-4 col-lg-4">
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
             <div class="card border-0">
               <i class="fab fa-facebook"></i>
             </div>
           </div>
-
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
           <div class="col-block col-sm-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-instagram"></i>
             </div>
           </div>
-
         </div>
       </div>
     </div>
