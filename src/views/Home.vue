@@ -436,21 +436,21 @@
   </div>
     <!-- Single item -->
     <div class="carousel-item active">
-      <div class="container d-sm-block">
+      <div class="container">
         <div class="row">
-          <div class="col-sm-4 lg-4">
+          <div class="col-4 col-lg-4">
             <div class="card border-0">
               <i class="fas fa-dollar-sign"></i>
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-google"></i>
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-microsoft"></i>
             </div>
@@ -464,19 +464,19 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-block col-sm-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-chrome"></i>
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-block col-sm-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-vuejs"></i>
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-block col-sm-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-github"></i>
             </div>
@@ -490,20 +490,20 @@
     <div class="carousel-item">
       <div class="container">
         <div class="row">
-       <div class="col-sm-4 lg-4">
+       <div class="col-block col-sm-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-whatsapp"></i>
             </div>
           </div>
 
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-block col-sm-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-facebook"></i>
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-block col-sm-4 col-lg-4">
             <div class="card border-0">
               <i class="fab fa-instagram"></i>
             </div>
