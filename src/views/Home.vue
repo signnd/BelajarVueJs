@@ -304,13 +304,13 @@
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
             <div class="card border-0">
               <i class="fab fa-google"></i>
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
             <div class="card border-0">
               <i class="fab fa-microsoft"></i>
             </div>
@@ -330,13 +330,13 @@
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
             <div class="card border-0">
               <i class="fab fa-vuejs"></i>
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
             <div class="card border-0">
               <i class="fab fa-github"></i>
             </div>
@@ -357,13 +357,13 @@
           </div>
 
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
             <div class="card border-0">
               <i class="fab fa-facebook"></i>
             </div>
           </div>
 
-          <div class="col-sm-4 lg-4">
+          <div class="col-sm-4 lg-4 d-none d-sm-block">
             <div class="card border-0">
               <i class="fab fa-instagram"></i>
             </div>
