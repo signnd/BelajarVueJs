@@ -7,13 +7,11 @@ import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import TestApi from '../views/TestApi.vue'
 import Blog from '../views/Blog.vue'
-import Halaman2 from '../views/Halaman2.vue'
-import Halaman3 from '../views/Halaman3.vue'
-import Rumahsakit from '../views/Rumahsakit.vue'
+import Rumahsakit from '../views/Blog/Rumahsakit.vue'
 import Destination from '../views/Destination.vue'
 import Services from '../views/Services.vue'
-import Kesehatan from '../views/Kesehatan.vue'
-import Olahraga from '../views/Olahraga.vue'
+import Kesehatan from '../views/Blog/Kesehatan.vue'
+import Olahraga from '../views/Blog/Olahraga.vue'
 import RSUPSanglah from '../views/Destination/rsup-sanglah.vue'
 import RSUBM from '../views/Destination/rsu-balimandara.vue'
 import RSMBM from '../views/Destination/rsm-balimandara.vue'
@@ -68,37 +66,14 @@ const routes =
       name: 'services',
       component: Services
     },
-    {
-      path: '/halaman2',
-      name: 'halaman2',
-      component: Halaman2
-    },
-    {
-      path: '/halaman3',
-      name: 'halaman3',
-      component: Halaman3
-    },
-    {
-      path: '/rumahsakit',
-      name: 'rumahsakit',
-      component: Rumahsakit
-    },
-    {
-      path: '/kesehatan',
-      name: 'kesehatan',
-      component: Kesehatan
-    },
-    {
-      path: '/olahraga',
-      name: 'olahraga',
-      component: Olahraga
-    },
   //   { path: '/Destination/rsup-sanglah', name: 'Destination/rsup-sanglah', component: RSUPSanglah },
   // nanti struktur link untuk RS sanglah pake yang kayak di atas
   { path: '/Destination/rs-member', name: 'Destination/rsup-sanglah', component: RSUPSanglah }, //temporary page
   { path: '/Destination/rsu-balimandara', name: 'Destination/rsu-balimandara', component: RSUBM },
   { path: '/Destination/rsm-balimandara', name: 'Destination/rsm-balimandara', component: RSMBM },
-
+  { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
+  { path: '/Blog/Olahraga', name: 'Blog/Olahraga', component: Olahraga },
+  { path: '/Blog/Rumahsakit', name: 'Blog/Rumahsakit', component: Rumahsakit },
 ]
 
 const router = createRouter({

@@ -6,10 +6,8 @@
         <div class="container-fluid px-0">
           <img :src="images.cover1" alt="contacthead" class="w-100">
           <h1 class="d-block d-sm-block d-md-block d-lg-block pb-5 mt-5 pt-3 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
-          <p class="d-none d-lg-block mt-5 centered text-black style t-pos pt-3" style="font-size:1.15em;">Anda dapat
-            menghubungi kami melalui:</p>
           <!-- Header Small Screen -->
-          <p class="d-block d-lg-none text-center my-2">Anda dapat menghubungi kami melalui:</p>
+          <p class="d-block d-lg-none text-center my-2"></p>
         </div>
       </div>
     </div>
@@ -25,6 +23,7 @@
   <section>
     <!-- Whole Card -->
     <div class="container">
+    <p class="text-center">Hubungi kami melalui kontak di bawah ini:</p>
       <div class="card my-3">
         <div class="card-body">
           <div class="row">

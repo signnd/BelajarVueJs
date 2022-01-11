@@ -6,75 +6,171 @@
         <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">Our Blogs</h1>
       </div>
     </div>
+    <h1 class="pt-5"> Our <span class="card-text t-color"> <b> Blogs </b> </span> </h1>
+    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-ride="carousel">
+      <!-- Controls -->
+      <div class="d-flex justify-content-center mb-4">
+        <button class="carousel-control-prev position-relative" type="button" data-target="#carouselMultiItemExample"
+          data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next position-relative" type="button" data-target="#carouselMultiItemExample"
+          data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Inner -->
+      <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card">
+                  <img :src="images.gambar1" class="card-img-top" alt="Card image 1" />
+                  <div class="card-body">
+                    <router-link to="/Blog/Rumahsakit"><b>Kewajiban Rumah Sakit kepada Pasien dan Masyarakat</b>
+                    </router-link>
+                    <br>
+                    <br>
+                    <p class="card-text">Rumah Sakit adalah institusi pelayanan kesehatan yang menyelenggarakan
+                      pelayanan kesehatan perorangan secara paripurna yang menyediakan pelayanan rawat inap, rawat
+                      jalan, dan gawat darurat. Pasien adalah setiap orang yang melakukan konsultasi masalah
+                      kesehatannya untuk memperoleh pelayanan kesehatan yang diperlukan, baik secara langsung maupun
+                      tidak langsung di Rumah Sakit. </p>
+                    <br>
+                    <router-link to="/Blog/Rumahsakit" type="button" class="btn d-block btn-dark">Lebih Lanjut
+                    </router-link>
+                    <p class="card-text">
+                      Info Rumah Sakit
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card">
+                  <img :src="images.gambar2" class="card-img-top" alt="Card image 2" />
+                  <div class="card-body">
+                    <router-link to="/Blog/Kesehatan"><b class="text-black">Cara Mencuci Tangan Yang Benar</b>
+                    </router-link>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="card-text">Salah satu perilaku hidup bersih dan sehat (PHBS) yang selalu digaungkan sejak
+                      lama untuk menjaga kesehatan dan kebersihan pribadi adalah mencuci tangan. Perilaku ini seharusnya
+                      menjadi kebiasaan yang sangat baik, karena selain untuk menjaga kesehatan dan kebersihan, agama
+                      juga mengajarkannya.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <router-link to="/Blog/Kesehatan" type="button" class="btn d-block btn-dark">Lebih Lanjut
+                    </router-link>
+                    <p class="card-text">
+                      Info Kesehatan
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card">
+                  <img :src="images.gambar3" class="card-img-top" alt="Card image 3" />
+                  <div class="card-body">
+                    <router-link class="text-black" to="/Blog/Olahraga"><b>Beragam Manfaat Olahraga untuk Kesehatan
+                        Fisik dan Mental</b></router-link>
+                    <br>
+                    <br>
+                    <p class="card-text">Ada beragam manfaat olahraga yang bisa Anda peroleh, mulai dari memelihara
+                      fungsi organ hingga meningkatkan stamina dan daya tahan tubuh. Tak hanya bermanfaat untuk
+                      kesehatan fisik, olahraga juga baik untuk kesehatan mental Anda.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <router-link to="/Blog/Olahraga" type="button" class="btn d-block btn-dark">Lebih Lanjut
+                    </router-link>
+                    Info Manfaat Olahraga
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <nav aria-label="breadcrumb" class="container">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Blog</li>
-  </ol>
-</nav>
-    
-    <div class="p-3 mb-2 text-black">
-      <div class="container">
-        <div class="container-fluid d-flex">
-          <div class="container-fluid ml-5 mx-auto my-5 pt-5 mt-5 align-items-center" style="width: 700px;">
-            <h1 class="text-center">Artikel Kami</h1>
-            <div class="card-group">
-              <div class="card">
-                <div class="p-3 mb-2 text-black">
-                  <div class="card" style="width:auto;">
-                    <img class="card-img-top" :src="images.gambar1" alt="Card image 1">
-                    <div class="card-body">
-                      <router-link class="text-black" to="/Olahraga"><b>Kewajiban Rumah Sakit kepada Pasien dan
-                          Masyarakat</b></router-link>
-                      <p class="card-text">Rumah Sakit adalah institusi pelayanan kesehatan yang menyelenggarakan
-                        pelayanan kesehatan perorangan secara paripurna yang menyediakan pelayanan rawat inap, rawat
-                        jalan, dan gawat darurat. Pasien adalah setiap orang yang melakukan konsultasi masalah
-                        kesehatannya untuk memperoleh pelayanan kesehatan yang diperlukan, baik secara langsung maupun
-                        tidak langsung di Rumah Sakit. </p>
-                      <router-link to="/rumahsakit" type="button" class="btn d-block btn-dark">Lebih Lanjut
-                      </router-link>
-                      <div class="row">
-                        <div class="col">
-                          Info Rumah Sakit
-                        </div>
-                      </div>
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <div class="card">
+                  <img :src="images.gambar4" class="card-img-top" alt="Card image 4" />
+                  <div class="card-body">
+                    <router-link class="text-black" to="/about"><b>5 CARA TETAP PRODUKTIF SAAT BEKERJA DARI RUMAH</b>
+                    </router-link>
+                    <br>
+                    <br>
+                    <p class="card-text">Sebagai langkah mencegah penyebaran COVID-19, pemerintah mengimbau masyarakat
+                      untuk membatasi aktivitas dengan tetap berada di rumah. Imbauan ini mendorong banyak perusahaan
+                      menerapkan sistem kerja dari rumah atau work from home.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <router-link to="/about" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>
+                    <div class="col">
+                      Info Kesehatan
                     </div>
                   </div>
-                  <br>
-                  <br>
-                  <div class="card" style="width:auto;">
-                    <div class="card">
-                      <img class="card-img-top" :src="images.gambar2" alt="Card image 2">
-                      <div class="card-body">
-                        <router-link class="text-black" to="/Olahraga"><b>Cara Mencuci Tangan Yang Benar</b>
-                        </router-link>
-                        <p class="card-text">Salah satu perilaku hidup bersih dan sehat (PHBS) yang selalu digaungkan
-                          sejak lama untuk menjaga kesehatan dan kebersihan pribadi adalah mencuci tangan. Perilaku ini
-                          seharusnya menjadi kebiasaan yang sangat baik, karena selain untuk menjaga kesehatan dan
-                          kebersihan, agama juga mengajarkannya.</p>
-                        <router-link to="/kesehatan" type="button" class="btn d-block btn-dark">Lebih Lanjut
-                        </router-link>
-                        <div class="col">
-                          Info Kesehatan
-                        </div>
-                      </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                <div class="card">
+                  <img :src="images.gambar5" class="card-img-top" alt="Card image 5" />
+                  <div class="card-body">
+                    <router-link class="text-black" to="/about"><b>Lingkungan Bersih Ciptakan Hidup Sehat</b>
+                    </router-link>
+                    <br>
+                    <br>
+                    <p class="card-text">Lingkungan adalah kombinasi antara kondisi fisik yang mencakup keadaan sumber
+                      daya alam, serta flora dan fauna yang tumbuh di darat maupun di dalam laut. Lingkungan terdiri
+                      dari dua komponen biotik ( segala sesuatu yang bernyawa) dan abiotik ( segala yang tidak bernyawa
+                      ).</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <router-link to="/about" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>
+                    <div class="col">
+                      Info Lingkungan
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                <div class="card">
+                  <img :src="images.gambar6" class="card-img-top" alt="Card image 6" />
+                  <div class="card-body">
+                    <router-link class="text-black" to="/about"><b>Kapankah Kita Periksakan Kesehatan Jantung?</b>
+                    </router-link>
                     <br>
                     <br>
-                    <nav aria-label="Page navigation example">
-                      <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="Blog">1</a></li>
-                        <li class="page-item"><a class="page-link" href="Halaman2">2</a></li>
-                        <li class="page-item"><a class="page-link" href="Halaman3">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="/Halaman2">Next</a>
-                        </li>
-                      </ul>
-                    </nav>
+                    <p class="card-text">Risiko penyakit jantung terbagi dalam 4 kategori, mulai dari rendah, sedang,
+                      tinggi, dan sangat tinggi. Yang termasuk dalam risiko SANGAT TINGGI meliputi mereka yang memiliki
+                      riwayat serangan jantung, operasi jantung, stroke, gangguan peredaran darah pada anggota gerak,
+                      hasil pemeriksaan kateterisasi jantung atau CT-scan pembuluh darah dengan penyempitan bermakna,
+                      diabetes melitus lebih dari 20 tahun atau dengan komplikasi, gangguan ginjal berat, gangguan
+                      kolesterol genetik.</p>
+                    <router-link to="/about" type="button" class="btn d-block btn-dark">Lebih Lanjut</router-link>
+                    <p class="card-text">
+                      Info Kesehatan
+                    </p>
                   </div>
                 </div>
               </div>
@@ -86,22 +182,26 @@
   </section>
 </template>
 
-
 <script>
-export default {
+  export default {
     data() {
-        return {
-            images: {
-                cover1: require('@/assets/hero/flat.png'),
-                cover2: require('@/assets/gallery/section_bg01.png'),
-                about: require('@/assets/gallery/popular_sub3.png'),
-                logo: require('@/assets/logo/logo.png'),
-                gambar1: require('@/assets/logo/rumah-sakit.jpg'),
-                gambar2: require('@/assets/logo/mencuci.jpg')
-            }
+      return {
+        images: {
+          cover1: require('@/assets/hero/flat.png'),
+          cover2: require('@/assets/gallery/section_bg01.png'),
+          about: require('@/assets/gallery/popular_sub3.png'),
+          logo: require('@/assets/logo/logo.png'),
+          gambar1: require('@/assets/logo/rumah-sakit.jpg'),
+          gambar2: require('@/assets/logo/mencuci.jpg'),
+          gambar3: require('@/assets/logo/olahraga.jpg'),
+          gambar4: require('@/assets/logo/kesehatanrumah.jpg'),
+          gambar5: require('@/assets/logo/lingkungan.jpg'),
+          gambar6: require('@/assets/logo/jantung.jpg')
         }
+      }
     }
-}
+  }
 </script>
+
 <style>
 </style>
