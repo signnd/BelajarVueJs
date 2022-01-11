@@ -15,6 +15,12 @@ import Olahraga from '../views/Blog/Olahraga.vue'
 import RSUPSanglah from '../views/Destination/rsup-sanglah.vue'
 import RSUBM from '../views/Destination/rsu-balimandara.vue'
 import RSMBM from '../views/Destination/rsm-balimandara.vue'
+import About_ing from '../views/en/About.vue'
+import Blog_ing from '../views/en/Blog.vue'
+import Home_ing from '../views/en/Home.vue'
+import Services_ing from '../views/en/Services.vue'
+import Contact_ing from '../views/en/Contact.vue'
+import Destination_ing from '../views/en/Destination.vue'
 import RSPTNUnud from '../views/Destination/rsptn-unud.vue'
 import RSMangusadaBadung from '../views/Destination/rs-mangusada-badung.vue'
 import RSBIMCNusadua from '../views/Destination/rs-bimc-nusadua.vue'
@@ -74,6 +80,12 @@ const routes =
   { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
   { path: '/Blog/Olahraga', name: 'Blog/Olahraga', component: Olahraga },
   { path: '/Blog/Rumahsakit', name: 'Blog/Rumahsakit', component: Rumahsakit },
+  { path: '/en/About', name: 'en/About', component: About_ing },
+  {path: '/en/Blog', name: 'en/Blog', component: Blog_ing },
+  {path: '/en/Home', name: 'en/Home', component: Home_ing },
+  {path: '/en/Services', name: 'en/Services', component: Services_ing },
+  {path: '/en/Contact', name: 'en/Contact', component: Contact_ing },
+  {path: '/en/Destination', name: 'en/Destination', component: Destination_ing },
 ]
 
 const router = createRouter({

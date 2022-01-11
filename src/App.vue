@@ -39,8 +39,6 @@
               data-target="#navbarSupportedContent">About</router-link>
             <router-link to="/Blog" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Blog</router-link>
-              <router-link to="/Blogkw1" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Blogkw1</router-link>
             <router-link to="/Destination" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Destination</router-link>
             <router-link to="/Services" class="d-none fs-4 mx-2" data-toggle="collapse"
@@ -51,6 +49,12 @@
               data-target="#navbarSupportedContent">Kesehatan</router-link>
             <router-link to="/Olahraga" class="d-none fs-4 mx-2" data-toggle="collapse"
               data-target="#navbarSupportedContent">Olahraga</router-link>
+              <router-link to="/en/About" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">About</router-link>
+              <router-link to="/en/Blog" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Blog</router-link>
+              <router-link to="/en/Home" class="d-none fs-4 mx-2" data-toggle="collapse"
+              data-target="#navbarSupportedContent">Home</router-link>
           </div>
         </div>
       </div>
