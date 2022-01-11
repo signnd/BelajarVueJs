@@ -332,7 +332,7 @@
       </div>
     </div>
   </div>
-
+  </div>
     <!-- Single item 
     <div class="carousel-item">
       <div class="container">
@@ -356,11 +356,8 @@
       </div>
     </div>
   </div>
-</div>
-
-  <!-- Inner -->
+</div> Inner -->
   <div class="py-4"></div>
-</div>
 <!-- Carousel wrapper -->
 </section>
 
