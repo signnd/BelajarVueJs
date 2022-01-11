@@ -96,7 +96,7 @@
             <div class="card-body">
               <h5 class="card-title">Mitra handal kami</h5>
               <p class="card-text">Tersedia 17 rumah sakit mitra yang tersebar di seluruh Bali.</p>
-              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">Tentang kami</router-link>
+              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">Lihat rumah sakit</router-link>
             </div>
           </div>
         <div class="card" style="width:auto;">
@@ -112,7 +112,7 @@
             <div class="card-body">
               <h5 class="card-title">Pelayanan profesional</h5>
               <p class="card-text">Ratusan dokter yang berpengalaman di bidangnya.</p>
-              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">Cari dokter</router-link>
+              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">Tentang kami</router-link>
             </div>
           </div>
         </div>
@@ -281,9 +281,8 @@
 <!-- Carousel wrapper -->
   <!-- Controls -->
   <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
-
   <!-- Inner -->
-  <div class="carousel-inner pb-5">
+  <div class="carousel-inner pb-4">
       <div class="d-flex justify-content-center position-relative">
       <a class="carousel-control-prev" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -298,21 +297,16 @@
     <div class="carousel-item active">
       <div class="container">
         <div class="row">
-          <div class="col-4 col-lg-4">
-            <div class="card border-0">
-              <i class="fas fa-dollar-sign"></i>
-            </div>
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner1" alt="Partner logo">
           </div>
 
-          <div class="col-4 col-lg-4">
-            <div class="card border-0">
-              <i class="fab fa-google"></i>
-            </div>
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner2" alt="Partner logo">
           </div>
-          <div class="col-4 col-lg-4">
-            <div class="card border-0">
-              <i class="fab fa-microsoft"></i>
-            </div>
+
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner3" alt="Partner logo">
           </div>
         </div>
       </div>
@@ -322,52 +316,45 @@
     <div class="carousel-item">
       <div class="container">
         <div class="row">
-
-          <div class="col-block col-sm-4 col-lg-4">
-            <div class="card border-0">
-              <i class="fab fa-chrome"></i>
-            </div>
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner4" alt="Partner logo">
           </div>
 
-          <div class="col-sm-4 lg-4 d-none d-sm-block">
-            <div class="card border-0">
-              <i class="fab fa-vuejs"></i>
-            </div>
-          </div>
-          <div class="col-sm-4 lg-4 d-none d-sm-block">
-            <div class="card border-0">
-              <i class="fab fa-github"></i>
-            </div>
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner5" alt="Partner logo">
           </div>
 
-        </div>
-      </div>
-    </div>
+          <div class="col">
+              <img class="partner-carousel" :src="images.partner6" alt="Partner logo">
+          </div>
 
-    <!-- Single item -->
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row">
-       <div class="col-block col-sm-4 col-lg-4">
-            <div class="card border-0">
-              <i class="fab fa-whatsapp"></i>
-            </div>
-          </div>
-          <div class="col-sm-4 lg-4 d-none d-sm-block">
-            <div class="card border-0">
-              <i class="fab fa-facebook"></i>
-            </div>
-          </div>
-          <div class="col-sm-4 lg-4 d-none d-sm-block">
-          <div class="col-block col-sm-4 col-lg-4">
-            <div class="card border-0">
-              <i class="fab fa-instagram"></i>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
+
+    <!-- Single item 
+    <div class="carousel-item">
+      <div class="container">
+      <div class="row">
+       <div class="col">
+            <div class="card border-0">
+               <img class="partner-carousel" :src="images.partner7" alt="Partner logo">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+               <img class="partner-carousel" :src="images.partner8" alt="Partner logo">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+               <img class="partner-carousel" :src="images.partner9" alt="Partner logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
   <!-- Inner -->
   <div class="py-4"></div>
 </div>
@@ -428,8 +415,15 @@ export default {
         team1: require('@/assets/Team/dr ida ayu oka purnamawati.jpg'),
         team2: require('@/assets/Team/Dr.i gede wiryana patra jaya.jpg'),
         team3: require('@/assets/Team/PUTU-DEDDY-SUHARTAWAN-B.BUS-MKTG.jpg'),
-        placeholder: require('@/assets/placeholder.png')
-
+        partner1: require('@/assets/logors/350x350-01.png'),
+        partner2: require('@/assets/logors/350x350-02.png'),
+        partner3: require('@/assets/logors/350x350-03.png'),
+        partner4: require('@/assets/logors/350x350-04.png'),
+        partner5: require('@/assets/logors/350x350-05.png'),
+        partner6: require('@/assets/logors/350x350-06.png'),
+        partner7: require('@/assets/logors/350x350-07.png'),
+        partner8: require('@/assets/logors/350x350-08.png'),
+        partner9: require('@/assets/logors/350x350-09.png'),
       },
     banners: [
         {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Siloam Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
@@ -468,6 +462,10 @@ export default {
 .col-5{
   margin-inline: auto;
   text-align: center;
+}
+
+.partner-carousel {
+  height: 300px;
 }
 
 .container {
