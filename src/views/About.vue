@@ -4,7 +4,7 @@
     <div class="about" id="about">
       <div class="container-fluid p-0">
         <img :src="images.cover1" alt="habout" class="w-100">
-        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">About us</h1>
+        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">About BMTA</h1>
       </div>
     </div>
   </section>
@@ -20,12 +20,12 @@
     <div class="container">
       <div class="row">
         <div class="col pt-0 mx-5 my-5 mt-3">
-          <img :src="images.about" alt="logo" style="img-fluid">
+          <img :src="images.about" alt="logo" style="img-fluid" class="img-about">
         </div>
         <div class="col pt-5">
           <div class="text-left">
-            <h2>About <span class="t-color">Medical</span></h2>
-            <p>Asosiasi Wisata Medis Indonesia<br>Cinta Indonesia Cinta Wisata Medis Bangsa</p>
+            <h2><span class="t-color">Bali Medical Tourist Association</span></h2>
+            <p>Cinta Indonesia Cinta Wisata Medis Bangsa</p>
             <h2>Visi</h2>
             <p>Meningkatkan Kecintaan Masyarakat Indonesia Akan Wisata Medis</p>
             <h2>Misi</h2>
@@ -72,15 +72,15 @@
           dengan instansi terkait amat diperlukan dan untuk Populasi pasien dengan asuransi diperlukan regulasi dari
           pemerintah untuk memberikan keringanan pada perusahaan asuransi yang mendukung wisata medis Indonesia. Melihat
           pentingnya kerjasama ini dan mendukung terciptanya Wisata medis Indonesia maka AWMI didirikan pada 8 Agustus
-          2019 agar mensinergiskan langkah antara pihak2 terkait.</p>
+          2019 agar mensinergiskan langkah antara pihak-pihak terkait.</p>
       </div>
     </div>
   </section>
 
   <section>
-      <h5 align="middle" class="my-5">Website ini mulai dibangun pada Desember 2021.</h5>
-      <h5 align="middle" class="my-4">Lihat pengembangan website ini di GitHub: 
-        <a href="https://github.com/Pryandika/BelajarVueJs">(Source)</a> <a href="https://github.com/signnd/BelajarVueJs-n">(Fork)</a></h5>
+      <p align="middle" class="my-5">Website ini mulai dibangun pada Desember 2021.</p>
+      <p align="middle" class="my-4">Lihat pengembangan website ini di GitHub: 
+        <a href="https://github.com/Pryandika/BelajarVueJs">(Source)</a> <a href="https://github.com/signnd/BelajarVueJs-n">(Fork)</a></p>
   </section>
 </template>
 
@@ -92,7 +92,7 @@ export default {
             images: {
                 cover1: require('@/assets/hero/flat.png'),
                 cover2: require('@/assets/gallery/section_bg01.png'),
-                about: require('@/assets/gallery/popular_sub3.png'),
+                about: require('@/assets/gallery/pexels-tom-fisk-1692693.jpg'),
                 logo: require('@/assets/logo/logo.png')
             }
         }
@@ -111,6 +111,11 @@ export default {
   text-align: left;
   width: 100%;
 
+}
+
+.img-about {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .centered{  

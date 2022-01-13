@@ -80,7 +80,8 @@
           <img class="card-img-top" :src="images.rssanglah" alt="RSUP Sanglah">
           <div class="card-body text-center">
             <h5 class="card-title">RSUP Sanglah</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Diponegoro, Denpasar</p>
+            <div class="pt-4 d-none d-sm-block"></div>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
             </router-link>
             <div class="py-1"></div>
@@ -90,7 +91,7 @@
                   <button class="btn w-100 btn-primary" data-toggle="modal"
                     data-target="#Reservasi">Reservasi</button>
                 </div>
-                <div class="py-1 d-block d-sm-block d-md-none"></div>
+                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
                 <div class="col">
                   <button class="btn w-100 btn-primary" data-toggle="modal"
                     data-target="#Jadwal">Jadwal</button>
@@ -102,8 +103,8 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.rsubm" alt="RSU Bali Mandara">
           <div class="card-body text-center">
-            <h5 class="card-title">RSU Bali Mandara</h5>
-            <p class="card-text">Deskripsi</p>
+            <h5 class="card-title">RSU Bali Mandara RSU Bali Mandara</h5>
+            <p class="card-text">Jl. Bypass Ngurah Rai No. 548, Denpasar</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="pt-2"></div>
@@ -112,7 +113,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -124,7 +125,8 @@
           <img class="card-img-top" :src="images.rsmbm" alt="RS Mata Bali Mandara">
           <div class="card-body text-center">
             <h5 class="card-title">RS Mata Bali Mandara</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Angsoka No. 8 Denpasar</p>
+            <div class="pt-4 d-none d-sm-block d-md-none d-lg-block"></div>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="pt-2"></div>
@@ -133,7 +135,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -154,7 +156,7 @@
           <img class="card-img-top" :src="images.rsptnunud" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RSPTN Unud</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Rumah Sakit Universitas Udayana No. 1, Jimbaran, Kuta Selatan</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -162,11 +164,12 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
               </div>
+
             </div>
           </div>
         </div>
@@ -174,7 +177,8 @@
           <img class="card-img-top" :src="images.rsmangusadabadung" alt="RS Mangusada Ubung">
           <div class="card-body text-center">
             <h5 class="card-title">RS Mangusada Badung</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Raya Kapal, Mangupura, Mengwi, Badung</p>
+            <div class="pt-4 d-none d-sm-block d-md-none d-lg-none"></div>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -182,7 +186,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -194,7 +198,8 @@
           <img class="card-img-top" :src="images.bimcnusadua" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS BIMC Nusa Dua</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Kawasan ITDC Blok D, Jl. Nusa Dua, Kuta Selatan, Badung</p>
+            <div class="pt-4 d-none d-sm-block d-md-none"></div>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -202,7 +207,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -223,7 +228,8 @@
           <img class="card-img-top" :src="images.bimckuta" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS BIMC Kuta</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Bypass Ngurah Rai No. 100X</p>
+            <div class="pt-4 d-none d-sm-none d-md-none"></div>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -231,7 +237,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -243,7 +249,7 @@
           <img class="card-img-top" :src="images.rssiloamkuta" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS Siloam Kuta</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Sunset Road No. 818, Kuta</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -251,7 +257,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -263,7 +269,7 @@
           <img class="card-img-top" :src="images.bros" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">Bali Royal Hospital</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Tantular No. 6, Renon, Denpasar</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -271,7 +277,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -292,7 +298,8 @@
           <img class="card-img-top" :src="images.rsprimamedika" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS Prima Medika</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Raya Sesetan No. 10, Denpasar</p>
+            <br class="d-none d-sm-block d-md-block d-lg-none">
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -300,7 +307,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -312,7 +319,7 @@
           <img class="card-img-top" :src="images.rskasihibudps" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS Kasih Ibu Denpasar</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Teuku Umar No. 120, Denpasar</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -320,7 +327,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -332,7 +339,8 @@
           <img class="card-img-top" :src="images.rskasihibusaba" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS Kasih Ibu Saba</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Raya Pantai Saba No. 9, Gianyar</p>
+            <br class="d-none d-sm-none d-md-block d-lg-none">
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -340,7 +348,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -361,7 +369,7 @@
           <img class="card-img-top" :src="images.rsramata" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS Khusus Mata Ramata</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Gatot Subroto Barat No. 429, Denpasar</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -369,7 +377,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -381,7 +389,9 @@
           <img class="card-img-top" :src="images.rsbhayangkara" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">RS Bhayangkara</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Trijata No. 32, Denpasar</p>
+            <br class="d-none d-sm-none d-md-block d-lg-none">
+            <div class="pt-4 d-none d-sm-block d-md-block d-lg-block"></div>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -389,7 +399,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">Jadwal</button>
@@ -401,7 +411,8 @@
           <img class="card-img-top" :src="images.pentamedika" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">Klinik Penta Medika</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Mahendradatta Selatan No. 88, Denpasar</p>
+            <div class="pt-4 d-none d-sm-block d-md-none d-lg-none"></div>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -409,7 +420,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">#Jadwal</button>
@@ -429,7 +440,7 @@
           <img class="card-img-top" :src="images.dentalclinic" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">Dental 911 Clinic</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Gatot Subroto Barat No. 367, Denpasar</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -449,14 +460,14 @@
           <img class="card-img-top" :src="images.assist" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title">Assist 221</h5>
-            <p class="card-text">Deskripsi</p>
+            <p class="card-text">Jl. Anyelir No. 8, Denpasar</p>
+            <br class="d-none d-sm-block d-md-block d-lg-block">
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter">Reservasi</button>
-                <button data-target="#Reservasi">Reservasi</button>
+                  data-target="#exampleModalCenter">Reservasi</button>  
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">

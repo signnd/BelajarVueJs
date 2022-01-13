@@ -6,20 +6,23 @@
         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
         <li data-target="#slideshow" data-slide-to="1"></li>
       </ol>
-      <br>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
           <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1>
-              <p calss="text-justify" style="font-size:2vw;">Berwisata medis bersama kami</p>
+              <div class="mt-5"><h1 class="font-weight-bold" style="font-size:5vw;">{{$translate(['Selamat datang','Welcome'])}}</h1></div>
+              <p calss="text-justify" style="font-size:2vw;">
+                {{$translate(['Selamat datang di BMTA','Welcome to BMTA'])}}
+              </p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
           <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1>
-              <p class="" style="font-size:2vw;">Berwisata medis bersama kami</p>
+              <div class="mt-5"><h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1></div>
+              <p class="" style="font-size:2vw;">
+                {{$translate(['Wisata medis bersama BMTA','Medical Tourism with BMTA'])}}
+              </p>
           </div>
         </div>
       </div>
@@ -39,7 +42,7 @@
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
         <select class="form-control form-control-md">
-          <option hidden>Lokasi</option>
+          <option hidden>{{$translate(['Lokasi','Location'])}}</option>
           <option>Denpasar</option>
           <option>Tabanan</option>
           <option>Klungkung</option>
@@ -49,18 +52,18 @@
       </div>
       <div class="col-3">
         <select class="form-control form-control-md">
-          <option hidden>Kategori</option>
+          <option hidden>{{$translate(['Kategori','Categories'])}}</option>
           <option>Klinik</option>
           <option>Rumah Sakit</option>
           <option>Apotek</option>
         </select>
       </div>
       <div class="col-3">
-        <input class="form-control mr-2" type="search" placeholder="Pencarian">
+        <input class="form-control mr-2" type="search" placeholder="Search">
       </div>
       <div class="col-2">
         <router-link :to="{name: 'Destination'}">
-          <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
+          <button type="button" class="btn btn-md btn-block btn-primary">{{$translate(['Cari','Search'])}}</button>
         </router-link>
       </div>
     </div>
@@ -68,7 +71,7 @@
   <!-- Search Destination & Categories SM -->
 <div class="container d-block d-md-none pt-3">
   <select class="form-control form-control-md">
-    <option hidden>Lokasi</option>
+    <option hidden>{{$translate(['Lokasi','Location'])}}</option>
     <option>Denpasar</option>
     <option>Tabanan</option>
     <option>Klungkung</option>
@@ -76,28 +79,28 @@
     <option>Buleleng</option>
   </select>
   <select class="form-control form-control-md my-3">
-    <option hidden>Kategori</option>
+    <option hidden>{{$translate(['Kategori','Categories'])}}</option>
     <option>Klinik</option>
     <option>Rumah Sakit</option>
     <option>Apotek</option>
   </select>
   <input class="form-control mb-3" type="search" placeholder="Search">
   <router-link :to="{name: 'Destination'}">
-    <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
+    <button type="button" class="btn btn-md btn-block btn-primary">{{$translate(['Cari','Search'])}}</button>
   </router-link>
 </div>
 
   <section>
-    <h2 class="pt-5 font-weight-bold">Keunggulan Kami</h2>
+    <h2 class="pt-5 font-weight-bold">{{$translate(['Mengapa Memilih Kami?','Why choose us?'])}}</h2>
     <div class="container d-flex">
       <div class="container my-5 align-items-center" style="width: 900px;">
         <div class="card-group">
           <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card1" alt="Card image 1">
             <div class="card-body">
-              <h5 class="card-title">Mitra handal kami</h5>
+              <h5 class="card-title">Mitra handal</h5>
               <p class="card-text">Tersedia 17 rumah sakit mitra yang tersebar di seluruh Bali.</p>
-              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">Tentang kami</router-link>
+              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">Lihat rumah sakit</router-link>
             </div>
           </div>
         <div class="card" style="width:auto;">
@@ -111,9 +114,10 @@
           <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card3" alt="Card image 2">
             <div class="card-body">
-              <h5 class="card-title">Pelayanan profesional</h5>
-              <p class="card-text">Ratusan dokter yang berpengalaman di bidangnya.</p>
-              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">Cari dokter</router-link>
+              <h5 class="card-title">Layanan profesional</h5>
+              <p class="card-text">Ratusan dokter yang ahli di bidangnya.</p>
+              <div class="py-2 d-none d-sm-block d-md-none"></div>
+              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">Tentang kami</router-link>
             </div>
           </div>
         </div>
@@ -122,7 +126,7 @@
   </section>
 
 <section>
-  <h2 class="font-weight-bold text-center pb-3">Layanan kami</h2>
+  <h2 class="font-weight-bold text-center pb-3">{{$translate(['Layanan Kami','Our Services'])}}</h2>
 </section>
 
 <section>
@@ -145,7 +149,7 @@
               <h5 class="service-title">Medical research</h5>
               <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.</p>
           </div>
-          <div class="col-5 mb-4">
+          <div class="col-5 mb-3">
           <i class="fas fa-heart"></i>
               <h5 class="service-title">Medical advisor</h5>
               <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
@@ -155,62 +159,8 @@
 </section>
 
 
-
-<!-- Popular Destination -->
-<h2 class="font-weight-bold ">Destinasi Populer</h2>
-<div id="stripes" class="d-none d-lg-block">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
 <section>
-  <div class="container-fluid d-none d-lg-block">
-    <div class="destination">
-      <div class="row">
-        <div class="col">
-          <img class="dest-img" :src="selectedBanner.img">
-        </div>
-        <div class="col-4 mt-3 pt-3 text-left mr-5 destination">
-          <h2 class="text-black font-weight-bold mx-3 dest-text">{{selectedBanner.label}}</h2>
-          <p class="text-black text-justify mx-3 dest-text">{{selectedBanner.deskripsi}}</p>
-          <br>
-          <h4 class="text-black ml-3">Destinasi Lainnya </h4>
-          <router-link to="/Destination" class="btn btn-outline-primary text-wrap ml-3 dest-text">Lihat Semua ►</router-link>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="d-block d-lg-none">
-  <div class="container-fluid">
-    <img class="dest-img" :src="selectedBanner.img">
-      </div>
-    <div class="container destination">
-      <h2 class="text-black font-weight-bold dest-text pt-4">{{selectedBanner.label}}</h2>
-      <p class="text-black text-justify dest-text">{{selectedBanner.deskripsi}}</p>
-      <br>
-      <h4 class="text-black">Destinasi Lainnya </h4>
-      <router-link to="/Destination" class="btn btn-outline-primary text-wrap dest-text">Lihat Semua ►
-      </router-link>
-      <div class="pb-2"></div>
-    </div>
-  </div>
-</section>
-<div class="d-none d-sm-block">
-<br><br><br><br><br><br>
-</div>
-
-<div class="d-block d-sm-none">
-<br><br>
-</div>
-
-
-<section>
-  <h2 class="font-weight-bold">Our Team</h2>
+  <h2 class="font-weight-bold pb-3">{{$translate(['Tim Kami','Our Team'])}}</h2>
 <!-- Carousel wrapper -->
 <div
   id="carouselMultiItemExample"
@@ -218,7 +168,7 @@
   data-ride="carousel"
 >
   <!-- Inner -->
-  <div class="carousel-inner">
+  <div class="carousel-inner pb-5">
     <!-- Single item -->
     <div class="carousel-item active">
       <div class="container">
@@ -273,197 +223,95 @@
         </div>
       </div>
     </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-12">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Fissure in Sandstone"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Tony Sukentro SpB</h5>
-                <p class="card-text">
-                  Bendahara
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Storm Clouds"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Reza Yuridian Purwok</h5>
-                <p class="card-text">
-                  Sekertaris
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Hot Air Balloons"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Haekal Yassier Anshari</h5>
-                <p class="card-text">
-                  Sie Marketing
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Peaks Against the Starry Sky"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Vito A. Damay, SpJP(K)</h5>
-                <p class="card-text">
-                  Sie Publikasi
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Bridge Over Water"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dr. Andry Edwin Dahlan, M.Par</h5>
-                <p class="card-text">
-                  Sie Inovasi dan Teknologi
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="card">
-              <img
-                :src="images.placeholder"
-                class="card-img-top"
-                alt="Purbeck Heritage Coast"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Ogy Winenriandhika</h5>
-                <p class="card-text">
-                  Wakil Ketua 2
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#slideshow" data-slide-to="0" class="active"></li>
-        <li data-target="#slideshow" data-slide-to="1"></li>
-        <li data-target="#slideshow" data-slide-to="2"></li>
-      </ol>
-  <!-- Controls -->
-  <div class="d-flex justify-content-center mb-4">
-    <button
-      class="carousel-control-prev position-relative"
-      type="button"
-      data-target="#carouselMultiItemExample"
-      data-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next position-relative"
-      type="button"
-      data-target="#carouselMultiItemExample"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
   <!-- Inner -->
 </div>
 <!-- Carousel wrapper -->
 </section>
-<br><br><br>
+
+<!-- Popular Destination -->
+<h2 class="font-weight-bold py-3">{{$translate(['Destinasi Populer','Popular Destinations'])}}</h2>
+<div id="stripes" class="d-none d-lg-block">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<section>
+  <div class="container-fluid d-none d-lg-block">
+    <div class="destination">
+      <div class="row">
+        <div class="col">
+          <img class="dest-img" :src="selectedBanner.img">
+        </div>
+        <div class="col-4 mt-3 pt-3 text-left mr-5 destination">
+          <h2 class="text-black font-weight-bold mx-3 dest-text">{{selectedBanner.label}}</h2>
+          <p class="text-black text-justify mx-3 dest-text">{{selectedBanner.deskripsi}}</p>
+          <br>
+          <router-link to="/Destination" class="btn btn-outline-primary text-wrap ml-3 dest-text">{{$translate(['Lihat Destinasi Lainnya','See More Destinations'])}} ►</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section>
-  <h2 class="font-weight-bold">Our Partners</h2>
+  <div class="d-block d-lg-none">
+  <div class="container-fluid">
+    <img class="dest-img" :src="selectedBanner.img">
+      </div>
+    <div class="container destination">
+      <h2 class="text-black font-weight-bold dest-text pt-4">{{selectedBanner.label}}</h2>
+      <p class="text-black text-justify dest-text">{{selectedBanner.deskripsi}}</p>
+      <br>
+      <router-link to="/Destination" class="btn btn-outline-primary text-wrap dest-text">
+      {{$translate(['Lihat Destinasi Lainnya','See Other Destinations'])}} ►
+      </router-link>
+      <div class="pb-2"></div>
+    </div>
+  </div>
+</section>
+<div class="d-none d-sm-block">
+<br><br><br><br><br><br>
+</div>
+
+<div class="d-block d-sm-none">
+<br><br>
+</div>
+
+<section>
+  <h2 class="font-weight-bold">{{$translate(['Mitra Kami','Our Partners'])}}</h2>
 <!-- Carousel wrapper -->
-    <!-- Indicators -->
-    <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
-        <!-- Controls -->
-  <div class="d-flex justify-content-center mb-4">
-    <a class="carousel-control-prev position-relative" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
+  <!-- Controls -->
+  <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
+  <!-- Inner -->
+  <div class="carousel-inner pb-4">
+      <div class="d-flex justify-content-center position-center">
+      <a class="carousel-control-prev" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
-    </a>
-    <a class="carousel-control-next position-relative" type="button" data-target="#carouselMultiItemPartner" data-slide="next">
+      </a>
+      <a class="carousel-control-next" type="button" data-target="#carouselMultiItemPartner" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
-    </a>
+  </a>
   </div>
-
-  <!-- Inner -->
-  <div class="carousel-inner">
     <!-- Single item -->
     <div class="carousel-item active">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fas fa-dollar-sign"></i>
-            </div>
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner1" alt="Partner logo">
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-google"></i>
-            </div>
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner2" alt="Partner logo">
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-microsoft"></i>
-            </div>
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner3" alt="Partner logo">
           </div>
-
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-paypal"></i>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -472,69 +320,24 @@
     <div class="carousel-item">
       <div class="container">
         <div class="row">
-       <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-aws"></i>
-            </div>
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner4" alt="Partner logo">
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-chrome"></i>
-            </div>
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner5" alt="Partner logo">
           </div>
 
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-vuejs"></i>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-github"></i>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row">
-       <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-whatsapp"></i>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-android"></i>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-facebook"></i>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="card">
-              <i class="fab fa-instagram"></i>
-            </div>
+          <div class="col">
+              <img class="partner-carousel" :src="images.partner6" alt="Partner logo">
           </div>
 
         </div>
       </div>
     </div>
   </div>
-  <!-- Inner -->
+  </div>
   <div class="py-4"></div>
-</div>
 <!-- Carousel wrapper -->
 </section>
 
@@ -580,7 +383,7 @@
     
     
 <script>
-export default {
+export default {  
   data() {
     return {
       images: {
@@ -592,8 +395,15 @@ export default {
         team1: require('@/assets/Team/dr ida ayu oka purnamawati.jpg'),
         team2: require('@/assets/Team/Dr.i gede wiryana patra jaya.jpg'),
         team3: require('@/assets/Team/PUTU-DEDDY-SUHARTAWAN-B.BUS-MKTG.jpg'),
-        placeholder: require('@/assets/placeholder.png')
-
+        partner1: require('@/assets/logors/350x350-01.png'),
+        partner2: require('@/assets/logors/350x350-02.png'),
+        partner3: require('@/assets/logors/350x350-03.png'),
+        partner4: require('@/assets/logors/350x350-04.png'),
+        partner5: require('@/assets/logors/350x350-05.png'),
+        partner6: require('@/assets/logors/350x350-06.png'),
+        partner7: require('@/assets/logors/350x350-07.png'),
+        partner8: require('@/assets/logors/350x350-08.png'),
+        partner9: require('@/assets/logors/350x350-09.png'),
       },
     banners: [
         {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Siloam Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
@@ -622,6 +432,11 @@ export default {
 </script>
     
 <style lang="css">
+.partner-carousel {
+  min-height:100px;
+  
+}
+
 .fas, .fab, .far {
   font-size:6em;
   color:rgb(85, 189, 253);
@@ -668,7 +483,7 @@ export default {
 
 @media only screen and (max-width: 1000px){
   .carousel-caption {
-    padding-inline-end: 15rem;
+    padding-inline-end: 1rem;
     width: 500px !important;
     left: 15%;
     top: 50% !important;
@@ -700,13 +515,13 @@ export default {
 }
 
 .carousel-control-prev{
-  margin-top: 50px;
+  margin-top: 10px;
   width:20%;
-  height: auto;
+  height:0px;
 }
 
 .carousel-control-next{
-  margin-top: 50px;
+  margin-top: 0px;
   width:20%;
   height: auto;   
 }

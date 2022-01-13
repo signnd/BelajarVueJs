@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <section>
   <div class="header-area" id="nav">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
+    <nav class="navbar navbar-expand-xl navbar-light bg-white fixed-top shadow">
       <div class="container">
         <nav class="navbar navbar-white bg-white">
           <a class="navbar-brand my-0" href="/">
@@ -15,43 +15,30 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav">
-            <!-- Nav Link Fullscreen -->
+            <!-- Nav Link -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
-              data-target="#navbarSupportedContent">Home</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Beranda','Home'])}}</router-link>
             <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
-              data-target="#navbarSupportedContent">About</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Tentang','About'])}}</router-link>
              <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
-              data-target="#navbarSupportedContent">Services</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Layanan','Services'])}}</router-link>
             <router-link to="/Destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
-              data-target="#navbarSupportedContent">Destination</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Destinasi','Destination'])}}</router-link>
             <router-link to="/Blog" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">Blog</router-link>
             <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
-              data-target="#navbarSupportedContent">Contact</router-link>
-              
-
-            <!-- Nav Link Collapsed -->
-            <router-link to="/" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Contact" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Contact</router-link>
-            <router-link to="/About" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">About</router-link>
-            <router-link to="/Blog" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Blog</router-link>
-              <router-link to="/Blogkw1" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Blogkw1</router-link>
-            <router-link to="/Destination" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Destination</router-link>
-            <router-link to="/Services" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Services</router-link>
-            <router-link to="/Halaman3" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Rumahsakit</router-link>
-            <router-link to="/Kesehatan" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Kesehatan</router-link>
-            <router-link to="/Olahraga" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Olahraga</router-link>
-          </div>
+              data-target="#navbarSupportedContent">{{$translate(['Kontak','Contact'])}}</router-link>
+              <div class="dropdown mt-2 mx-3">
+                <!--<i class="bi bi-translate" id="dropdownMenuButton" data-toggle="dropdown"></i>-->
+                <button type="button" class="btn btn-info dropdown-toggle card-title" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{$translate(['ID','EN'])}}
+                </button>
+                  <div class="dropdown-menu text-center">
+                    <div @click="setLanguage(1)" class="dropdown-item text-center" ><img :src="images.idflag" alt="idflag"></div>
+                    <div @click="setLanguage(2)" class="dropdown-item text-center" ><img :src="images.enflag" alt="enflag"></div>
+                  </div>
+              </div>
+           </div>
         </div>
       </div>
     </nav>
@@ -64,7 +51,7 @@
   <section>
   <transition>
     <div id="pagetop" v-show="scY > 300" @click="toTop">
-      <button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-chevron-double-up px-1"></i></button>
+      <button type="button" class="btn btn-info btn-sm rounded-pill"><i class="bi bi-chevron-double-up px-1"></i></button>
     </div>
   </transition>
   </section>
@@ -95,12 +82,13 @@
 </template>
 
 <script>
-import GoTop from './component/GoTop.vue'
 export default {
     data() {
         return {
             images: {
-                logo: require('@/assets/logo/logo-real-a.jpeg')
+                logo: require('@/assets/logo/logo-real-a.jpeg'),
+                enflag: require('@/assets/flag/en.jpg'),
+                idflag: require('@/assets/flag/id.png')
             },
             scTimer: 0,
             scY: 0,
@@ -123,7 +111,12 @@ export default {
           top: 0,
           behavior: "smooth"
         });
+      },
+      setLanguage: function (val){
+        localStorage.setItem('language', val)
+        location.reload()
       }
+
     }
 }
 
@@ -164,6 +157,11 @@ $(function(){
 #nav a:hover {
   color: #6ec3ff;
 }
+
+#nav i:hover {
+  color: #6ec3ff;
+}
+
 
 #nav form {
   color: #6ec3ff;
@@ -241,5 +239,10 @@ $(function(){
     100% {
         opacity: 1;
     }
+}
+
+.dropdown-menu {
+    width: 100px !important;
+    height: 100px !important;
 }
 </style> 
