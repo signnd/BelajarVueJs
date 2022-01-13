@@ -17,9 +17,9 @@
           <div class="navbar-nav">
             <!-- Nav Link -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
-              data-target="#navbarSupportedContent">Home</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Rumah','Home'])}}</router-link>
             <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
-              data-target="#navbarSupportedContent">About</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Tentang','About'])}}</router-link>
              <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">Services</router-link>
             <router-link to="/Destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
@@ -29,10 +29,10 @@
             <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
               data-target="#navbarSupportedContent">Contact</router-link>
               <div class="dropdown mx-3">
-                <i class="bi bi-translate" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                  <div class="dropdown-menu">
-                    <router-link class="dropdown-item text-center" to="/about"><img :src="images.idflag" alt="idflag"></router-link>
-                    <router-link class="dropdown-item text-center" to="#"><img :src="images.enflag" alt="enflag"></router-link>
+                <i class="bi bi-translate" id="dropdownMenuButton" data-toggle="dropdown">
+                  <div class="dropdown-menu text-center">
+                    <div @click="setLanguage(1)" class="dropdown-item text-center" ><img :src="images.idflag" alt="idflag"></div>
+                    <div @click="setLanguage(2)" class="dropdown-item text-center" ><img :src="images.enflag" alt="enflag"></div>
                   </div>
                 </i>
               </div>
@@ -110,7 +110,12 @@ export default {
           top: 0,
           behavior: "smooth"
         });
+      },
+      setLanguage: function (val){
+        localStorage.setItem('language', val)
+        location.reload()
       }
+
     }
 }
 
@@ -151,6 +156,11 @@ $(function(){
 #nav a:hover {
   color: #6ec3ff;
 }
+
+#nav i:hover {
+  color: #6ec3ff;
+}
+
 
 #nav form {
   color: #6ec3ff;

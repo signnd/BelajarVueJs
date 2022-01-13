@@ -33,6 +33,8 @@
     </div>
   </section>
 
+  <p></p>
+
   <!-- Search Destination & Categories Lg -->
   <form class="d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
@@ -333,30 +335,6 @@
     </div>
   </div>
   </div>
-    <!-- Single item 
-    <div class="carousel-item">
-      <div class="container">
-      <div class="row">
-       <div class="col">
-            <div class="card border-0">
-               <img class="partner-carousel" :src="images.partner7" alt="Partner logo">
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-0">
-               <img class="partner-carousel" :src="images.partner8" alt="Partner logo">
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-0">
-               <img class="partner-carousel" :src="images.partner9" alt="Partner logo">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> Inner -->
   <div class="py-4"></div>
 <!-- Carousel wrapper -->
 </section>
@@ -403,7 +381,7 @@
     
     
 <script>
-export default {
+export default {  
   data() {
     return {
       images: {
