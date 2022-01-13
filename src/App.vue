@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <section>
   <div class="header-area" id="nav">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
+    <nav class="navbar navbar-expand-xl navbar-light bg-white fixed-top shadow">
       <div class="container">
         <nav class="navbar navbar-white bg-white">
           <a class="navbar-brand my-0" href="/">
@@ -17,24 +17,26 @@
           <div class="navbar-nav">
             <!-- Nav Link -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
-              data-target="#navbarSupportedContent">{{$translate(['Rumah','Home'])}}</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Beranda','Home'])}}</router-link>
             <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">{{$translate(['Tentang','About'])}}</router-link>
              <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
-              data-target="#navbarSupportedContent">Services</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Layanan','Services'])}}</router-link>
             <router-link to="/Destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
-              data-target="#navbarSupportedContent">Destination</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Destinasi','Destination'])}}</router-link>
             <router-link to="/Blog" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">Blog</router-link>
             <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
-              data-target="#navbarSupportedContent">Contact</router-link>
-              <div class="dropdown mx-3">
-                <i class="bi bi-translate" id="dropdownMenuButton" data-toggle="dropdown">
+              data-target="#navbarSupportedContent">{{$translate(['Kontak','Contact'])}}</router-link>
+              <div class="dropdown mt-2 mx-3">
+                <!--<i class="bi bi-translate" id="dropdownMenuButton" data-toggle="dropdown"></i>-->
+                <button type="button" class="btn btn-info dropdown-toggle card-title" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{$translate(['ID','EN'])}}
+                </button>
                   <div class="dropdown-menu text-center">
                     <div @click="setLanguage(1)" class="dropdown-item text-center" ><img :src="images.idflag" alt="idflag"></div>
                     <div @click="setLanguage(2)" class="dropdown-item text-center" ><img :src="images.enflag" alt="enflag"></div>
                   </div>
-                </i>
               </div>
            </div>
         </div>
@@ -49,7 +51,7 @@
   <section>
   <transition>
     <div id="pagetop" v-show="scY > 300" @click="toTop">
-      <button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-chevron-double-up px-1"></i></button>
+      <button type="button" class="btn btn-info btn-sm rounded-pill"><i class="bi bi-chevron-double-up px-1"></i></button>
     </div>
   </transition>
   </section>
@@ -80,7 +82,6 @@
 </template>
 
 <script>
-import GoTop from './component/GoTop.vue'
 export default {
     data() {
         return {
