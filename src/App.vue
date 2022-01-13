@@ -15,11 +15,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav">
-            <!-- Nav Link Fullscreen -->
+            <!-- Nav Link -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
-              data-target="#navbarSupportedContent">Home</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Rumah','Home'])}}</router-link>
             <router-link to="/About" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
-              data-target="#navbarSupportedContent">About</router-link>
+              data-target="#navbarSupportedContent">{{$translate(['Tentang','About'])}}</router-link>
              <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">Services</router-link>
             <router-link to="/Destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
@@ -28,34 +28,15 @@
               data-target="#navbarSupportedContent">Blog</router-link>
             <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
               data-target="#navbarSupportedContent">Contact</router-link>
-              
-
-            <!-- Nav Link Collapsed -->
-            <router-link to="/" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Home</router-link>
-            <router-link to="/Contact" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Contact</router-link>
-            <router-link to="/About" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">About</router-link>
-            <router-link to="/Blog" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Blog</router-link>
-            <router-link to="/Destination" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Destination</router-link>
-            <router-link to="/Services" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Services</router-link>
-            <router-link to="/Halaman3" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Rumahsakit</router-link>
-            <router-link to="/Kesehatan" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Kesehatan</router-link>
-            <router-link to="/Olahraga" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Olahraga</router-link>
-              <router-link to="/en/About" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">About</router-link>
-              <router-link to="/en/Blog" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Blog</router-link>
-              <router-link to="/en/Home" class="d-none fs-4 mx-2" data-toggle="collapse"
-              data-target="#navbarSupportedContent">Home</router-link>
-          </div>
+              <div class="dropdown mx-3">
+                <i class="bi bi-translate" id="dropdownMenuButton" data-toggle="dropdown">
+                  <div class="dropdown-menu text-center">
+                    <div @click="setLanguage(1)" class="dropdown-item text-center" ><img :src="images.idflag" alt="idflag"></div>
+                    <div @click="setLanguage(2)" class="dropdown-item text-center" ><img :src="images.enflag" alt="enflag"></div>
+                  </div>
+                </i>
+              </div>
+           </div>
         </div>
       </div>
     </nav>
@@ -104,7 +85,9 @@ export default {
     data() {
         return {
             images: {
-                logo: require('@/assets/logo/logo-real-a.jpeg')
+                logo: require('@/assets/logo/logo-real-a.jpeg'),
+                enflag: require('@/assets/flag/en.jpg'),
+                idflag: require('@/assets/flag/id.png')
             },
             scTimer: 0,
             scY: 0,
@@ -127,7 +110,12 @@ export default {
           top: 0,
           behavior: "smooth"
         });
+      },
+      setLanguage: function (val){
+        localStorage.setItem('language', val)
+        location.reload()
       }
+
     }
 }
 
@@ -168,6 +156,11 @@ $(function(){
 #nav a:hover {
   color: #6ec3ff;
 }
+
+#nav i:hover {
+  color: #6ec3ff;
+}
+
 
 #nav form {
   color: #6ec3ff;
@@ -245,5 +238,10 @@ $(function(){
     100% {
         opacity: 1;
     }
+}
+
+.dropdown-menu {
+    width: 100px !important;
+    height: 100px !important;
 }
 </style> 
