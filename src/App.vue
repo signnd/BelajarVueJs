@@ -33,9 +33,9 @@
                 <button type="button" class="btn btn-info dropdown-toggle card-title" data-bs-toggle="dropdown" aria-expanded="false">
                   {{$translate(['ID','EN'])}}
                 </button>
-                  <div class="dropdown-menu text-center">
-                    <div @click="setLanguage(1)" class="dropdown-item text-center" ><img :src="images.idflag" alt="idflag"></div>
-                    <div @click="setLanguage(2)" class="dropdown-item text-center" ><img :src="images.enflag" alt="enflag"></div>
+                  <div class="dropdown-menu">
+                    <div @click="setLanguage(1)" class="dropdown-item text-center" ><img :src="images.idflag" alt="idflag"><col>Indonesia</div>
+                    <div @click="setLanguage(2)" class="dropdown-item text-center" ><img :src="images.enflag" alt="enflag"><col>English</div>
                   </div>
               </div>
            </div>
@@ -243,6 +243,6 @@ $(function(){
 
 .dropdown-menu {
     width: 100px !important;
-    height: 100px !important;
+    height: inherit !important;
 }
 </style> 
