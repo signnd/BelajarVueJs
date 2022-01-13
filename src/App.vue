@@ -28,11 +28,11 @@
               data-target="#navbarSupportedContent">Blog</router-link>
             <router-link to="/Contact" class="nav-item nav-link navbar-collapse fs-4 mx-3"
               data-target="#navbarSupportedContent">Contact</router-link>
-              <div class="dropdown">
+              <div class="dropdown mx-3">
                 <i class="bi bi-translate" type="button" id="dropdownMenuButton" data-toggle="dropdown">
                   <div class="dropdown-menu">
-                    <router-link class="dropdown-item" to="/about"><img :src="images.idflag" alt="idflag"></router-link>
-                    <router-link class="dropdown-item" to="#"><img :src="images.enflag" alt="enflag"></router-link>
+                    <router-link class="dropdown-item text-center" to="/about"><img :src="images.idflag" alt="idflag"></router-link>
+                    <router-link class="dropdown-item text-center" to="#"><img :src="images.enflag" alt="enflag"></router-link>
                   </div>
                 </i>
               </div>
