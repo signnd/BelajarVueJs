@@ -282,10 +282,9 @@
 
 <section>
   <h2 class="font-weight-bold">{{$translate(['Mitra Kami','Our Partners'])}}</h2>
-<!-- Carousel wrapper -->
+<!-- Carousel for bigger screen -->
+  <div id="carouselMultiItemPartner" class="carousel slide carousel-dark d-none d-md-none d-lg-block" data-ride="carousel">
   <!-- Controls -->
-  <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
-  <!-- Inner -->
   <div class="carousel-inner pb-4">
       <div class="d-flex justify-content-center position-center">
       <a class="carousel-control-prev" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
@@ -339,6 +338,83 @@
   </div>
   <div class="py-4"></div>
 <!-- Carousel wrapper -->
+
+<!-- Carousel smaller screen-->
+<div id="carouselMultiItemPartnerSmall" class="carousel slide carousel-dark d-block d-sm-block d-md-block d-lg-none" data-ride="carousel">
+  <div class="carousel-inner pb-4">
+      <div class="d-flex justify-content-center position-center">
+      <a class="carousel-control-prev" type="button" data-target="#carouselMultiItemPartnerSmall" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" type="button" data-target="#carouselMultiItemPartnerSmall" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </a>
+  </div>
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner1" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner2" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner3" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner4" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner5" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner6" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 </section>
 
 
