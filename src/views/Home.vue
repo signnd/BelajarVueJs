@@ -10,15 +10,19 @@
         <div class="carousel-item active">
           <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
           <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">WELCOME</h1>
-              <p calss="text-justify" style="font-size:2vw;">Selamat datang di website BMTA</p>
+              <div class="mt-5"><h1 class="font-weight-bold" style="font-size:5vw;">{{$translate(['Selamat datang','Welcome'])}}</h1></div>
+              <p calss="text-justify" style="font-size:2vw;">
+                {{$translate(['Selamat datang di BMTA','Welcome to BMTA'])}}
+              </p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
           <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1>
-              <p class="" style="font-size:2vw;">Berwisata medis bersama kami</p>
+              <div class="mt-5"><h1 class="font-weight-bold" style="font-size:5vw;">BMTA</h1></div>
+              <p class="" style="font-size:2vw;">
+                {{$translate(['Wisata medis bersama BMTA','Medical Tourism with BMTA'])}}
+              </p>
           </div>
         </div>
       </div>
@@ -33,14 +37,12 @@
     </div>
   </section>
 
-  <p></p>
-
   <!-- Search Destination & Categories Lg -->
   <form class="d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
         <select class="form-control form-control-md">
-          <option hidden>Lokasi</option>
+          <option hidden>{{$translate(['Lokasi','Location'])}}</option>
           <option>Denpasar</option>
           <option>Tabanan</option>
           <option>Klungkung</option>
@@ -50,18 +52,18 @@
       </div>
       <div class="col-3">
         <select class="form-control form-control-md">
-          <option hidden>Kategori</option>
+          <option hidden>{{$translate(['Kategori','Categories'])}}</option>
           <option>Klinik</option>
           <option>Rumah Sakit</option>
           <option>Apotek</option>
         </select>
       </div>
       <div class="col-3">
-        <input class="form-control mr-2" type="search" placeholder="Pencarian">
+        <input class="form-control mr-2" type="search" placeholder="Search">
       </div>
       <div class="col-2">
         <router-link :to="{name: 'Destination'}">
-          <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
+          <button type="button" class="btn btn-md btn-block btn-primary">{{$translate(['Cari','Search'])}}</button>
         </router-link>
       </div>
     </div>
@@ -69,7 +71,7 @@
   <!-- Search Destination & Categories SM -->
 <div class="container d-block d-md-none pt-3">
   <select class="form-control form-control-md">
-    <option hidden>Lokasi</option>
+    <option hidden>{{$translate(['Lokasi','Location'])}}</option>
     <option>Denpasar</option>
     <option>Tabanan</option>
     <option>Klungkung</option>
@@ -77,26 +79,26 @@
     <option>Buleleng</option>
   </select>
   <select class="form-control form-control-md my-3">
-    <option hidden>Kategori</option>
+    <option hidden>{{$translate(['Kategori','Categories'])}}</option>
     <option>Klinik</option>
     <option>Rumah Sakit</option>
     <option>Apotek</option>
   </select>
   <input class="form-control mb-3" type="search" placeholder="Search">
   <router-link :to="{name: 'Destination'}">
-    <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
+    <button type="button" class="btn btn-md btn-block btn-primary">{{$translate(['Cari','Search'])}}</button>
   </router-link>
 </div>
 
   <section>
-    <h2 class="pt-5 font-weight-bold">Keunggulan Kami</h2>
+    <h2 class="pt-5 font-weight-bold">{{$translate(['Mengapa Memilih Kami?','Why choose us?'])}}</h2>
     <div class="container d-flex">
       <div class="container my-5 align-items-center" style="width: 900px;">
         <div class="card-group">
           <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card1" alt="Card image 1">
             <div class="card-body">
-              <h5 class="card-title">Mitra handal kami</h5>
+              <h5 class="card-title">Mitra handal</h5>
               <p class="card-text">Tersedia 17 rumah sakit mitra yang tersebar di seluruh Bali.</p>
               <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">Lihat rumah sakit</router-link>
             </div>
@@ -112,8 +114,9 @@
           <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card3" alt="Card image 2">
             <div class="card-body">
-              <h5 class="card-title">Pelayanan profesional</h5>
-              <p class="card-text">Ratusan dokter yang berpengalaman di bidangnya.</p>
+              <h5 class="card-title">Layanan profesional</h5>
+              <p class="card-text">Ratusan dokter yang ahli di bidangnya.</p>
+              <div class="py-2 d-none d-sm-block d-md-none"></div>
               <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">Tentang kami</router-link>
             </div>
           </div>
@@ -123,7 +126,7 @@
   </section>
 
 <section>
-  <h2 class="font-weight-bold text-center pb-3">Layanan kami</h2>
+  <h2 class="font-weight-bold text-center pb-3">{{$translate(['Layanan Kami','Our Services'])}}</h2>
 </section>
 
 <section>
@@ -157,7 +160,7 @@
 
 
 <section>
-  <h2 class="font-weight-bold pb-3">Our Team</h2>
+  <h2 class="font-weight-bold pb-3">{{$translate(['Tim Kami','Our Team'])}}</h2>
 <!-- Carousel wrapper -->
 <div
   id="carouselMultiItemExample"
@@ -227,7 +230,7 @@
 </section>
 
 <!-- Popular Destination -->
-<h2 class="font-weight-bold py-3">Destinasi Populer</h2>
+<h2 class="font-weight-bold py-3">{{$translate(['Destinasi Populer','Popular Destinations'])}}</h2>
 <div id="stripes" class="d-none d-lg-block">
   <span></span>
   <span></span>
@@ -246,8 +249,7 @@
           <h2 class="text-black font-weight-bold mx-3 dest-text">{{selectedBanner.label}}</h2>
           <p class="text-black text-justify mx-3 dest-text">{{selectedBanner.deskripsi}}</p>
           <br>
-          <h4 class="text-black ml-3">Destinasi Lainnya </h4>
-          <router-link to="/Destination" class="btn btn-outline-primary text-wrap ml-3 dest-text">Lihat Semua ►</router-link>
+          <router-link to="/Destination" class="btn btn-outline-primary text-wrap ml-3 dest-text">{{$translate(['Lihat Destinasi Lainnya','See More Destinations'])}} ►</router-link>
         </div>
       </div>
     </div>
@@ -280,13 +282,12 @@
 </div>
 
 <section>
-  <h2 class="font-weight-bold">Our Partners</h2>
-<!-- Carousel wrapper -->
+  <h2 class="font-weight-bold">{{$translate(['Mitra Kami','Our Partners'])}}</h2>
+<!-- Carousel for bigger screen -->
+  <div id="carouselMultiItemPartner" class="carousel slide carousel-dark d-none d-md-none d-lg-block" data-ride="carousel">
   <!-- Controls -->
-  <div id="carouselMultiItemPartner" class="carousel slide carousel-dark" data-ride="carousel">
-  <!-- Inner -->
   <div class="carousel-inner pb-4">
-      <div class="d-flex justify-content-center position-relative">
+      <div class="d-flex justify-content-center position-center">
       <a class="carousel-control-prev" type="button" data-target="#carouselMultiItemPartner" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -294,7 +295,7 @@
       <a class="carousel-control-next" type="button" data-target="#carouselMultiItemPartner" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
-      </a>
+  </a>
   </div>
     <!-- Single item -->
     <div class="carousel-item active">
@@ -338,6 +339,83 @@
   </div>
   <div class="py-4"></div>
 <!-- Carousel wrapper -->
+
+<!-- Carousel smaller screen-->
+<div id="carouselMultiItemPartnerSmall" class="carousel slide carousel-dark d-block d-sm-block d-md-block d-lg-none" data-ride="carousel">
+  <div class="carousel-inner pb-4">
+      <div class="d-flex justify-content-center position-center">
+      <a class="carousel-control-prev" type="button" data-target="#carouselMultiItemPartnerSmall" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" type="button" data-target="#carouselMultiItemPartnerSmall" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </a>
+  </div>
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner1" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner2" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner3" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner4" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner5" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="partner-carousel" :src="images.partner6" alt="Partner logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 </section>
 
 
@@ -431,6 +509,11 @@ export default {
 </script>
     
 <style lang="css">
+.partner-carousel {
+  min-height:100px;
+  
+}
+
 .fas, .fab, .far {
   font-size:6em;
   color:rgb(85, 189, 253);
@@ -441,10 +524,6 @@ export default {
 .col-5{
   margin-inline: auto;
   text-align: center;
-}
-
-.partner-carousel {
-  height: 300px;
 }
 
 .container {
@@ -481,7 +560,7 @@ export default {
 
 @media only screen and (max-width: 1000px){
   .carousel-caption {
-    padding-inline-end: 15rem;
+    padding-inline-end: 1rem;
     width: 500px !important;
     left: 15%;
     top: 50% !important;
