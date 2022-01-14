@@ -260,16 +260,17 @@
   <div class="d-block d-lg-none">
   <div class="container-fluid">
     <img class="dest-img" :src="selectedBanner.img">
-      </div>
-    <div class="container destination">
-      <h2 class="text-black font-weight-bold dest-text pt-4">{{selectedBanner.label}}</h2>
-      <p class="text-black text-justify dest-text">{{selectedBanner.deskripsi}}</p>
+
+    <div class="destination">
+      <h2 class="mx-4 text-black text-left font-weight-bold dest-text-sm pt-4">{{selectedBanner.label}}</h2>
+      <p class="mx-4 text-black text-justify dest-text-sm">{{selectedBanner.deskripsi}}</p>
       <br>
-      <router-link to="/Destination" class="btn btn-outline-primary text-wrap dest-text">
-      {{$translate(['Lihat Destinasi Lainnya','See Other Destinations'])}} ►
+      <h4 class="mx-4 text-black text-left">Destinasi Lainnya </h4>
+      <router-link to="/Destination" type="button" class="btn btn-outline-primary mx-4 d-block">Lihat Semua ►
       </router-link>
       <div class="pb-2"></div>
     </div>
+  </div>
   </div>
 </section>
 <div class="d-none d-sm-block">
