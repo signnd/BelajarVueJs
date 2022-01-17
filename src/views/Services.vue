@@ -20,24 +20,24 @@
           <div class="col-5">
           <i class="fas fa-plane-departure"></i>
               <h5 class="service-title">Medical Tourism Guidelines</h5>
-              <p class="service-text">Panduan untuk seseorang yang membutuhkan perawatan medis.</p>
+              <p class="service-text">{{$translate(['Panduan untuk seseorang yang membutuhkan perawatan medis.','A guide for someone who needs medical care.'])}}</p>
           </div>
           <div class="col-5">
           <i class="fas fa-notes-medical"></i>
           <div>
             <h5 class="service-title">Medical training</h5>
-            <p class="service-text">Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.</p>
+            <p class="service-text">{{$translate(['Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.','Seminars and Training Workshops for Government, Health Clusters, Hospitals, Insurance Providers, Hospitality, and other interested parties.'])}}</p>
           </div>
           </div>
           <div class="col-5">
           <i class="fas fa-stethoscope"></i>
               <h5 class="service-title">Medical research</h5>
-              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.</p>
+              <p class="service-text">{{$translate(['Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.','The information and research gleaned from conducting research and surveys significantly raises awareness in medical tourism through our findings and up-to-date information.'])}}</p>
           </div>
           <div class="col-5 mb-4">
           <i class="fas fa-heart"></i>
               <h5 class="service-title">Medical advisor</h5>
-              <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
+              <p class="service-text">{{$translate(['Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.','Help provide medical assessments, reviews or audits of medical practices provided by providers or non-providers from insurance or companies that provide health insurance for their workers.'])}}</p>
           </div>
         </div>
     </div>

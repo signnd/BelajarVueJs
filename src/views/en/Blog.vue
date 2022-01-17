@@ -35,11 +35,7 @@
                     </router-link>
                     <br>
                     <br>
-                    <p class="card-text">Hospital is a health service institution that organizes
-                      a complete individual health service that provides inpatient, outpatient services
-                      roads, and emergency services. The patient is everyone who does the problem consultation
-                      health to obtain the necessary health services, either directly or indirectly
-                      not directly in the hospital.</p>
+                    <p class="card-text"></p>
                     <br><br><br>
                     <router-link to="/Blog/Rumahsakit" type="button" class="btn d-block btn-dark">Furthermore
                     </router-link>

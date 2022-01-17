@@ -82,6 +82,7 @@
             <h5 class="card-title">RSUP Sanglah</h5>
             <p class="card-text">Jl. Diponegoro, Denpasar</p>
             <div class="pt-4 d-none d-sm-block"></div>
+            <br>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
             </router-link>
             <div class="py-1"></div>
@@ -127,6 +128,7 @@
             <h5 class="card-title">RS Mata Bali Mandara</h5>
             <p class="card-text">Jl. Angsoka No. 8 Denpasar</p>
             <div class="pt-4 d-none d-sm-block d-md-none d-lg-block"></div>
+            <br>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="pt-2"></div>
