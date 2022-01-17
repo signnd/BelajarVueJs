@@ -8,7 +8,7 @@
     </div>
     <section>
     <div role="tabpanel">
-    <div class="list-group list-group" id="list-tab" role="tablist">
+    <div class="list-group list-group-horizontal" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="infors-list" data-bs-toggle="list" href="#infors" role="tab" aria-controls="list-infors">Info rumah sakit</a>
       <a class="list-group-item list-group-item-action" id="kesehatan-list" data-bs-toggle="list" href="#kesehatan" role="tab" aria-controls="list-kesehatan">Info kesehatan</a>
       <a class="list-group-item list-group-item-action" id="lingkungan-list" data-bs-toggle="list" href="#lingkungan" role="tab" aria-controls="list-lingkungan">Info lingkungan</a>
