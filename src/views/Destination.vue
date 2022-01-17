@@ -106,9 +106,11 @@
           <div class="card-body text-center">
             <h5 class="card-title">RSU Bali Mandara</h5>
             <p class="card-text">Jl. Bypass Ngurah Rai No. 548, Denpasar</p>
+            <div class="pt-4 d-none d-sm-block"></div>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
-            <div class="pt-2"></div>
+            <div class="py-1"></div>
+            <div class="container-fluid">
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
@@ -120,6 +122,7 @@
                   data-target="#Jadwal">Jadwal</button>
               </div>
             </div>
+          </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
