@@ -10,9 +10,9 @@
   <section>
     <!-- <div class="list-group list-group-horizontal" id="list-tab" role="tablist"> -->
     <ul class="nav nav-pills justify-content-center my-3">
-      <li class="nav-item"><a class="nav-link active" id="infors-list" data-bs-toggle="list" href="#infors" role="tab" aria-controls="list-infors">Info Rumah Sakit</a></li>
-      <li class="nav-item"><a class="nav-link" id="kesehatan-list" data-bs-toggle="list" href="#kesehatan" role="tab" aria-controls="list-kesehatan">Info Kesehatan</a></li>
-      <li class="nav-item"><a class="nav-link" id="lingkungan-list" data-bs-toggle="list" href="#lingkungan" role="tab" aria-controls="list-lingkungan">Info Lingkungan</a></li>
+      <li class="nav-item"><a class="nav-link active" id="infors-list" data-bs-toggle="list" href="#infors" role="tab" aria-controls="list-infors">{{$translate(['Info Rumah Sakit','Hospital Info'])}}</a></li>
+      <li class="nav-item"><a class="nav-link" id="kesehatan-list" data-bs-toggle="list" href="#kesehatan" role="tab" aria-controls="list-kesehatan">{{$translate(['Info Kesehatan','Health Info'])}}</a></li>
+      <li class="nav-item"><a class="nav-link" id="lingkungan-list" data-bs-toggle="list" href="#lingkungan" role="tab" aria-controls="list-lingkungan">{{$translate(['Info Lingkungan','Environment Info'])}}</a></li>
     </ul>
     <!-- </div> -->
   </section>
