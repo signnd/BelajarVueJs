@@ -135,24 +135,33 @@
           <div class="col-5">
           <i class="fas fa-plane-departure"></i>
               <h5 class="service-title">Medical Tourism Guidelines</h5>
-              <p class="service-text">Panduan untuk seseorang yang membutuhkan perawatan medis.</p>
+              <p class="service-text">
+                {{$translate(['Panduan untuk seseorang yang membutuhkan perawatan medis.',
+                'A guide for someone who needs medical care.'])}}</p>
           </div>
           <div class="col-5">
           <i class="fas fa-notes-medical"></i>
           <div>
             <h5 class="service-title">Medical training</h5>
-            <p class="service-text">Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.</p>
+            <p class="service-text">
+              {{$translate(['Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.',
+              'Seminars and Training Workshops for Government, Health Clusters, Hospitals, Insurance Providers, Hospitality, and other interested parties.'])}}</p>
           </div>
           </div>
           <div class="col-5">
           <i class="fas fa-stethoscope"></i>
               <h5 class="service-title">Medical research</h5>
-              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.</p>
+              <p class="service-text">
+                {{$translate(['Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.',
+                'The information and research gleaned from conducting research and surveys significantly raises awareness in medical tourism through our findings and up-to-date information.'])}}</p>
           </div>
           <div class="col-5 mb-3">
           <i class="fas fa-heart"></i>
               <h5 class="service-title">Medical advisor</h5>
-              <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
+              <p class="service-text">
+                {{$translate(['Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.',
+                'Help provide medical assessments, reviews or audits of medical practices provided by providers or non-providers from insurance or companies that provide health insurance for their workers.'])}}
+              </p>
           </div>
         </div>
       </div>
@@ -183,7 +192,7 @@
               <div class="card-body">
                 <h5 class="card-title">Dr. Ida Ayu Oka Purnamawati</h5>
                 <p class="card-text">
-                  Sekertaris
+                  {{$translate(['Sekretaris 1','1st Secretary'])}}
                 </p>
               </div>
             </div>
@@ -199,7 +208,7 @@
               <div class="card-body">
                 <h5 class="card-title">Dr. I Gede Wiryana Patra Jaya</h5>
                 <p class="card-text">
-                  Ketua
+                  {{$translate(['Ketua','Leader'])}}
                 </p>
               </div>
             </div>
@@ -215,7 +224,7 @@
               <div class="card-body">
                 <h5 class="card-title">Putu Deddy Suhartawan</h5>
                 <p class="card-text">
-                  Sekertaris 2
+                  {{$translate(['Sekretaris 2','2nd Secretary'])}}
                 </p>
               </div>
             </div>
@@ -265,8 +274,8 @@
       <h2 class="mx-4 text-black text-left font-weight-bold dest-text-sm pt-4">{{selectedBanner.label}}</h2>
       <p class="mx-4 text-black text-justify dest-text-sm">{{selectedBanner.deskripsi}}</p>
       <br>
-      <h4 class="mx-4 text-black text-left">Destinasi Lainnya </h4>
-      <router-link to="/Destination" type="button" class="btn btn-outline-primary mx-4 d-block">Lihat Semua ►
+      <router-link to="/Destination" type="button" class="btn btn-outline-primary mx-4 d-block">
+      {{$translate(['Lihat Destinasi Lainnya','See More Destinations'])}} ►
       </router-link>
       <div class="pb-2"></div>
     </div>
