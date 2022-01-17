@@ -103,7 +103,7 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.rsubm" alt="RSU Bali Mandara">
           <div class="card-body text-center">
-            <h5 class="card-title">RSU Bali Mandara RSU Bali Mandara</h5>
+            <h5 class="card-title">RSU Bali Mandara</h5>
             <p class="card-text">Jl. Bypass Ngurah Rai No. 548, Denpasar</p>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
