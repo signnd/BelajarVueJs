@@ -23,7 +23,7 @@
   <section>
     <!-- Whole Card -->
     <div class="container">
-    <p class="text-center">Contact us via the contact below:</p>
+    <p class="text-center"></p>
       <div class="card my-3">
         <div class="card-body">
           <div class="row">
