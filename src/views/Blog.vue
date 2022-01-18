@@ -6,17 +6,17 @@
         <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">BMTA Blog</h1>
       </div>
     </div>
+  </section>
+  <section>
+    <!-- <div class="list-group list-group-horizontal" id="list-tab" role="tablist"> -->
+    <ul class="nav nav-pills justify-content-center my-3">
+      <li class="nav-item"><a class="nav-link active" id="infors-list" data-bs-toggle="list" href="#infors" role="tab" aria-controls="list-infors">{{$translate(['Info Rumah Sakit','Hospital Info'])}}</a></li>
+      <li class="nav-item"><a class="nav-link" id="kesehatan-list" data-bs-toggle="list" href="#kesehatan" role="tab" aria-controls="list-kesehatan">{{$translate(['Info Kesehatan','Health Info'])}}</a></li>
+      <li class="nav-item"><a class="nav-link" id="lingkungan-list" data-bs-toggle="list" href="#lingkungan" role="tab" aria-controls="list-lingkungan">{{$translate(['Info Lingkungan','Environment Info'])}}</a></li>
+    </ul>
+    <!-- </div> -->
+  </section>
     <section>
-    <div role="tabpanel">
-    <div class="list-group list-group-horizontal" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="infors-list" data-bs-toggle="list" href="#infors" role="tab" aria-controls="list-infors">Info rumah sakit</a>
-      <a class="list-group-item list-group-item-action" id="kesehatan-list" data-bs-toggle="list" href="#kesehatan" role="tab" aria-controls="list-kesehatan">Info kesehatan</a>
-      <a class="list-group-item list-group-item-action" id="lingkungan-list" data-bs-toggle="list" href="#lingkungan" role="tab" aria-controls="list-lingkungan">Info lingkungan</a>
-    </div>
-    </div>
-    </section>
-    <section>
-
     <!-- Tab Info RS -->
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="infors" role="tabpanel" aria-labelledby="list-infors-list">
@@ -122,7 +122,6 @@
       </div>
     </div>
     </section>
-</section>
     <div class="py-2"></div>
 </template>
 
@@ -148,16 +147,10 @@
 </script>
 
 <style>
-.list-group, .list-group-horizontal{
-  padding-top: 20px;
-  padding-inline: 50px;
-}
-
 .card-img-blog {
   width: 75%;
   height: 75%;
   margin: 0 auto;
   margin-block: 1rem;
 }
-
 </style>
