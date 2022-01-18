@@ -98,26 +98,41 @@
           <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card1" alt="Card image 1">
             <div class="card-body">
-              <h5 class="card-title">Mitra handal</h5>
-              <p class="card-text">Tersedia 17 rumah sakit mitra yang tersebar di seluruh Bali.</p>
-              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">Lihat rumah sakit</router-link>
+              <h5 class="card-title">
+                {{$translate(['Mitra handal','Reliable partners'])}}
+              </h5>
+              <p class="card-text">
+                {{$translate(['Tersedia 17 rumah sakit mitra yang tersebar di seluruh Bali.',
+                'We have 17 hosiptal partners across Bali.'])}}</p>
+              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">
+              {{$translate(['Lihat rumah sakit','See hospitals'])}}
+              </router-link>
             </div>
           </div>
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card2" alt="Card image 2">
             <div class="card-body">
-              <h5 class="card-title">Biaya terjangkau</h5>
-              <p class="card-text">Menerima asuransi & BPJS untuk meringankan biaya Anda.</p>
-              <router-link to="/Contact" class="btn d-block btn-outline-primary text-wrap">Kontak kami</router-link>
+              <h5 class="card-title">{{$translate(['Biaya terjangkau','Affordable costs'])}}</h5>
+              <p class="card-text">
+                {{$translate(['Menerima asuransi & BPJS untuk meringankan biaya Anda.',
+                'We accept insurances & BPJS to ease your costs.'])}}
+                </p>
+              <router-link to="/Contact" class="btn d-block btn-outline-primary text-wrap">
+              {{$translate(['Kontak kami','Contact us'])}}
+              </router-link>
             </div>
           </div>
           <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card3" alt="Card image 2">
             <div class="card-body">
-              <h5 class="card-title">Layanan profesional</h5>
-              <p class="card-text">Ratusan dokter yang ahli di bidangnya.</p>
-              <div class="py-2 d-none d-sm-block d-md-none"></div>
-              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">Tentang kami</router-link>
+              <h5 class="card-title">{{$translate(['Layanan profesional','Reliable partners'])}}</h5>
+              <p class="card-text">
+                 {{$translate(['Kami punya ratusan dokter yang ahli di bidangnya.',
+                'Hundreds of expert doctors ready to serve you.'])}}
+              </p>
+              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">
+              {{$translate(['Tentang kami','About us'])}}
+              </router-link>
             </div>
           </div>
         </div>
@@ -618,7 +633,7 @@ export default {
 }
 
 .card-title {
-  font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
+  font-family: 'Segoe UI', Verdana, sans-serif, ans-serif;
   font-weight:bold;
 }
 
