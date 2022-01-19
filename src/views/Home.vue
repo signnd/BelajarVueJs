@@ -639,13 +639,13 @@ export default {
 }
 
 .carousel-control-prev{
-  margin-top: 10px;
+  margin-top: auto;
   width:20%;
-  height:0px;
+  height:auto;
 }
 
 .carousel-control-next{
-  margin-top: 0px;
+  margin-top: auto;
   width:20%;
   height: auto;   
 }
@@ -689,8 +689,8 @@ export default {
 
 .dest-img{
   position:relative;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .dest-text{
