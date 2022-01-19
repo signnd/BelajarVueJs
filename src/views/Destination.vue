@@ -587,8 +587,17 @@
 </template>
 
 <script>
+const axios = require('axios');
+axios.get('/random_offices.php?limit=2')
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
 export default {
-    data() {
+     data() {
         return {
             images: {
                 cover1: require('@/assets/hero/flat.png'),
@@ -603,7 +612,8 @@ export default {
                 rsmangusadabadung: require('@/assets/rumahsakit/rs-mangusada-badung.jpeg'),
                 rssiloamkuta: require('@/assets/rumahsakit/rs-siloam-kuta-2.jpg'),
                 rsptnunud: require('@/assets/rumahsakit/rsptn-unud.jpeg'),
-                rsprimamedika: require('@/assets/rumahsakit/primamedika-2.png'),                rskasihibudps:require('@/assets/rumahsakit/rs-kasihibu-dps.jpg'),
+                rsprimamedika: require('@/assets/rumahsakit/primamedika-2.png'),                
+                rskasihibudps:require('@/assets/rumahsakit/rs-kasihibu-dps.jpg'),
                 rskasihibusaba: require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'),
                 rsramata: require('@/assets/rumahsakit/rs-ramata.jpg'),
                 rsbhayangkara: require('@/assets/rumahsakit/rs-bhayangkara.jpg'),
