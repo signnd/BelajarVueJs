@@ -66,9 +66,7 @@ const routes =
       name: 'services',
       component: Services
     },
-  //   { path: '/Destination/rsup-sanglah', name: 'Destination/rsup-sanglah', component: RSUPSanglah },
-  // nanti struktur link untuk RS sanglah pake yang kayak di atas
-  { path: '/Destination/rs-member', name: 'Destination/rsup-sanglah', component: RSUPSanglah }, //temporary page
+  { path: '/Destination/rsup-sanglah', name: 'Destination/rsup-sanglah', component: RSUPSanglah },
   { path: '/Destination/rsu-balimandara', name: 'Destination/rsu-balimandara', component: RSUBM },
   { path: '/Destination/rsm-balimandara', name: 'Destination/rsm-balimandara', component: RSMBM },
   { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
