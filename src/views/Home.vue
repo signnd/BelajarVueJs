@@ -493,7 +493,7 @@ export default {
         cover1: require('@/assets/hero/hero.png'),
         cover2: require('@/assets/hero/hero2.jpg'),
         card1: require('@/assets/gallery/blog1.png'),
-        card2: require('@/assets/gallery/blog2.png'),
+        card2de: require('@/assets/gallery/blog2.png'),
         card3: require('@/assets/gallery/blog3.png'),
         team1: require('@/assets/Team/dr ida ayu oka purnamawati.jpg'),
         team2: require('@/assets/Team/Dr.i gede wiryana patra jaya.jpg'),
@@ -515,8 +515,26 @@ export default {
         {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Kuta', deskripsi_en: 'Bali International Medical Center (BIMC) Kuta Hospital is a 24-hour international standard medical and emergency service center. Its strategic location in the Kuta area makes it a preferred health care center that is easily accessible to both locals and tourists.', deskripsi_id: 'Rumah Sakit Bali International Medical Centre (BIMC) Kuta adalah pusat pelayanan medis dan gawat darurat 24 jam yang berstandar internasional. Lokasinya yang strategis di daerah Kuta menjadikannya sebagai pusat pelayanan kesehatan pilihan yang mudah diakses baik oleh penduduk setempat maupun para wisatawan.'}, 
         {img: require('@/assets/rumahsakit/bros.jpg'), label: 'Rumah Sakit BROS', deskripsi_en: 'BIMC Hospital Nusa Dua is an international standard hospital in Bali that provides first-class health services at relatively affordable prices for communities around the Jimbaran, Nusa Dua, Uluwatu and Kampial areas.', deskripsi_id: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'}, 
     ],
+    loc: {
+      lat: '',
+      long: ''
+    },
     selectedBanner: ''
     }
+  },
+  mounted(){
+    navigator.geolocation.getCurrentPosition((pos) => {
+      const {latitude: lat, longitude: lng} = pos.coords
+      this.loc.lat = lat
+      this.loc.long = lng
+      console.log(this.loc);
+    }, (err) => {
+      console.warn(`ERROR(${err.code}): ${err.message}`)
+    }, {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    })
   },
   created (){
     const idx = Math.floor(Math.random() * this.banners.length)
