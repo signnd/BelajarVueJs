@@ -116,7 +116,6 @@ export default {
         localStorage.setItem('language', val)
         location.reload()
       }
-
     }
 }
 
