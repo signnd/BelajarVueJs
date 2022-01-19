@@ -15,8 +15,8 @@
   
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+    <li class="breadcrumb-item"><a href="/">{{$translate(['Rumah','Home'])}}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Kontak','Home'])}}</li>
   </ol>
 </nav>
 
@@ -61,8 +61,7 @@
             <!-- Map -->
             <div class="col">
               <div class="iframe-container col-lg-12 py-3">
-                <div id="map-container-google-11" class="z-depth-1-half map-container-6 map-height"
-                  style="height: 400px">
+                <div id="map-container-google-11" class="z-depth-1-half map-container-6 map-height" style="height: 400px">
                   <iframe src="https://maps.google.com/maps?q=Bamboomedia&t=&z=17&ie=UTF8&iwloc=&output=embed"
                     frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
