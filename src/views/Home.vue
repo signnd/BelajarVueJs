@@ -493,7 +493,7 @@ export default {
         cover1: require('@/assets/hero/hero.png'),
         cover2: require('@/assets/hero/hero2.jpg'),
         card1: require('@/assets/gallery/blog1.png'),
-        card2de: require('@/assets/gallery/blog2.png'),
+        card2: require('@/assets/gallery/blog2.png'),
         card3: require('@/assets/gallery/blog3.png'),
         team1: require('@/assets/Team/dr ida ayu oka purnamawati.jpg'),
         team2: require('@/assets/Team/Dr.i gede wiryana patra jaya.jpg'),
