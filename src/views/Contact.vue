@@ -23,7 +23,7 @@
   <section>
     <!-- Whole Card -->
     <div class="container">
-    <p class="text-center">Hubungi kami melalui kontak di bawah ini:</p>
+    <p class="text-center">{{$translate(['Hubungi kami melalui kontak di bawah ini:','Contact us via the contact below:'])}}</p>
       <div class="card my-3">
         <div class="card-body">
           <div class="row">

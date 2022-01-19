@@ -98,26 +98,41 @@
           <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card1" alt="Card image 1">
             <div class="card-body">
-              <h5 class="card-title">Mitra handal</h5>
-              <p class="card-text">Tersedia 17 rumah sakit mitra yang tersebar di seluruh Bali.</p>
-              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">Lihat rumah sakit</router-link>
+              <h5 class="card-title">
+                {{$translate(['Mitra handal','Reliable partners'])}}
+              </h5>
+              <p class="card-text">
+                {{$translate(['Tersedia 17 rumah sakit mitra yang tersebar di seluruh Bali.',
+                'We have 17 hosiptal partners across Bali.'])}}</p>
+              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">
+              {{$translate(['Lihat rumah sakit','See hospitals'])}}
+              </router-link>
             </div>
           </div>
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card2" alt="Card image 2">
             <div class="card-body">
-              <h5 class="card-title">Biaya terjangkau</h5>
-              <p class="card-text">Menerima asuransi & BPJS untuk meringankan biaya Anda.</p>
-              <router-link to="/Contact" class="btn d-block btn-outline-primary text-wrap">Kontak kami</router-link>
+              <h5 class="card-title">{{$translate(['Biaya terjangkau','Affordable costs'])}}</h5>
+              <p class="card-text">
+                {{$translate(['Menerima asuransi & BPJS untuk meringankan biaya Anda.',
+                'We accept insurances & BPJS to ease your costs.'])}}
+                </p>
+              <router-link to="/Contact" class="btn d-block btn-outline-primary text-wrap">
+              {{$translate(['Kontak kami','Contact us'])}}
+              </router-link>
             </div>
           </div>
           <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.card3" alt="Card image 2">
             <div class="card-body">
-              <h5 class="card-title">Layanan profesional</h5>
-              <p class="card-text">Ratusan dokter yang ahli di bidangnya.</p>
-              <div class="py-2 d-none d-sm-block d-md-none"></div>
-              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">Tentang kami</router-link>
+              <h5 class="card-title">{{$translate(['Layanan profesional','Reliable partners'])}}</h5>
+              <p class="card-text">
+                 {{$translate(['Kami punya ratusan dokter yang ahli di bidangnya.',
+                'Hundreds of expert doctors ready to serve you.'])}}
+              </p>
+              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">
+              {{$translate(['Tentang kami','About us'])}}
+              </router-link>
             </div>
           </div>
         </div>
@@ -135,24 +150,33 @@
           <div class="col-5">
           <i class="fas fa-plane-departure"></i>
               <h5 class="service-title">Medical Tourism Guidelines</h5>
-              <p class="service-text">Panduan untuk seseorang yang membutuhkan perawatan medis.</p>
+              <p class="service-text">
+                {{$translate(['Panduan untuk seseorang yang membutuhkan perawatan medis.',
+                'A guide for someone who needs medical care.'])}}</p>
           </div>
           <div class="col-5">
           <i class="fas fa-notes-medical"></i>
           <div>
             <h5 class="service-title">Medical training</h5>
-            <p class="service-text">Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.</p>
+            <p class="service-text">
+              {{$translate(['Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.',
+              'Seminars and Training Workshops for Government, Health Clusters, Hospitals, Insurance Providers, Hospitality, and other interested parties.'])}}</p>
           </div>
           </div>
           <div class="col-5">
           <i class="fas fa-stethoscope"></i>
               <h5 class="service-title">Medical research</h5>
-              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.</p>
+              <p class="service-text">
+                {{$translate(['Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.',
+                'The information and research gleaned from conducting research and surveys significantly raises awareness in medical tourism through our findings and up-to-date information.'])}}</p>
           </div>
           <div class="col-5 mb-3">
           <i class="fas fa-heart"></i>
               <h5 class="service-title">Medical advisor</h5>
-              <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
+              <p class="service-text">
+                {{$translate(['Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.',
+                'Help provide medical assessments, reviews or audits of medical practices provided by providers or non-providers from insurance or companies that provide health insurance for their workers.'])}}
+              </p>
           </div>
         </div>
       </div>
@@ -183,7 +207,7 @@
               <div class="card-body">
                 <h5 class="card-title">Dr. Ida Ayu Oka Purnamawati</h5>
                 <p class="card-text">
-                  Sekertaris
+                  {{$translate(['Sekretaris 1','1st Secretary'])}}
                 </p>
               </div>
             </div>
@@ -199,7 +223,7 @@
               <div class="card-body">
                 <h5 class="card-title">Dr. I Gede Wiryana Patra Jaya</h5>
                 <p class="card-text">
-                  Ketua
+                  {{$translate(['Ketua','Leader'])}}
                 </p>
               </div>
             </div>
@@ -215,7 +239,7 @@
               <div class="card-body">
                 <h5 class="card-title">Putu Deddy Suhartawan</h5>
                 <p class="card-text">
-                  Sekertaris 2
+                  {{$translate(['Sekretaris 2','2nd Secretary'])}}
                 </p>
               </div>
             </div>
@@ -265,8 +289,8 @@
       <h2 class="mx-4 text-black text-left font-weight-bold dest-text-sm pt-4">{{selectedBanner.label}}</h2>
       <p class="mx-4 text-black text-justify dest-text-sm">{{selectedBanner.deskripsi}}</p>
       <br>
-      <h4 class="mx-4 text-black text-left">Destinasi Lainnya </h4>
-      <router-link to="/Destination" type="button" class="btn btn-outline-primary mx-4 d-block">Lihat Semua ►
+      <router-link to="/Destination" type="button" class="btn btn-outline-primary mx-4 d-block">
+      {{$translate(['Lihat Destinasi Lainnya','See More Destinations'])}} ►
       </router-link>
       <div class="pb-2"></div>
     </div>
@@ -609,7 +633,7 @@ export default {
 }
 
 .card-title {
-  font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
+  font-family: 'Segoe UI', Verdana, sans-serif, ans-serif;
   font-weight:bold;
 }
 

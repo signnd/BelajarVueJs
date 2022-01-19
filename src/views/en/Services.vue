@@ -20,24 +20,24 @@
           <div class="col-5">
           <i class="fas fa-plane-departure"></i>
               <h5 class="service-title">Medical Tourism Guidelines</h5>
-              <p class="service-text">A guide for someone who needs medical care.</p>
+              <p class="service-text"></p>
           </div>
           <div class="col-5">
           <i class="fas fa-notes-medical"></i>
           <div>
             <h5 class="service-title">Medical training</h5>
-            <p class="service-text"> Seminars and Training Workshops for Government, Health Clusters, Hospitals, Insurance Providers, Hospitality, and other interested parties.</p>
+            <p class="service-text"> </p>
           </div>
           </div>
           <div class="col-5">
           <i class="fas fa-stethoscope"></i>
               <h5 class="service-title">Medical research</h5>
-              <p class="service-text">The information and research gleaned from conducting research and surveys significantly raises awareness in medical tourism through our findings and up-to-date information.</p>
+              <p class="service-text"></p>
           </div>
           <div class="col-5 mb-4">
           <i class="fas fa-heart"></i>
               <h5 class="service-title">Medical advisor</h5>
-              <p class="service-text">Help provide medical assessments, reviews or audits of medical practices provided by providers or non-providers from insurance or companies that provide health insurance for their workers.</p>
+              <p class="service-text"></p>
           </div>
         </div>
     </div>

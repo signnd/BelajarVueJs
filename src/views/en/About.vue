@@ -25,17 +25,17 @@
         <div class="col pt-5">
           <div class="text-left">
             <h2>About <span class="t-color">Medical</span></h2>
-            <p>Indonesian Medical Tourism Association<br>Love Indonesia Love Medical Tourism Nation</p>
-            <h2>Vision</h2>
+            <p>Indonesian Medical Tourism Association<br></p>
+            <h2></h2>
             <p>Increasing Indonesian Love for Medical Tourism</p>
-            <h2>Mission</h2>
-            <p>Move together to create Indonesian Medical tourism.</p>
+            <h2></h2>
+            <p></p>
           </div>
         </div>
       </div>
       <div class="text-justify">
         <h3>
-Purpose and objectives</h3>
+</h3>
         <hr>
         <p>In language, Medical Tourism / Medical Tourism is a trip for health reasons that
           more about medical treatment (cure), surgery and/or other medical actions, which
