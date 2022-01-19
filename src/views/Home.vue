@@ -493,7 +493,7 @@ export default {
         cover1: require('@/assets/hero/hero.png'),
         cover2: require('@/assets/hero/hero2.jpg'),
         card1: require('@/assets/gallery/blog1.png'),
-        card2de: require('@/assets/gallery/blog2.png'),
+        card2: require('@/assets/gallery/blog2.png'),
         card3: require('@/assets/gallery/blog3.png'),
         team1: require('@/assets/Team/dr ida ayu oka purnamawati.jpg'),
         team2: require('@/assets/Team/Dr.i gede wiryana patra jaya.jpg'),
@@ -639,13 +639,13 @@ export default {
 }
 
 .carousel-control-prev{
-  margin-top: 10px;
+  margin-top: auto;
   width:20%;
-  height:0px;
+  height:auto;
 }
 
 .carousel-control-next{
-  margin-top: 0px;
+  margin-top: auto;
   width:20%;
   height: auto;   
 }
@@ -689,8 +689,8 @@ export default {
 
 .dest-img{
   position:relative;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .dest-text{
