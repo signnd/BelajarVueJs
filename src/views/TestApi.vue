@@ -15,7 +15,7 @@
       <div class="col-3">
         <select class="form-control form-control-md">
           <option hidden>{{$translate(['Kategori','Categories'])}}</option>
-          <option v-for="kategori in poli" :key="kategori.id">{{kategori.name}}</option>
+          <option v-for="kategori in this.poli" :key="kategori.id">{{kategori.name}}</option>
         </select>
       </div>
       <div class="col-3">
@@ -37,15 +37,22 @@ import axios from "axios";
 export default {
   data: () => ({
     poli: null,
+    jadwal: null
   }),
     created(){
       let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/grouped_counters.php`)
       // axios.get(`https://api.openweathermap.org/data/2.5/weather?id=7038902&units=metric&APPID=d7667d2d21805a0a483e3da7ce1a0c9b`)
       .then((response) => {
-        this.poli = response.data.data.items.name;
+        this.poli = response.data.data.items;
         console.log(this.poli);
       })
+
+      // axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/operational_days.php?office_id=1&counter_id=1`)
+      // .then((response) => {
+      //   this.jadwal = response.data.data.items;
+      //   console.log(this.jadwal);
+      // })
       //  .catch(error => console.log('Request failed'));
     }
   }
