@@ -53,9 +53,7 @@
       <div class="col-3">
         <select class="form-control form-control-md">
           <option hidden>{{$translate(['Kategori','Categories'])}}</option>
-          <option>Klinik</option>
-          <option>Rumah Sakit</option>
-          <option>Apotek</option>
+          <option v-for="kategori in poli" :key="kategori.id">{{kategori.name}}</option>
         </select>
       </div>
       <div class="col-3">
