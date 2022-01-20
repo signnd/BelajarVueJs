@@ -82,8 +82,7 @@
             <h5 class="card-title">RSUP Sanglah</h5>
             <p class="card-text">Jl. Diponegoro, Denpasar</p>
             <div class="pt-4 d-none d-sm-block"></div>
-            <br>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
+            <router-link to="/Destination/rsup-sanglah" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
             </router-link>
             <div class="py-1"></div>
             <div class="container-fluid">
@@ -106,8 +105,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">RSU Bali Mandara</h5>
             <p class="card-text">Jl. Bypass Ngurah Rai No. 548, Denpasar</p>
-            <div class="pt-4 d-none d-sm-block"></div>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
+            <router-link to="/Destination/rsu-balimandara" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="py-1"></div>
             <div class="container-fluid">
@@ -131,8 +129,7 @@
             <h5 class="card-title">RS Mata Bali Mandara</h5>
             <p class="card-text">Jl. Angsoka No. 8 Denpasar</p>
             <div class="pt-4 d-none d-sm-block d-md-none d-lg-block"></div>
-            <br>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
+            <router-link to="/Destination/rsm-balimandara" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="pt-2"></div>
             <div class="row">
@@ -162,7 +159,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">RSPTN Unud</h5>
             <p class="card-text">Jl. Rumah Sakit Universitas Udayana No. 1, Jimbaran, Kuta Selatan</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rsptn-unud" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -184,7 +181,7 @@
             <h5 class="card-title">RS Mangusada Badung</h5>
             <p class="card-text">Jl. Raya Kapal, Mangupura, Mengwi, Badung</p>
             <div class="pt-4 d-none d-sm-block d-md-none d-lg-none"></div>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-mangusada-badung" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -205,7 +202,7 @@
             <h5 class="card-title">RS BIMC Nusa Dua</h5>
             <p class="card-text">Kawasan ITDC Blok D, Jl. Nusa Dua, Kuta Selatan, Badung</p>
             <div class="pt-4 d-none d-sm-block d-md-none"></div>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-bimc-nusadua" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -235,7 +232,7 @@
             <h5 class="card-title">RS BIMC Kuta</h5>
             <p class="card-text">Jl. Bypass Ngurah Rai No. 100X</p>
             <div class="pt-4 d-none d-sm-none d-md-none"></div>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-bumc-kuta" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -255,7 +252,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">RS Siloam Kuta</h5>
             <p class="card-text">Jl. Sunset Road No. 818, Kuta</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-siloam-kuta" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -275,7 +272,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">Bali Royal Hospital</h5>
             <p class="card-text">Jl. Tantular No. 6, Renon, Denpasar</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/bros" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -305,7 +302,7 @@
             <h5 class="card-title">RS Prima Medika</h5>
             <p class="card-text">Jl. Raya Sesetan No. 10, Denpasar</p>
             <br class="d-none d-sm-block d-md-block d-lg-none">
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-primamedika" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -325,7 +322,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">RS Kasih Ibu Denpasar</h5>
             <p class="card-text">Jl. Teuku Umar No. 120, Denpasar</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-kasihibu-dps" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -346,7 +343,7 @@
             <h5 class="card-title">RS Kasih Ibu Saba</h5>
             <p class="card-text">Jl. Raya Pantai Saba No. 9, Gianyar</p>
             <br class="d-none d-sm-none d-md-block d-lg-none">
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-kasihibu-saba" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -375,7 +372,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">RS Khusus Mata Ramata</h5>
             <p class="card-text">Jl. Gatot Subroto Barat No. 429, Denpasar</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-ramata" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -397,7 +394,7 @@
             <p class="card-text">Jl. Trijata No. 32, Denpasar</p>
             <br class="d-none d-sm-none d-md-block d-lg-none">
             <div class="pt-4 d-none d-sm-block d-md-block d-lg-block"></div>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-bhayangkara" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -418,7 +415,7 @@
             <h5 class="card-title">Klinik Penta Medika</h5>
             <p class="card-text">Jl. Mahendradatta Selatan No. 88, Denpasar</p>
             <div class="pt-4 d-none d-sm-block d-md-none d-lg-none"></div>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/klinik-pentamedika" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -446,7 +443,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">Dental 911 Clinic</h5>
             <p class="card-text">Jl. Gatot Subroto Barat No. 367, Denpasar</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/dental911clinic" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -467,7 +464,7 @@
             <h5 class="card-title">Assist 221</h5>
             <p class="card-text">Jl. Anyelir No. 8, Denpasar</p>
             <br class="d-none d-sm-block d-md-block d-lg-block">
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/assist221" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
