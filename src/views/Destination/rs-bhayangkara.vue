@@ -97,15 +97,14 @@
         <hr>
         <h5>{{$translate(['Visi RS Bhayangkara','RS Bhayangkara\'s Vision'])}}</h5>
         <p>
-         {{$translate([' Menjadi Rumah Sakit Unggul dan Mandiri Tahun 2024','Becoming an Excellent and Independent Hospital in 2024'])}}
+         {{$translate([' Menjadi Rumah Sakit Yang Profesional, Modern, Terpercaya Dalam Bidang Pelayanan Kesehatan dan Kedokteran Kepolisian','Becoming a Professional, Modern, Trusted Hospital in the Field of Police Health and Medical Services'])}}
         </p>
         <h5>{{$translate(['Misi RS Bhayangkara','RS Bhayangkara\'s Mission'])}}</h5>
         <ol>
-          <li>{{$translate(['Menyelenggarakan pelayanan kesehatan yang paripurna, mandiri dan terjangkau','Organizing comprehensive, independent and affordable health services'])}}</li>
-          <li>{{$translate(['Menyelenggarakan Pendidikan Terintegrasi dan Pelatihan Tenaga Kesehatan yang berdaya saing dan berbudaya','Organizing Integrated Education and Training of Health Workers who are competitive and cultured'])}}</li>
-          <li>{{$translate(['Menyelenggarakan penelitian kesehatan berbasis rumah sakit','Organizing hospital-based health research'])}}</li>
-          <li>{{$translate(['Menciptakan tata kelola RS yang baik','Creating good hospital governance'])}}</li>
-          <li>{{$translate(['Membangun jejaring kesehatan dan kerjasama dengan pemangku kepentingan terkait','Building health networks and collaboration with stakeholders related interests'])}}</li>
+          <li>{{$translate(['Memberikan pelayanan kesehatan yang prima dan terstandarisasi;','Provide excellent and standardized health services;'])}}</li>
+          <li>{{$translate(['Memberikan dukungan pelayanan kedokteran kepolisian yang handal dan profesional;','Provide support for reliable and professional police medical services;'])}}</li>
+          <li>{{$translate(['Memiliki sumber daya manusia unggul dan bermoral;','Having superior and moral human resources;'])}}</li>
+          <li>{{$translate(['Meningkatkan kuantitas dan kualitas sarana dan prasarana yang modern.','Increase the quantity and quality of modern facilities and infrastructure.'])}}</li>
         </ol>
         </div>
 </section>
@@ -117,7 +116,7 @@ export default {
     data() {
         return {
             images: {
-                cover1: require('@/assets/rumahsakit/rs-sanglah.jpg'),
+                cover1: require('@/assets/rumahsakit/rs-bhayangkara.jpg'),
                 cover2: require('@/assets/gallery/section_bg01.png'),
                 about: require('@/assets/gallery/popular_sub3.png'),
                 logo: require('@/assets/logo/logo.png')

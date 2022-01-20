@@ -97,15 +97,15 @@
         <hr>
         <h5>{{$translate(['Visi RS Kasih Ibu Saba','RS Kasih Ibu Saba\'s Vision'])}}</h5>
         <p>
-         {{$translate([' Menjadi Rumah Sakit Unggul dan Mandiri Tahun 2024','Becoming an Excellent and Independent Hospital in 2024'])}}
+         {{$translate([' Menjadi rumah sakit pilihan utama di Bali, melalui pelayanan kesehatan yang lengkap & berkualitas, dengan beberapa layanan unggulan, serta mengutamakan keselamatan pasien & sentuhan kasih.','To become the first choice hospital in Bali, through complete & quality health services, with several superior services, and prioritizing patient safety & a touch of love.'])}}
         </p>
         <h5>{{$translate(['Misi RS Kasih Ibu Saba','RS Kasih Ibu Saba\'s Mission'])}}</h5>
         <ol>
-          <li>{{$translate(['Menyelenggarakan pelayanan kesehatan yang paripurna, mandiri dan terjangkau','Organizing comprehensive, independent and affordable health services'])}}</li>
-          <li>{{$translate(['Menyelenggarakan Pendidikan Terintegrasi dan Pelatihan Tenaga Kesehatan yang berdaya saing dan berbudaya','Organizing Integrated Education and Training of Health Workers who are competitive and cultured'])}}</li>
-          <li>{{$translate(['Menyelenggarakan penelitian kesehatan berbasis rumah sakit','Organizing hospital-based health research'])}}</li>
-          <li>{{$translate(['Menciptakan tata kelola RS yang baik','Creating good hospital governance'])}}</li>
-          <li>{{$translate(['Membangun jejaring kesehatan dan kerjasama dengan pemangku kepentingan terkait','Building health networks and collaboration with stakeholders related interests'])}}</li>
+          <li>{{$translate(['Meningkatkan pengelolaan manajemen rumah sakit yang profesional.','Improve the management of professional hospital management.'])}}</li>
+          <li>{{$translate(['Memberikan pelayanan melalui sumber daya manusia yang ramah dan paripurna.','Providing services through friendly and complete human resources.'])}}</li>
+          <li>{{$translate(['Mengembangkan kemampuan sumber daya manusia yang berkualitas melalui pelatihan internal dan eksternal yang berkesinambungan.','Develop quality human resource capabilities through continuous internal and external training.'])}}</li>
+          <li>{{$translate(['Meningkatkan pelayanan yang terfokus kepada keselamatan dan kepuasan pasien.','Improve services that are focused on patient safety and satisfaction.'])}}</li>
+          <li>{{$translate(['Menyediakan sarana, prasarana dan peralatan medis yang canggih.','Providing sophisticated medical facilities, infrastructure and equipment.'])}}</li>
         </ol>
         </div>
 </section>
@@ -117,7 +117,7 @@ export default {
     data() {
         return {
             images: {
-                cover1: require('@/assets/rumahsakit/rs-sanglah.jpg'),
+                cover1: require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'),
                 cover2: require('@/assets/gallery/section_bg01.png'),
                 about: require('@/assets/gallery/popular_sub3.png'),
                 logo: require('@/assets/logo/logo.png')
