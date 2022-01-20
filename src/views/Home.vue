@@ -78,9 +78,7 @@
   </select>
   <select class="form-control form-control-md my-3">
     <option hidden>{{$translate(['Kategori','Categories'])}}</option>
-    <option>Klinik</option>
-    <option>Rumah Sakit</option>
-    <option>Apotek</option>
+    <option v-for="kategori in poli" :key="kategori.id">{{kategori.name}}</option>
   </select>
   <input class="form-control mb-3" type="search" placeholder="Search">
   <router-link :to="{name: 'Destination'}">
