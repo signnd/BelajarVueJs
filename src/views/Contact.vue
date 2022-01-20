@@ -15,8 +15,8 @@
   
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+    <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Kontak','Contact'])}}</li>
   </ol>
 </nav>
 
@@ -61,8 +61,7 @@
             <!-- Map -->
             <div class="col">
               <div class="iframe-container col-lg-12 py-3">
-                <div id="map-container-google-11" class="z-depth-1-half map-container-6 map-height"
-                  style="height: 400px">
+                <div id="map-container-google-11" class="z-depth-1-half map-container-6 map-height" style="height: 400px">
                   <iframe src="https://maps.google.com/maps?q=Bamboomedia&t=&z=17&ie=UTF8&iwloc=&output=embed"
                     frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
@@ -76,28 +75,28 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto">Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.</div>
+                  <div class="col-10 my-auto">Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali.</div>
                 </div></div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col my-auto">info@bamboomedia.net</div></div>
+                  <div class="col-auto my-auto">info@bamboomedia.net</div></div>
             </div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col my-auto">+62 361 265521</div></div>
+              <div class="col-auto my-auto">+62 361 265521</div></div>
             </div>
           </div>
           <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-whatsapp"></i></div>
-                  <div class="col my-auto">+62 821-4663-3466</div></div>
+                  <div class="col-auto my-auto">+62 821-4663-3466</div></div>
                 </div>
           </div>
         </div>

@@ -15,12 +15,6 @@ import Olahraga from '../views/Blog/Olahraga.vue'
 import RSUPSanglah from '../views/Destination/rsup-sanglah.vue'
 import RSUBM from '../views/Destination/rsu-balimandara.vue'
 import RSMBM from '../views/Destination/rsm-balimandara.vue'
-import About_ing from '../views/en/About.vue'
-import Blog_ing from '../views/en/Blog.vue'
-import Home_ing from '../views/en/Home.vue'
-import Services_ing from '../views/en/Services.vue'
-import Contact_ing from '../views/en/Contact.vue'
-import Destination_ing from '../views/en/Destination.vue'
 import RSPTNUnud from '../views/Destination/rsptn-unud.vue'
 import RSMangusadaBadung from '../views/Destination/rs-mangusada-badung.vue'
 import RSBIMCNusadua from '../views/Destination/rs-bimc-nusadua.vue'
@@ -34,6 +28,7 @@ import RSBhayangkara from '../views/Destination/rs-bhayangkara.vue'
 import KlinikPentaMedika from '../views/Destination/klinik-pentamedika.vue'
 import Dental911Clinic from '../views/Destination/dental911clinic.vue'
 import Assist211 from '../views/Destination/assist211.vue'
+import RSSiloamKuta from '../views/Destination/rs-siloam-kuta.vue'
 
 const routes = 
 [
@@ -72,20 +67,26 @@ const routes =
       name: 'services',
       component: Services
     },
-  //   { path: '/Destination/rsup-sanglah', name: 'Destination/rsup-sanglah', component: RSUPSanglah },
-  // nanti struktur link untuk RS sanglah pake yang kayak di atas
-  { path: '/Destination/rs-member', name: 'Destination/rsup-sanglah', component: RSUPSanglah }, //temporary page
+  { path: '/Destination/rsup-sanglah', name: 'Destination/rsup-sanglah', component: RSUPSanglah },
   { path: '/Destination/rsu-balimandara', name: 'Destination/rsu-balimandara', component: RSUBM },
   { path: '/Destination/rsm-balimandara', name: 'Destination/rsm-balimandara', component: RSMBM },
+  { path: '/Destination/rsptn-unud', name: 'Destination/rsptn-unud', component: RSPTNUnud },
+  { path: '/Destination/assist211', name: 'Destination/assist211', component: Assist211 },
+  { path: '/Destination/bros', name: 'Destination/bros', component: BROS },
+  { path: '/Destination/dental911clinic', name: 'Destination/dental911clinic', component: Dental911Clinic },
+  { path: '/Destination/klinik-pentamedika', name: 'Destination/klinik-pentamedika', component: KlinikPentaMedika },
+  { path: '/Destination/rs-bhayangkara', name: 'Destination/rs-bhayangkara', component: RSBhayangkara },
+  { path: '/Destination/rs-bimc-kuta', name: 'Destination/rs-bimc-kuta', component: RSBIMCKuta },
+  { path: '/Destination/rs-bimc-nusadua', name: 'Destination/rs-bimc-nusadua', component: RSBIMCNusadua },
+  { path: '/Destination/rs-kasihibu-dps', name: 'Destination/rs-kasihibu-dps', component: RSKasihIbuDps },
+  { path: '/Destination/rs-kasihibu-saba', name: 'Destination/rs-kasihibu-saba', component: RSKasihIbuSaba },
+  { path: '/Destination/rs-mangusada-badung', name: 'Destination/rs-mangusada-badung', component: RSMangusadaBadung },
+  { path: '/Destination/rs-primamedika', name: 'Destination/rs-primamedika', component: RSPrimaMedika },
+  { path: '/Destination/rs-ramata', name: 'Destination/rs-ramata', component: RSRamata },
+  { path: '/Destination/rs-siloam-kuta', name: 'Destination/rs-siloam-kuta', component: RSSiloamKuta },
   { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
   { path: '/Blog/Olahraga', name: 'Blog/Olahraga', component: Olahraga },
   { path: '/Blog/Rumahsakit', name: 'Blog/Rumahsakit', component: Rumahsakit },
-  { path: '/en/About', name: 'en/About', component: About_ing },
-  {path: '/en/Blog', name: 'en/Blog', component: Blog_ing },
-  {path: '/en/Home', name: 'en/Home', component: Home_ing },
-  {path: '/en/Services', name: 'en/Services', component: Services_ing },
-  {path: '/en/Contact', name: 'en/Contact', component: Contact_ing },
-  {path: '/en/Destination', name: 'en/Destination', component: Destination_ing },
 ]
 
 const router = createRouter({

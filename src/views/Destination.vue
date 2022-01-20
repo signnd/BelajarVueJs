@@ -82,8 +82,7 @@
             <h5 class="card-title">RSUP Sanglah</h5>
             <p class="card-text">Jl. Diponegoro, Denpasar</p>
             <div class="pt-4 d-none d-sm-block"></div>
-            <br>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
+            <router-link to="/Destination/rsup-sanglah" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
             </router-link>
             <div class="py-1"></div>
             <div class="container-fluid">
@@ -106,8 +105,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">RSU Bali Mandara</h5>
             <p class="card-text">Jl. Bypass Ngurah Rai No. 548, Denpasar</p>
-            <div class="pt-4 d-none d-sm-block"></div>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
+            <router-link to="/Destination/rsu-balimandara" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="py-1"></div>
             <div class="container-fluid">
@@ -131,7 +129,6 @@
             <h5 class="card-title">RS Mata Bali Mandara</h5>
             <p class="card-text">Jl. Angsoka No. 8 Denpasar</p>
             <div class="pt-4 d-none d-sm-block d-md-none d-lg-block"></div>
-            <br>
             <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="pt-2"></div>
@@ -587,8 +584,17 @@
 </template>
 
 <script>
+const axios = require('axios');
+axios.get('/random_offices.php?limit=2')
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
 export default {
-    data() {
+     data() {
         return {
             images: {
                 cover1: require('@/assets/hero/flat.png'),
@@ -603,7 +609,8 @@ export default {
                 rsmangusadabadung: require('@/assets/rumahsakit/rs-mangusada-badung.jpeg'),
                 rssiloamkuta: require('@/assets/rumahsakit/rs-siloam-kuta-2.jpg'),
                 rsptnunud: require('@/assets/rumahsakit/rsptn-unud.jpeg'),
-                rsprimamedika: require('@/assets/rumahsakit/primamedika-2.png'),                rskasihibudps:require('@/assets/rumahsakit/rs-kasihibu-dps.jpg'),
+                rsprimamedika: require('@/assets/rumahsakit/primamedika-2.png'),                
+                rskasihibudps:require('@/assets/rumahsakit/rs-kasihibu-dps.jpg'),
                 rskasihibusaba: require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'),
                 rsramata: require('@/assets/rumahsakit/rs-ramata.jpg'),
                 rsbhayangkara: require('@/assets/rumahsakit/rs-bhayangkara.jpg'),
