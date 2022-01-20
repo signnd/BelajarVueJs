@@ -105,7 +105,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">RSU Bali Mandara</h5>
             <p class="card-text">Jl. Bypass Ngurah Rai No. 548, Denpasar</p>
-            <router-link to="/Destination/rs-member" class="btn d-block btn-outline-primary text-wrap">Detail
+            <router-link to="/Destination/rsu-balimandara" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="py-1"></div>
             <div class="container-fluid">
