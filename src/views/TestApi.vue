@@ -1,5 +1,5 @@
 <template>
-  <div id="#app" class="mt-5 pt-5">
+  <div id="api" class="mt-5 pt-5">
     {{data}}
   </div>     
 </template>
@@ -18,7 +18,7 @@ export default {
         console.log(this.data);
       });
     }
-}
+  }
 </script>
 
 <style>
