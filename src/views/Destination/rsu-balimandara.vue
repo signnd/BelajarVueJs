@@ -8,7 +8,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
     <li class="breadcrumb-item"><a href="/Destination">{{$translate(['Destinasi','Destination'])}}</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{$translate(['RSUP Sanglah','Sanglah General Hospital'])}}</li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['RSUP Bali Mandara','Sanglah General Hospital'])}}</li>
   </ol>
 </nav>
 
@@ -95,17 +95,17 @@
         <div class="text-justify px-5">
         <h3 class="text-center">{{$translate(['RSUP Sanglah','Sanglah General Hospital'])}}</h3>
         <hr>
-        <h5>{{$translate(['Visi RSUP Sanglah','RSUP Sanglah\'s Vision'])}}</h5>
+        <h5>{{$translate(['Visi RSUP Bali Mandara','RSUP Bali Mandara\'s Vision'])}}</h5>
         <p>
-         {{$translate([' Menjadi Rumah Sakit Unggul dan Mandiri Tahun 2024','Becoming an Excellent and Independent Hospital in 2024'])}}
+         {{$translate([' Menjadi Rumah Sakit Yang Berkualitas Dengan Mengedepankan Pelayanan, Pendidikan dan Penelitian Menuju Rumah Sakit Berkelas Dunia Tahun 2025','Becoming a Quality Hospital by Prioritizing Services, Education and Research Towards a World Class Hospital in 2025'])}}
         </p>
-        <h5>{{$translate(['Misi RSUP Sanglah','RSUP Sanglah\'s Mission'])}}</h5>
+        <h5>{{$translate(['Misi RSUP Bali Mandara','RSUP Bali Mandara\'s Mission'])}}</h5>
         <ol>
-          <li>{{$translate(['Menyelenggarakan pelayanan kesehatan yang paripurna, mandiri dan terjangkau','Organizing comprehensive, independent and affordable health services'])}}</li>
-          <li>{{$translate(['Menyelenggarakan Pendidikan Terintegrasi dan Pelatihan Tenaga Kesehatan yang berdaya saing dan berbudaya','Organizing Integrated Education and Training of Health Workers who are competitive and cultured'])}}</li>
-          <li>{{$translate(['Menyelenggarakan penelitian kesehatan berbasis rumah sakit','Organizing hospital-based health research'])}}</li>
-          <li>{{$translate(['Menciptakan tata kelola RS yang baik','Creating good hospital governance'])}}</li>
-          <li>{{$translate(['Membangun jejaring kesehatan dan kerjasama dengan pemangku kepentingan terkait','Building health networks and collaboration with stakeholders related interests'])}}</li>
+          <li>{{$translate(['Menyelenggarakan pelayanan kesehatan bermutu sesuai dengan standar akreditasi nasional dan internasional yang berorientasi pada keselamatan dan kepuasan pelanggan;','Organizing quality health services in accordance with national and international accreditation standards that are oriented towards safety and customer satisfaction;'])}}</li>
+          <li>{{$translate(['Menyelenggarakan pelayanan kesehatan rujukan dengan jejaring yang luas;','Organizing referral health services with a wide network;'])}}</li>
+          <li>{{$translate(['Menyediakan sarana dan prasarana sesuai dengan perkembangan ilmu pengetahuan dan teknologi kesehatan;','Provide facilities and infrastructure in accordance with the development of health science and technology;'])}}</li>
+          <li>{{$translate(['Menyelenggarakan pendidikan, penelitian dan pengembangan yang berkesinambungan untuk menghasilkan sumber daya manusia yang kompeten, berintegrasi dan memiliki budaya kerja; dan','Organizing continuous education, research and development to produce competent, integrated human resources with a work culture; and'])}}</li>
+          <li>{{$translate(['Meningkatkan kinerja layanan, profesionalisme dan meningkatkan kesejahteraan pegawai.','Improve service performance, professionalism and improve employee welfare.'])}}</li>
         </ol>
         </div>
 </section>
