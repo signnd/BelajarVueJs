@@ -232,7 +232,8 @@
             <h5 class="card-title">RS BIMC Kuta</h5>
             <p class="card-text">Jl. Bypass Ngurah Rai No. 100X</p>
             <div class="pt-4 d-none d-sm-none d-md-none"></div>
-            <router-link to="/Destination/rs-bumc-kuta" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-bumc-kuta" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
