@@ -587,15 +587,6 @@
 </template>
 
 <script>
-const axios = require('axios');
-axios.get('/random_offices.php?limit=2')
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-
 export default {
      data() {
         return {
