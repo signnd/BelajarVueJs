@@ -93,8 +93,9 @@
   </section>
 <section class="p-4">
         <div class="text-justify px-5">
-        <h3 class="text-center">{{$translate(['RS BIMC Nusa Dua','RS BIMC Nusa Dua\'s History'])}}</h3>
+        <h3 class="text-center">{{$translate(['RS BIMC Nusa Dua','RS BIMC Nusa Dua'])}}</h3>
         <hr>
+        <h5>{{$translate(['Sejarah RS BIMC Nusa Dua','RS BIMC Nusa Dua\'s History'])}}</h5>
         <p>
          {{$translate([' Rumah Sakit BIMC Nusa Dua adalah rumah sakit pertama di Indonesia yang mendapat akreditasi internasional dari Australian Council on Healthcare Standards (ACHS) dan diakui sebagai penyedia layanan kesehatan nomor satu di Indonesia oleh Internasional Assistance Group (IAG).','BIMC Nusa Dua Hospital is the first hospital in Indonesia to receive international accreditation from the Australian Council on Healthcare Standards (ACHS) and is recognized as the number one healthcare provider in Indonesia by the International Assistance Group (IAG).'])}}
          {{$translate([' Rumah Sakit BIMC Nusa Dua juga menjadi pilihan tujuan wisata kesehatan dan layanan gawat darurat unggulan di Indonesia mengingat jaraknya hanya 20 menit dari Bandara Internasional Ngurah Rai. Rumah sakit ini juga terletak di di lingkungan Bali Tourism Development Corporation (BTDC) Complex yang ramai dan dikelilingi oleh hotel-hotel berbintang lima dan pantai-pantai yang menawan maupun pusat perbelanjaan dan gaya hidup modern seperti Bali Golf and Country Club.','BIMC Nusa Dua Hospital is also the preferred destination for health tourism and leading emergency services in Indonesia considering that it is only 20 minutes from Ngurah Rai International Airport. The hospital is also located in the bustling Bali Tourism Development Corporation (BTDC) Complex, surrounded by five-star hotels and charming beaches as well as shopping centers and modern lifestyles such as the Bali Golf and Country Club.'])}}

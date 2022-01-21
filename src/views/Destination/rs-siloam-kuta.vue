@@ -93,7 +93,7 @@
   </section>
 <section class="p-4">
         <div class="text-justify px-5">
-        <h3 class="text-center">{{$translate(['RSUP Sanglah','Sanglah General Hospital'])}}</h3>
+        <h3 class="text-center">{{$translate(['RS Siloam Kuta','Siloam Kuta Hospital'])}}</h3>
         <hr>
         <h5>{{$translate(['Visi RS Siloam Kuta','RS Siloam Kuta\'s Vision'])}}</h5>
         <p>
