@@ -526,7 +526,7 @@ export default {
       const {latitude: lat, longitude: lng} = pos.coords
       this.loc.lat = lat
       this.loc.long = lng
-      console.log(this.loc);
+      // console.log(this.loc);
     }, (err) => {
       console.warn(`ERROR(${err.code}): ${err.message}`)
     }, {
