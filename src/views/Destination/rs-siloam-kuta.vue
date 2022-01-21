@@ -27,14 +27,14 @@
                 <div class="card-body">
                 <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col my-auto"><a href="https://g.page/siloam-denpasar?share" target="_blank" style="color:black;">Jl. Sunset Road No.818, Kuta, Kabupaten Badung, Bali 80361</a></div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div>
+                  <div class="col my-auto"><a href="mailto:corporate.secretary@siloamhospitals.com" style="color:black;">corporate.secretary@siloamhospitals.com</a></div>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div>
+                  <div class="col my-auto"><a href="tel:021-5460075" target="_blank" style="color:black;"> 021-5460075 ext 15</a></div>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col my-auto"><a href="https://www.siloamhospitals.com/" target="_blank">https://www.siloamhospitals.com/</a></div></div>
                 </div>
               </div>
             </div>
@@ -63,28 +63,28 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col-auto my-auto"><a href="https://g.page/siloam-denpasar?share" target="_blank" style="color:black;">Jl. Sunset Road No.818, Kuta, Kabupaten Badung, Bali 80361</a></div>
                 </div></div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div></div>
+                  <div class="col-auto my-auto"><a href="mailto:corporate.secretary@siloamhospitals.com" style="color:black;">corporate.secretary@siloamhospitals.com</a></div></div>
             </div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div></div>
+              <div class="col-auto my-auto"><a href="tel:021-5460075" target="_blank" style="color:black;"> 021-5460075 ext 15</a></div></div>
             </div>
           </div>
           <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col-auto my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col-auto my-auto"><a href="https://www.siloamhospitals.com/" target="_blank">https://www.siloamhospitals.com//</a></div></div>
                 </div>
           </div>
         </div>
@@ -97,15 +97,11 @@
         <hr>
         <h5>{{$translate(['Visi RS Siloam Kuta','RS Siloam Kuta\'s Vision'])}}</h5>
         <p>
-         {{$translate([' Menjadi Rumah Sakit Unggul dan Mandiri Tahun 2024','Becoming an Excellent and Independent Hospital in 2024'])}}
+         {{$translate([' Kualitas Internasional. Skala. Mencapai. Berbelas Kasih','International Quality. Scale. Reach. Godly Compassion'])}}
         </p>
         <h5>{{$translate(['Misi RS Siloam Kuta','RS Siloam Kuta\'s Mission'])}}</h5>
         <ol>
-          <li>{{$translate(['Menyelenggarakan pelayanan kesehatan yang paripurna, mandiri dan terjangkau','Organizing comprehensive, independent and affordable health services'])}}</li>
-          <li>{{$translate(['Menyelenggarakan Pendidikan Terintegrasi dan Pelatihan Tenaga Kesehatan yang berdaya saing dan berbudaya','Organizing Integrated Education and Training of Health Workers who are competitive and cultured'])}}</li>
-          <li>{{$translate(['Menyelenggarakan penelitian kesehatan berbasis rumah sakit','Organizing hospital-based health research'])}}</li>
-          <li>{{$translate(['Menciptakan tata kelola RS yang baik','Creating good hospital governance'])}}</li>
-          <li>{{$translate(['Membangun jejaring kesehatan dan kerjasama dengan pemangku kepentingan terkait','Building health networks and collaboration with stakeholders related interests'])}}</li>
+          <li>{{$translate(['Destinasi pilihan terpercaya untuk perawatan kesehatan holistik kelas dunia, pendidikan kesehatan dan penelitian.','The trusted destination of choice for holistic world class healthcare, health education and research.'])}}</li>
         </ol>
         </div>
 </section>

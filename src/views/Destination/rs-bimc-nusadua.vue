@@ -27,14 +27,14 @@
                 <div class="card-body">
                 <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col my-auto"><a href="https://g.page/bimc-nusa-dua?share" target="_blank" style="color:black;">Kawasan BTDC Blok D Nusa Dua 80363, Bali</a></div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div>
+                  <div class="col my-auto"><a href="mailto:nusadua@bimcbali.com" style="color:black;">nusadua@bimcbali.com</a></div>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div>
+                  <div class="col my-auto"><a href="tel:(0361) 3000 911" target="_blank" style="color:black;"> (0361) 3000 911</a></div>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col my-auto"><a href="https://www.siloamhospitals.com/" target="_blank">https://www.siloamhospitals.com/</a></div></div>
                 </div>
               </div>
             </div>
@@ -63,28 +63,28 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col-auto my-auto"><a href="https://g.page/bimc-nusa-dua?share" target="_blank" style="color:black;">Kawasan BTDC Blok D Nusa Dua 80363, Bali</a></div>
                 </div></div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div></div>
+                  <div class="col-auto my-auto"><a href="mailto:nusadua@bimcbali.com" style="color:black;">nusadua@bimcbali.com</a></div></div>
             </div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div></div>
+              <div class="col-auto my-auto"><a href="tel:(0361) 3000 911" target="_blank" style="color:black;"> (0361) 3000 911</a></div></div>
             </div>
           </div>
           <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col-auto my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col-auto my-auto"><a href="https://www.siloamhospitals.com/" target="_blank">https://www.siloamhospitals.com/</a></div></div>
                 </div>
           </div>
         </div>
@@ -95,18 +95,10 @@
         <div class="text-justify px-5">
         <h3 class="text-center">{{$translate(['RS BIMC Nusa Dua','RS BIMC Nusa Dua'])}}</h3>
         <hr>
-        <h5>{{$translate(['Visi RS BIMC Nusa Dua','RS BIMC Nusa Dua\'s Vision'])}}</h5>
         <p>
-         {{$translate([' Menjadi Rumah Sakit Unggul dan Mandiri Tahun 2024','Becoming an Excellent and Independent Hospital in 2024'])}}
+         {{$translate([' Rumah Sakit BIMC Nusa Dua adalah rumah sakit pertama di Indonesia yang mendapat akreditasi internasional dari Australian Council on Healthcare Standards (ACHS) dan diakui sebagai penyedia layanan kesehatan nomor satu di Indonesia oleh Internasional Assistance Group (IAG).','BIMC Nusa Dua Hospital is the first hospital in Indonesia to receive international accreditation from the Australian Council on Healthcare Standards (ACHS) and is recognized as the number one healthcare provider in Indonesia by the International Assistance Group (IAG).'])}}
+         {{$translate([' Rumah Sakit BIMC Nusa Dua juga menjadi pilihan tujuan wisata kesehatan dan layanan gawat darurat unggulan di Indonesia mengingat jaraknya hanya 20 menit dari Bandara Internasional Ngurah Rai. Rumah sakit ini juga terletak di di lingkungan Bali Tourism Development Corporation (BTDC) Complex yang ramai dan dikelilingi oleh hotel-hotel berbintang lima dan pantai-pantai yang menawan maupun pusat perbelanjaan dan gaya hidup modern seperti Bali Golf and Country Club.','BIMC Nusa Dua Hospital is also the preferred destination for health tourism and leading emergency services in Indonesia considering that it is only 20 minutes from Ngurah Rai International Airport. The hospital is also located in the bustling Bali Tourism Development Corporation (BTDC) Complex, surrounded by five-star hotels and charming beaches as well as shopping centers and modern lifestyles such as the Bali Golf and Country Club.'])}}
         </p>
-        <h5>{{$translate(['Misi RS BIMC Nusa Dua','RS BIMC Nusa Dua\'s Mission'])}}</h5>
-        <ol>
-          <li>{{$translate(['Menyelenggarakan pelayanan kesehatan yang paripurna, mandiri dan terjangkau','Organizing comprehensive, independent and affordable health services'])}}</li>
-          <li>{{$translate(['Menyelenggarakan Pendidikan Terintegrasi dan Pelatihan Tenaga Kesehatan yang berdaya saing dan berbudaya','Organizing Integrated Education and Training of Health Workers who are competitive and cultured'])}}</li>
-          <li>{{$translate(['Menyelenggarakan penelitian kesehatan berbasis rumah sakit','Organizing hospital-based health research'])}}</li>
-          <li>{{$translate(['Menciptakan tata kelola RS yang baik','Creating good hospital governance'])}}</li>
-          <li>{{$translate(['Membangun jejaring kesehatan dan kerjasama dengan pemangku kepentingan terkait','Building health networks and collaboration with stakeholders related interests'])}}</li>
-        </ol>
         </div>
 </section>
   </section>
