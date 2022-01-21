@@ -96,11 +96,12 @@
   </section>
 <section class="p-4">
         <div class="text-justify px-5">
-        <h3 class="text-center">{{$translate(['RS BIMC Kuta','RS BIMC Kuta'])}}</h3>
+                <h3 class="text-center">{{$translate(['RS BIMC Nusa Dua','RS BIMC Nusa Dua'])}}</h3>
         <hr>
+                <h5>{{$translate(['Sejarah RS BIMC Kuta','RS BIMC Kuta\'s History'])}}</h5>
         <p>
-         {{$translate(['Rumah Sakit Bali International Medical Centre (BIMC) Kuta adalah pusat pelayanan medis dan gawat darurat 24 jam yang berstandar internasional. Lokasinya yang strategis di daerah Kuta menjadikannya sebagai pusat pelayanan kesehatan pilihan yang mudah diakses baik oleh penduduk setempat maupun para wisatawan. Rumah Sakit BIMC Kuta bekerjasama dengan International Assistance Group (IAG) dan telah mendapatkan akreditasi KARS dari Menteri Kesehatan Indonesia dengan status Paripurna.',
-         'Established in 1998, the four-storey facility lies strategically on a 1,500 sqm area in Simpang Siur, Kuta, granting easy access for patients coming from all over Bali, whether for an emergency or a planned visit. BIMC Hospital Kuta stands at the forefront of quick and responsive medical assistance that it therefore provides first response emergency motorbike. BIMC Hospital Kuta encompasses two Centres of Excellence: the 24h Accident & Emergency Centre and 24h Medical Centre. The 24 hour Medical Centre caters family medicine program, consultation, on call to hotels and medical check up. Pathology and pharmacy units also operate 24 hours a day.'])}}
+         {{$translate([' Rumah Sakit BIMC Nusa Dua adalah rumah sakit pertama di Indonesia yang mendapat akreditasi internasional dari Australian Council on Healthcare Standards (ACHS) dan diakui sebagai penyedia layanan kesehatan nomor satu di Indonesia oleh Internasional Assistance Group (IAG).','BIMC Nusa Dua Hospital is the first hospital in Indonesia to receive international accreditation from the Australian Council on Healthcare Standards (ACHS) and is recognized as the number one healthcare provider in Indonesia by the International Assistance Group (IAG).'])}}
+         {{$translate([' Rumah Sakit BIMC Nusa Dua juga menjadi pilihan tujuan wisata kesehatan dan layanan gawat darurat unggulan di Indonesia mengingat jaraknya hanya 20 menit dari Bandara Internasional Ngurah Rai. Rumah sakit ini juga terletak di di lingkungan Bali Tourism Development Corporation (BTDC) Complex yang ramai dan dikelilingi oleh hotel-hotel berbintang lima dan pantai-pantai yang menawan maupun pusat perbelanjaan dan gaya hidup modern seperti Bali Golf and Country Club.','BIMC Nusa Dua Hospital is also the preferred destination for health tourism and leading emergency services in Indonesia considering that it is only 20 minutes from Ngurah Rai International Airport. The hospital is also located in the bustling Bali Tourism Development Corporation (BTDC) Complex, surrounded by five-star hotels and charming beaches as well as shopping centers and modern lifestyles such as the Bali Golf and Country Club.'])}}
         </p>
         </div>
 </section>
