@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="+62 361 3370001-4" target="_blank" style="color:black;"> +62 361 3370001 ext 4</a></div>
+                  <div class="col my-auto"><a href="tel:+623613370001" target="_blank" style="color:black;">+62 361 3370001 ext 4</a></div>
                   </div>
                 </div>
               </div>
@@ -77,7 +77,7 @@
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:+62 361 3370001-4" target="_blank" style="color:black;"> +62 361 3370001 ext 4</a></div></div>
+              <div class="col-auto my-auto"><a href="tel:+623613370001" target="_blank" style="color:black;"> +62 361 3370001 ext 4</a></div></div>
             </div>
           </div>
           <div class="card my-3">

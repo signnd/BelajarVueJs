@@ -42,7 +42,10 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:(0361) 3000 911" target="_blank" style="color:black;"> (0361) 3000 911</a></div>
+                  <div class="col my-auto"><a href="tel:+623613000911" target="_blank" style="color:black;">Phone: (+62 361) 3000 911</a>
+                  <br>
+                  <a href="https://wa.me/628113896113" target="_blank" style="color:black;">WhatsApp: +62 811 3896 113</a>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -50,7 +53,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://www.siloamhospitals.com/" target="_blank">https://www.siloamhospitals.com/</a></div></div>
+                  <div class="col my-auto"><a href="https://bimcbali.com/" target="_blank">https://www.bimcbali.com/</a></div></div>
                 </div>
               </div>
             </div>
@@ -77,14 +80,15 @@
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:(0361) 3000 911" target="_blank" style="color:black;"> (0361) 3000 911</a></div></div>
+              <div class="col-10 my-auto"><a href="tel:+623613000911" target="_blank" style="color:black;">Phone: (+62 361) 3000 911</a><br>
+              <a href="https://wa.me/628113896113" target="_blank" style="color:black;">WhatsApp: +62 811 3896 113</a></div></div>
             </div>
           </div>
           <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col-auto my-auto"><a href="https://www.siloamhospitals.com/" target="_blank">https://www.siloamhospitals.com/</a></div></div>
+                  <div class="col-auto my-auto"><a href="https://bimcbali.com/" target="_blank">https://www.bimcbali.com/</a></div></div>
                 </div>
           </div>
         </div>
@@ -109,7 +113,7 @@ export default {
     data() {
         return {
             images: {
-                cover1: require('@/assets/rumahsakit/rs-sanglah.jpg'),
+                cover1: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'),
                 cover2: require('@/assets/gallery/section_bg01.png'),
                 about: require('@/assets/gallery/popular_sub3.png'),
                 logo: require('@/assets/logo/logo.png')

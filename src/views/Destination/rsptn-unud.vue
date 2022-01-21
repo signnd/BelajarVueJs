@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:03618953670" target="_blank" style="color:black;"> 03618953670 ext 15</a></div>
+                  <div class="col my-auto"><a href="tel:+623618953670" target="_blank" style="color:black;">(+62 361) 8953670 ext 15</a></div>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://rs.unud.ac.id/" target="_blank">https://rs.unud.ac.id//</a></div></div>
+                  <div class="col my-auto"><a href="https://rs.unud.ac.id/" target="_blank">https://rs.unud.ac.id/</a></div></div>
                 </div>
               </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="https://g.page/rsunud?share" target="_blank" style="color:black;">Jl. Rumah Sakit Universitas Udayana No.1, Jimbaran, Kuta Selatan, Badung,Bali</a></div>
+                  <div class="col-10 my-auto"><a href="https://g.page/rsunud?share" target="_blank" style="color:black;">Jl. Rumah Sakit Universitas Udayana No.1, Jimbaran, Kuta Selatan, Badung, Bali</a></div>
                 </div></div>
           </div>
           <div class="card my-3">
@@ -77,14 +77,14 @@
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:03618953670" target="_blank" style="color:black;"> 03618953670 ext 15</a></div></div>
+              <div class="col-auto my-auto"><a href="tel:+623618953670" target="_blank" style="color:black;">(+62 361) 8953670 ext 15</a></div></div>
             </div>
           </div>
           <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col-auto my-auto"><a href="https://rs.unud.ac.id/" target="_blank">https://rs.unud.ac.id//</a></div></div>
+                  <div class="col-auto my-auto"><a href="https://rs.unud.ac.id/" target="_blank">https://rs.unud.ac.id/</a></div></div>
                 </div>
           </div>
         </div>
@@ -93,7 +93,7 @@
   </section>
 <section class="p-4">
         <div class="text-justify px-5">
-        <h3 class="text-center">{{$translate(['RSUP Sanglah','Sanglah General Hospital'])}}</h3>
+        <h3 class="text-center">RSPTN Unud</h3>
         <hr>
         <h5>{{$translate(['Visi RSPTN Unud','RSPTN Unud\'s Vision'])}}</h5>
         <p>

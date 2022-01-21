@@ -34,7 +34,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col my-auto"><a href="mailto:inforsmatabalimandara@gmail.com" style="color:black;">inforsmatabalimandara@gmail.com</a></div>
+                  <div class="col-10 my-auto"><a href="mailto:inforsmatabalimandara@gmail.com" style="color:black;">inforsmatabalimandara@gmail.com</a></div>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:(0361) 243350" target="_blank" style="color:black;"> (0361) 243350 ext 15</a></div>
+                  <div class="col my-auto"><a href="tel:+62361243350" target="_blank" style="color:black;"> (+62 361) 243350 ext 15</a></div>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://rsmatabalimandara.baliprov.go.id//home/" target="_blank">https://rsmatabalimandara.baliprov.go.id//</a></div></div>
+                  <div class="col-10 my-auto"><a href="https://rsmatabalimandara.baliprov.go.id//home/" target="_blank">https://rsmatabalimandara.baliprov.go.id//</a></div></div>
                 </div>
               </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/h67ejFARb79VwHn49  " target="_blank" style="color:black;">Jl. Angsoka No.8, Dangin Puri Kangin, Kec. Denpasar Utara, Kota Denpasar, Bali 80236</a></div>
+                  <div class="col-10 my-auto"><a href="https://goo.gl/maps/h67ejFARb79VwHn49  " target="_blank" style="color:black;">Jl. Angsoka No.8, Dangin Puri Kangin, Kec. Denpasar Utara, Kota Denpasar, Bali 80236</a></div>
                 </div></div>
           </div>
           <div class="card my-3">
@@ -77,7 +77,7 @@
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:(0361) 243350" target="_blank" style="color:black;"> (0361) 243350 ext 15</a></div></div>
+              <div class="col-auto my-auto"><a href="tel:(0361) 243350" target="_blank" style="color:black;"> (+62 361) 243350 ext 15</a></div></div>
             </div>
           </div>
           <div class="card my-3">
