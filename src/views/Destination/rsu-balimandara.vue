@@ -8,7 +8,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
     <li class="breadcrumb-item"><a href="/Destination">{{$translate(['Destinasi','Destination'])}}</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{$translate(['RSUP Bali Mandara','Sanglah General Hospital'])}}</li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['RSU Bali Mandara','RSU Bali Mandara'])}}</li>
   </ol>
 </nav>
 
