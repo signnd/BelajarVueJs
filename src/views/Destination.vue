@@ -305,12 +305,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs10')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs10')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -325,12 +325,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs11')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs11')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -346,12 +346,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs12')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs12')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -375,12 +375,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs13')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs13')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -397,12 +397,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs14')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs14')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -418,12 +418,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs15')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs15')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">#Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -446,12 +446,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs16')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs16')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -467,12 +467,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter" @click="setName('rs17')">Reservasi</button>  
+                  data-target="#exampleModalCenter" @click="setName('rs17')">{{$translate(['Reservasi','Reservation'])}}</button>  
               </div>
               <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
