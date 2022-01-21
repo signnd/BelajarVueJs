@@ -27,14 +27,14 @@
                 <div class="card-body">
                 <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col my-auto"><a href="https://goo.gl/maps/LfFP6aNo7SxCniBa7" target="_blank" style="color:black;">Jl. Raya Kapal, Mangupura, Mengwi, Badung, Bali</a></div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div>
+                  <div class="col my-auto"><a href="mailto:rsdm@rsdmangusada.com" style="color:black;">rsdm@rsdmangusada.com</a></div>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div>
+                  <div class="col my-auto"><a href="tel:+623613370001" target="_blank" style="color:black;">+62 361 3370001 ext 4</a></div>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col my-auto"><a href="rsudmangusada.badungkab.go.id" target="_blank">rsudmangusada.badungkab.go.id</a></div></div>
                 </div>
               </div>
             </div>
@@ -63,28 +63,28 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/LfFP6aNo7SxCniBa7" target="_blank" style="color:black;">Jl. Raya Kapal, Mangupura, Mengwi, Badung, Bali</a></div>
                 </div></div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div></div>
+                  <div class="col-auto my-auto"><a href="rsdm@rsdmangusada.com" style="color:black;">rsdm@rsdmangusada.com</a></div></div>
             </div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div></div>
+              <div class="col-auto my-auto"><a href="tel:+623613370001" target="_blank" style="color:black;"> +62 361 3370001 ext 4</a></div></div>
             </div>
           </div>
           <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col-auto my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col-auto my-auto"><a href="rsudmangusada.badungkab.go.id" target="_blank">rsudmangusada.badungkab.go.id</a></div></div>
                 </div>
           </div>
         </div>

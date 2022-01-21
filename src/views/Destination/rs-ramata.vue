@@ -27,7 +27,7 @@
                 <div class="card-body">
                 <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl Gatot Subroto Barat No 429, Denpasar, Bali</a></div>
+                  <div class="col my-auto"><a href="https://goo.gl/maps/PP8iLXLq1ahvrFXe6" target="_blank" style="color:black;">Jl Gatot Subroto Barat No 429, Denpasar, Bali</a></div>
                 </div></div>
               </div>
               <div class="card my-3">
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:+62361 9069009" target="_blank" style="color:black;"> +62361 9069009</a></div>
+                  <div class="col my-auto"><a href="tel:+623619069009" target="_blank" style="color:black;"> (+62 361) 9069009</a></div>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col my-auto"><a href="https://www.rsmramata.com/" target="_blank">https://www.rsmramata.com/</a></div></div>
                 </div>
               </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl Gatot Subroto Barat No 429, Denpasar, Bali</a></div>
+                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/PP8iLXLq1ahvrFXe6" target="_blank" style="color:black;">Jl Gatot Subroto Barat No 429, Denpasar, Bali</a></div>
                 </div></div>
           </div>
           <div class="card my-3">
@@ -77,14 +77,14 @@
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="+62361 9069009" target="_blank" style="color:black;"> +62361 9069009</a></div></div>
+              <div class="col-auto my-auto"><a href="+623619069009" target="_blank" style="color:black;"> (+62 361) 9069009</a></div></div>
             </div>
           </div>
           <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col-auto my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col-auto my-auto"><a href="https://www.rsmramata.com/" target="_blank">https://www.rsmramata.com/</a></div></div>
                 </div>
           </div>
         </div>

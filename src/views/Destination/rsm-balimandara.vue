@@ -27,14 +27,14 @@
                 <div class="card-body">
                 <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto"><a href="https://goo.gl/maps/h67ejFARb79VwHn49" target="_blank" style="color:black;"> Jl. Angsoka No. 8 Denpasar, Bali</a></div>
+                  <div class="col my-auto"><a href="https://goo.gl/maps/h67ejFARb79VwHn49" target="_blank" style="color:black;"> Jl. Angsoka No.8, Dangin Puri Kangin, Kec. Denpasar Utara, Kota Denpasar, Bali 80236</a></div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col my-auto"><a href="mailto:inforsmatabalimandara@gmail.com" style="color:black;">inforsmatabalimandara@gmail.com</a></div>
+                  <div class="col-10 my-auto"><a href="mailto:inforsmatabalimandara@gmail.com" style="color:black;">inforsmatabalimandara@gmail.com</a></div>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div>
+                  <div class="col my-auto"><a href="tel:+62361243350" target="_blank" style="color:black;"> (+62 361) 243350 ext 15</a></div>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://rsmatabalimandara.baliprov.go.id//home/" target="_blank">https://rsmatabalimandara.baliprov.go.id//</a></div></div>
+                  <div class="col-10 my-auto"><a href="https://rsmatabalimandara.baliprov.go.id//home/" target="_blank">https://rsmatabalimandara.baliprov.go.id//</a></div></div>
                 </div>
               </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/h67ejFARb79VwHn49  " target="_blank" style="color:black;">Jl. Angsoka No. 8 Denpasar</a></div>
+                  <div class="col-10 my-auto"><a href="https://goo.gl/maps/h67ejFARb79VwHn49  " target="_blank" style="color:black;">Jl. Angsoka No.8, Dangin Puri Kangin, Kec. Denpasar Utara, Kota Denpasar, Bali 80236</a></div>
                 </div></div>
           </div>
           <div class="card my-3">
@@ -77,7 +77,7 @@
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div></div>
+              <div class="col-auto my-auto"><a href="tel:(0361) 243350" target="_blank" style="color:black;"> (+62 361) 243350 ext 15</a></div></div>
             </div>
           </div>
           <div class="card my-3">
@@ -93,13 +93,13 @@
   </section>
 <section class="p-4">
         <div class="text-justify px-5">
-        <h3 class="text-center">{{$translate(['RSUP Sanglah','Sanglah General Hospital'])}}</h3>
+        <h3 class="text-center">{{$translate(['RSM Bali Mandara','RSM Bali Mandara'])}}</h3>
         <hr>
-        <h5>{{$translate(['Visi RSUP Sanglah','RSUP Sanglah\'s Vision'])}}</h5>
+        <h5>{{$translate(['Visi RSM Bali Mandara','RSM Bali Mandara\'s Vision'])}}</h5>
         <p>
          {{$translate(['Menjaga Kesucian dan Keharmonisan Alam Bali Beserta Isinya, Untuk Mewujudkan Kehidupan Krama Bali Yang Sejahtera dan Bahagia, Sakala-Niskala Menuju Kehidupan Krama dan Gumi Bali Sesuai Dengan Prinsip Trisakti Bung Karno: Berdaulat secara Politik, Berdikari Secara Ekonomi, dan Berkepribadian dalam Kebudayaan Melalui Pembangunan Secara Terpola, Menyeluruh, Terencana, Terarah, dan Terintegrasi Dalam Bingkai Negara Kesatuan Republik Indonesia Berdasarkan Nilai-Nilai Pancasila 1 Juni 1945.','Maintaining the Sanctity and Harmony of Bali Nature and Its Contents, To Realize a Prosperous and Happy Balinese Krama Life, Sakala-Niskala Towards a Balinese Krama and Gumi Life in accordance with Bung Karno Trisakti Principles: Political Sovereignty, Economically Independent, and Personality in Culture through Social Development Patterned, Comprehensive, Planned, Directed, and Integrated in the Frame of the Unitary State of the Republic of Indonesia Based on the Values ​​of Pancasila June 1, 1945.'])}}
         </p>
-        <h5>{{$translate(['Misi RSUP Sanglah','RSUP Sanglah\'s Mission'])}}</h5>
+        <h5>{{$translate(['Misi RSM Bali Mandara','RSM Bali Mandara\'s Mission'])}}</h5>
         <ol>
           <li>{{$translate(['Memastikan terpenuhinya kebutuhan pangan, sandang, dan papan dalam jumlah dan kualitas yang memadai bagi kehidupan Krama Bali.','Ensuring the fulfillment of food, clothing and housing needs in sufficient quantity and quality for the life of Balinese Krama.'])}}</li>
           <li>{{$translate(['Mewujudkan kemandirian pangan, meningkatkan nilai tambah dan daya saing pertanian, dan meningkatkan kesejahteraan petani.','Realizing food self-sufficiency, increasing added value and agricultural competitiveness, and improving farmers welfare.'])}}</li>
