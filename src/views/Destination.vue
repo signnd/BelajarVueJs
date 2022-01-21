@@ -545,7 +545,7 @@
             {{$translate(['Jadwal Tersedia','Available Schedule'])}}
           </h4>
           <div class="row px-4">
-            <div class="col text-left">
+            <div class="col-5 text-left">
               <h5>{{$translate(['Senin','Monday'])}}</h5>
               <h5>{{$translate(['Rabu','Wednesday'])}}</h5>
               <h5>{{$translate(['Kamis','Thursday'])}}</h5>
@@ -553,7 +553,7 @@
               <h5>{{$translate(['Sabtu','Saturday'])}}</h5>
               <h5>{{$translate(['Minggu','Sunday'])}}</h5>
             </div>
-            <div class="col text-right">
+            <div class="col-5 text-right">
               <div v-for="jadwal in waktu" :key="jadwal.id">
               <h5 v-if="jadwal.day == 1">{{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
               <h5 v-else-if="jadwal.day == 3">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
