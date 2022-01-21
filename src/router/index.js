@@ -27,7 +27,7 @@ import RSRamata from '../views/Destination/rs-ramata.vue'
 import RSBhayangkara from '../views/Destination/rs-bhayangkara.vue'
 import KlinikPentaMedika from '../views/Destination/klinik-pentamedika.vue'
 import Dental911Clinic from '../views/Destination/dental911clinic.vue'
-import Assist211 from '../views/Destination/assist211.vue'
+import Assist221 from '../views/Destination/assist221.vue'
 import RSSiloamKuta from '../views/Destination/rs-siloam-kuta.vue'
 
 const routes = 
@@ -71,7 +71,7 @@ const routes =
   { path: '/Destination/rsu-balimandara', name: 'Destination/rsu-balimandara', component: RSUBM },
   { path: '/Destination/rsm-balimandara', name: 'Destination/rsm-balimandara', component: RSMBM },
   { path: '/Destination/rsptn-unud', name: 'Destination/rsptn-unud', component: RSPTNUnud },
-  { path: '/Destination/assist211', name: 'Destination/assist211', component: Assist211 },
+  { path: '/Destination/assist221', name: 'Destination/assist221', component: Assist221 },
   { path: '/Destination/bros', name: 'Destination/bros', component: BROS },
   { path: '/Destination/dental911clinic', name: 'Destination/dental911clinic', component: Dental911Clinic },
   { path: '/Destination/klinik-pentamedika', name: 'Destination/klinik-pentamedika', component: KlinikPentaMedika },

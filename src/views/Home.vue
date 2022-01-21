@@ -53,9 +53,7 @@
       <div class="col-3">
         <select class="form-control form-control-md">
           <option hidden>{{$translate(['Kategori','Categories'])}}</option>
-          <option>Klinik</option>
-          <option>Rumah Sakit</option>
-          <option>Apotek</option>
+          <option v-for="kategori in poli" :key="kategori.id">{{kategori.name}}</option>
         </select>
       </div>
       <div class="col-3">
@@ -80,9 +78,7 @@
   </select>
   <select class="form-control form-control-md my-3">
     <option hidden>{{$translate(['Kategori','Categories'])}}</option>
-    <option>Klinik</option>
-    <option>Rumah Sakit</option>
-    <option>Apotek</option>
+    <option v-for="kategori in poli" :key="kategori.id">{{kategori.name}}</option>
   </select>
   <input class="form-control mb-3" type="search" placeholder="Search">
   <router-link :to="{name: 'Destination'}">
@@ -486,9 +482,12 @@
     
     
 <script>
+import json from "@/api/poliRs.json"
+
 export default {  
   data() {
     return {
+      poli: json.data.items,
       images: {
         cover1: require('@/assets/hero/hero.png'),
         cover2: require('@/assets/hero/hero2.jpg'),
@@ -527,7 +526,7 @@ export default {
       const {latitude: lat, longitude: lng} = pos.coords
       this.loc.lat = lat
       this.loc.long = lng
-      console.log(this.loc);
+      // console.log(this.loc);
     }, (err) => {
       console.warn(`ERROR(${err.code}): ${err.message}`)
     }, {
