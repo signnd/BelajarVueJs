@@ -86,12 +86,12 @@
               <div class="row">
                 <div class="col">
                   <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#Reservasi" @click="setName('rs1')">Reservasi</button>
+                    data-target="#Reservasi" @click="setName('rs1')">{{$translate(['Reservasi','Reservation'])}}</button>
                 </div>
                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
                 <div class="col">
                   <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#Jadwal">Jadwal</button>
+                    data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
                 </div>
               </div>
             </div>
@@ -109,12 +109,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs2')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs2')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -132,12 +132,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs3')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs3')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -161,12 +161,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs4')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
 
             </div>
@@ -183,12 +183,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs5')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs5')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -204,12 +204,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs2')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs2')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -235,12 +235,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs7')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs7')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -255,12 +255,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs8')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs8')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -275,12 +275,12 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs9')">Reservasi</button>
+                  data-target="#Reservasi" @click="setName('rs9')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">Jadwal</button>
+                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
@@ -498,14 +498,14 @@
         <div class="modal-body">
           <h4 class="font-weight-bold" id="buttonRs"></h4>
           <br>
-          <h5 class="text-left">Belum Install?</h5>
+          <h5 class="text-left">{{$translate(['Belum Install?','Have Not Installed Yet?'])}}</h5>
           <ol class="text-left">
             <li>Download SpeedID</li>
-            <li>Klik SpeedQ</li>
-            <li>Cari Lokasi yang Anda Inginkan</li>
-            <li>Tambahkan "Rumah Sakit Ini" ke Favorite (Klik ★)</li>
-            <li>Pilih Dokter dan Hari Layanan</li>
-            <li>Tiket Anda di My-Ticket</li>
+            <li>{{$translate(['Klik SpeedQ','Click SpeedQ'])}}</li>
+            <li>{{$translate(['Cari Lokasi Yang Anda Inginkan','Find Your Desired location'])}}</li>
+            <li>{{$translate(['Tambahkan Rumah Sakit Ini ke Favorite (Klik ★)','Add This Hospital Into Your Favourite (Click ★)'])}}</li>
+            <li>{{$translate(['Pilih Dokter dan Hari Layanan','Choose The Doctor From Days of Service'])}}</li>
+            <li>{{$translate(['Tiket Anda di My-Ticket','Your ticket is located in My-Ticket'])}}</li>
           </ol>
         </div>
         <div class="modal-footer">
@@ -542,26 +542,38 @@
         <img :src="images.speedid" alt="speedid" class="speedid-size pt-3">
         <div class="modal-body">
           <h4 class="font-weight-bold">
-            Jadwal Tersedia
+            {{$translate(['Jadwal Tersedia','Available Schedule'])}}
           </h4>
-          <div v-for="jadwal in waktu" :key="jadwal.id">
-            <li v-if="jadwal.day == 1"> Senin {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </li>
-            <li v-else-if="jadwal.day == 3"> Rabu {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </li>
-            <li v-else-if="jadwal.day == 4"> Kamis {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </li>
-            <li v-else-if="jadwal.day == 5"> Jumat {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </li>
-            <li v-else-if="jadwal.day == 6"> Sabtu {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </li>
-            <li v-else-if="jadwal.day == 0"> Minggu {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </li>
+          <div class="row px-4">
+            <div class="col text-left">
+              <h5>{{$translate(['Senin','Monday'])}}</h5>
+              <h5>{{$translate(['Rabu','Wednesday'])}}</h5>
+              <h5>{{$translate(['Kamis','Thursday'])}}</h5>
+              <h5>{{$translate(['Jumat','Friday'])}}</h5>
+              <h5>{{$translate(['Sabtu','Saturday'])}}</h5>
+              <h5>{{$translate(['Minggu','Sunday'])}}</h5>
+            </div>
+            <div class="col text-right">
+              <div v-for="jadwal in waktu" :key="jadwal.id">
+              <h5 v-if="jadwal.day == 1">{{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
+              <h5 v-else-if="jadwal.day == 3">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
+              <h5 v-else-if="jadwal.day == 4">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
+              <h5 v-else-if="jadwal.day == 5">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
+              <h5 v-else-if="jadwal.day == 6">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
+              <h5 v-else-if="jadwal.day == 0">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
+            </div>
+          </div>
           </div>
           <hr>
           <br>
-          <h5 class="text-left">Belum Install SpeedID?</h5>
+          <h5 class="text-left">{{$translate(['Belum Install SpeedID?','Have Not Installed Yet?'])}}</h5>
           <ol class="text-left">
             <li>Download SpeedID</li>
-            <li>Klik SpeedQ</li>
-            <li>Cari Lokasi yang Anda Inginkan</li>
-            <li>Tambahkan "Rumah Sakit Ini" ke Favorite (Klik ★)</li>
-            <li>Pilih Dokter dan Hari Layanan</li>
-            <li>Tiket Anda di My-Ticket</li>
+            <li>{{$translate(['Klik SpeedQ','Click SpeedQ'])}}</li>
+            <li>{{$translate(['Cari Lokasi Yang Anda Inginkan','Find Your Desired location'])}}</li>
+            <li>{{$translate(['Tambahkan Rumah Sakit Ini ke Favorite (Klik ★)','Add This Hospital Into Your Favourite (Click ★)'])}}</li>
+            <li>{{$translate(['Pilih Dokter dan Hari Layanan','Choose The Doctor From Days of Service'])}}</li>
+            <li>{{$translate(['Tiket Anda di My-Ticket','Your ticket is located in My-Ticket'])}}</li>
           </ol>
         </div>
         <div class="modal-footer">
@@ -628,8 +640,14 @@ export default {
       setName (idName){
         var name = document.getElementById(idName).innerHTML;
         console.log(name);
+        let language = localStorage.getItem('language')
+        if(language == 1){
+                  document.getElementById("buttonRs").innerHTML = "Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari office" + " " + "'" + name +  "'" + " " + "pada fitur SpeedQ."
+        }
+        else{
+                  document.getElementById("buttonRs").innerHTML = "You can register directly through the SpeedID application by searching for office" + " " + "'" + name +  "'" + " " + "in the SpeedQ feature."
+        }
 
-        document.getElementById("buttonRs").innerHTML = "Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari office" + " " + "'" + name +  "'" + " " + "pada fitur SpeedQ."
       }
    }
 }
