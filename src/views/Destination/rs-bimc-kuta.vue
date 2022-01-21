@@ -93,20 +93,13 @@
   </section>
 <section class="p-4">
         <div class="text-justify px-5">
-        <h3 class="text-center">{{$translate(['RS BIMC Kuta','RS BIMC Kuta'])}}</h3>
+                <h3 class="text-center">{{$translate(['RS BIMC Nusa Dua','RS BIMC Nusa Dua'])}}</h3>
         <hr>
-        <h5>{{$translate(['Visi RS BIMC Kuta','RS BIMC Kuta\'s Vision'])}}</h5>
+                <h5>{{$translate(['Sejarah RS BIMC Kuta','RS BIMC Kuta\'s History'])}}</h5>
         <p>
-         {{$translate([' Menjadi Rumah Sakit Unggul dan Mandiri Tahun 2024','Becoming an Excellent and Independent Hospital in 2024'])}}
+         {{$translate([' Rumah Sakit BIMC Nusa Dua adalah rumah sakit pertama di Indonesia yang mendapat akreditasi internasional dari Australian Council on Healthcare Standards (ACHS) dan diakui sebagai penyedia layanan kesehatan nomor satu di Indonesia oleh Internasional Assistance Group (IAG).','BIMC Nusa Dua Hospital is the first hospital in Indonesia to receive international accreditation from the Australian Council on Healthcare Standards (ACHS) and is recognized as the number one healthcare provider in Indonesia by the International Assistance Group (IAG).'])}}
+         {{$translate([' Rumah Sakit BIMC Nusa Dua juga menjadi pilihan tujuan wisata kesehatan dan layanan gawat darurat unggulan di Indonesia mengingat jaraknya hanya 20 menit dari Bandara Internasional Ngurah Rai. Rumah sakit ini juga terletak di di lingkungan Bali Tourism Development Corporation (BTDC) Complex yang ramai dan dikelilingi oleh hotel-hotel berbintang lima dan pantai-pantai yang menawan maupun pusat perbelanjaan dan gaya hidup modern seperti Bali Golf and Country Club.','BIMC Nusa Dua Hospital is also the preferred destination for health tourism and leading emergency services in Indonesia considering that it is only 20 minutes from Ngurah Rai International Airport. The hospital is also located in the bustling Bali Tourism Development Corporation (BTDC) Complex, surrounded by five-star hotels and charming beaches as well as shopping centers and modern lifestyles such as the Bali Golf and Country Club.'])}}
         </p>
-        <h5>{{$translate(['Misi RS BIMC Kuta','RS BIMC Kuta\'s Mission'])}}</h5>
-        <ol>
-          <li>{{$translate(['Menyelenggarakan pelayanan kesehatan yang paripurna, mandiri dan terjangkau','Organizing comprehensive, independent and affordable health services'])}}</li>
-          <li>{{$translate(['Menyelenggarakan Pendidikan Terintegrasi dan Pelatihan Tenaga Kesehatan yang berdaya saing dan berbudaya','Organizing Integrated Education and Training of Health Workers who are competitive and cultured'])}}</li>
-          <li>{{$translate(['Menyelenggarakan penelitian kesehatan berbasis rumah sakit','Organizing hospital-based health research'])}}</li>
-          <li>{{$translate(['Menciptakan tata kelola RS yang baik','Creating good hospital governance'])}}</li>
-          <li>{{$translate(['Membangun jejaring kesehatan dan kerjasama dengan pemangku kepentingan terkait','Building health networks and collaboration with stakeholders related interests'])}}</li>
-        </ol>
         </div>
 </section>
   </section>

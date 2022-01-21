@@ -8,7 +8,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
     <li class="breadcrumb-item"><a href="/Destination">{{$translate(['Destinasi','Destination'])}}</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{$translate(['RSUP Sanglah','Sanglah General Hospital'])}}</li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Bali Royal Hospital','Bali Royal Hospital'])}}</li>
   </ol>
 </nav>
 
@@ -27,14 +27,14 @@
                 <div class="card-body">
                 <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col my-auto"><a href="https://g.page/baliroyalhospital?share" target="_blank" style="color:black;">Jl. Tantular No. 6 Renon, Denpasar - Bali</a></div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div>
+                  <div class="col my-auto"><a href="mailto:info@baliroyalhospital.co.id" style="color:black;">info@baliroyalhospital.co.id</a></div>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div>
+                  <div class="col my-auto"><a href="tel:(+62361) 247 499, 222 588" target="_blank" style="color:black;"> (+62361) 247 499, 222 588</a></div>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col my-auto"><a href="https://baliroyalhospital.co.id/" target="_blank">https://baliroyalhospital.co.id/</a></div></div>
                 </div>
               </div>
             </div>
@@ -63,28 +63,28 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col-auto my-auto"><a href="https://g.page/baliroyalhospital?share" target="_blank" style="color:black;">Jl. Tantular No. 6 Renon, Denpasar - Bali</a></div>
                 </div></div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div></div>
+                  <div class="col-auto my-auto"><a href="mailto:info@baliroyalhospital.co.id" style="color:black;">info@baliroyalhospital.co.id</a></div></div>
             </div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div></div>
+              <div class="col-auto my-auto"><a href="tel:(+62361) 247 499, 222 588" target="_blank" style="color:black;"> (+62361) 247 499, 222 588</a></div></div>
             </div>
           </div>
           <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col-auto my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col-auto my-auto"><a href="https://baliroyalhospital.co.id/" target="_blank">https://baliroyalhospital.co.id/</a></div></div>
                 </div>
           </div>
         </div>
@@ -93,19 +93,19 @@
   </section>
 <section class="p-4">
         <div class="text-justify px-5">
-        <h3 class="text-center">{{$translate(['RSUP Sanglah','Sanglah General Hospital'])}}</h3>
+        <h3 class="text-center">{{$translate(['Bali Royal Hospital','Bali Royal Hospital'])}}</h3>
         <hr>
-        <h5>{{$translate(['Visi RSUP Sanglah','RSUP Sanglah\'s Vision'])}}</h5>
+        <h5>{{$translate(['Visi Bali Royal Hospital','Bali Royal Hospital\'s Vision'])}}</h5>
         <p>
-         {{$translate([' Menjadi Rumah Sakit Unggul dan Mandiri Tahun 2024','Becoming an Excellent and Independent Hospital in 2024'])}}
+         {{$translate([' Menjadi pusat pelayanan kesehatan yang unggul (Center of Excellence) dengan mengutamakan keselamatan dan kepuasan pasien.','To become a center of excellence for health services (Center of Excellence) by prioritizing patient safety and satisfaction.'])}}
         </p>
-        <h5>{{$translate(['Misi RSUP Sanglah','RSUP Sanglah\'s Mission'])}}</h5>
+        <h5>{{$translate(['Misi Bali Royal Hospital','Bali Royal Hospital\'s Mission'])}}</h5>
         <ol>
-          <li>{{$translate(['Menyelenggarakan pelayanan kesehatan yang paripurna, mandiri dan terjangkau','Organizing comprehensive, independent and affordable health services'])}}</li>
-          <li>{{$translate(['Menyelenggarakan Pendidikan Terintegrasi dan Pelatihan Tenaga Kesehatan yang berdaya saing dan berbudaya','Organizing Integrated Education and Training of Health Workers who are competitive and cultured'])}}</li>
-          <li>{{$translate(['Menyelenggarakan penelitian kesehatan berbasis rumah sakit','Organizing hospital-based health research'])}}</li>
-          <li>{{$translate(['Menciptakan tata kelola RS yang baik','Creating good hospital governance'])}}</li>
-          <li>{{$translate(['Membangun jejaring kesehatan dan kerjasama dengan pemangku kepentingan terkait','Building health networks and collaboration with stakeholders related interests'])}}</li>
+          <li>{{$translate(['Memberikan pelayanan kesehatan terpercaya melalui kerjasama Tim yang berkualitas dan optimal, bertanggungjawab, berempati, rasional dan terintegrasi untuk kepuasan dan keselamatan pasien.','Providing trusted health services through quality and optimal team collaboration, being responsible, empathetic, rational and integrated for patient satisfaction and safety.'])}}</li>
+          <li>{{$translate(['Memberikan pelayanan kesehatan yang terkini melalui pendekatan ilmiah (scientific approach)','Providing the latest health services through a scientific approach'])}}</li>
+          <li>{{$translate(['Membangun kerjasama dalam bidang Ilmu Pengetahuan Teknologi Kedokteran (IPTEKDOK) yang tepat guna, dan bidang lainnya, baik vertical maupun horizontal secara berkesinambungan.','Build cooperation in the field of Medical Science Technology (IPTEKDOK) that is appropriate, and other fields, both vertically and horizontally on an ongoing basis.'])}}</li>
+          <li>{{$translate(['Mengembangkan pusat unggulan untuk meningkatkan derajat kesehatan masyarakat.','Develop a center of excellence to improve the health status of the community.'])}}</li>
+          <li>{{$translate(['Mengembangkan dan menyediakan SDM dan penguatan infrastruktur finansial untuk menunjang pelayanan yang unggul.','Develop and provide human resources and strengthen financial infrastructure to support superior services.'])}}</li>
         </ol>
         </div>
 </section>
@@ -117,7 +117,7 @@ export default {
     data() {
         return {
             images: {
-                cover1: require('@/assets/rumahsakit/rs-sanglah.jpg'),
+                cover1: require('@/assets/rumahsakit/bros.jpg'),
                 cover2: require('@/assets/gallery/section_bg01.png'),
                 about: require('@/assets/gallery/popular_sub3.png'),
                 logo: require('@/assets/logo/logo.png')
