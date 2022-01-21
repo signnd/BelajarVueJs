@@ -27,14 +27,14 @@
                 <div class="card-body">
                 <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col my-auto"><a href="https://goo.gl/maps/zoM1N6XuQjRsnpdM6" target="_blank" style="color:black;">Jl. Gatot Subroto Barat No.367,Pemecutan Kaja, Kec. Denpasar Utara,Kota Denpasar, Bali</a></div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div>
+                  <div class="col my-auto"><a href="mailto:info@bali911dentalclinic.com" style="color:black;">info@bali911dentalclinic.com</a></div>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div>
+                  <div class="col my-auto"><a href="tel:+62 812 36280911" target="_blank" style="color:black;"> +62 812 36280911</a></div>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col my-auto"><a href="http://bali911dentalclinic.com/" target="_blank">http://bali911dentalclinic.com/</a></div></div>
                 </div>
               </div>
             </div>
@@ -63,28 +63,28 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/JA5RaDxG4krVm3918" target="_blank" style="color:black;">Jl. Diponegoro, Kota Denpasar, Bali</a></div>
+                  <div class="col-auto my-auto"><a href="https://goo.gl/maps/zoM1N6XuQjRsnpdM6" target="_blank" style="color:black;">Jl. Gatot Subroto Barat No.367,Pemecutan Kaja, Kec. Denpasar Utara,Kota Denpasar, Bali</a></div>
                 </div></div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col-auto my-auto"><a href="mailto:info@sanglahhospitalbali.com" style="color:black;">info@sanglahhospitalbali.com</a></div></div>
+                  <div class="col-auto my-auto"><a href="mailto:info@bali911dentalclinic.com" style="color:black;">info@bali911dentalclinic.com</a></div></div>
             </div>
           </div>
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><a href="tel:+62 361 227911" target="_blank" style="color:black;"> +62 361 227911 ext 15</a></div></div>
+              <div class="col-auto my-auto"><a href="tel:+62 812 36280911" target="_blank" style="color:black;"> +62 812 36280911</a></div></div>
             </div>
           </div>
           <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-globe2"></i></div>
-                  <div class="col-auto my-auto"><a href="https://sanglahhospitalbali.com/home/" target="_blank">https://sanglahhospitalbali.com/</a></div></div>
+                  <div class="col-auto my-auto"><a href="http://bali911dentalclinic.com/" target="_blank">http://bali911dentalclinic.com/</a></div></div>
                 </div>
           </div>
         </div>
@@ -93,13 +93,13 @@
   </section>
 <section class="p-4">
         <div class="text-justify px-5">
-        <h3 class="text-center">{{$translate(['Dental 911 Clinic','Dental 911 Clinic'])}}</h3>
+        <h3 class="text-center">{{$translate(['RS BIMC Kuta','RS BIMC Kuta'])}}</h3>
         <hr>
-        <h5>{{$translate(['Visi Dental 911 Clinic','Dental 911 Clinic\'s Vision'])}}</h5>
+        <h5>{{$translate(['Visi RS BIMC Kuta','RS BIMC Kuta\'s Vision'])}}</h5>
         <p>
          {{$translate([' Menjadi Rumah Sakit Unggul dan Mandiri Tahun 2024','Becoming an Excellent and Independent Hospital in 2024'])}}
         </p>
-        <h5>{{$translate(['Misi Dental 911 Clinic','Dental 911 Clinic\'s Mission'])}}</h5>
+        <h5>{{$translate(['Misi RS BIMC Kuta','RS BIMC Kuta\'s Mission'])}}</h5>
         <ol>
           <li>{{$translate(['Menyelenggarakan pelayanan kesehatan yang paripurna, mandiri dan terjangkau','Organizing comprehensive, independent and affordable health services'])}}</li>
           <li>{{$translate(['Menyelenggarakan Pendidikan Terintegrasi dan Pelatihan Tenaga Kesehatan yang berdaya saing dan berbudaya','Organizing Integrated Education and Training of Health Workers who are competitive and cultured'])}}</li>
