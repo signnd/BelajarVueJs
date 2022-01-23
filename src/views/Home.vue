@@ -484,6 +484,7 @@
 <script>
 import json from "@/api/poliRs.json"
 
+import axios from "axios"
 export default {  
   data() {
     return {
@@ -507,6 +508,7 @@ export default {
         partner8: require('@/assets/logors/350x350-08.png'),
         partner9: require('@/assets/logors/350x350-09.png'),
       },
+
     banners: [
         {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi_en: 'BIMC Siloam Hospital Nusa Dua is an international standard hospital in Bali that provides first-class health services at relatively affordable prices for communities around the Jimbaran, Nusa Dua, Uluwatu and Kampial areas.', deskripsi_id: 'BIMC Siloam Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'}, 
         {img: require('@/assets/rumahsakit/rs-siloam-kuta.jpg'), label: 'BIMC Siloam Kuta',deskripsi_en: 'Siloam Kuta Bali International Medical Center (BIMC) Hospital is a 24-hour international standard medical and emergency service center. Its strategic location in the Kuta area makes it a preferred health care center that is easily accessible to both locals and tourists.', deskripsi_id: 'Rumah Sakit Bali International Medical Centre (BIMC) Siloam Kuta adalah pusat pelayanan medis dan gawat darurat 24 jam yang berstandar internasional. Lokasinya yang strategis di daerah Kuta menjadikannya sebagai pusat pelayanan kesehatan pilihan yang mudah diakses baik oleh penduduk setempat maupun para wisatawan.'}, 
@@ -535,15 +537,13 @@ export default {
       maximumAge: 0
     })
   },
+
   created (){
     const idx = Math.floor(Math.random() * this.banners.length)
     this.selectedBanner = this.banners[idx]
+    // console.log(this.selectedBanner)
+  },
 
-    console.log(this.selectedBanner)
-  },
-  methods: {
-      
-  },
   computed: {
     heroImage() {
       return {
