@@ -24,21 +24,25 @@
         <div class="card-body">
           <div class="row">
             <!--<img src="" id="img1-mobile" alt="rs-header-img" class="d-block d-sm-block d-md-block d-lg-none">-->
-            <div class="col-2"><img src="" id="img1-desktop" alt="img-1"></div>
+            <div class="col-3"><img src="" id="img1-desktop" alt="rs-header-img" class="img-fluid"></div>
+            <div class="col-3"><img src="" id="img2-desktop" alt="rs-header-img" class="img-fluid"></div>
+            <div class="col-3"><img src="" id="img3-desktop" alt="rs-header-img" class="img-fluid"></div>
+            <div class="col-3"><img src="" id="img4-desktop" alt="rs-header-img" class="img-fluid"></div>
+
             <div class="d-none d-lg-block col">
 
               <!-- Card on desktop-->
               <div class="card my-3">
                 <div class="card-body">
                 <div class="row align-center">
-                  <div class="col-1 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="col-1 my-auto"><i class="bi bi-geo-alt-fill"></i></div>
                   <div class="col my-auto"><div v-if="loading">Loading...</div>{{this.alamat}}</div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
+                  <div class="col-1 my-auto"><i class="bi bi-envelope-fill"></i></div>
                   <div class="col my-auto"><div v-if="loading">Loading...</div></div>
                   </div>
                 </div>
@@ -46,7 +50,7 @@
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="col-1 my-auto"><i class="bi bi-telephone-fill"></i></div>
                   <div class="col my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://wa.me/+${ this.whatsapp }`">{{this.whatsapp}}</a></div>
                   
                   </div>
@@ -55,14 +59,14 @@
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-1 mr-3"><i class="bi bi-bookmarks-fill"></i></div>
+                  <div class="col-1 my-auto"><i class="bi bi-bookmarks-fill"></i></div>
                   <div class="col my-auto"><div v-if="loading">Loading...</div>{{this.kategori}}</div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
+      </div>
         <!-- Card in smaller screen -->
         <div class="d-block d-lg-none container">
           <div class="card my-3">
@@ -95,7 +99,7 @@
           </div>
         </div>
       </div>
-    </div>
+
   </section>
 <section class="p-4">
         <div class="text-justify px-5">
@@ -143,9 +147,12 @@ export default {
         console.log(this.alamat);
         console.log(this.img);
         console.log(this.deskripsi);
-        document.getElementById("img1-mobile").src = this.img1;
+        //document.getElementById("img1-mobile").src = this.img1;
         document.getElementById("img1-desktop").src = this.img1;
         document.getElementById("img2-desktop").src = this.img2;
+        document.getElementById("img3-desktop").src = this.img3;
+        document.getElementById("img4-desktop").src = this.img4;
+        document.getElementById("img5-desktop").src = this.img5;
       })
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/grouped_counters.php`)
       .then((response) => {
