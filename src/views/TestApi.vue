@@ -1,11 +1,11 @@
 <template>
 <div class="container d-flex">
-    <div class="container my-5 align-items-center" style="width: 900px;">
+    <div class="container my-5 pb-5 mb-5 align-items-center" style="width: 900px;">
       <div class="card-group">
         <div class="card" style="width:auto;">
           <img class="card-img-top" src="" id="img1" alt="RSUP Sanglah">
           <div class="card-body text-center">
-            <h5 class="card-title" id="rs1"></h5>
+            <h5 class="card-title" id="rs1">{{this.nama}}</h5>
             <p class="card-text">Jl. Diponegoro, Denpasar</p>
             <div class="pt-4 d-none d-sm-block"></div>
             <router-link to="" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
@@ -96,7 +96,8 @@ export default {
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?page=1&lat=-8.6649188&long=115.2384802`)
       .then((response) => {
         this.img = response.data.data.items[0].images[1];
-        console.log(this.img);
+        this.nama = response.data.data.items[0].name;
+        console.log(this.nama);
         document.getElementById("img1").src = this.img;
       })
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/grouped_counters.php`)
