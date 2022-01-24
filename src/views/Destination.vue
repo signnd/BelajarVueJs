@@ -30,7 +30,7 @@
       <div class="col-3">
         <select class="form-control form-control-md" id="list_poli">
           <option hidden>Kategori</option>
-          <option>Poli Umum</option>
+          <option v-for="klinik in this.listpoli" :key="klinik.id">{{klinik.name}}</option>
         </select>
       </div>
       <div class="col-3">
@@ -54,7 +54,7 @@
   <select class="form-control form-control-md my-3">
     <option hidden>Kategori</option>
     <option>Poli Umum</option>
-    <!-- <option v-for="klinik in this.poli" :key="klinik.id">{{klinik.name}}</option> -->
+    <!-- <option v-for="klinik in this.listpoli" :key="klinik.id">{{klinik.name}}</option> -->
   </select>
   <input class="form-control mb-3" type="search" placeholder="Search">
     <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
@@ -71,8 +71,12 @@
         <div class="card" style="width:auto;">
           <img class="card-img-top img-card" src="" id="img1" alt="Bakti Bangsa">
           <div class="card-body text-center">
-            <h5 class="card-title" id="rs1">{{this.nama}}</h5>
-            <p class="card-text">Jl. Diponegoro, Denpasar</p>
+            <h5 class="card-title" id="rs1">{{this.namars}}</h5>
+            <br>
+            <h4 class="card-title" id="">{{this.namapoli}}</h4>
+            <h4 class="card-title" id="">{{this.person}}</h4>
+            <p class="card-text">{{this.deskripsi}}</p>
+            <p class="card-text">{{this.alamat}}</p>
             <div class="pt-4 d-none d-sm-block"></div>
             <router-link to="/Destination/rsup-sanglah" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
             </router-link>
@@ -644,12 +648,14 @@ export default {
         playstore: require('@/assets/modal/playstore.png'),
         speedid: require('@/assets/modal/SpeedID.png')
       },
-      poli: null,
+      namapoli: null,
+      listpoli: null,
       img: null,
-      nama: null,
+      namars: null,
       waktu: null,
       alamat: null,
       deskripsi: null,
+      person: null,
     }
   },
   created() {
@@ -657,14 +663,14 @@ export default {
     // axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&limit=2&lat=-8.6649188&long=115.2384802`)
     //   .then((response) => {
     //     this.img = response.data.data.items[0].office.images[1];
-    //     this.nama = response.data.data.items[0].office.name;
+    //     this.namars = response.data.data.items[0].office.name;
     //     this.alamat = response.data.data.items[0].office.address;
     //     this.deskripsi = response.data.data.items[0].office.description;
     //     document.getElementById("img1").src = this.img;
     //   })
-    axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/grouped_counters.php`)
+    axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters.php?office_id=1`)
       .then((response) => {
-        this.poli = response.data.data.items;
+        this.listpoli = response.data.data.items;
       })
     axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/operational_days.php?office_id=1&counter_id=1`)
       .then((response) => {
@@ -692,10 +698,12 @@ export default {
         axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&limit=2&counter=${text}&lat=-8.6649188&long=115.2384802`)
         .then((response) => {
           this.img = response.data.data.items[0].office.images[1];
-          this.nama = response.data.data.items[0].office.name;
+          this.namars = response.data.data.items[0].office.name;
           this.alamat = response.data.data.items[0].office.address;
           this.deskripsi = response.data.data.items[0].office.description;
-        document.getElementById("img1").src = this.img;
+          this.person = response.data.data.items[0].person;
+          this.namapoli = response.data.data.items[0].name;
+          document.getElementById("img1").src = this.img;
       })
       }
    }
