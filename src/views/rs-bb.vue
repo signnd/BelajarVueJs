@@ -23,22 +23,8 @@
       <div class="card my-3">
         <div class="card-body">
           <div class="row">
-            <!-- <img src="" id="img1-mobile" alt="rs-header-img" class="d-block d-sm-block d-md-block d-lg-none">
-            <img src="" id="img1-desktop" alt="rs-header-img" class="rs-header-img my-auto d-none d-lg-block"> -->
-      <div id="slideshow-member" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#slideshow" data-slide-to="0" class="active"></li>
-        <li data-target="#slideshow" data-slide-to="1"></li>  
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="" id="img1-desktop" alt="rs-image-slide" class="d-block mt-5 pt-2 w-100">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="" id="img1-desktop" class="d-block mt-5 pt-2 w-100" alt="rs-image-slide-2">
-        </div>
-      </div>
+            <!--<img src="" id="img1-mobile" alt="rs-header-img" class="d-block d-sm-block d-md-block d-lg-none">-->
+            <div class="col-2"><img src="" id="img1-desktop" alt="img-1"></div>
             <div class="d-none d-lg-block col">
 
               <!-- Card on desktop-->
