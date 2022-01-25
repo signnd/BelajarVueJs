@@ -29,7 +29,7 @@ import KlinikPentaMedika from '../views/Destination/klinik-pentamedika.vue'
 import Dental911Clinic from '../views/Destination/dental911clinic.vue'
 import Assist221 from '../views/Destination/assist221.vue'
 import RSSiloamKuta from '../views/Destination/rs-siloam-kuta.vue'
-import RSBB from '../views/rs-bb.vue'
+import RSBB from '../views/id-01.vue'
 
 const routes = 
 [
