@@ -41,7 +41,7 @@
   <form class="d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
-        <select class="form-control form-control-md">
+        <select class="form-control form-control-md" id="kabupaten">
           <option hidden>{{$translate(['Lokasi','Location'])}}</option>
           <option>Denpasar</option>
           <option>Tabanan</option>
@@ -60,9 +60,7 @@
         <input class="form-control mr-2" type="search" placeholder="Search">
       </div>
       <div class="col-2">
-        <router-link :to="{name: 'Destination'}">
-          <button type="button" class="btn btn-md btn-block btn-primary">{{$translate(['Cari','Search'])}}</button>
-        </router-link>
+          <button type="button" class="btn btn-md btn-block btn-primary" @click="valueSender()" id="search_home">{{$translate(['Cari','Search'])}}</button>
       </div>
     </div>
 </form>
@@ -483,8 +481,8 @@
     
 <script>
 import json from "@/api/poliRs.json"
-
 import axios from "axios"
+
 export default {  
   data() {
     return {
@@ -550,7 +548,15 @@ export default {
         backgroundImage: `url${require('../assets/gallery/section_bg02.png')}`
       };
     }
-  }
+  },
+  methods: {
+    valueSender: function () {
+      var val_kabupaten;
+      val_kabupaten = document.getElementById('kabupaten').value;
+      localStorage.setItem("val_kabupaten", val_kabupaten);
+      location.href = "/api";   
+      }
+    }
 }
 </script>
     

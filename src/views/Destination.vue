@@ -28,18 +28,16 @@
         </select>
       </div>
       <div class="col-3">
-        <select class="form-control form-control-md">
+        <select class="form-control form-control-md" id="list_poli">
           <option hidden>Kategori</option>
-          <option v-for="kategori in poli" :key="kategori.id">{{kategori.name}}</option>
+          <option v-for="klinik in this.listpoli" :key="klinik.id">{{klinik.name}}</option>
         </select>
       </div>
       <div class="col-3">
         <input class="form-control mr-2" type="search" placeholder="Pencarian">
       </div>
       <div class="col-2">
-        <router-link :to="{name: 'Destination'}">
-          <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
-        </router-link>
+          <button type="button" @click="searchPoli()" class="btn btn-md btn-block btn-outline-light">Search</button>
       </div>
     </div>
 </form>
@@ -55,20 +53,17 @@
   </select>
   <select class="form-control form-control-md my-3">
     <option hidden>Kategori</option>
-    <option>Klinik</option>
-    <option>Rumah Sakit</option>
-    <option>Apotek</option>
+    <option>Poli Umum</option>
+    <!-- <option v-for="klinik in this.listpoli" :key="klinik.id">{{klinik.name}}</option> -->
   </select>
   <input class="form-control mb-3" type="search" placeholder="Search">
-  <router-link :to="{name: 'Destination'}">
     <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
-  </router-link>
 </div>
 
 <br>
 <br>
 
-<!-- Rumah Sakit Placeholder -->
+<!-- Rumah Sakit -->
 <section>
   <div class="container d-flex">
     <div class="container my-5 align-items-center" style="width: 900px;">
@@ -555,12 +550,7 @@
             </div>
             <div class="col-5 text-right">
               <div v-for="jadwal in waktu" :key="jadwal.id">
-              <h5 v-if="jadwal.day == 1">{{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 3">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 4">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 5">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 6">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 0">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
+              <h5>  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
             </div>
           </div>
           </div>
@@ -599,14 +589,11 @@
 </template>
 
 <script>
-import listPoli from "@/api/poliRs.json"
-import listWaktu from "@/api/waktuBuka.json"
+import axios from "axios";
 
 export default {
-  data() {
+  data:() => {
     return {
-      poli: listPoli.data.items,
-      waktu: listWaktu.data.items,
       images: {
         cover1: require('@/assets/hero/flat.png'),
         cover2: require('@/assets/gallery/section_bg01.png'),
@@ -631,10 +618,35 @@ export default {
         apple: require('@/assets/modal/apple.png'),
         playstore: require('@/assets/modal/playstore.png'),
         speedid: require('@/assets/modal/SpeedID.png')
-      }
-      
+      },
+      namapoli: null,
+      listpoli: null,
+      img: null,
+      namars: null,
+      waktu: null,
+      alamat: null,
+      deskripsi: null,
+      person: null,
     }
-    
+  },
+  created() {
+    let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
+    // axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&limit=2&lat=-8.6649188&long=115.2384802`)
+    //   .then((response) => {
+    //     this.img = response.data.data.items[0].office.images[1];
+    //     this.namars = response.data.data.items[0].office.name;
+    //     this.alamat = response.data.data.items[0].office.address;
+    //     this.deskripsi = response.data.data.items[0].office.description;
+    //     document.getElementById("img1").src = this.img;
+    //   })
+    axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters.php?office_id=1`)
+      .then((response) => {
+        this.listpoli = response.data.data.items;
+      })
+    axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/operational_days.php?office_id=1&counter_id=1`)
+      .then((response) => {
+        this.waktu = response.data.data.items;
+      })
   },
    methods: {
       setName (idName){
@@ -642,12 +654,28 @@ export default {
         console.log(name);
         let language = localStorage.getItem('language')
         if(language == 1){
-                  document.getElementById("buttonRs").innerHTML = "Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari office" + " " + "'" + name +  "'" + " " + "pada fitur SpeedQ."
+          document.getElementById("buttonRs").innerHTML = "Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari office" + " " + "'" + name +  "'" + " " + "pada fitur SpeedQ."
         }
         else{
-                  document.getElementById("buttonRs").innerHTML = "You can register directly through the SpeedID application by searching for office" + " " + "'" + name +  "'" + " " + "in the SpeedQ feature."
+          document.getElementById("buttonRs").innerHTML = "You can register directly through the SpeedID application by searching for office" + " " + "'" + name +  "'" + " " + "in the SpeedQ feature."
         }
+      },
+      searchPoli (){
+        var e = document.getElementById("list_poli");
+        var text = e.options[e.selectedIndex].text;
+        console.log(text);
 
+        let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
+        axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&limit=2&counter=${text}&lat=-8.6649188&long=115.2384802`)
+        .then((response) => {
+          this.img = response.data.data.items[0].office.images[1];
+          this.namars = response.data.data.items[0].office.name;
+          this.alamat = response.data.data.items[0].office.address;
+          this.deskripsi = response.data.data.items[0].office.description;
+          this.person = response.data.data.items[0].person;
+          this.namapoli = response.data.data.items[0].name;
+          document.getElementById("img1").src = this.img;
+      })
       }
    }
 }
@@ -697,5 +725,5 @@ export default {
   width: 100%;
   max-width: 400px;
   height: auto;
-}
+} 
 </style>

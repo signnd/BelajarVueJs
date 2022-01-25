@@ -1,111 +1,102 @@
 <template>
-<div class="container d-flex">
-    <div class="container my-5 align-items-center" style="width: 900px;">
-      <div class="card-group">
-        <div class="card" style="width:auto;">
-          <img class="card-img-top" src="" id="img1" alt="RSUP Sanglah">
-          <div class="card-body text-center">
-            <h5 class="card-title" id="rs1"></h5>
-            <p class="card-text">Jl. Diponegoro, Denpasar</p>
-            <div class="pt-4 d-none d-sm-block"></div>
-            <router-link to="" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
-            </router-link>
-            <div class="py-1"></div>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col">
-                  <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#Reservasi">{{$translate(['Reservasi','Reservation'])}}</button>
-                </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                <div class="col">
-                  <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="width:auto;">
-          <img class="card-img-top" src="" alt="RSU Bali Mandara">
-          <div class="card-body text-center">
-            <h5 class="rs2 card-title" id="rs2">RSU Bali Mandara</h5>
-            <p class="card-text">Jl. Bypass Ngurah Rai No. 548, Denpasar</p>
-            <router-link to="" class="btn d-block btn-outline-primary text-wrap">Detail
-            </router-link>
-            <div class="py-1"></div>
-            <div class="container-fluid">
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-        <div class="card" style="width:auto;">
-          <img class="card-img-top" src="" alt="RS Mata Bali Mandara">
-          <div class="card-body text-center">
-            <h5 class="rs card-title" id="rs3">RS Mata Bali Mandara</h5>
-            <p class="card-text">Jl. Angsoka No. 8 Denpasar</p>
-            <div class="pt-4 d-none d-sm-block d-md-none d-lg-block"></div>
-            <router-link to="" class="btn d-block btn-outline-primary text-wrap">Detail
-            </router-link>
-            <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-  <ul>
-    <li v-for="klinik in poli" :key="klinik.id">{{this.poli}}</li>
-  </ul>
+<div class="row" id="results"></div>
+<div class="error" id="error"></div>
+  
+ 
 </template>
 
 <script>
 import axios from "axios";
 
 export default {
-  data: () => ({
+  data() {
+    return {
+      page: 1,
+    };
+  },
+  api: () => ({
+    listpoli: null,
     poli: null,
-    jadwal: null,
-    nama: null,
-    deskripsi: null,
     img: null,
+    nama: null,
+    alamat: null,
+    deskripsi: null,
+    waktu: null,
+    bahan: null,
+    total: null,
   }),
-    created(){
+  created() {
+    this.cari()
+  },
+  methods: {
+    cari: function () {
+      var value_kabupaten = localStorage.getItem("val_kabupaten");
+      console.log(value_kabupaten);
       let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?page=1&lat=-8.6649188&long=115.2384802`)
-      .then((response) => {
-        this.img = response.data.data.items[0].images[1];
-        console.log(this.img);
-        document.getElementById("img1").src = this.img;
-      })
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/grouped_counters.php`)
-      .then((response) => {
-        this.poli = response.data.data.items[0];
-      })
+      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&lat=-8.6649188&long=115.2384802&search=${value_kabupaten}`)
+        .then((response) => {
+          this.total = response.data.data.paging.item_per_page;
+          var total_item = this.total;
+          var strHTML = '';
+          for (var i = 0; i < total_item; i++) {
+            this.bahan = response.data.data.items[i];
+            console.log(this.bahan);
+            console.log(this.bahan.name);
+            var template =
+              `<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
+                  <div class="container d-flex">
+                    <div class="container my-5 align-items-center" style="width: 900px;">
+                      <div class="card-group">
+                        <div class="card" style="width:auto;">
+                          <img class="card-img-top" src="${this.bahan.office.images[1]}" alt="Card image 1">
+                          <div class="card-body text-center">
+                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
+                            <p class="card-text">${this.bahan.office.name}</p>
+                            <br>
+                            <h4 class="card-text">${this.bahan.person}</h4>
+                            <p class="card-text">${this.bahan.office.whatsapp}</p>
+                            <p class="card-text">${this.bahan.office.address}</p>
+                            <div class="pt-2"></div>
+                            <div class="row">
+                              <div class="col">
+                                <button class="btn w-100 btn-primary" data-toggle="modal"
+                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
+                              </div>
+                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
+                              <div class="col">
+                                <button class="btn w-100 btn-primary" data-toggle="modal"
+                                  data-target="#Jadwal">Jadwal</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+            strHTML += template;
+          }
+          document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
+        })
+        .catch(error => {
+          document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
+         })
     }
   }
+}
 </script>
 
 <style>
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
 </style>

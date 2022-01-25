@@ -117,7 +117,7 @@ export default {
         location.reload()
       }
     }
-}
+  }
 
 $(function(){ 
      var navMain = $(".navbar-collapse");
