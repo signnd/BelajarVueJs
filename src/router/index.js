@@ -29,6 +29,7 @@ import KlinikPentaMedika from '../views/Destination/klinik-pentamedika.vue'
 import Dental911Clinic from '../views/Destination/dental911clinic.vue'
 import Assist221 from '../views/Destination/assist221.vue'
 import RSSiloamKuta from '../views/Destination/rs-siloam-kuta.vue'
+import RSBB from '../views/id-01.vue'
 
 const routes = 
 [
@@ -87,6 +88,8 @@ const routes =
   { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
   { path: '/Blog/Olahraga', name: 'Blog/Olahraga', component: Olahraga },
   { path: '/Blog/Rumahsakit', name: 'Blog/Rumahsakit', component: Rumahsakit },
+  { path: '/api/rs-bb', name: 'api/rs-bb', component: RSBB },
+
 ]
 
 const router = createRouter({
