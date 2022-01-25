@@ -41,7 +41,7 @@
   <form class="d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
-        <select class="form-control form-control-md">
+        <select class="form-control form-control-md" id="kabupaten">
           <option hidden>{{$translate(['Lokasi','Location'])}}</option>
           <option>Denpasar</option>
           <option>Tabanan</option>
@@ -60,9 +60,7 @@
         <input class="form-control mr-2" type="search" placeholder="Search">
       </div>
       <div class="col-2">
-        <router-link to="">
-          <button type="button" class="btn btn-md btn-block btn-primary" id="search_home">{{$translate(['Cari','Search'])}}</button>
-        </router-link>
+          <button type="button" class="btn btn-md btn-block btn-primary" @click="valueSender()" id="search_home">{{$translate(['Cari','Search'])}}</button>
       </div>
     </div>
 </form>
@@ -552,27 +550,11 @@ export default {
     }
   },
   methods: {
-    cari: function () {
-      location.href = "/api";
-      let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&limit=5`)
-        .then((response) => {
-          this.total = response.data.data.paging.item_per_page;
-          var total_item = this.total;
-          var strHTML = '';
-          for(var i=0; i<total_item; i++){
-            this.bahan = response.data.data.items[i];
-            console.log(this.bahan);
-            var template =
-              `<div class="Results-item">
-                <h3 class="Results-itemName">${this.bahan.name}</h3>
-                <p class="Results-itemLocation"><b>${this.bahan.person}</b></p>
-                <p class="Results-itemDetails">${this.bahan.office.address}</p>
-              </div>`;
-            strHTML += template;
-          }
-          document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
-        });
+    valueSender: function () {
+      var val_kabupaten;
+      val_kabupaten = document.getElementById('kabupaten').value;
+      localStorage.setItem("val_kabupaten", val_kabupaten);
+      location.href = "/api";   
       }
     }
 }

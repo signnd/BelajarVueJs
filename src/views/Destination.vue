@@ -63,20 +63,16 @@
 <br>
 <br>
 
-<!-- Rumah Sakit Placeholder -->
+<!-- Rumah Sakit -->
 <section>
   <div class="container d-flex">
     <div class="container my-5 align-items-center" style="width: 900px;">
       <div class="card-group">
         <div class="card" style="width:auto;">
-          <img class="card-img-top img-card" src="" id="img1" alt="Bakti Bangsa">
+          <img class="card-img-top" :src="images.rssanglah" alt="RSUP Sanglah">
           <div class="card-body text-center">
-            <h5 class="card-title" id="rs1">{{this.namars}}</h5>
-            <br>
-            <h4 class="card-title" id="">{{this.namapoli}}</h4>
-            <h4 class="card-title" id="">{{this.person}}</h4>
-            <p class="card-text">{{this.deskripsi}}</p>
-            <p class="card-text">{{this.alamat}}</p>
+            <h5 class="card-title" id="rs1">RSUP Sanglah</h5>
+            <p class="card-text">Jl. Diponegoro, Denpasar</p>
             <div class="pt-4 d-none d-sm-block"></div>
             <router-link to="/Destination/rsup-sanglah" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
             </router-link>
@@ -167,6 +163,7 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
+
             </div>
           </div>
         </div>
@@ -430,35 +427,10 @@
     </div>
   </div>
 </section>
-
 <section>
   <div class="container d-flex">
-    <div class="container my-5 align-items-center" style="width: 900px;">
+    <div class="container my-5 align-items-center" style="width: 600px;">
       <div class="card-group">
-        <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.rssanglah" alt="RSUP Sanglah">
-          <div class="card-body text-center">
-            <h5 class="card-title" id="rs1">RSUP Sanglah</h5>
-            <p class="card-text">Jl. Diponegoro, Denpasar</p>
-            <div class="pt-4 d-none d-sm-block"></div>
-            <router-link to="/Destination/rsup-sanglah" class="btn d-block btn-outline-primary text-wrap gap-2">Detail
-            </router-link>
-            <div class="py-1"></div>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col">
-                  <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#Reservasi" @click="setName('rs1')">{{$translate(['Reservasi','Reservation'])}}</button>
-                </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                <div class="col">
-                  <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.dentalclinic" alt="Card image 1">
           <div class="card-body text-center">
@@ -469,9 +441,9 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs13')">{{$translate(['Reservasi','Reservation'])}}</button>
+                  data-target="#Reservasi" @click="setName('rs16')">{{$translate(['Reservasi','Reservation'])}}</button>
               </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
@@ -479,7 +451,7 @@
             </div>
           </div>
         </div>
-        <div class="card" style="width:auto;">
+         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.assist" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title" id="rs17">Assist 221</h5>
@@ -490,16 +462,16 @@
             <div class="row">
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs14')">{{$translate(['Reservasi','Reservation'])}}</button>
+                  data-target="#exampleModalCenter" @click="setName('rs17')">{{$translate(['Reservasi','Reservation'])}}</button>  
               </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
+              <div class="py-1 d-block d-sm-block d-md-none"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
             </div>
           </div>
-        </div>
+         </div>
       </div>
     </div>
   </div>

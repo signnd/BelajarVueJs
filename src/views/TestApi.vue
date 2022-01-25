@@ -6,15 +6,9 @@
 <br>
 <br>
 
-<h1>Test</h1>
-<button @click="cari()">Cari</button>
 <div class="row" id="results"></div>
+<div class="error" id="error"></div>
   
-<b-pagination
-  v-model="currentPage"
-  :total-rows="rows"
-  :per-page="perPage"
-></b-pagination>
  
 </template>
 
@@ -39,12 +33,14 @@ export default {
     total: null,
   }),
   created() {
-
+    this.cari()
   },
   methods: {
     cari: function () {
+      var value_kabupaten = localStorage.getItem("val_kabupaten");
+      console.log(value_kabupaten);
       let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&lat=-8.6649188&long=115.2384802`)
+      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&lat=-8.6649188&long=115.2384802&search=${value_kabupaten}`)
         .then((response) => {
           this.total = response.data.data.paging.item_per_page;
           var total_item = this.total;
@@ -88,7 +84,10 @@ export default {
             strHTML += template;
           }
           document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
-        });
+        })
+        .catch(error => {
+          document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
+         })
     }
   }
 }
