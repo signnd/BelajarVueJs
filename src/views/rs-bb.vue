@@ -8,7 +8,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
     <li class="breadcrumb-item"><a href="/Destination">{{$translate(['Destinasi','Destination'])}}</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{$translate(['RSUP Sanglah','Sanglah General Hospital'])}}</li>
+    <li class="breadcrumb-item active" aria-current="page">{{this.nama}}</li>
   </ol>
 </nav>
 
@@ -23,26 +23,54 @@
       <div class="card my-3">
         <div class="card-body">
           <div class="row">
-            <!--<img src="" id="img1-mobile" alt="rs-header-img" class="d-block d-sm-block d-md-block d-lg-none">-->
-            <div class="col-3"><img src="" id="img1-desktop" alt="rs-header-img" class="img-fluid"></div>
-            <div class="col-3"><img src="" id="img2-desktop" alt="rs-header-img" class="img-fluid"></div>
-            <div class="col-3"><img src="" id="img3-desktop" alt="rs-header-img" class="img-fluid"></div>
-            <div class="col-3"><img src="" id="img4-desktop" alt="rs-header-img" class="img-fluid"></div>
+            <div id="slideshow" class="carousel d-lg-block slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                <li data-target="#slideshow" data-slide-to="1"></li>
+                <li data-target="#slideshow" data-slide-to="2"></li>
+                <li data-target="#slideshow" data-slide-to="3"></li>
+                <li data-target="#slideshow" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item carousel-member-item active">
+                  <img id="img1-desktop" class="memberpage img-fluid d-block" alt="Image 1">
+                </div>
+                <div class="carousel-item carousel-member-item">
+                  <img id="img2-desktop" class="memberpage img-fluid d-block" alt="Image 2">
+                </div>
+                <div class="carousel-item carousel-member-item">
+                  <img id="img3-desktop" class="memberpage img-fluid d-block" alt="Image 3">
+                </div>
+                <div class="carousel-item carousel-member-item">
+                  <img id="img4-desktop" class="memberpage img-fluid d-block" alt="Image 4">
+                </div>
+                <div class="carousel-item carousel-member-item">
+                  <img id="img5-desktop" class="memberpage img-fluid d-block" alt="Image 5">
+                </div>
+                <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
 
             <div class="d-none d-lg-block col">
-
               <!-- Card on desktop-->
               <div class="card my-3">
                 <div class="card-body">
                 <div class="row align-center">
-                  <div class="col-1 my-auto"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="col-2 my-auto"><i class="bi bi-geo-alt-fill"></i></div>
                   <div class="col my-auto"><div v-if="loading">Loading...</div>{{this.alamat}}</div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-1 my-auto"><i class="bi bi-envelope-fill"></i></div>
+                  <div class="col-2 my-auto"><i class="bi bi-envelope-fill"></i></div>
                   <div class="col my-auto"><div v-if="loading">Loading...</div></div>
                   </div>
                 </div>
@@ -50,8 +78,8 @@
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-1 my-auto"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://wa.me/+${ this.whatsapp }`">{{this.whatsapp}}</a></div>
+                  <div class="col-2 my-auto"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="col my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://wa.me/+${ this.whatsapp }`" class="text-black">{{this.whatsapp}}</a></div>
                   
                   </div>
                 </div>
@@ -59,7 +87,7 @@
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-1 my-auto"><i class="bi bi-bookmarks-fill"></i></div>
+                  <div class="col-2 my-auto"><i class="bi bi-bookmarks-fill"></i></div>
                   <div class="col my-auto"><div v-if="loading">Loading...</div>{{this.kategori}}</div></div>
                 </div>
               </div>
@@ -87,7 +115,7 @@
             <div class="card-body">
               <div class="row align-center">
               <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
-              <div class="col-auto my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://wa.me/+${ this.whatsapp }`">{{this.whatsapp}}</a></div></div>
+              <div class="col-auto my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://wa.me/+${ this.whatsapp }`" class="text-black">{{this.whatsapp}}</a></div></div>
             </div>
           </div>
           <div class="card my-3">
@@ -172,6 +200,20 @@ export default {
 .rs-header-img {
   width: 60%;
   height: 60%;
+}
+
+.carousel-member {
+  width:unset;
+  height:unset;
+}
+
+.carousel-member-item img {
+  position:relative;
+}
+
+.memberpage{
+  max-width: 560px;
+  max-height: 490px;
 }
 
 </style>
