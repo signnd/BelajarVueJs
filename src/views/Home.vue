@@ -60,8 +60,8 @@
         <input class="form-control mr-2" type="search" placeholder="Search">
       </div>
       <div class="col-2">
-        <router-link :to="{name: 'Destination'}">
-          <button type="button" class="btn btn-md btn-block btn-primary">{{$translate(['Cari','Search'])}}</button>
+        <router-link to="">
+          <button type="button" class="btn btn-md btn-block btn-primary" id="search_home">{{$translate(['Cari','Search'])}}</button>
         </router-link>
       </div>
     </div>
@@ -483,8 +483,8 @@
     
 <script>
 import json from "@/api/poliRs.json"
-
 import axios from "axios"
+
 export default {  
   data() {
     return {
@@ -550,7 +550,31 @@ export default {
         backgroundImage: `url${require('../assets/gallery/section_bg02.png')}`
       };
     }
-  }
+  },
+  methods: {
+    cari: function () {
+      location.href = "/api";
+      let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
+      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&limit=5`)
+        .then((response) => {
+          this.total = response.data.data.paging.item_per_page;
+          var total_item = this.total;
+          var strHTML = '';
+          for(var i=0; i<total_item; i++){
+            this.bahan = response.data.data.items[i];
+            console.log(this.bahan);
+            var template =
+              `<div class="Results-item">
+                <h3 class="Results-itemName">${this.bahan.name}</h3>
+                <p class="Results-itemLocation"><b>${this.bahan.person}</b></p>
+                <p class="Results-itemDetails">${this.bahan.office.address}</p>
+              </div>`;
+            strHTML += template;
+          }
+          document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
+        });
+      }
+    }
 }
 </script>
     

@@ -167,7 +167,6 @@
                 <button class="btn w-100 btn-primary" data-toggle="modal"
                   data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
               </div>
-
             </div>
           </div>
         </div>
