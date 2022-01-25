@@ -31,6 +31,7 @@ export default {
     waktu: null,
     bahan: null,
     total: null,
+    loading: true,
 
     page: null,
     total_page: null,
@@ -92,6 +93,7 @@ export default {
         .catch(error => {
           document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
          })
+        .finally(() => this.loading = false)
     },
     retrivePaging() {
       let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
