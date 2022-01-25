@@ -6,7 +6,7 @@
 <br>
 <br>
 
-<div class="row" id="results"></div>
+<div class="row" id="results"><div v-if="loading">Loading...</div></div>
 <div class="error" id="error"></div>
   
  
@@ -31,6 +31,10 @@ export default {
     waktu: null,
     bahan: null,
     total: null,
+
+    page: null,
+    total_page: null,
+    item_per_page: null,
   }),
   created() {
     this.cari()
@@ -88,6 +92,15 @@ export default {
         .catch(error => {
           document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
          })
+    },
+    retrivePaging() {
+      let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
+      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&lat=-8.6649188&long=115.2384802&search=${value_kabupaten}`)
+      .then((response) => {
+          this.page = response.data.data.paging.page;
+          this.total_page = response.data.data.total_page;
+          this.item_per_page = response.data.data.item_per_page;
+      })
     }
   }
 }
