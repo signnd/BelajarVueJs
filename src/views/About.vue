@@ -1,5 +1,34 @@
 <template>
 
+                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                      <div class="card">
+                        <div class="card h-100">
+                          <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
+                          <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${this.bahan.name}</h5>
+                            <p class="card-text">${this.bahan.office.name}</p>
+                            <br>
+                            <h4 class="card-text">${this.bahan.person}</h4>
+                            <p class="card-text">${this.bahan.office.whatsapp}</p>
+                            <p class="card-text">${this.bahan.office.address}</p>
+                            <div class="pt-2"></div>
+                            <div class="row">
+                              <div class="col">
+                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
+                                  data-target="#Reservasi">Reservasi</button>
+                              </div>
+                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
+                              <div class="col">
+                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
+                                  data-target="#Jadwal">Jadwal</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
 <div class="container-fluid">
 <div class="row">
   <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
@@ -266,7 +295,24 @@ export default {
                 logo: require('@/assets/logo/logo.png')
             }
         }
+    },
+    methods: {
+      cari() {
+        console.log("Cari")
+      },
+          getNextData() {
+      window.onscroll = () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          console.log("success")
+          this.cari();
+        }
+      }
     }
+  },
+  mounted() {
+      this.getNextData()
+  }
+    
 }
 </script>
 

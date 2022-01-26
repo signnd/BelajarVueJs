@@ -8,14 +8,14 @@
 </div>
 
 <div class="error pb-5" id="error"></div>
-<!-- <div @scroll="onScroll"></div> -->
-        <div class="my-4">
+
+        <!-- <div class="my-4">
           <ul class="pagination pagination-md justify-content-center text-center">
             <li class="page-item" :class="page === lastPage ? 'disabled' : ''">
-              <a class="page-link" @click="nextPage">Load More</a>
+              <a class="page-link" @scroll="getNextData">Load More</a>
             </li>
           </ul>
-        </div>
+        </div> -->
 
 <!-- Modal Reservasi -->
 <section>
@@ -198,13 +198,12 @@ export default {
                 // console.log(this.bahan);
                 // console.log(this.bahan.name);
                 var template =
-                  `<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                    <div class="my-5 align-items-center">
-                      <div class="card-group">
+                  `<div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                      <div class="card">
                         <div class="card h-100">
-                          <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
+                          <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
+                          <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${this.bahan.name}</h5>
                             <p class="card-text">${this.bahan.office.name}</p>
                             <br>
                             <h4 class="card-text">${this.bahan.person}</h4>
@@ -213,20 +212,19 @@ export default {
                             <div class="pt-2"></div>
                             <div class="row">
                               <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" ">Reservasi</button>
+                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
+                                  data-target="#Reservasi">Reservasi</button>
                               </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
+                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
                               <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
+                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
                                   data-target="#Jadwal">Jadwal</button>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>`;
+                    </div>`;
                 strHTML += template;
               }
               document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
@@ -248,14 +246,12 @@ export default {
                 // console.log(this.bahan);
                 // console.log(this.bahan.name);
                 var template =
-                  `<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                  <div class="container d-flex">
-                    <div class="container my-5 align-items-center" style="width: 900px;">
-                      <div class="card-group">
-                        <div class="card" style="width:auto;">
-                          <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
+                  `<div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                      <div class="card">
+                        <div class="card h-100">
+                          <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
+                          <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${this.bahan.name}</h5>
                             <p class="card-text">${this.bahan.office.name}</p>
                             <br>
                             <h4 class="card-text">${this.bahan.person}</h4>
@@ -264,21 +260,19 @@ export default {
                             <div class="pt-2"></div>
                             <div class="row">
                               <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
+                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
+                                  data-target="#Reservasi">Reservasi</button>
                               </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
+                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
                               <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
+                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
                                   data-target="#Jadwal">Jadwal</button>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>`;
+                    </div>`;
                 strHTML += template;
               }
               document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
@@ -303,20 +297,18 @@ export default {
         this.page++;
       },
 
-    // onScroll() {
-    //   let asd = this;
-    //   window.onscroll = () => {
-    //     let bottomOfWindow = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
-    //     if (bottomOfWindow) {
-    //       this.apipage++;
-    //       asd.cari();
-    //       this.page++;
-    //     }
-    //   }
-    // }
+      getNextData() {
+      window.onscroll = () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          console.log("success")
+          this.cari();
+        }
+      }
+    }
   },
 
   mounted() {
+    this.getNextData(),
     this.cari()
   }
 }
