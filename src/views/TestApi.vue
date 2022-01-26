@@ -9,8 +9,6 @@
 
 <div class="error pb-5" id="error"></div>
 
-<button @click="this.cari()"></button>
-
         <!-- <div class="my-4">
           <ul class="pagination pagination-md justify-content-center text-center">
             <li class="page-item" :class="page === lastPage ? 'disabled' : ''">
@@ -76,20 +74,32 @@
 
 <script>
 import axios from "axios";
-
 export default {
-  data: () => ({
+    data() {
+    return {
+      images:{
+        apple: require('@/assets/modal/apple.png'),
+        playstore: require('@/assets/modal/playstore.png'),
+        speedid: require('@/assets/modal/SpeedID.png')
+      },
+        apipage: 1,
+        repositories: [],
+        page: 1,
+        loading: false,
+        perPage: 20
+    };
+  },
+  api: () => ({
+    listpoli: null,
     poli: null,
-    jadwal: null,
+    img: null,
     nama: null,
+    alamat: null,
     deskripsi: null,
     waktu: null,
     bahan: null,
     total: null,
-    id_counter: null,
-    id_office: null,
-    jadwal: null,
-
+    loading: true,
     total_page: null,
     item_per_page: null,
   }),
@@ -119,7 +129,7 @@ export default {
       cari() {
         var value_kabupaten = localStorage.getItem("val_kabupaten");
         console.log(value_kabupaten);
-        if (value_kabupaten == "Lokasi" || value_kabupaten == "undefined") {
+        if (value_kabupaten == "Lokasi" || value_kabupaten == "Location") {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage)
             .then((response) => {
@@ -218,22 +228,6 @@ export default {
             })
         }
       },
-
-      findJadwal(){
-      var id_office = document.getElementsByClassName("ido");
-      var id_counter = document.getElementsByClassName("idc");
-
-      console.log(id_office);
-      console.log(id_counter);
-      // let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta//operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
-      //     axios.get(baseUrl + id_counter + `&office_id=${id_office}`)
-      //       .then((response) => {
-      //         this.jadwal = response.data.data.items;
-      //         var hari = this.jadwal.day;
-      //         console.log(hari);
-      //      })
-      },
-
       prevPage() {
         this.page--;
         window.scrollTo({
@@ -241,13 +235,11 @@ export default {
           behavior: 'smooth'
         });
       },
-
       nextPage() {
         this.githubPage++;
         this.cari();
         this.page++;
       },
-
       getNextData() {
       window.onscroll = () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -256,6 +248,10 @@ export default {
         }
       }
     }
+  },
+  mounted() {
+    this.getNextData(),
+    this.cari()
   }
 }
 </script>
