@@ -29,7 +29,9 @@ import KlinikPentaMedika from '../views/Destination/klinik-pentamedika.vue'
 import Dental911Clinic from '../views/Destination/dental911clinic.vue'
 import Assist221 from '../views/Destination/assist221.vue'
 import RSSiloamKuta from '../views/Destination/rs-siloam-kuta.vue'
-import RSBB from '../views/id-01.vue'
+import RouterTest from '../views/router-test.vue'
+import MemberOne from '../views/id-01.vue'
+import axios from 'axios'
 
 const routes = 
 [
@@ -88,9 +90,11 @@ const routes =
   { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
   { path: '/Blog/Olahraga', name: 'Blog/Olahraga', component: Olahraga },
   { path: '/Blog/Rumahsakit', name: 'Blog/Rumahsakit', component: Rumahsakit },
-  { path: '/api/rs-bb', name: 'api/rs-bb', component: RSBB },
-
+  { path: '/router-test/', name: 'router-test/', component: RouterTest },
+  { path: '/router-test/id-01', name: 'router-test/id-01', component: MemberOne },
 ]
+
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
