@@ -7,9 +7,11 @@
 
 <section v-else>
     <div class="pt-4">
-        <h3 class="pt-5">Links:</h3>
+        <h3 class="pt-5"><router-link to="/router-test/id-01">Links:</router-link></h3>
         <div v-if="loading">Loading...</div>
         <div id="results"></div>
+        <div v-for="urut in i" :key="urut.i"><router-link to="/router-test/${i}">Link</router-link></div>
+        
     </div>
 </section>
 </template>
@@ -19,6 +21,7 @@ import axios from "axios";
 
 export default {
   data: () => ({
+    i: null,
     isi: null,
     loading: true,
     errored: false
@@ -38,11 +41,12 @@ export default {
           var dataapi = this.isi;
           console.log(this.isi.name);
           console.log(this.isi.id);
-          console.log(dataapi.whatsapp);
+          //var urut = i;
+          //console.log(dataapi.whatsapp);
           var template =
               `
               <ul class="text-justify">
-              <li>${this.isi.name}</li>
+              <li><a href="/router-test/${i}">${this.isi.name}</a></li>
               </ul>
               `
             strHTML += template;

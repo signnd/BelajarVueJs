@@ -159,16 +159,16 @@ export default {
       let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?page=1&lat=-8.6649188&long=115.2384802`)
       .then((response) => {
-        this.nama = response.data.data.items[0].name;
-        this.img1 = response.data.data.items[0].images[0];
-        this.img2 = response.data.data.items[0].images[1];
-        this.img3 = response.data.data.items[0].images[2];
-        this.img4 = response.data.data.items[0].images[3];
-        this.img5 = response.data.data.items[0].images[4];
-        this.deskripsi = response.data.data.items[0].description;
-        this.alamat = response.data.data.items[0].address;
-        this.whatsapp = response.data.data.items[0].whatsapp;
-        this.kategori = response.data.data.items[0].type.name;
+        this.nama = response.data.data.items[2].name;
+        this.img1 = response.data.data.items[2].images[0];
+        this.img2 = response.data.data.items[2].images[1];
+        this.img3 = response.data.data.items[2].images[2];
+        this.img4 = response.data.data.items[2].images[3];
+        this.img5 = response.data.data.items[2].images[4];
+        this.deskripsi = response.data.data.items[2].description;
+        this.alamat = response.data.data.items[2].address;
+        this.whatsapp = response.data.data.items[2].whatsapp;
+        this.kategori = response.data.data.items[2].type.name;
         console.log(this.kategori);
         console.log(this.name);
         console.log(this.whatsapp);
@@ -180,10 +180,6 @@ export default {
         document.getElementById("img3-desktop").src = this.img3;
         document.getElementById("img4-desktop").src = this.img4;
         document.getElementById("img5-desktop").src = this.img5;
-      })
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/grouped_counters.php`)
-      .then((response) => {
-        this.poli = response.data.data.items[0];
       })
       .catch(error => {
         console.log(error)
