@@ -11,23 +11,13 @@
 </div>
 <div class="error" id="error"></div>
   
-<div class="my-4">
-  <ul class="pagination pagination-md justify-content-center text-center">
-    <li class="page-item" :class="page === 1 ? 'disabled' : ''">
-      <a class="page-link" @click="prevPage">
-        Previous
-      </a>
-    </li>
-    <li class="page-link" style="background-color: inherit">
-      {{ page }} of {{ lastPage }}
-    </li>
-    <li class="page-item" :class="page === lastPage ? 'disabled' : ''">
-      <a class="page-link" @click="nextPage">
-        Next
-      </a>
-    </li>
-  </ul>
-</div>
+        <div class="my-4">
+          <ul class="pagination pagination-md justify-content-center text-center">
+            <li class="page-item" :class="page === lastPage ? 'disabled' : ''">
+              <a class="page-link" @click="nextPage">Next</a>
+            </li>
+          </ul>
+        </div>
  
 </template>
 
@@ -60,15 +50,15 @@ export default {
     item_per_page: null,
   }),
   computed: {
-      showRepos() {
-        let start = (this.page - 1) * this.perPage;
-        let end = start + this.perPage;
-        return this.repositories.slice(start, end);
-      },
-
       lastPage() {
-        let length = this.repositories.length;
-        return length / this.perPage;
+        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?lat=-8.6649188&long=115.2384802&page=';
+        axios.get(baseUrl + this.githubPage)
+          .then((response) => {
+           this.total_page = response.data.data.paging.total_page;
+           var tp = this.total_page;
+           console.log(tp);
+           return tp;
+          })
       }
   },
   methods: {
@@ -76,10 +66,10 @@ export default {
       var value_kabupaten = localStorage.getItem("val_kabupaten");
       console.log(value_kabupaten);
       if (value_kabupaten == "Lokasi" || value_kabupaten == "undefined") {
-        let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
-        axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&lat=-8.6649188&long=115.2384802`)
+        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
+        axios.get(baseUrl + this.githubPage)
           .then((response) => {
-            this.repositories = response.data;
+            this.repositories = response.data.data.items;
             this.total = response.data.data.paging.total_page;
             this.item_per_page = response.data.data.paging.item_per_page;
             var total_item = this.total;
@@ -188,18 +178,13 @@ export default {
     },
 
     nextPage() {
-      if (this.page == this.lastPage - 1) {
-        this.githubPage++;
-        this.cari();
-      }
+      this.githubPage++;
+      this.cari();
       this.page++;
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-  },
-  created() {
+      }
+    },
+
+  mounted() {
     this.cari()
   }
 }
