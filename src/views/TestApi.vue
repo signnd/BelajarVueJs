@@ -87,10 +87,14 @@
           </h4>
           <div class="row px-4">
             <div class="col-5 text-left">
-              hari
+              <p>Senin</p>
+              <p>Rabu</p>
+              <p>Kamis</p>
             </div>
             <div class="col-5 text-right">
-              waktu
+              <p>08:00 - 21:00</p>
+              <p>08:00 - 21:00</p>
+              <p>08:00 - 21:00</p>
             </div>
           </div>
         </div>
@@ -132,6 +136,7 @@ export default {
     days: null,
     op_hours: null,
     ed_hours: null,
+    loading: true,
 
     total_item: null,
   }),
@@ -140,18 +145,16 @@ export default {
   },
   methods: {
       cari() {
-        this.loading = "true";
+        var value_search = localStorage.getItem("val_search");
         var value_kabupaten = localStorage.getItem("val_kabupaten");
         console.log(value_kabupaten);
-        if (value_kabupaten == "Lokasi" || value_kabupaten == "Location") {
+        if (value_kabupaten == "Lokasi" || value_kabupaten == "Location" || value_search) {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
-          axios.get(baseUrl + this.apipage)
+          axios.get(baseUrl + this.apipage + `&search=${value_search}`)
             .then((response) => {
-              this.total = response.data.data.paging.item_per_page;
-              console.log(this.total);
-              var total_item = this.total;
+              console.log(value_search);
               var strHTML = '';
-              for (var i = 0; i < total_item; i++) {
+              for (var i = 0; i < 20; i++) {
                 this.bahan = response.data.data.items[i];
                 // console.log(this.bahan);
                 // console.log(this.bahan.name);
@@ -196,11 +199,8 @@ export default {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
-              this.total = response.data.data.paging.total_item;
-              this.item_per_page = response.data.data.paging.item_per_page;
-              var total_item = this.total;
               var strHTML = '';
-              for (var i = 0; i < total_item; i++) {
+              for (var i = 0; i < 20; i++) {
                 this.bahan = response.data.data.items[i];
                 // console.log(this.bahan);
                 // console.log(this.bahan.name);
@@ -232,12 +232,13 @@ export default {
                         </div>
                       </div>
                     </div>`;
-                var doc = new DOMParser().parseFromString(template, "text/html");
-                strHTML += doc;
+                strHTML += template;
               }
-              document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
+              document.getElementById('results').innerHTML = strHTML;
+              this.loading= "false";
             })
             .catch(error => {
+              console.log(error);
               document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
             })
         }
@@ -263,6 +264,19 @@ export default {
         // })
 
       },
+      prevPage() {
+        this.page--;
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      },
+
+      nextPage() {
+        this.githubPage++;
+        this.cari();
+        this.page++;
+      },
 
       getNextData() {
       window.onscroll = () => {
@@ -276,7 +290,7 @@ export default {
     }
   },
 
-  created() {
+  mounted() {
     this.getNextData(),
     this.cari()
   }

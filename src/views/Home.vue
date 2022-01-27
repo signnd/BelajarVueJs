@@ -57,7 +57,7 @@
         </select>
       </div>
       <div class="col-3">
-        <input class="form-control mr-2" type="search" placeholder="Search">
+        <input class="form-control mr-2" type="search" placeholder="Search" id="search">
       </div>
       <div class="col-2">
           <button type="button" class="btn btn-md btn-block btn-primary" @click="valueSender()" id="search_home">{{$translate(['Cari','Search'])}}</button>
@@ -552,8 +552,11 @@ export default {
   methods: {
     valueSender: function () {
       var val_kabupaten;
+      var val_search;
       val_kabupaten = document.getElementById('kabupaten').value;
+      val_search = document.getElementById('search').value;
       localStorage.setItem("val_kabupaten", val_kabupaten);
+      localStorage.setItem("val_search", val_search);
       location.href = "/api";   
       }
     }
