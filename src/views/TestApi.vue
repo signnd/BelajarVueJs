@@ -81,53 +81,22 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <img :src="images.speedid" alt="speedid" class="speedid-size pt-3">
         <div class="modal-body">
           <h4 class="font-weight-bold">
             {{$translate(['Jadwal Tersedia','Available Schedule'])}}
           </h4>
           <div class="row px-4">
             <div class="col-5 text-left">
-              <h5>{{$translate(['Senin','Monday'])}}</h5>
-              <h5>{{$translate(['Rabu','Wednesday'])}}</h5>
-              <h5>{{$translate(['Kamis','Thursday'])}}</h5>
-              <h5>{{$translate(['Jumat','Friday'])}}</h5>
-              <h5>{{$translate(['Sabtu','Saturday'])}}</h5>
-              <h5>{{$translate(['Minggu','Sunday'])}}</h5>
+              hari
             </div>
             <div class="col-5 text-right">
-              
-            </div>
-          </div>
-          </div>
-          <hr>
-          <br>
-          <h5 class="text-left">{{$translate(['Belum Install SpeedID?','Have Not Installed Yet?'])}}</h5>
-          <ol class="text-left">
-            <li>Download SpeedID</li>
-            <li>{{$translate(['Klik SpeedQ','Click SpeedQ'])}}</li>
-            <li>{{$translate(['Cari Lokasi Yang Anda Inginkan','Find Your Desired location'])}}</li>
-            <li>{{$translate(['Tambahkan Rumah Sakit Ini ke Favorite (Klik ★)','Add This Hospital Into Your Favourite (Click ★)'])}}</li>
-            <li>{{$translate(['Pilih Dokter dan Hari Layanan','Choose The Doctor From Days of Service'])}}</li>
-            <li>{{$translate(['Tiket Anda di My-Ticket','Your ticket is located in My-Ticket'])}}</li>
-          </ol>
-        </div>
-        <div class="modal-footer">
-          <div class="containe">
-            <div class="row">
-              <div class="col">
-                <a href="https://play.google.com/store/apps/details?id=com.bamboomedia.speedid&hl=in&gl=US"
-                  target="_blank"><img :src="images.playstore" alt="playstore" class="logo-download"></a>
-              </div>
-              <div class="col">
-                <a href="https://apps.apple.com/id/app/speedid/id1439413446" target="_blank"><img :src="images.apple"
-                    alt="apple" class="logo-download"></a>
-              </div>
+              waktu
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
 </template>
 
@@ -256,14 +225,15 @@ export default {
                                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
                               <div class="col">
                                 <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
+                                  data-target="#Jadwal" @click="cariJadwal('${this.bahan.id}')">Jadwal</button>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>`;
-                strHTML += template;
+                var doc = new DOMParser().parseFromString(template, "text/html");
+                strHTML += doc;
               }
               document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
             })
@@ -273,12 +243,15 @@ export default {
         }
       },
 
-      cariJadwal(){
-        var o = document.getElementsByClassName("oid");
-        var c = document.getElementsByClassName("cid");
+      cariJadwal(id_counter){
 
-        console.log("office:" + o);
-        console.log(c);
+        var c = id_counter;
+
+        // var o = document.getElementsByClassName(id_office).id;
+        // var c = document.getElementsByClassName(id_counter).id;
+
+
+        console.log("counter: " + c);
 
         // let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=2081&office_id=536';
         // axios.get(baseUrl + this.apipage + `&counter_id=${c}` + `&office_id=${o}`)
@@ -289,19 +262,6 @@ export default {
         //   this.ed_hours = this.jadwal.closing_hours;
         // })
 
-      },
-      prevPage() {
-        this.page--;
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      },
-
-      nextPage() {
-        this.githubPage++;
-        this.cari();
-        this.page++;
       },
 
       getNextData() {
@@ -316,7 +276,7 @@ export default {
     }
   },
 
-  mounted() {
+  created() {
     this.getNextData(),
     this.cari()
   }
