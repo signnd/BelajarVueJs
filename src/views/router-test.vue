@@ -1,18 +1,23 @@
 <template>
-
-
 <section v-if="errored">
+    <div class="pt-5">
     <p>Mohon maaf, terjadi kesalahan saat mengambil data. Silakan coba beberapa saat lagi.</p>
+    </div>
 </section>
 
 <section v-else>
-    <div class="pt-4">
-        <h3 class="pt-5"><router-link to="/router-test/id-01">Links:</router-link></h3>
-        <div v-if="loading">Loading...</div>
-        <div id="results"></div>
-        <div v-for="urut in i" :key="urut.i"><router-link to="/router-test/${i}">Link</router-link></div>
-        
+  <div class="pt-5">
+    <div class="container pt-4">
+      <nav aria-label="breadcrumb" class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Destination</li>
+        </ol>
+      </nav>
+        <div v-if="loading" class="text-center p-5">Loading...</div>
+        <div class="row" id="results"></div>
     </div>
+  </div>
 </section>
 </template>
 
@@ -45,9 +50,19 @@ export default {
           //console.log(dataapi.whatsapp);
           var template =
               `
-              <ul class="text-justify">
-              <li><a href="/router-test/${i}">${this.isi.name}</a></li>
-              </ul>
+            <div class="col-lg-4 mb-4 d-flex align-items-stretch">
+                <div class="card-group">
+                  <div class="card card-members">
+                    <img class="card-img-top" src="${this.isi.images[0]}" alt="Card image">
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" id="${this.isi.id[i]}">${this.isi.name}</h5>
+                          <p class="card-text">${this.isi.address}</p>
+                        <a href="/router-test/${i}" class="btn d-block btn-outline-primary">Detail</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               `
             strHTML += template;
           }
@@ -66,3 +81,9 @@ export default {
 }
 
 </script>
+
+<style>
+.card-members{
+  padding:0;
+}
+</style>
