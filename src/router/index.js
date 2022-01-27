@@ -106,7 +106,7 @@ const routes =
   { path: '/router-test/', name: 'router-test/', component: RouterTest },
   //{ path: '/router-test/536', name: 'router-test/', component: MemberOne },
   { path: '/router-test/:id', name: 'router-test/:id', component: MemberTwo },
-  //{ path: '/router-test/30', name: 'router-test/30', component: MemberThree },
+  { path: '/router-test/4', name: 'router-test/4', component: MemberThree },
   
 ]
 
