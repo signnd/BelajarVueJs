@@ -145,7 +145,7 @@ export default {
         apipage: 1,
         repositories: [],
         page: 1,
-        loading: false,
+        loading: true,
         perPage: 20
     };
   },
@@ -164,32 +164,12 @@ export default {
     op_hours: null,
     ed_hours: null,
 
-    total_page: null,
-    item_per_page: null,
+    total_item: null,
   }),
   computed: {
-      lastPage() {
-        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?lat=-8.6649188&long=115.2384802&page=';
-        axios.get(baseUrl + this.apipage)
-          .then((response) => {
-           this.total_page = response.data.data.paging.total_page;
-           var tp = this.total_page;
-           console.log(tp);
-           return tp;
-          })
-      }
+
   },
   methods: {
-      setName(idName) {
-        var name = document.getElementById(idName).innerHTML;
-        console.log(name);
-        let language = localStorage.getItem('language')
-        if (language == 1) {
-          document.getElementById("buttonRs").innerHTML = "Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari office" + " " + "'" + name + "'" + " " + "pada fitur SpeedQ."
-        } else {
-          document.getElementById("buttonRs").innerHTML = "You can register directly through the SpeedID application by searching for office" + " " + "'" + name + "'" + " " + "in the SpeedQ feature."
-        }
-      },
       cari() {
         this.loading = "true";
         var value_kabupaten = localStorage.getItem("val_kabupaten");
@@ -198,9 +178,8 @@ export default {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage)
             .then((response) => {
-              var jadwal = this.cariJadwal();
-              this.total = response.data.data.paging.total_page;
-              this.item_per_page = response.data.data.paging.item_per_page;
+              this.total = response.data.data.paging.item_per_page;
+              console.log(this.total);
               var total_item = this.total;
               var strHTML = '';
               for (var i = 0; i < total_item; i++) {
@@ -213,8 +192,8 @@ export default {
                         <div class="card h-100">
                           <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
                           <div class="card-body d-flex flex-column">
-                            <h5 class="card-title cid" id="${this.bahan.id}">${this.bahan.name}</h5>
-                            <p class="card-text oid" id="${this.bahan.office.id}">${this.bahan.office.name}</p>
+                            <h5 class="card-title ${this.bahan.id}" id="${this.bahan.id}">${this.bahan.name}</h5>
+                            <p class="card-text ${this.bahan.office.id}" id="${this.bahan.office.id}">${this.bahan.office.name}</p>
                             <br>
                             <h4 class="card-text">${this.bahan.person}</h4>
                             <p class="card-text">${this.bahan.office.whatsapp}</p>
@@ -228,7 +207,7 @@ export default {
                                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
                               <div class="col">
                                 <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Jadwal" @click="${jadwal}">Jadwal</button>
+                                  data-target="#Jadwal">Jadwal</button>
                               </div>
                             </div>
                           </div>
@@ -242,12 +221,13 @@ export default {
             })
             .catch(error => {
               document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
+              console.log(error);
             })
         } else {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
-              this.total = response.data.data.paging.total_page;
+              this.total = response.data.data.paging.total_item;
               this.item_per_page = response.data.data.paging.item_per_page;
               var total_item = this.total;
               var strHTML = '';
@@ -261,8 +241,8 @@ export default {
                         <div class="card h-100">
                           <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
                           <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
+                            <h5 class="card-title ${this.bahan.id}" id="${this.bahan.id}">${this.bahan.name}</h5>
+                            <p class="card-text ${this.bahan.office.id}" id="${this.bahan.office.id}">${this.bahan.office.name}</p>
                             <br>
                             <h4 class="card-text">${this.bahan.person}</h4>
                             <p class="card-text">${this.bahan.office.whatsapp}</p>
@@ -328,7 +308,9 @@ export default {
       window.onscroll = () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
           console.log("success")
+          this.apipage++;
           this.cari();
+
         }
       }
     }
