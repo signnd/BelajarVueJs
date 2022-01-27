@@ -1,5 +1,11 @@
 <template>
 
+<nav class="container pt-5 mt-5">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Search','Pencarian'])}}</li>
+  </ol>
+</nav>
 
 <div class="container">
   <div class="row" id="results">
@@ -7,15 +13,16 @@
   </div>
 </div>
 
+
+<div v-if="loading" class="justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
 <div class="error pb-5" id="error"></div>
 
-        <!-- <div class="my-4">
-          <ul class="pagination pagination-md justify-content-center text-center">
-            <li class="page-item" :class="page === lastPage ? 'disabled' : ''">
-              <a class="page-link" @scroll="getNextData">Load More</a>
-            </li>
-          </ul>
-        </div> -->
+
 
 <!-- Modal Reservasi -->
 <section>
@@ -89,8 +96,7 @@
               <h5>{{$translate(['Minggu','Sunday'])}}</h5>
             </div>
             <div class="col-5 text-right">
-              <!-- <div v-for="jadwal in waktu" :key="jadwal.id">
-              <h5>  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5> -->
+              
             </div>
           </div>
           </div>
@@ -153,7 +159,10 @@ export default {
     waktu: null,
     bahan: null,
     total: null,
-    loading: true,
+    jadwal: null,
+    days: null,
+    op_hours: null,
+    ed_hours: null,
 
     total_page: null,
     item_per_page: null,
@@ -182,13 +191,14 @@ export default {
         }
       },
       cari() {
+        this.loading = "true";
         var value_kabupaten = localStorage.getItem("val_kabupaten");
         console.log(value_kabupaten);
-        if (value_kabupaten == "Lokasi" || value_kabupaten == "undefined") {
+        if (value_kabupaten == "Lokasi" || value_kabupaten == "Location") {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage)
             .then((response) => {
-              this.repositories = response.data.data.items;
+              var jadwal = this.cariJadwal();
               this.total = response.data.data.paging.total_page;
               this.item_per_page = response.data.data.paging.item_per_page;
               var total_item = this.total;
@@ -203,8 +213,8 @@ export default {
                         <div class="card h-100">
                           <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
                           <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
+                            <h5 class="card-title cid" id="${this.bahan.id}">${this.bahan.name}</h5>
+                            <p class="card-text oid" id="${this.bahan.office.id}">${this.bahan.office.name}</p>
                             <br>
                             <h4 class="card-text">${this.bahan.person}</h4>
                             <p class="card-text">${this.bahan.office.whatsapp}</p>
@@ -218,7 +228,7 @@ export default {
                                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
                               <div class="col">
                                 <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
+                                  data-target="#Jadwal" @click="${jadwal}">Jadwal</button>
                               </div>
                             </div>
                           </div>
@@ -228,6 +238,7 @@ export default {
                 strHTML += template;
               }
               document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
+              this.loading= "false";
             })
             .catch(error => {
               document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
@@ -236,7 +247,6 @@ export default {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
-              this.repositories = response.data.data.items;
               this.total = response.data.data.paging.total_page;
               this.item_per_page = response.data.data.paging.item_per_page;
               var total_item = this.total;
@@ -283,6 +293,23 @@ export default {
         }
       },
 
+      cariJadwal(){
+        var o = document.getElementsByClassName("oid");
+        var c = document.getElementsByClassName("cid");
+
+        console.log("office:" + o);
+        console.log(c);
+
+        // let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=2081&office_id=536';
+        // axios.get(baseUrl + this.apipage + `&counter_id=${c}` + `&office_id=${o}`)
+        // .then((response) => {
+        //   this.jadwal = response.data.data.items[0];
+        //   this.days = this.jadwal.day;
+        //   this.op_hours = this.jadwal.opening_hours;
+        //   this.ed_hours = this.jadwal.closing_hours;
+        // })
+
+      },
       prevPage() {
         this.page--;
         window.scrollTo({
@@ -315,9 +342,40 @@ export default {
 </script>
 
 <style>
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
+
+.fa-spinner {
+  animation: spinner 1s linear infinite;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.speedid-size{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.logo-download{
+ width: 100%;
+}
+
+.nopadding{
+  padding: 0;
+  margin: 0;
+}
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+} 
 </style>
