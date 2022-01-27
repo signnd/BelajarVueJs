@@ -1,5 +1,11 @@
 <template>
 
+<nav class="container pt-5 mt-5">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Search','Pencarian'])}}</li>
+  </ol>
+</nav>
 
 <div class="container">
   <div class="row" id="results">
@@ -7,15 +13,16 @@
   </div>
 </div>
 
+
+<div v-if="loading" class="justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
 <div class="error pb-5" id="error"></div>
 
-        <!-- <div class="my-4">
-          <ul class="pagination pagination-md justify-content-center text-center">
-            <li class="page-item" :class="page === lastPage ? 'disabled' : ''">
-              <a class="page-link" @scroll="getNextData">Load More</a>
-            </li>
-          </ul>
-        </div> -->
+
 
 <!-- Modal Reservasi -->
 <section>
@@ -43,32 +50,84 @@
             <li>{{$translate(['Tiket Anda di My-Ticket','Your ticket is located in My-Ticket'])}}</li>
           </ol>
         </div>
-        <div class="card" style="width:auto;">
-          <img class="card-img-top" src="" alt="RSU Bali Mandara">
-          <div class="card-body text-center">
-            <h5 class="rs2 card-title" id="rs2">RSU Bali Mandara</h5>
-            <p class="card-text">Jl. Bypass Ngurah Rai No. 548, Denpasar</p>
-            <router-link to="" class="btn d-block btn-outline-primary text-wrap">Detail
-            </router-link>
-            <div class="py-1"></div>
-            <div class="container-fluid">
+        <div class="modal-footer">
+          <div class="containe">
             <div class="row">
               <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi">{{$translate(['Reservasi','Reservation'])}}</button>
+                <a href="https://play.google.com/store/apps/details?id=com.bamboomedia.speedid&hl=in&gl=US"
+                  target="_blank"><img :src="images.playstore" alt="playstore" class="logo-download"></a>
               </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
               <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
+                <a href="https://apps.apple.com/id/app/speedid/id1439413446" target="_blank"><img :src="images.apple"
+                    alt="apple" class="logo-download"></a>
               </div>
             </div>
           </div>
-          </div>
-         </div>
+        </div>
       </div>
-      </div>
+    </div>
   </div>
+</section>
+
+<!-- Modal Jadwal -->
+<section>
+  <div class="modal fade" id="Jadwal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Jadwal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <img :src="images.speedid" alt="speedid" class="speedid-size pt-3">
+        <div class="modal-body">
+          <h4 class="font-weight-bold">
+            {{$translate(['Jadwal Tersedia','Available Schedule'])}}
+          </h4>
+          <div class="row px-4">
+            <div class="col-5 text-left">
+              <h5>{{$translate(['Senin','Monday'])}}</h5>
+              <h5>{{$translate(['Rabu','Wednesday'])}}</h5>
+              <h5>{{$translate(['Kamis','Thursday'])}}</h5>
+              <h5>{{$translate(['Jumat','Friday'])}}</h5>
+              <h5>{{$translate(['Sabtu','Saturday'])}}</h5>
+              <h5>{{$translate(['Minggu','Sunday'])}}</h5>
+            </div>
+            <div class="col-5 text-right">
+              
+            </div>
+          </div>
+          </div>
+          <hr>
+          <br>
+          <h5 class="text-left">{{$translate(['Belum Install SpeedID?','Have Not Installed Yet?'])}}</h5>
+          <ol class="text-left">
+            <li>Download SpeedID</li>
+            <li>{{$translate(['Klik SpeedQ','Click SpeedQ'])}}</li>
+            <li>{{$translate(['Cari Lokasi Yang Anda Inginkan','Find Your Desired location'])}}</li>
+            <li>{{$translate(['Tambahkan Rumah Sakit Ini ke Favorite (Klik ★)','Add This Hospital Into Your Favourite (Click ★)'])}}</li>
+            <li>{{$translate(['Pilih Dokter dan Hari Layanan','Choose The Doctor From Days of Service'])}}</li>
+            <li>{{$translate(['Tiket Anda di My-Ticket','Your ticket is located in My-Ticket'])}}</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <div class="containe">
+            <div class="row">
+              <div class="col">
+                <a href="https://play.google.com/store/apps/details?id=com.bamboomedia.speedid&hl=in&gl=US"
+                  target="_blank"><img :src="images.playstore" alt="playstore" class="logo-download"></a>
+              </div>
+              <div class="col">
+                <a href="https://apps.apple.com/id/app/speedid/id1439413446" target="_blank"><img :src="images.apple"
+                    alt="apple" class="logo-download"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
 </template>
 
@@ -99,7 +158,11 @@ export default {
     waktu: null,
     bahan: null,
     total: null,
-    loading: true,
+    jadwal: null,
+    days: null,
+    op_hours: null,
+    ed_hours: null,
+
     total_page: null,
     item_per_page: null,
   }),
@@ -127,14 +190,14 @@ export default {
         }
       },
       cari() {
+        this.loading = "true";
         var value_kabupaten = localStorage.getItem("val_kabupaten");
         console.log(value_kabupaten);
         if (value_kabupaten == "Lokasi" || value_kabupaten == "Location") {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage)
             .then((response) => {
-              this.repositories = response.data.data.items;
-              console.log(this.repositories);
+              var jadwal = this.cariJadwal();
               this.total = response.data.data.paging.total_page;
               this.item_per_page = response.data.data.paging.item_per_page;
               var total_item = this.total;
@@ -149,10 +212,10 @@ export default {
                         <div class="card h-100">
                           <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
                           <div class="card-body d-flex flex-column">
-                            <h5 class="card-title ido" id="${this.bahan.office.id}">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
+                            <h5 class="card-title cid" id="${this.bahan.id}">${this.bahan.name}</h5>
+                            <p class="card-text oid" id="${this.bahan.office.id}">${this.bahan.office.name}</p>
                             <br>
-                            <h4 class="card-text idc" id="${this.bahan.id}">${this.bahan.person}</h4>
+                            <h4 class="card-text">${this.bahan.person}</h4>
                             <p class="card-text">${this.bahan.office.whatsapp}</p>
                             <p class="card-text">${this.bahan.office.address}</p>
                             <div class="pt-2"></div>
@@ -163,8 +226,8 @@ export default {
                               </div>
                                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
                               <div class="col">
-                                <button class="btn w-100 btn-primary align-self-end " data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
+                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
+                                  data-target="#Jadwal" @click="${jadwal}">Jadwal</button>
                               </div>
                             </div>
                           </div>
@@ -174,6 +237,7 @@ export default {
                 strHTML += template;
               }
               document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
+              this.loading= "false";
             })
             .catch(error => {
               document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
@@ -182,7 +246,6 @@ export default {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
-              this.repositories = response.data.data.items;
               this.total = response.data.data.paging.total_page;
               this.item_per_page = response.data.data.paging.item_per_page;
               var total_item = this.total;
@@ -228,6 +291,24 @@ export default {
             })
         }
       },
+
+      cariJadwal(){
+        var o = document.getElementsByClassName("oid");
+        var c = document.getElementsByClassName("cid");
+
+        console.log("office:" + o);
+        console.log(c);
+
+        // let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=2081&office_id=536';
+        // axios.get(baseUrl + this.apipage + `&counter_id=${c}` + `&office_id=${o}`)
+        // .then((response) => {
+        //   this.jadwal = response.data.data.items[0];
+        //   this.days = this.jadwal.day;
+        //   this.op_hours = this.jadwal.opening_hours;
+        //   this.ed_hours = this.jadwal.closing_hours;
+        // })
+
+      },
       prevPage() {
         this.page--;
         window.scrollTo({
@@ -257,9 +338,40 @@ export default {
 </script>
 
 <style>
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
+
+.fa-spinner {
+  animation: spinner 1s linear infinite;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.speedid-size{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.logo-download{
+ width: 100%;
+}
+
+.nopadding{
+  padding: 0;
+  margin: 0;
+}
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+} 
 </style>
