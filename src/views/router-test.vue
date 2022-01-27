@@ -1,8 +1,16 @@
 <template>
 <section v-if="errored">
-    <div class="pt-5">
-    <p>Mohon maaf, terjadi kesalahan saat mengambil data. Silakan coba beberapa saat lagi.</p>
+  <div class="pt-5">
+    <div class="container pt-4">
+      <nav aria-label="breadcrumb" class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Destination</li>
+        </ol>
+      </nav>
+    <p class="text-center p-5">Mohon maaf, terjadi kesalahan saat mengambil data. Silakan coba beberapa saat lagi.</p>
     </div>
+  </div>
 </section>
 
 <section v-else>
@@ -14,7 +22,11 @@
           <li class="breadcrumb-item active" aria-current="page">Destination</li>
         </ol>
       </nav>
-        <div v-if="loading" class="text-center p-5">Loading...</div>
+        <div v-if="loading" class="text-center p-5">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <br><br>Loading...</div>
         <div class="row" id="results"></div>
     </div>
   </div>
@@ -73,7 +85,7 @@ export default {
       
       .catch(error => {
         console.log(error);
-        this.error = true;
+        this.errored = true;
         //document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
       })
       .finally(() => this.loading = false);
