@@ -79,7 +79,7 @@
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-2 my-auto"><i class="bi bi-telephone-fill"></i></div>
-                  <div class="col my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://wa.me/+${this.whatsapp}`" class="text-black">{{this.whatsapp}}</a></div>
+                  <div class="col my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://wa.me/+${ this.whatsapp }`" class="text-black">{{this.whatsapp}}</a></div>
                   
                   </div>
                 </div>
@@ -150,12 +150,16 @@ export default {
     alamat: null,
     whatsapp: null,
     deskripsi: null,
-    email: null,
     img: null,
     kategori: null,
     loading: true,
     errored: false
   }),
+  /*watch: {
+$route(to, from){
+console.log();
+
+  },*/
     created(){
       var arrayke = this.$route.params.id.toString()
       console.log(arrayke);
@@ -168,15 +172,14 @@ export default {
         this.img3 = response.data.data.items[arrayke].images[2];
         this.img4 = response.data.data.items[arrayke].images[3];
         this.img5 = response.data.data.items[arrayke].images[4];
-        this.deskripsi = response.data.data.items[arrayke].description;
         this.email = 'info@bamboomedia.net';
+        this.deskripsi = response.data.data.items[arrayke].description;
         this.alamat = response.data.data.items[arrayke].address;
         this.whatsapp = response.data.data.items[arrayke].whatsapp;
         this.kategori = response.data.data.items[arrayke].type.name;
         console.log(this.kategori);
         console.log(this.name);
         console.log(this.whatsapp);
-        console.log(this.email);
         console.log(this.alamat);
         console.log(this.img);
         console.log(this.deskripsi);
