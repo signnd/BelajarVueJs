@@ -52,9 +52,9 @@ export default {
                   <div class="card card-members">
                     <img class="card-img-top" src="${this.isi.images[0]}" alt="Card image">
                       <div class="card-body d-flex flex-column">
-                        <h5 class="card-title" id="${this.isi.id[i]}">${this.isi.name}</h5>
+                        <h5 class="card-title text-center" id="${this.isi.id[i]}">${this.isi.name}</h5>
                           <p class="card-text">${this.isi.address}</p>
-                        <a href="/router-test/${i}" class="btn d-block btn-outline-primary">Detail</a>
+                        <a href="/destination-new/${i}" class="btn d-block btn-outline-primary">Detail</a>
                       </div>
                     </div>
                   </div>

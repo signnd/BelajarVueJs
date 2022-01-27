@@ -103,11 +103,8 @@ const routes =
   { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
   { path: '/Blog/Olahraga', name: 'Blog/Olahraga', component: Olahraga },
   { path: '/Blog/Rumahsakit', name: 'Blog/Rumahsakit', component: Rumahsakit },
-  { path: '/router-test/', name: 'router-test/', component: RouterTest },
-  //{ path: '/router-test/536', name: 'router-test/', component: MemberOne },
-  { path: '/router-test/:id', name: 'router-test/:id', component: MemberTwo },
-  { path: '/router-test/4', name: 'router-test/4', component: MemberThree },
-  
+  { path: '/destination-new/', name: 'destination-new/', component: RouterTest },
+  { path: '/destination-new/:id', name: 'destination-new/:id', component: MemberTwo },
 ]
 
 
