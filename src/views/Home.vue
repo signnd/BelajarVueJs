@@ -256,43 +256,40 @@
   <span></span>
   <span></span>
 </div>
-<section>
+
   <div class="container-fluid d-none d-lg-block">
     <div class="destination">
       <div class="row">
         <div class="col">
-          <img class="dest-img" :src="selectedBanner.img">
+          <img class="dest-img ranimg" id="ranimg" src="">
         </div>
         <div class="col-4 mt-3 pt-3 text-left mr-5 destination">
-          <h2 class="text-black font-weight-bold mx-3 dest-text">{{selectedBanner.label}}</h2>
-
-          <p class="text-black text-justify mx-3 dest-text">{{$translate([selectedBanner.deskripsi_id, selectedBanner.deskripsi_en])}}</p>
-    
+          <h2 class="text-black font-weight-bold mx-3 dest-text ranoffices">{{this.nama}}</h2>
+          <p class="text-black text-justify mx-3 dest-text randesc">{{this.deskripsi}}</p>
           <br>
-          <router-link to="/Destination" class="btn btn-outline-primary text-wrap ml-3 dest-text">{{$translate(['Lihat Destinasi Lainnya','See More Destinations'])}} ►</router-link>
+          <router-link to="/Destination" class="btn btn-outline-primary text-wrap ml-3 dest-text">
+            {{$translate(['Lihat Destinasi Lainnya','See More Destinations'])}} ►</router-link>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<section>
   <div class="d-block d-lg-none">
-  <div class="container-fluid">
-    <img class="dest-img" :src="selectedBanner.img">
-
-    <div class="destination">
-      <h2 class="mx-4 text-black text-left font-weight-bold dest-text-sm pt-4">{{selectedBanner.label}}</h2>
-      <p class="mx-4 text-black text-justify dest-text-sm">{{$translate([selectedBanner.deskripsi_id, selectedBanner.deskripsi_en])}}</p>
-      <br>
-      <router-link to="/Destination" type="button" class="btn btn-outline-primary mx-4 d-block">
-      {{$translate(['Lihat Destinasi Lainnya','See More Destinations'])}} ►
-      </router-link>
-      <div class="pb-2"></div>
+    <div class="container-fluid">
+      <img class="dest-img" id="ranimg1" src="">
+      <div class="destination">
+        <h2 class="mx-4 text-black text-left font-weight-bold dest-text-sm pt-4 ">{{this.nama}}</h2>
+        <p class="mx-4 text-black text-justify dest-text-sm randesc">{{this.deskripsi}}</p>
+        <br>
+        <router-link to="/Destination" type="button" class="btn btn-outline-primary mx-4 d-block">
+          {{$translate(['Lihat Destinasi Lainnya','See More Destinations'])}} ►
+        </router-link>
+        <div class="pb-2"></div>
+      </div>
     </div>
   </div>
-  </div>
-</section>
+
+
 <div class="d-none d-sm-block">
 <br><br><br><br><br><br>
 </div>
@@ -487,6 +484,10 @@ export default {
   data() {
     return {
       poli: json.data.items,
+      random_offices: null,
+      nama: null,
+      img: '',
+      deskripsi: null,
       images: {
         cover1: require('@/assets/hero/hero.png'),
         cover2: require('@/assets/hero/hero2.jpg'),
@@ -506,14 +507,6 @@ export default {
         partner8: require('@/assets/logors/350x350-08.png'),
         partner9: require('@/assets/logors/350x350-09.png'),
       },
-
-    banners: [
-        {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi_en: 'BIMC Siloam Hospital Nusa Dua is an international standard hospital in Bali that provides first-class health services at relatively affordable prices for communities around the Jimbaran, Nusa Dua, Uluwatu and Kampial areas.', deskripsi_id: 'BIMC Siloam Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'}, 
-        {img: require('@/assets/rumahsakit/rs-siloam-kuta.jpg'), label: 'BIMC Siloam Kuta',deskripsi_en: 'Siloam Kuta Bali International Medical Center (BIMC) Hospital is a 24-hour international standard medical and emergency service center. Its strategic location in the Kuta area makes it a preferred health care center that is easily accessible to both locals and tourists.', deskripsi_id: 'Rumah Sakit Bali International Medical Centre (BIMC) Siloam Kuta adalah pusat pelayanan medis dan gawat darurat 24 jam yang berstandar internasional. Lokasinya yang strategis di daerah Kuta menjadikannya sebagai pusat pelayanan kesehatan pilihan yang mudah diakses baik oleh penduduk setempat maupun para wisatawan.'}, 
-        {img: require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'), label: 'RS Kasih Ibu Saba', deskripsi_en: 'Kasih Ibu Saba Hospital was established in 2016 under the auspices of Kasih Ibu Hospital Group. Kasih Ibu Hospital has a vision to be the first choice hospital in Bali, complete and quality services, prioritizing patient safety & a touch of love. With a mission to improve management professionally, provide friendly services, develop quality human resources, improve services by prioritizing patient safety, and provide sophisticated infrastructure.', deskripsi_id: 'Rumah Sakit Kasih Ibu Saba berdiri pada tahun 2016 dibawah naungan Kasih Ibu Hospital Group. Rumah Sakit Kasih Ibu memiliki Visi menjadi Rumah Sakit pilihan utama di Bali, pelayanan yang lengkap dan berkualitas, mengutamakan keselamatan pasien & sentuhan kasih. Dengan Misi meningkatkan manajemen secara profesional, memberi pelayanan yang ramah, mengembangkan SDM yang berkualitas, meningkatkan pelayanan dengan mengutamakan keselamatan pasien, dan menyediakan sarana prasarana yang canggih.'}, 
-        {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Kuta', deskripsi_en: 'Bali International Medical Center (BIMC) Kuta Hospital is a 24-hour international standard medical and emergency service center. Its strategic location in the Kuta area makes it a preferred health care center that is easily accessible to both locals and tourists.', deskripsi_id: 'Rumah Sakit Bali International Medical Centre (BIMC) Kuta adalah pusat pelayanan medis dan gawat darurat 24 jam yang berstandar internasional. Lokasinya yang strategis di daerah Kuta menjadikannya sebagai pusat pelayanan kesehatan pilihan yang mudah diakses baik oleh penduduk setempat maupun para wisatawan.'}, 
-        {img: require('@/assets/rumahsakit/bros.jpg'), label: 'Rumah Sakit BROS', deskripsi_en: 'BIMC Hospital Nusa Dua is an international standard hospital in Bali that provides first-class health services at relatively affordable prices for communities around the Jimbaran, Nusa Dua, Uluwatu and Kampial areas.', deskripsi_id: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'}, 
-    ],
     loc: {
       lat: '',
       long: ''
@@ -537,9 +530,19 @@ export default {
   },
 
   created (){
-    const idx = Math.floor(Math.random() * this.banners.length)
-    this.selectedBanner = this.banners[idx]
-    // console.log(this.selectedBanner)
+    let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/random_offices.php?limit=1';
+          axios.get(baseUrl)
+            .then((response) => {
+            this.nama = response.data.data.items[0].name;
+            this.img = response.data.data.items[0].images[1];
+            this.deskripsi = response.data.data.items[0].description;
+            document.getElementById('ranimg').src = this.img;
+            document.getElementById('ranimg1').src = this.img;
+            })
+            .catch(error => {
+              document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
+              console.log(error);
+            })
   },
 
   computed: {
@@ -692,11 +695,12 @@ export default {
 }
 
 .destination{
+  position:relative;
   background-color: #eaf6ff;
+  height: 100%;
 }
 
 .dest-img{
-  position:relative;
   width: 100%;
   height: 100%;
 }

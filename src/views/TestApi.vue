@@ -12,12 +12,12 @@
     <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in this.bahan" :key="item.id">
       <div class="card">
         <div class="card h-100">
-          <div>
-            <img class="card-img-top container-fluid" :src="item.office.images[1]" alt="Card image">
+          <div class="pt-4">
+            <img class="card-img-top container-fluid rounded-circle mx-auto d-block" style="width: 200px; height:200px;" :src="item.logo" alt="Card image">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">{{item.name}}</h5>
-            <p class="card-text ">{{item.office.name}}</p>
+            <h5 class="card-title text-center">{{item.name}}</h5>
+            <p class="card-text text-center">{{item.office.name}}</p>
             <br>
             <h4 class="card-text">{{item.person}}</h4>
             <p class="card-text">{{item.office.whatsapp}}</p>
@@ -167,7 +167,6 @@ export default {
       },
         apipage: 1,
         repositories: [],
-        page: 1,
         loading: true,
         perPage: 20
     };
@@ -235,15 +234,17 @@ export default {
           behavior: 'smooth'
         });
       },
+
       nextPage() {
         this.githubPage++;
         this.cari();
         this.page++;
       },
+
       getNextData() {
       window.onscroll = () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-          console.log("success")
+          console.log("load more")
           this.apipage++;
           this.cari();
 
@@ -273,6 +274,10 @@ export default {
   width: 100%;
   height: 15vw;
   object-fit: cover;
+}
+
+.card {
+    max-width: 55rem;
 }
 
 .speedid-size{
