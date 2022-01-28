@@ -200,9 +200,11 @@ export default {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
-              this.bahan = response.data.data.items[i];
-                // console.log(this.bahan);
-                // console.log(this.bahan.name);
+              console.log(value_search);
+              this.bahan = response.data.data.items;
+              var x = this.bahan;
+              this.getimg = x.office;
+              this.img = this.getimg;
               this.loading= "false";
             })
             .catch(error => {
