@@ -12,7 +12,7 @@
     <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in this.bahan" :key="item.id">
       <div class="card">
         <div class="card h-100">
-          <img class="card-img-top img1" alt="Card image">
+          <img class="card-img-top img1" :src="img" alt="Card image">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">{{item.name}}</h5>
             <p class="card-text ">{{item.office.name}}</p>
@@ -154,7 +154,7 @@ export default {
   api: () => ({
     listpoli: null,
     poli: null,
-    img: null,
+    img: '',
     nama: null,
     alamat: null,
     deskripsi: null,
@@ -182,7 +182,8 @@ export default {
           axios.get(baseUrl + this.apipage + `&search=${value_search}`)
             .then((response) => {
               console.log(value_search);
-              this.img = response.data.data.items[0].office.images[1];
+              this.getimg = response.data.data.items[0].office.images[1];
+              this.img = this.getimg;
               this.bahan = response.data.data.items;
               var x = this.bahan;
               this.loading= "false";
