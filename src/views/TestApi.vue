@@ -1,311 +1,296 @@
 <template>
-<!-- Slideshow -->
-  <section>
-    <div id="slideshow" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#slideshow" data-slide-to="0" class="active"></li>
-        <li data-target="#slideshow" data-slide-to="1"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block mt-5 pt-2 w-100" :src="images.cover1" alt="First slide">
-          <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 1</h1>
-              <p style="font-size:2vw;">Kami adalah website medis</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block mt-5 pt-2 w-100 h-3" :src="images.cover2" alt="Third slide">
-          <div class="carousel-caption text-dark">
-              <h1 class="font-weight-bold" style="font-size:5vw;">Slide 2</h1>
-              <p style="font-size:2vw;">Berwisata medis bersama kami</p>
-          </div>
-        </div>
-      </div>
-        <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-    </div>
-  </section>
 
-  <!-- Search Destination & Categories Lg -->
-  <form class="d-none d-md-block">
-    <div class="container-fluid form-row f-color px-5">
-      <div class="col-3 ml-5">
-        <select class="form-control form-control-md">
-          <option hidden>Lokasi</option>
-          <option>Denpasar</option>
-          <option>Tabanan</option>
-          <option>Klungkung</option>
-          <option>Gianyar</option>
-          <option>Buleleng</option>
-        </select>
+<nav class="container pt-5 mt-5">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Search','Pencarian'])}}</li>
+  </ol>
+</nav>
+
+<div class="container" >
+  <div class="row" id="results">
+    <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in this.bahan" :key="item.id">
+      <div class="card">
+        <div class="card h-100">
+          <div>
+            <img class="card-img-top container-fluid" :src="item.office.images[1]" alt="Card image">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text ">{{item.office.name}}</p>
+            <br>
+            <h4 class="card-text">{{item.person}}</h4>
+            <p class="card-text">{{item.office.whatsapp}}</p>
+            <p class="card-text">{{item.office.address}}</p>
+            <div class="pt-2"></div>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
+                  data-target="#Reservasi">Reservasi</button>
+              </div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
+              <div class="col">
+                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal" data-target="#Jadwal"
+                  @click="cariJadwal(item.id, item.office.id)">Jadwal</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-3">
-        <select class="form-control form-control-md">
-          <option hidden>Kategori</option>
-          <option>Klinik</option>
-          <option>Rumah Sakit</option>
-          <option>Apotek</option>
-        </select>
-      </div>
-      <div class="col-3">
-        <input class="form-control mr-2" type="search" placeholder="Pencarian">
-      </div>
-      <div class="col-2">
-        <router-link :to="{name: 'Destination'}">
-          <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
-        </router-link>
-      </div>
-    </div>
-</form>
-  <!-- Search Destination & Categories SM -->
-<div class="container d-block d-md-none pt-3">
-  <select class="form-control form-control-md">
-    <option hidden>Lokasi</option>
-    <option>Denpasar</option>
-    <option>Tabanan</option>
-    <option>Klungkung</option>
-    <option>Gianyar</option>
-    <option>Buleleng</option>
-  </select>
-  <select class="form-control form-control-md my-3">
-    <option hidden>Kategori</option>
-    <option>Klinik</option>
-    <option>Rumah Sakit</option>
-    <option>Apotek</option>
-  </select>
-  <input class="form-control mb-3" type="search" placeholder="Search">
-  <router-link :to="{name: 'Destination'}">
-    <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
-  </router-link>
+    </div>`
+  </div>
 </div>
 
-  <section>
-    <div class="container d-flex">
-      <div class="container my-5 align-items-center" style="width: 900px;">
-        <div class="card-group">
-          <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.card1" alt="Card image 1">
-            <div class="card-body">
-              <h5 class="card-title">Mitra handal kami</h5>
-              <p class="card-text">Tersedia 17 rumah sakit mitra yang tersebar di seluruh Bali.</p>
-              <router-link to="/About" class="btn d-block btn-outline-primary text-wrap">Tentang kami</router-link>
-            </div>
-          </div>
-        <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.card2" alt="Card image 2">
-            <div class="card-body">
-              <h5 class="card-title">Biaya terjangkau</h5>
-              <p class="card-text">Menerima asuransi & BPJS untuk meringankan biaya Anda.</p>
-              <router-link to="/Contact" class="btn d-block btn-outline-primary text-wrap">Kontak kami</router-link>
-            </div>
-          </div>
-          <div class="card" style="width:auto;">
-          <img class="card-img-top" :src="images.card3" alt="Card image 2">
-            <div class="card-body">
-              <h5 class="card-title">Pelayanan profesional</h5>
-              <p class="card-text">Ratusan dokter yang berpengalaman di bidangnya.</p>
-              <router-link to="/Destination" class="btn d-block btn-outline-primary text-wrap">Cari dokter</router-link>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
-  </section>
 
-<section>
-  <h2 class="font-weight-bold text-center pb-3">Layanan kami</h2>
-</section>
+<div v-if="loading" class="justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
 
-<section>
-  <div class="container">
-        <div class="row d-flex">
-          <div class="col-5">
-          <i class="fas fa-plane-departure"></i>
-              <h5 class="service-title">Medical Tourism Guidelines</h5>
-              <p class="service-text">Panduan untuk seseorang yang membutuhkan perawatan medis.</p>
-          </div>
-          <div class="col-5">
-          <i class="fas fa-notes-medical"></i>
-          <div>
-            <h5 class="service-title">Medical training</h5>
-            <p class="service-text">Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.</p>
-          </div>
-          </div>
-          <div class="col-5">
-          <i class="fas fa-stethoscope"></i>
-              <h5 class="service-title">Medical research</h5>
-              <p class="service-text">Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.</p>
-          </div>
-          <div class="col-5 mb-4">
-          <i class="fas fa-heart"></i>
-              <h5 class="service-title">Medical advisor</h5>
-              <p class="service-text">Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.</p>
-          </div>
-        </div>
-      </div>
-</section>
+<div class="error pb-5" id="error"></div>
 
-<!-- Popular Destination -->
+
+
+<!-- Modal Reservasi -->
 <section>
-  <div class="container-fluid">
-    <div class="destination">
-      <div class="row">
-        <div class="col" style="image-size=30%;">
-          <img :src="selectedBanner.img">
+  <div class="modal fade" id="Reservasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Reservasi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class="col-3 mt-3 pt-3 text-left mr-5">
-          <h2 class="text-black font-weight-bold">{{selectedBanner.label}}</h2>
-          <p class="text-black text-justify">{{selectedBanner.deskripsi}}</p>
+        <img :src="images.speedid" alt="speedid" class="speedid-size pt-3">
+        <div class="modal-body">
+          <h4 class="font-weight-bold" id="buttonRs"></h4>
           <br>
-          <h4 class="text-black">Destinasi Lainnya </h4>
-          <router-link to="/Destination" class="btn btn-outline-primary text-wrap">Lihat Semua ►</router-link>
+          <h5 class="text-left">{{$translate(['Belum Install?','Have Not Installed Yet?'])}}</h5>
+          <ol class="text-left">
+            <li>Download SpeedID</li>
+            <li>{{$translate(['Klik SpeedQ','Click SpeedQ'])}}</li>
+            <li>{{$translate(['Cari Lokasi Yang Anda Inginkan','Find Your Desired location'])}}</li>
+            <li>{{$translate(['Tambahkan Rumah Sakit Ini ke Favorite (Klik ★)','Add This Hospital Into Your Favourite (Click ★)'])}}</li>
+            <li>{{$translate(['Pilih Dokter dan Hari Layanan','Choose The Doctor From Days of Service'])}}</li>
+            <li>{{$translate(['Tiket Anda di My-Ticket','Your ticket is located in My-Ticket'])}}</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <div class="containe">
+            <div class="row">
+              <div class="col">
+                <a href="https://play.google.com/store/apps/details?id=com.bamboomedia.speedid&hl=in&gl=US"
+                  target="_blank"><img :src="images.playstore" alt="playstore" class="logo-download"></a>
+              </div>
+              <div class="col">
+                <a href="https://apps.apple.com/id/app/speedid/id1439413446" target="_blank"><img :src="images.apple"
+                    alt="apple" class="logo-download"></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-            
+
+<!-- Modal Jadwal -->
+<section>
+  <div class="modal fade" id="Jadwal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Jadwal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4 class="font-weight-bold">
+            {{$translate(['Jadwal Tersedia','Available Schedule'])}}
+          </h4>
+          <br>
+            <div v-for="op in this.operational" :key="op.id">
+              <div class="row">
+                <div class="col-5 text-left">
+                <h5 v-if="op.day == 1">Senin</h5>
+                <h5 v-else-if="op.day == 2">Selasa</h5>
+                <h5 v-else-if="op.day == 3">Rabu</h5>
+                <h5 v-else-if="op.day == 4">Kamis</h5>
+                <h5 v-else-if="op.day == 5">Jumat</h5>
+                <h5 v-else-if="op.day == 6">Sabtu</h5>
+                <h5 v-else-if="op.day == 0">Minggu</h5>
+                </div>
+                <h5 class="col-5 text-right"> {{op.opening_hours}} - {{op.closing_hours}}</h5>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
 </template>
-    
-    
+
 <script>
+import axios from "axios";
 export default {
-  data() {
+    data() {
     return {
-      images: {
-        cover1: require('@/assets/hero/hero.png'),
-        cover2: require('@/assets/hero/hero2.jpg'),
-        card1: require('@/assets/gallery/blog1.png'),
-        card2: require('@/assets/gallery/blog2.png'),
-        card3: require('@/assets/gallery/blog3.png')
+      bahan: null,
+      modal: false,
+      template: null,
+      operational: null,
+      listpoli: null,
+      poli: null,
+      img: null,
+      nama: null,
+      alamat: null,
+      deskripsi: null,
+      waktu: null,
+      bahan: null,
+      total: null,
+      jadwal: null,
+      days: null,
+      op_hours: null,
+      ed_hours: null,
+      loading: true,
+
+      total_item: null,
+      images:{
+        apple: require('@/assets/modal/apple.png'),
+        playstore: require('@/assets/modal/playstore.png'),
+        speedid: require('@/assets/modal/SpeedID.png')
       },
-    banners: [
-        {img: require('@/assets/rumahsakit/bimc-nusa-dua.jpg'), label: 'BIMC Siloam Nusa Dua', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
-        {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Siloam Kuta', deskripsi: 'Rumah Sakit Kasih Ibu Saba berdiri pada tahun 2016 dibawah naungan Kasih Ibu Hospital Group. Rumah Sakit Kasih Ibu memiliki Visi menjadi Rumah Sakit pilihan utama di Bali, pelayanan yang lengkap dan berkualitas, mengutamakan keselamatan pasien & sentuhan kasih. Dengan Misi meningkatkan manajemen secara profesional, memberi pelayanan yang ramah, mengembangkan SDM yang berkualitas, meningkatkan pelayanan dengan mengutamakan keselamatan pasien, dan menyediakan sarana prasarana yang canggih.'},
-        {img: require('@/assets/rumahsakit/rs-kasihibu-saba.jpg'), label: 'RS Kasih Ibu Saba', deskripsi: 'Rumah Sakit Kasih Ibu Saba berdiri pada tahun 2016 dibawah naungan Kasih Ibu Hospital Group. Rumah Sakit Kasih Ibu memiliki Visi menjadi Rumah Sakit pilihan utama di Bali, pelayanan yang lengkap dan berkualitas, mengutamakan keselamatan pasien & sentuhan kasih. Dengan Misi meningkatkan manajemen secara profesional, memberi pelayanan yang ramah, mengembangkan SDM yang berkualitas, meningkatkan pelayanan dengan mengutamakan keselamatan pasien, dan menyediakan sarana prasarana yang canggih.'},
-        {img: require('@/assets/rumahsakit/bimc-kuta.jpg'), label: 'BIMC Kuta', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
-        {img: require('@/assets/rumahsakit/bros.jpg'), label: 'Rumah Sakit BROS', deskripsi: 'BIMC Hospital Nusa Dua adalah rumah sakit di Bali bertaraf internasional yang menyediakan layanan kesehatan kelas satu dengan harga yang relative terjangkau bagi masyarakat di sekitar area Jimbaran, Nusa Dua, Uluwatu dan Kampial.'},
-    ],
-    selectedBanner: ''
+        apipage: 1,
+        repositories: [],
+        page: 1,
+        loading: true,
+        perPage: 20
+    };
+  },
+
+  computed: {
+
+  },
+  methods: {
+      cari() {
+        var value_search = localStorage.getItem("val_search");
+        var value_kabupaten = localStorage.getItem("val_kabupaten");
+        console.log(value_kabupaten);
+        if (value_kabupaten == "Lokasi" || value_kabupaten == "Location" || value_search) {
+          let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
+          axios.get(baseUrl + this.apipage + `&search=${value_search}`)
+            .then((response) => {
+              console.log(value_search);
+              this.bahan = response.data.data.items;
+              var x = this.bahan;
+              this.getimg = x.office;
+              this.img = this.getimg;
+              this.loading= "false";
+            })
+            .catch(error => {
+              document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
+              console.log(error);
+            })
+        } else {
+          let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
+          axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
+            .then((response) => {
+              this.bahan = response.data.data.items[i];
+                // console.log(this.bahan);
+                // console.log(this.bahan.name);
+              this.loading= "false";
+            })
+            .catch(error => {
+              console.log(error);
+              document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
+            })
+        }
+      },
+
+      cariJadwal(id_counter, id_office){
+        var cid = id_counter;
+        var oid = id_office;
+
+        console.log("counter id :", cid);
+        console.log("office id :", oid);
+
+        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
+        axios.get(baseUrl + cid + `&office_id=${oid}`)
+        .then((response) => {
+          this.operational = response.data.data.items;
+        })
+      },
+
+      prevPage() {
+        this.page--;
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      },
+      nextPage() {
+        this.githubPage++;
+        this.cari();
+        this.page++;
+      },
+      getNextData() {
+      window.onscroll = () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          console.log("success")
+          this.apipage++;
+          this.cari();
+
+        }
+      }
     }
   },
-  created (){
-    const idx = Math.floor(Math.random() * this.banners.length)
-    this.selectedBanner = this.banners[idx]
+  mounted() {
+    this.getNextData(),
+    this.cari()
+  }
+}
+</script>
 
-    console.log(this.selectedBanner)
+<style>
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
   }
 }
 
-</script>
-    
-<style lang="css">
-.fas {
-  font-size:6em;
-  color:rgb(85, 189, 253);
-  margin-block: 2rem;
-  margin-inline: auto;
-}
-
-.col-5{
-  margin-inline: auto;
-  text-align: center;
-}
-
-.container {
-  position: relative;
-  text-align: left;
-  color: rgb(0, 0, 0);
-}
-
-.container-fluid{
-   padding: 0;
-   margin: 0;
-}
-
-.carousel {
-  width:unset;
-  height:unset;
-}
-
-.carousel-item img {
-  position:relative;
-  min-width: 100%;
-  width: 100%;
-}
-
-.carousel-caption {
-  padding-inline-end: 15rem;
-  width: 500px;
-  left: 15%;
-  top: 50% !important;
-  transform: translateY(-60%);
-  text-align: left;
-  bottom: initial;
-}
-
-.carousel-control-prev{
-  margin-top: 50px;
-  width:20%;
-  height: auto;
-}
-
-.carousel-control-next{
-  margin-top: 50px;
-  width:20%;
-  height: auto;   
+.fa-spinner {
+  animation: spinner 1s linear infinite;
 }
 
 .card-img-top {
-  padding-inline: 4pt;
-  padding-block: 4pt;
-}
-
-.card-title {
-  font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
-  font-weight:bold;
-}
-
-.card-text {
-  font-family:Calibri, sans-serif;
-  font-weight:normal;
-}
-
-.service-title {
-  font-family: 'Segoe UI', Verdana, sans-serif, sans-serif;
-  font-weight:bold;
-  text-align: center;
-}
-
-.service-text {
-  font-family:Calibri, sans-serif;
-  font-weight:normal;
-  text-align: center;
-}
-
-.f-color{
-  padding-block: 1em;
-  color: #6ec3ff;
-  background-color: #6ec3ff;
-}
-
-.destination{
-  background-color: #eaf6ff;
-}
-
-
-.dest-img{
-  position:relative;
-  min-width: 100%;
   width: 100%;
-  max-height: 60%;  
-  background-color: white;
+  height: 15vw;
+  object-fit: cover;
 }
+
+.speedid-size{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.logo-download{
+ width: 100%;
+}
+
+.nopadding{
+  padding: 0;
+  margin: 0;
+}
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+} 
 </style>

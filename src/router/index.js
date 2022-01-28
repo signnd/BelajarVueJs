@@ -27,7 +27,24 @@ import RSRamata from '../views/Destination/rs-ramata.vue'
 import RSBhayangkara from '../views/Destination/rs-bhayangkara.vue'
 import KlinikPentaMedika from '../views/Destination/klinik-pentamedika.vue'
 import Dental911Clinic from '../views/Destination/dental911clinic.vue'
-import Assist211 from '../views/Destination/assist211.vue'
+import Assist221 from '../views/Destination/assist221.vue'
+import RSSiloamKuta from '../views/Destination/rs-siloam-kuta.vue'
+import RouterTest from '../views/router-test.vue'
+import MemberOne from '../views/id-01.vue'
+import MemberTwo from '../views/id-02.vue'
+import MemberThree from '../views/id-03.vue'
+/*import axios from 'axios'
+var isi = null;
+let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta'
+  axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?page=1&lat=-8.6649188&long=115.2384802`)
+  .then((response) => {
+    //this.byk = response.data.data.paging.items[];
+    //var byk_item = this.byk;
+    for (var i = 0; i < 3; i++){
+      var isi = response.data.data.items[i];
+      var pageid = this.isi.id;
+    }
+  })*/
 
 const routes = 
 [
@@ -66,15 +83,31 @@ const routes =
       name: 'services',
       component: Services
     },
-  //   { path: '/Destination/rsup-sanglah', name: 'Destination/rsup-sanglah', component: RSUPSanglah },
-  // nanti struktur link untuk RS sanglah pake yang kayak di atas
-  { path: '/Destination/rs-member', name: 'Destination/rsup-sanglah', component: RSUPSanglah }, //temporary page
+  { path: '/Destination/rsup-sanglah', name: 'Destination/rsup-sanglah', component: RSUPSanglah },
   { path: '/Destination/rsu-balimandara', name: 'Destination/rsu-balimandara', component: RSUBM },
   { path: '/Destination/rsm-balimandara', name: 'Destination/rsm-balimandara', component: RSMBM },
+  { path: '/Destination/rsptn-unud', name: 'Destination/rsptn-unud', component: RSPTNUnud },
+  { path: '/Destination/assist221', name: 'Destination/assist221', component: Assist221 },
+  { path: '/Destination/bros', name: 'Destination/bros', component: BROS },
+  { path: '/Destination/dental911clinic', name: 'Destination/dental911clinic', component: Dental911Clinic },
+  { path: '/Destination/klinik-pentamedika', name: 'Destination/klinik-pentamedika', component: KlinikPentaMedika },
+  { path: '/Destination/rs-bhayangkara', name: 'Destination/rs-bhayangkara', component: RSBhayangkara },
+  { path: '/Destination/rs-bimc-kuta', name: 'Destination/rs-bimc-kuta', component: RSBIMCKuta },
+  { path: '/Destination/rs-bimc-nusadua', name: 'Destination/rs-bimc-nusadua', component: RSBIMCNusadua },
+  { path: '/Destination/rs-kasihibu-dps', name: 'Destination/rs-kasihibu-dps', component: RSKasihIbuDps },
+  { path: '/Destination/rs-kasihibu-saba', name: 'Destination/rs-kasihibu-saba', component: RSKasihIbuSaba },
+  { path: '/Destination/rs-mangusada-badung', name: 'Destination/rs-mangusada-badung', component: RSMangusadaBadung },
+  { path: '/Destination/rs-primamedika', name: 'Destination/rs-primamedika', component: RSPrimaMedika },
+  { path: '/Destination/rs-ramata', name: 'Destination/rs-ramata', component: RSRamata },
+  { path: '/Destination/rs-siloam-kuta', name: 'Destination/rs-siloam-kuta', component: RSSiloamKuta },
   { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
   { path: '/Blog/Olahraga', name: 'Blog/Olahraga', component: Olahraga },
   { path: '/Blog/Rumahsakit', name: 'Blog/Rumahsakit', component: Rumahsakit },
+  { path: '/destination-new/', name: 'destination-new/', component: RouterTest },
+  { path: '/destination-new/:id', name: 'destination-new/:id', component: MemberTwo },
 ]
+
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -84,5 +117,7 @@ const router = createRouter({
 router.afterEach(() => {
   window.scrollTo(0, 0);
 });
+
+
 
 export default router;
