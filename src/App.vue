@@ -22,7 +22,7 @@
               data-target="#navbarSupportedContent">{{$translate(['Tentang','About'])}}</router-link>
              <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">{{$translate(['Layanan','Services'])}}</router-link>
-            <router-link to="/Destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+            <router-link to="/Destination-new" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">{{$translate(['Destinasi','Destination'])}}</router-link>
             <router-link to="/Blog" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">Blog</router-link>
@@ -117,7 +117,7 @@ export default {
         location.reload()
       }
     }
-}
+  }
 
 $(function(){ 
      var navMain = $(".navbar-collapse");

@@ -29,6 +29,22 @@ import KlinikPentaMedika from '../views/Destination/klinik-pentamedika.vue'
 import Dental911Clinic from '../views/Destination/dental911clinic.vue'
 import Assist221 from '../views/Destination/assist221.vue'
 import RSSiloamKuta from '../views/Destination/rs-siloam-kuta.vue'
+import RouterTest from '../views/router-test.vue'
+import MemberOne from '../views/id-01.vue'
+import MemberTwo from '../views/id-02.vue'
+import MemberThree from '../views/id-03.vue'
+/*import axios from 'axios'
+var isi = null;
+let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta'
+  axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?page=1&lat=-8.6649188&long=115.2384802`)
+  .then((response) => {
+    //this.byk = response.data.data.paging.items[];
+    //var byk_item = this.byk;
+    for (var i = 0; i < 3; i++){
+      var isi = response.data.data.items[i];
+      var pageid = this.isi.id;
+    }
+  })*/
 
 const routes = 
 [
@@ -87,7 +103,11 @@ const routes =
   { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
   { path: '/Blog/Olahraga', name: 'Blog/Olahraga', component: Olahraga },
   { path: '/Blog/Rumahsakit', name: 'Blog/Rumahsakit', component: Rumahsakit },
+  { path: '/destination-new/', name: 'destination-new/', component: RouterTest },
+  { path: '/destination-new/:id', name: 'destination-new/:id', component: MemberTwo },
 ]
+
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -97,5 +117,7 @@ const router = createRouter({
 router.afterEach(() => {
   window.scrollTo(0, 0);
 });
+
+
 
 export default router;

@@ -28,18 +28,16 @@
         </select>
       </div>
       <div class="col-3">
-        <select class="form-control form-control-md">
+        <select class="form-control form-control-md" id="list_poli">
           <option hidden>Kategori</option>
-          <option v-for="kategori in poli" :key="kategori.id">{{kategori.name}}</option>
+          <option v-for="klinik in this.listpoli" :key="klinik.id">{{klinik.name}}</option>
         </select>
       </div>
       <div class="col-3">
         <input class="form-control mr-2" type="search" placeholder="Pencarian">
       </div>
       <div class="col-2">
-        <router-link :to="{name: 'Destination'}">
-          <button type="button" class="btn btn-md btn-block btn-outline-light">Search</button>
-        </router-link>
+          <button type="button" @click="searchPoli()" class="btn btn-md btn-block btn-outline-light">Search</button>
       </div>
     </div>
 </form>
@@ -55,20 +53,21 @@
   </select>
   <select class="form-control form-control-md my-3">
     <option hidden>Kategori</option>
-    <option>Klinik</option>
-    <option>Rumah Sakit</option>
-    <option>Apotek</option>
+    <option>Poli Umum</option>
+    <!-- <option v-for="klinik in this.listpoli" :key="klinik.id">{{klinik.name}}</option> -->
   </select>
   <input class="form-control mb-3" type="search" placeholder="Search">
-  <router-link :to="{name: 'Destination'}">
     <button type="button" class="btn btn-md btn-block btn-outline-primary">Search</button>
-  </router-link>
 </div>
 
 <br>
 <br>
 
-<!-- Rumah Sakit Placeholder -->
+<!-- Rumah Sakit -->
+<!-- <section>
+<div class="row" id="office"></div>
+</section> -->
+
 <section>
   <div class="container d-flex">
     <div class="container my-5 align-items-center" style="width: 900px;">
@@ -83,18 +82,10 @@
             </router-link>
             <div class="py-1"></div>
             <div class="container-fluid">
-              <div class="row">
-                <div class="col">
-                  <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#Reservasi" @click="setName('rs1')">{{$translate(['Reservasi','Reservation'])}}</button>
-                </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                <div class="col">
-                  <button class="btn w-100 btn-primary" data-toggle="modal"
-                    data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-                </div>
-              </div>
+              <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+                @click="setName('rs1')">{{$translate(['Reservasi','Reservation'])}}</button>
             </div>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -106,18 +97,10 @@
             </router-link>
             <div class="py-1"></div>
             <div class="container-fluid">
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs2')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
+              <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+                @click="setName('rs2')">{{$translate(['Reservasi','Reservation'])}}</button>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
             </div>
-          </div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -129,23 +112,14 @@
             <router-link to="/Destination/rsm-balimandara" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs3')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal"
+              data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </section>
+</section>
 
 <section>
   <div class="container d-flex">
@@ -156,21 +130,13 @@
           <div class="card-body text-center">
             <h5 class="card-title" id="rs4">RSPTN Unud</h5>
             <p class="card-text">Jl. Rumah Sakit Universitas Udayana No. 1, Jimbaran, Kuta Selatan</p>
-            <router-link to="/Destination/rsptn-unud" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rsptn-unud" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs4')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs4')">{{$translate(['Reservasi','Reservation'])}}</button>
           </div>
+          <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
         </div>
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.rsmangusadabadung" alt="RS Mangusada Ubung">
@@ -178,19 +144,12 @@
             <h5 class="card-title" id="rs5">RS Mangusada Badung</h5>
             <p class="card-text">Jl. Raya Kapal, Mangupura, Mengwi, Badung</p>
             <div class="pt-4 d-none d-sm-block d-md-none d-lg-none"></div>
-            <router-link to="/Destination/rs-mangusada-badung" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-mangusada-badung" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs5')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs5')">{{$translate(['Reservasi','Reservation'])}}</button>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -199,20 +158,13 @@
             <h5 class="card-title" id="rs6">RS BIMC Nusa Dua</h5>
             <p class="card-text">Kawasan ITDC Blok D, Jl. Nusa Dua, Kuta Selatan, Badung</p>
             <div class="pt-4 d-none d-sm-block d-md-none"></div>
-            <router-link to="/Destination/rs-bimc-nusadua" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-bimc-nusadua" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs2')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs2')">{{$translate(['Reservasi','Reservation'])}}</button>
           </div>
+          <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
         </div>
       </div>
     </div>
@@ -232,37 +184,22 @@
             <router-link to="/Destination/rs-bimc-kuta" class="btn d-block btn-outline-primary text-wrap">Detail
             </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs7')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs7')">{{$translate(['Reservasi','Reservation'])}}</button>
           </div>
+          <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
         </div>
         <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.rssiloamkuta" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title" id="rs8">RS Siloam Kuta</h5>
             <p class="card-text">Jl. Sunset Road No. 818, Kuta</p>
-            <router-link to="/Destination/rs-siloam-kuta" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-siloam-kuta" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs8')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs8')">{{$translate(['Reservasi','Reservation'])}}</button>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -272,17 +209,9 @@
             <p class="card-text">Jl. Tantular No. 6, Renon, Denpasar</p>
             <router-link to="/Destination/bros" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs9')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs9')">{{$translate(['Reservasi','Reservation'])}}</button>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
           </div>
         </div>
       </div>
@@ -300,19 +229,12 @@
             <h5 class="card-title" id="rs10">RS Prima Medika</h5>
             <p class="card-text">Jl. Raya Sesetan No. 10, Denpasar</p>
             <br class="d-none d-sm-block d-md-block d-lg-none">
-            <router-link to="/Destination/rs-primamedika" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-primamedika" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs10')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs10')">{{$translate(['Reservasi','Reservation'])}}</button>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -320,19 +242,12 @@
           <div class="card-body text-center">
             <h5 class="card-title" id="rs11">RS Kasih Ibu Denpasar</h5>
             <p class="card-text">Jl. Teuku Umar No. 120, Denpasar</p>
-            <router-link to="/Destination/rs-kasihibu-dps" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-kasihibu-dps" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs11')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs11')">{{$translate(['Reservasi','Reservation'])}}</button>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -341,19 +256,12 @@
             <h5 class="card-title" id="rs12">RS Kasih Ibu Saba</h5>
             <p class="card-text">Jl. Raya Pantai Saba No. 9, Gianyar</p>
             <br class="d-none d-sm-none d-md-block d-lg-none">
-            <router-link to="/Destination/rs-kasihibu-saba" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-kasihibu-saba" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs12')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs12')">{{$translate(['Reservasi','Reservation'])}}</button>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
           </div>
         </div>
       </div>
@@ -370,19 +278,12 @@
           <div class="card-body text-center">
             <h5 class="card-title" id="rs13">RS Khusus Mata Ramata</h5>
             <p class="card-text">Jl. Gatot Subroto Barat No. 429, Denpasar</p>
-            <router-link to="/Destination/rs-ramata" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-ramata" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs13')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs13')">{{$translate(['Reservasi','Reservation'])}}</button>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -392,19 +293,12 @@
             <p class="card-text">Jl. Trijata No. 32, Denpasar</p>
             <br class="d-none d-sm-none d-md-block d-lg-none">
             <div class="pt-4 d-none d-sm-block d-md-block d-lg-block"></div>
-            <router-link to="/Destination/rs-bhayangkara" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/rs-bhayangkara" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs14')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+              @click="setName('rs14')">{{$translate(['Reservasi','Reservation'])}}</button>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
           </div>
         </div>
         <div class="card" style="width:auto;">
@@ -413,25 +307,19 @@
             <h5 class="card-title" id="rs15">Klinik Penta Medika</h5>
             <p class="card-text">Jl. Mahendradatta Selatan No. 88, Denpasar</p>
             <div class="pt-4 d-none d-sm-block d-md-none d-lg-none"></div>
-            <router-link to="/Destination/klinik-pentamedika" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/klinik-pentamedika" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs15')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+              @click="setName('rs17')">{{$translate(['Reservasi','Reservation'])}}</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <section>
   <div class="container d-flex">
     <div class="container my-5 align-items-center" style="width: 600px;">
@@ -441,42 +329,28 @@
           <div class="card-body text-center">
             <h5 class="card-title" id="rs16">Dental 911 Clinic</h5>
             <p class="card-text">Jl. Gatot Subroto Barat No. 367, Denpasar</p>
-            <router-link to="/Destination/dental911clinic" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/dental911clinic" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Reservasi" @click="setName('rs16')">{{$translate(['Reservasi','Reservation'])}}</button>
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <div class="py-1 d-block d-sm-block d-md-none"></div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+              @click="setName('rs17')">{{$translate(['Reservasi','Reservation'])}}</button>
           </div>
         </div>
-         <div class="card" style="width:auto;">
+        <div class="card" style="width:auto;">
           <img class="card-img-top" :src="images.assist" alt="Card image 1">
           <div class="card-body text-center">
             <h5 class="card-title" id="rs17">Assist 221</h5>
             <p class="card-text">Jl. Anyelir No. 8, Denpasar</p>
             <br class="d-none d-sm-block d-md-block d-lg-block">
-            <router-link to="/Destination/assist221" class="btn d-block btn-outline-primary text-wrap">Detail</router-link>
+            <router-link to="/Destination/assist221" class="btn d-block btn-outline-primary text-wrap">Detail
+            </router-link>
             <div class="pt-2"></div>
-            <div class="row">
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#exampleModalCenter" @click="setName('rs17')">{{$translate(['Reservasi','Reservation'])}}</button>  
-              </div>
-              <div class="py-1 d-block d-sm-block d-md-none"></div>
-              <div class="col">
-                <button class="btn w-100 btn-primary" data-toggle="modal"
-                  data-target="#Jadwal">{{$translate(['Jadwal','Schedule'])}}</button>
-              </div>
-            </div>
+            <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+              @click="setName('rs17')">{{$translate(['Reservasi','Reservation'])}}</button>
+            <div class="py-1 d-block d-sm-block d-md-none"></div>
           </div>
-         </div>
+        </div>
       </div>
     </div>
   </div>
@@ -555,12 +429,7 @@
             </div>
             <div class="col-5 text-right">
               <div v-for="jadwal in waktu" :key="jadwal.id">
-              <h5 v-if="jadwal.day == 1">{{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 3">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 4">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 5">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 6">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
-              <h5 v-else-if="jadwal.day == 0">  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
+              <h5>  {{jadwal.opening_hours}} - {{jadwal.closing_hours}} </h5>
             </div>
           </div>
           </div>
@@ -594,19 +463,14 @@
     </div>
   </div>
   </section>
-
-
 </template>
 
 <script>
-import listPoli from "@/api/poliRs.json"
-import listWaktu from "@/api/waktuBuka.json"
+import axios from "axios";
 
 export default {
-  data() {
+  data:() => {
     return {
-      poli: listPoli.data.items,
-      waktu: listWaktu.data.items,
       images: {
         cover1: require('@/assets/hero/flat.png'),
         cover2: require('@/assets/gallery/section_bg01.png'),
@@ -631,10 +495,29 @@ export default {
         apple: require('@/assets/modal/apple.png'),
         playstore: require('@/assets/modal/playstore.png'),
         speedid: require('@/assets/modal/SpeedID.png')
-      }
-      
+      },
+      namapoli: null,
+      listpoli: null,
+      img: null,
+      namars: null,
+      waktu: null,
+      alamat: null,
+      deskripsi: null,
+      person: null,
     }
-    
+  },
+  created() {
+    let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
+    axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters.php?office_id=1`)
+      .then((response) => {
+        this.listpoli = response.data.data.items;
+      })
+    axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/operational_days.php?office_id=1&counter_id=1`)
+      .then((response) => {
+        this.waktu = response.data.data.items;
+      })
+
+      this.cari();
   },
    methods: {
       setName (idName){
@@ -642,12 +525,68 @@ export default {
         console.log(name);
         let language = localStorage.getItem('language')
         if(language == 1){
-                  document.getElementById("buttonRs").innerHTML = "Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari office" + " " + "'" + name +  "'" + " " + "pada fitur SpeedQ."
+          document.getElementById("buttonRs").innerHTML = "Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari office" + " " + "'" + name +  "'" + " " + "pada fitur SpeedQ."
         }
         else{
-                  document.getElementById("buttonRs").innerHTML = "You can register directly through the SpeedID application by searching for office" + " " + "'" + name +  "'" + " " + "in the SpeedQ feature."
+          document.getElementById("buttonRs").innerHTML = "You can register directly through the SpeedID application by searching for office" + " " + "'" + name +  "'" + " " + "in the SpeedQ feature."
         }
+      },
+      cari: function () {
+      let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
+      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?page=1&limit=3&lat=-8.6649188&long=115.2384802`)
+        .then((response) => {
+          this.total = response.data.data.paging.item_per_page;
+          var total_item = this.total;
+          var strHTML = '';
+          for (var i = 0; i < total_item; i++) {
+            this.office = response.data.data.items[i];
+            console.log(this.office);
+            console.log(this.office.name);
+            var template =
+            `<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
+              <div class="container d-flex">
+                <div class="container my-5 align-items-center" style="width: 900px;">
+                  <div class="card-group">
+                    <div class="card" style="width:auto;">
+                      <img class="card-img-top" src="${this.office.images[1]}" alt="Card image 1">
+                      <div class="card-body text-center">
+                        <h5 class="card-title" id="rs4">${this.office.name}</h5>
+                        <p class="card-text">${this.office.address}</p>
+                        <div class="pt-2"></div>
+                        <router-link to="/Destination/rsup-sanglah"
+                          class="btn d-block btn-outline-primary text-wrap gap-2">
+                          Detail
+                        </router-link>
+                        <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#Reservasi"
+                          @click="setName('rs4')">Reservasi</button>
+                        <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>`;
+            strHTML += template;
+          }
+          document.getElementById('office').insertAdjacentHTML('beforeend', strHTML);
+        })
+      },
+      searchPoli (){
+        var e = document.getElementById("list_poli");
+        var text = e.options[e.selectedIndex].text;
+        console.log(text);
 
+        let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
+        axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/counters_with_office.php?page=1&limit=2&counter=${text}&lat=-8.6649188&long=115.2384802`)
+        .then((response) => {
+          this.img = response.data.data.items[0].office.images[1];
+          this.namars = response.data.data.items[0].office.name;
+          this.alamat = response.data.data.items[0].office.address;
+          this.deskripsi = response.data.data.items[0].office.description;
+          this.person = response.data.data.items[0].person;
+          this.namapoli = response.data.data.items[0].name;
+          document.getElementById("img1").src = this.img;
+      })
       }
    }
 }
@@ -697,5 +636,5 @@ export default {
   width: 100%;
   max-width: 400px;
   height: auto;
-}
+} 
 </style>
