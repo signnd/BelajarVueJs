@@ -70,7 +70,7 @@ export default {
             <div class="col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card-group">
                   <div class="card card-members">
-                    <img class="card-img-top" src="${this.isi.images[0]}" alt="Card image">
+                    <img class="card-img-top" src="${this.isi.images[0]}" style="max-width:auto;" alt="Card image">
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">${this.isi.name}</h5>
                           <p class="card-text">${this.isi.address}</p>
