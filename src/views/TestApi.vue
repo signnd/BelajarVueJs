@@ -13,7 +13,7 @@
       <div class="card">
         <div class="card h-100">
           <div>
-            <img class="card-img-top img1" :src="item.images" alt="Card image">
+            <img class="card-img-top" :src="item.office.images[1]" alt="Card image">
           </div>
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">{{item.name}}</h5>
@@ -113,6 +113,7 @@
           <h4 class="font-weight-bold">
             {{$translate(['Jadwal Tersedia','Available Schedule'])}}
           </h4>
+          <br>
             <div v-for="op in this.operational" :key="op.id">
               <div class="row">
                 <div class="col-5 text-left">
