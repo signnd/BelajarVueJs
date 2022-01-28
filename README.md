@@ -1,11 +1,11 @@
 # Ini proyek git untuk coba buat website
 
-## Instal dulu proyek ini ke PC. Buka command prompt, arahkan ke folder tempat proyek ini diinstal dan ketik:
+## Instal
 ```
 npm install
 ```
 
-### Kemudian ketik ini untuk menjalankan aplikasi:
+### Jalankan aplikasi
 ```
 npm run serve
 ```
