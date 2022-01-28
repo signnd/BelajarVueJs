@@ -64,14 +64,14 @@
                 <div class="card-body">
                 <div class="row align-center">
                   <div class="col-2 my-auto"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div class="col my-auto"><div v-if="loading">Loading...</div>{{this.alamat}}</div>
+                  <div class="col my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://www.google.com/maps/search/?api=1&query=${this.lat},${this.long}`" class="text-black" target="_blank">{{this.alamat}}</a></div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
                   <div class="col-2 my-auto"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col my-auto"><div v-if="loading">Loading...</div></div>
+                  <div class="col my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`mailto:${this.email}`" class="text-black">{{this.email}}</a></div>
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@
             <div class="card-body">
               <div class="row align-center">
                   <div class="col-1 mr-3"><i class="bi bi-envelope-fill"></i></div>
-                  <div class="col-auto my-auto"><div v-if="loading">Loading...</div></div></div>
+                  <div class="col-auto my-auto"><div v-if="loading">Loading...</div>{{this.email}}</div></div>
             </div>
           </div>
           <div class="card my-3">
@@ -144,10 +144,11 @@ import axios from "axios";
 
 export default {
   data: () => ({
-    poli: null,
-    jadwal: null,
+    lat: null,
+    long: null,
     nama: null,
     alamat: null,
+    email: null,
     whatsapp: null,
     deskripsi: null,
     img: null,
@@ -155,20 +156,32 @@ export default {
     loading: true,
     errored: false
   }),
+  /*watch: {
+$route(to, from){
+console.log();
+
+  },*/
     created(){
+      var arrayke = this.$route.params.id.toString()
+      console.log(arrayke);
       let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?page=1&lat=-8.6649188&long=115.2384802`)
       .then((response) => {
-        this.nama = response.data.data.items[0].name;
-        this.img1 = response.data.data.items[0].images[0];
-        this.img2 = response.data.data.items[0].images[1];
-        this.img3 = response.data.data.items[0].images[2];
-        this.img4 = response.data.data.items[0].images[3];
-        this.img5 = response.data.data.items[0].images[4];
-        this.deskripsi = response.data.data.items[0].description;
-        this.alamat = response.data.data.items[0].address;
-        this.whatsapp = response.data.data.items[0].whatsapp;
-        this.kategori = response.data.data.items[0].type.name;
+        this.lat = response.data.data.items[arrayke].lat;
+        this.long = response.data.data.items[arrayke].long;
+        var koordinat = this.lat+', '+this.long;
+        this.nama = response.data.data.items[arrayke].name;
+        this.img1 = response.data.data.items[arrayke].images[0];
+        this.img2 = response.data.data.items[arrayke].images[1];
+        this.img3 = response.data.data.items[arrayke].images[2];
+        this.img4 = response.data.data.items[arrayke].images[3];
+        this.img5 = response.data.data.items[arrayke].images[4];
+        this.email = 'info@bamboomedia.net';
+        this.deskripsi = response.data.data.items[arrayke].description;
+        this.alamat = response.data.data.items[arrayke].address;
+        this.whatsapp = response.data.data.items[arrayke].whatsapp;
+        this.kategori = response.data.data.items[arrayke].type.name;
+        console.log(koordinat)
         console.log(this.kategori);
         console.log(this.name);
         console.log(this.whatsapp);
@@ -180,10 +193,6 @@ export default {
         document.getElementById("img3-desktop").src = this.img3;
         document.getElementById("img4-desktop").src = this.img4;
         document.getElementById("img5-desktop").src = this.img5;
-      })
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/grouped_counters.php`)
-      .then((response) => {
-        this.poli = response.data.data.items[0];
       })
       .catch(error => {
         console.log(error)

@@ -137,9 +137,8 @@
 
 <script>
 import axios from "axios";
-
 export default {
-  data() {
+    data() {
     return {
       bahan: null,
       modal: false,
@@ -234,13 +233,11 @@ export default {
           behavior: 'smooth'
         });
       },
-
       nextPage() {
         this.githubPage++;
         this.cari();
         this.page++;
       },
-
       getNextData() {
       window.onscroll = () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -252,7 +249,6 @@ export default {
       }
     }
   },
-
   mounted() {
     this.getNextData(),
     this.cari()
