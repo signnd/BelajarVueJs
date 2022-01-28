@@ -7,9 +7,35 @@
   </ol>
 </nav>
 
-<div class="container">
+<div class="container" >
   <div class="row" id="results">
-
+    <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in this.bahan" :key="item.id">
+      <div class="card">
+        <div class="card h-100">
+          <img class="card-img-top img1" alt="Card image">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text ">{{item.office.name}}</p>
+            <br>
+            <h4 class="card-text">{{item.person}}</h4>
+            <p class="card-text">{{item.office.whatsapp}}</p>
+            <p class="card-text">{{item.office.address}}</p>
+            <div class="pt-2"></div>
+            <div class="row">
+              <div class="col">
+                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
+                  data-target="#Reservasi">Reservasi</button>
+              </div>
+              <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
+              <div class="col">
+                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal" data-target="#Jadwal"
+                  @onclick="cariJadwal(testMethod)">Jadwal</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`
   </div>
 </div>
 
@@ -81,53 +107,26 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <img :src="images.speedid" alt="speedid" class="speedid-size pt-3">
         <div class="modal-body">
           <h4 class="font-weight-bold">
             {{$translate(['Jadwal Tersedia','Available Schedule'])}}
           </h4>
           <div class="row px-4">
             <div class="col-5 text-left">
-              <h5>{{$translate(['Senin','Monday'])}}</h5>
-              <h5>{{$translate(['Rabu','Wednesday'])}}</h5>
-              <h5>{{$translate(['Kamis','Thursday'])}}</h5>
-              <h5>{{$translate(['Jumat','Friday'])}}</h5>
-              <h5>{{$translate(['Sabtu','Saturday'])}}</h5>
-              <h5>{{$translate(['Minggu','Sunday'])}}</h5>
+              <p>Senin</p>
+              <p>Rabu</p>
+              <p>Kamis</p>
             </div>
             <div class="col-5 text-right">
-              
-            </div>
-          </div>
-          </div>
-          <hr>
-          <br>
-          <h5 class="text-left">{{$translate(['Belum Install SpeedID?','Have Not Installed Yet?'])}}</h5>
-          <ol class="text-left">
-            <li>Download SpeedID</li>
-            <li>{{$translate(['Klik SpeedQ','Click SpeedQ'])}}</li>
-            <li>{{$translate(['Cari Lokasi Yang Anda Inginkan','Find Your Desired location'])}}</li>
-            <li>{{$translate(['Tambahkan Rumah Sakit Ini ke Favorite (Klik ★)','Add This Hospital Into Your Favourite (Click ★)'])}}</li>
-            <li>{{$translate(['Pilih Dokter dan Hari Layanan','Choose The Doctor From Days of Service'])}}</li>
-            <li>{{$translate(['Tiket Anda di My-Ticket','Your ticket is located in My-Ticket'])}}</li>
-          </ol>
-        </div>
-        <div class="modal-footer">
-          <div class="containe">
-            <div class="row">
-              <div class="col">
-                <a href="https://play.google.com/store/apps/details?id=com.bamboomedia.speedid&hl=in&gl=US"
-                  target="_blank"><img :src="images.playstore" alt="playstore" class="logo-download"></a>
-              </div>
-              <div class="col">
-                <a href="https://apps.apple.com/id/app/speedid/id1439413446" target="_blank"><img :src="images.apple"
-                    alt="apple" class="logo-download"></a>
-              </div>
+              <p>08:00 - 21:00</p>
+              <p>08:00 - 21:00</p>
+              <p>08:00 - 21:00</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
 </template>
 
@@ -136,6 +135,9 @@ import axios from "axios";
 export default {
     data() {
     return {
+      bahan: null,
+      modal: false,
+      template: null,
       images:{
         apple: require('@/assets/modal/apple.png'),
         playstore: require('@/assets/modal/playstore.png'),
@@ -144,7 +146,7 @@ export default {
         apipage: 1,
         repositories: [],
         page: 1,
-        loading: false,
+        loading: true,
         perPage: 20
     };
   },
@@ -162,95 +164,38 @@ export default {
     days: null,
     op_hours: null,
     ed_hours: null,
+    loading: true,
 
-    total_page: null,
-    item_per_page: null,
+    total_item: null,
   }),
   computed: {
-      lastPage() {
-        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?lat=-8.6649188&long=115.2384802&page=';
-        axios.get(baseUrl + this.apipage)
-          .then((response) => {
-           this.total_page = response.data.data.paging.total_page;
-           var tp = this.total_page;
-           console.log(tp);
-           return tp;
-          })
-      }
+
   },
   methods: {
-      setName(idName) {
-        var name = document.getElementById(idName).innerHTML;
-        console.log(name);
-        let language = localStorage.getItem('language')
-        if (language == 1) {
-          document.getElementById("buttonRs").innerHTML = "Anda dapat melakukan registrasi langsung lewat aplikasi SpeedID dengan mencari office" + " " + "'" + name + "'" + " " + "pada fitur SpeedQ."
-        } else {
-          document.getElementById("buttonRs").innerHTML = "You can register directly through the SpeedID application by searching for office" + " " + "'" + name + "'" + " " + "in the SpeedQ feature."
-        }
-      },
       cari() {
-        this.loading = "true";
+        var value_search = localStorage.getItem("val_search");
         var value_kabupaten = localStorage.getItem("val_kabupaten");
         console.log(value_kabupaten);
-        if (value_kabupaten == "Lokasi" || value_kabupaten == "Location") {
+        if (value_kabupaten == "Lokasi" || value_kabupaten == "Location" || value_search) {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
-          axios.get(baseUrl + this.apipage)
+          axios.get(baseUrl + this.apipage + `&search=${value_search}`)
             .then((response) => {
-              var jadwal = this.cariJadwal();
-              this.total = response.data.data.paging.total_page;
-              this.item_per_page = response.data.data.paging.item_per_page;
-              var total_item = this.total;
-              var strHTML = '';
-              for (var i = 0; i < total_item; i++) {
-                this.bahan = response.data.data.items[i];
-                // console.log(this.bahan);
-                // console.log(this.bahan.name);
-                var template =
-                  `<div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                      <div class="card">
-                        <div class="card h-100">
-                          <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
-                          <div class="card-body d-flex flex-column">
-                            <h5 class="card-title cid" id="${this.bahan.id}">${this.bahan.name}</h5>
-                            <p class="card-text oid" id="${this.bahan.office.id}">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Reservasi">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Jadwal" @click="${jadwal}">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>`;
-                strHTML += template;
-              }
-              document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
+              console.log(value_search);
+              this.img = response.data.data.items[0].office.images[1];
+              this.bahan = response.data.data.items;
+              var x = this.bahan;
               this.loading= "false";
             })
             .catch(error => {
               document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
+              console.log(error);
             })
         } else {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
-              this.total = response.data.data.paging.total_page;
-              this.item_per_page = response.data.data.paging.item_per_page;
-              var total_item = this.total;
               var strHTML = '';
-              for (var i = 0; i < total_item; i++) {
+              for (var i = 0; i < 20; i++) {
                 this.bahan = response.data.data.items[i];
                 // console.log(this.bahan);
                 // console.log(this.bahan.name);
@@ -260,8 +205,8 @@ export default {
                         <div class="card h-100">
                           <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
                           <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
+                            <h5 class="card-title ${this.bahan.id}" id="${this.bahan.id}">${this.bahan.name}</h5>
+                            <p class="card-text ${this.bahan.office.id}" id="${this.bahan.office.id}">${this.bahan.office.name}</p>
                             <br>
                             <h4 class="card-text">${this.bahan.person}</h4>
                             <p class="card-text">${this.bahan.office.whatsapp}</p>
@@ -275,7 +220,7 @@ export default {
                                 <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
                               <div class="col">
                                 <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
+                                  data-target="#Jadwal" @click="cariJadwal()" id="${this.bahan.office.id}">Jadwal</button>
                               </div>
                             </div>
                           </div>
@@ -284,30 +229,19 @@ export default {
                     </div>`;
                 strHTML += template;
               }
-              document.getElementById('results').insertAdjacentHTML('beforeend', strHTML);
+              document.getElementById('results').innerHTML = strHTML;
+              this.loading= "false";
             })
             .catch(error => {
+              console.log(error);
               document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
             })
         }
       },
 
-      cariJadwal(){
-        var o = document.getElementsByClassName("oid");
-        var c = document.getElementsByClassName("cid");
-
-        console.log("office:" + o);
-        console.log(c);
-
-        // let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=2081&office_id=536';
-        // axios.get(baseUrl + this.apipage + `&counter_id=${c}` + `&office_id=${o}`)
-        // .then((response) => {
-        //   this.jadwal = response.data.data.items[0];
-        //   this.days = this.jadwal.day;
-        //   this.op_hours = this.jadwal.opening_hours;
-        //   this.ed_hours = this.jadwal.closing_hours;
-        // })
-
+      cariJadwal: function(id_counter){
+        var c = id_counter;
+        console.log("counter : ", c);
       },
       prevPage() {
         this.page--;
@@ -325,7 +259,9 @@ export default {
       window.onscroll = () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
           console.log("success")
+          this.apipage++;
           this.cari();
+
         }
       }
     }
