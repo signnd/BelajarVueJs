@@ -74,7 +74,7 @@ export default {
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">${this.isi.name}</h5>
                           <p class="card-text">${this.isi.address}</p>
-                        <a href="/destination-new/${i}" class="btn d-block btn-outline-primary">Detail</a>
+                        <a href="/destination-new/${i}" class="btn d-block btn-outline-primary mt-auto">Detail</a>
                       </div>
                     </div>
                   </div>
