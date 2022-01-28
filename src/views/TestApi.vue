@@ -12,7 +12,9 @@
     <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in this.bahan" :key="item.id">
       <div class="card">
         <div class="card h-100">
-          <img class="card-img-top img1" :src="img" alt="Card image">
+          <div>
+            <img class="card-img-top" :src="item.office.images[1]" alt="Card image">
+          </div>
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">{{item.name}}</h5>
             <p class="card-text ">{{item.office.name}}</p>
@@ -29,7 +31,7 @@
               <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
               <div class="col">
                 <button class="btn w-100 btn-primary align-self-end" data-toggle="modal" data-target="#Jadwal"
-                  @onclick="cariJadwal(testMethod)">Jadwal</button>
+                  @click="cariJadwal(item.id, item.office.id)">Jadwal</button>
               </div>
             </div>
           </div>
@@ -111,19 +113,22 @@
           <h4 class="font-weight-bold">
             {{$translate(['Jadwal Tersedia','Available Schedule'])}}
           </h4>
-          <div class="row px-4">
-            <div class="col-5 text-left">
-              <p>Senin</p>
-              <p>Rabu</p>
-              <p>Kamis</p>
-            </div>
-            <div class="col-5 text-right">
-              <p>08:00 - 21:00</p>
-              <p>08:00 - 21:00</p>
-              <p>08:00 - 21:00</p>
+          <br>
+            <div v-for="op in this.operational" :key="op.id">
+              <div class="row">
+                <div class="col-5 text-left">
+                <h5 v-if="op.day == 1">Senin</h5>
+                <h5 v-else-if="op.day == 2">Selasa</h5>
+                <h5 v-else-if="op.day == 3">Rabu</h5>
+                <h5 v-else-if="op.day == 4">Kamis</h5>
+                <h5 v-else-if="op.day == 5">Jumat</h5>
+                <h5 v-else-if="op.day == 6">Sabtu</h5>
+                <h5 v-else-if="op.day == 0">Minggu</h5>
+                </div>
+                <h5 class="col-5 text-right"> {{op.opening_hours}} - {{op.closing_hours}}</h5>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -138,6 +143,23 @@ export default {
       bahan: null,
       modal: false,
       template: null,
+      operational: null,
+      listpoli: null,
+      poli: null,
+      img: null,
+      nama: null,
+      alamat: null,
+      deskripsi: null,
+      waktu: null,
+      bahan: null,
+      total: null,
+      jadwal: null,
+      days: null,
+      op_hours: null,
+      ed_hours: null,
+      loading: true,
+
+      total_item: null,
       images:{
         apple: require('@/assets/modal/apple.png'),
         playstore: require('@/assets/modal/playstore.png'),
@@ -150,24 +172,7 @@ export default {
         perPage: 20
     };
   },
-  api: () => ({
-    listpoli: null,
-    poli: null,
-    img: '',
-    nama: null,
-    alamat: null,
-    deskripsi: null,
-    waktu: null,
-    bahan: null,
-    total: null,
-    jadwal: null,
-    days: null,
-    op_hours: null,
-    ed_hours: null,
-    loading: true,
 
-    total_item: null,
-  }),
   computed: {
 
   },
@@ -181,10 +186,10 @@ export default {
           axios.get(baseUrl + this.apipage + `&search=${value_search}`)
             .then((response) => {
               console.log(value_search);
-              this.getimg = response.data.data.items[0].office.images[1];
-              this.img = this.getimg;
               this.bahan = response.data.data.items;
               var x = this.bahan;
+              this.getimg = x.office;
+              this.img = this.getimg;
               this.loading= "false";
             })
             .catch(error => {
@@ -195,42 +200,9 @@ export default {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
-              var strHTML = '';
-              for (var i = 0; i < 20; i++) {
-                this.bahan = response.data.data.items[i];
+              this.bahan = response.data.data.items[i];
                 // console.log(this.bahan);
                 // console.log(this.bahan.name);
-                var template =
-                  `<div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                      <div class="card">
-                        <div class="card h-100">
-                          <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
-                          <div class="card-body d-flex flex-column">
-                            <h5 class="card-title ${this.bahan.id}" id="${this.bahan.id}">${this.bahan.name}</h5>
-                            <p class="card-text ${this.bahan.office.id}" id="${this.bahan.office.id}">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Reservasi">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Jadwal" @click="cariJadwal()" id="${this.bahan.office.id}">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>`;
-                strHTML += template;
-              }
-              document.getElementById('results').innerHTML = strHTML;
               this.loading= "false";
             })
             .catch(error => {
@@ -240,10 +212,20 @@ export default {
         }
       },
 
-      cariJadwal: function(id_counter){
-        var c = id_counter;
-        console.log("counter : ", c);
+      cariJadwal(id_counter, id_office){
+        var cid = id_counter;
+        var oid = id_office;
+
+        console.log("counter id :", cid);
+        console.log("office id :", oid);
+
+        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
+        axios.get(baseUrl + cid + `&office_id=${oid}`)
+        .then((response) => {
+          this.operational = response.data.data.items;
+        })
       },
+
       prevPage() {
         this.page--;
         window.scrollTo({
