@@ -13,7 +13,7 @@
       <div class="card">
         <div class="card h-100">
           <div>
-            <img class="card-img-top" :src="item.office.images[1]" alt="Card image">
+            <img class="card-img-top container-fluid" :src="item.office.images[1]" alt="Card image">
           </div>
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">{{item.name}}</h5>
