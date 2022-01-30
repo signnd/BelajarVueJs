@@ -1,323 +1,66 @@
 <template>
+  <nav class="container pt-5 mt-5">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        {{ $translate(["Tentang", "About"]) }}
+      </li>
+    </ol>
 
-                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-                      <div class="card">
-                        <div class="card h-100">
-                          <img class="card-img-top" src="${this.bahan.office.images[0]}" alt="Card image">
-                          <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Reservasi">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none mt-auto"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+    <section class="p-4">
+      <div class="text-justify px-5">
+        <h3 class="text-center">
+          {{ $translate(["Tentang", "About"]) }} Oobad
+        </h3>
+        <hr />
+        <p>
+          {{ $translate(["Yang terpenting dalam hidup adalah waktu. Bisa panjang umur dalam konsidi sehat adalah impian semua orang. Karena sehat adalah satu-satunya syarat untuk bersyukur dan pada akhirnya bahagia. Mari berlibur bersama keluarga sambil merawat kesehatan fisik, mental dan spiritual.", "The most important thing in life is time. Being able to live a long life in a healthy condition is everyone's dream. Because being healthy is the only condition for being grateful and ultimately happy. Let's take a vacation with family while taking care of our physical, mental and spiritual health."]) }}
+        </p>
+        <br>
+        <p>
+          {{ $translate(["Yang terpenting dalam hidup adalah waktu. Bisa panjang umur dalam konsidi sehat adalah impian semua orang. Karena sehat adalah satu-satunya syarat untuk bersyukur dan pada akhirnya bahagia. Mari berlibur bersama keluarga sambil merawat kesehatan fisik, mental dan spiritual.", "Oobad is a health tourism information and reservation center on the Island of the Gods, Bali. With the development of the Health SEZ in Sanur Bali, triggering the growth of industries related to health care, both medical and wellness. Find the best talent for your health, invest in the most important asset in our life, namely: HEALTHY and PEACEFUL"]) }}
 
-
-<div class="container-fluid">
-<div class="row">
-  <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                  <div class="container d-flex">
-                    <div class="container my-5 align-items-center" style="width: 900px;">
-                      <div class="card-group">
-                        <div class="card" style="width:auto;">
-                          <img class="card-img-top" src="${this.bahan.office.images[1]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                  <div class="container d-flex">
-                    <div class="container my-5 align-items-center" style="width: 900px;">
-                      <div class="card-group">
-                        <div class="card" style="width:auto;">
-                          <img class="card-img-top" src="${this.bahan.office.images[1]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                  <div class="container d-flex">
-                    <div class="container my-5 align-items-center" style="width: 900px;">
-                      <div class="card-group">
-                        <div class="card" style="width:auto;">
-                          <img class="card-img-top" src="${this.bahan.office.images[1]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                  <div class="container d-flex">
-                    <div class="container my-5 align-items-center" style="width: 900px;">
-                      <div class="card-group">
-                        <div class="card" style="width:auto;">
-                          <img class="card-img-top" src="${this.bahan.office.images[1]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                  <div class="container d-flex">
-                    <div class="container my-5 align-items-center" style="width: 900px;">
-                      <div class="card-group">
-                        <div class="card" style="width:auto;">
-                          <img class="card-img-top" src="${this.bahan.office.images[1]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                  <div class="container d-flex">
-                    <div class="container my-5 align-items-center" style="width: 900px;">
-                      <div class="card-group">
-                        <div class="card" style="width:auto;">
-                          <img class="card-img-top" src="${this.bahan.office.images[1]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                  <div class="container d-flex">
-                    <div class="container my-5 align-items-center" style="width: 900px;">
-                      <div class="card-group">
-                        <div class="card" style="width:auto;">
-                          <img class="card-img-top" src="${this.bahan.office.images[1]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12">
-                  <div class="container d-flex">
-                    <div class="container my-5 align-items-center" style="width: 900px;">
-                      <div class="card-group">
-                        <div class="card" style="width:auto;">
-                          <img class="card-img-top" src="${this.bahan.office.images[1]}" alt="Card image 1">
-                          <div class="card-body text-center">
-                            <h5 class="card-title" id="rs4">${this.bahan.name}</h5>
-                            <p class="card-text">${this.bahan.office.name}</p>
-                            <br>
-                            <h4 class="card-text">${this.bahan.person}</h4>
-                            <p class="card-text">${this.bahan.office.whatsapp}</p>
-                            <p class="card-text">${this.bahan.office.address}</p>
-                            <div class="pt-2"></div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Reservasi" @click="setName('rs4')">Reservasi</button>
-                              </div>
-                                <div class="py-1 d-block d-sm-block d-md-block d-lg-none"></div>
-                              <div class="col">
-                                <button class="btn w-100 btn-primary" data-toggle="modal"
-                                  data-target="#Jadwal">Jadwal</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-</div>
-</div>
+        </p>
+      </div>
+    </section>
+    <br />
+  </nav>
 </template>
 
 
 <script>
 export default {
-    data() {
-        return {
-            images: {
-                cover1: require('@/assets/hero/flat.png'),
-                cover2: require('@/assets/gallery/section_bg01.png'),
-                about: require('@/assets/gallery/pexels-tom-fisk-1692693.jpg'),
-                logo: require('@/assets/logo/logo.png')
-            }
-        }
-    },
-    methods: {
-      cari() {
-        console.log("Cari")
+  data() {
+    return {
+      images: {
+        cover1: require("@/assets/hero/flat.png"),
+        cover2: require("@/assets/gallery/section_bg01.png"),
+        about: require("@/assets/gallery/pexels-tom-fisk-1692693.jpg"),
+        logo: require("@/assets/logo/logo.png"),
       },
-          getNextData() {
+    };
+  },
+  methods: {
+    cari() {
+      console.log("Cari");
+    },
+    getNextData() {
       window.onscroll = () => {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-          console.log("success")
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+          console.log("success");
           this.cari();
         }
-      }
-    }
+      };
+    },
   },
   mounted() {
-      this.getNextData()
-  }
-    
-}
+    this.getNextData();
+  },
+};
 </script>
 
 <style>
-.container{
+.container {
   position: relative;
 }
 
@@ -326,7 +69,6 @@ export default {
   position: relative;
   text-align: left;
   width: 100%;
-
 }
 
 .img-about {
@@ -334,14 +76,14 @@ export default {
   max-height: 100%;
 }
 
-.centered{  
+.centered {
   position: absolute;
   top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.t-color{
+.t-color {
   color: #6ec3ff;
 }
 </style>
