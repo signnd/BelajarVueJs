@@ -8,7 +8,6 @@ import Contact from '../views/Contact.vue'
 import TestApi from '../views/TestApi.vue'
 import Blog from '../views/Blog.vue'
 import Rumahsakit from '../views/Blog/Rumahsakit.vue'
-import Destination from '../views/Destination.vue'
 import Services from '../views/Services.vue'
 import Kesehatan from '../views/Blog/Kesehatan.vue'
 import Olahraga from '../views/Blog/Olahraga.vue'
@@ -45,11 +44,6 @@ const routes =
       component: Blog
     },
     {
-      path: '/destination',
-      name: 'Destination',
-      component: Destination
-    },
-    {
       path: '/services',
       name: 'services',
       component: Services
@@ -57,8 +51,8 @@ const routes =
   { path: '/Blog/Kesehatan', name: 'Blog/Kesehatan', component: Kesehatan },
   { path: '/Blog/Olahraga', name: 'Blog/Olahraga', component: Olahraga },
   { path: '/Blog/Rumahsakit', name: 'Blog/Rumahsakit', component: Rumahsakit },
-  { path: '/destination-new/', name: 'destination-new/', component: RouterTest },
-  { path: '/destination-new/:id', name: 'destination-new/:id', component: MemberTwo },
+  { path: '/destination', name: 'destination', component: RouterTest },
+  { path: '/destination/:id', name: 'destination/:id', component: MemberTwo },
 ]
 
 

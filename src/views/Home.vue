@@ -177,7 +177,7 @@
       </option>
     </select>
     <input class="form-control mb-3" type="search" placeholder="Search" />
-    <router-link :to="{ name: 'Destination' }">
+    <router-link :to="{ name: 'destination' }">
       <button type="button" class="btn btn-md btn-block btn-primary">
         {{ $translate(["Cari", "Search"]) }}
       </button>
@@ -206,7 +206,7 @@
                 }}
               </p>
               <router-link
-                to="/Destination"
+                to="/destination"
                 class="btn d-block btn-outline-primary text-wrap mt-auto"
               >
                 {{ $translate(["Lihat rumah sakit", "See hospitals"]) }}
@@ -593,7 +593,7 @@
           </p>
           <br />
           <router-link
-            to="/Destination"
+            to="/destination"
             class="btn btn-outline-primary text-wrap ml-3 dest-text"
           >
             {{
@@ -680,7 +680,7 @@
               <div class="col">
                 <img
                   class="partner-carousel"
-                  :src="images.partner2"
+                  :src="images.partner1"
                   alt="Partner logo"
                 />
               </div>
@@ -688,7 +688,7 @@
               <div class="col">
                 <img
                   class="partner-carousel"
-                  :src="images.partner3"
+                  :src="images.partner2"
                   alt="Partner logo"
                 />
               </div>
@@ -703,7 +703,7 @@
               <div class="col">
                 <img
                   class="partner-carousel"
-                  :src="images.partner5"
+                  :src="images.partner3"
                   alt="Partner logo"
                 />
               </div>
@@ -711,7 +711,7 @@
               <div class="col">
                 <img
                   class="partner-carousel"
-                  :src="images.partner6"
+                  :src="images.partner4"
                   alt="Partner logo"
                 />
               </div>
@@ -811,34 +811,6 @@
             </div>
           </div>
         </div>
-
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                <img
-                  class="partner-carousel"
-                  :src="images.partner5"
-                  alt="Partner logo"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                <img
-                  class="partner-carousel"
-                  :src="images.partner6"
-                  alt="Partner logo"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -849,7 +821,7 @@
       <div class="row">
         <div class="col-4 center-block text-center">
           <h2 class="ml-4 pt-5 mt-3 text-white font-weight-bold">Video</h2>
-          <p class="ml-4 h4 text-white">Senyum Nenek</p>
+          <p class="ml-4 h4 text-white">Cara Kerja Oobad</p>
         </div>
         <div class="col">
           <div class="embed-responsive embed-responsive-16by9">
@@ -871,7 +843,7 @@
   <div class="container-fluid">
     <div class="background-video-sm text-center d-block d-md-none">
       <h2 class="text-white font-weight-bold">Video</h2>
-      <p class="h4 text-white">Senyum Nenek</p>
+      <p class="h4 text-white">Cara Kerja Oobad</p>
     </div>
     <div class="embed-responsive embed-responsive-16by9 d-block d-md-none">
       <iframe
@@ -914,15 +886,10 @@ export default {
         team1: require("@/assets/Team/dr ida ayu oka purnamawati.jpg"),
         team2: require("@/assets/Team/Dr.i gede wiryana patra jaya.jpg"),
         team3: require("@/assets/Team/PUTU-DEDDY-SUHARTAWAN-B.BUS-MKTG.jpg"),
-        partner1: require("@/assets/logors/350x350-01.png"),
-        partner2: require("@/assets/logors/350x350-02.png"),
-        partner3: require("@/assets/logors/350x350-03.png"),
-        partner4: require("@/assets/logors/350x350-04.png"),
-        partner5: require("@/assets/logors/350x350-05.png"),
-        partner6: require("@/assets/logors/350x350-06.png"),
-        partner7: require("@/assets/logors/350x350-07.png"),
-        partner8: require("@/assets/logors/350x350-08.png"),
-        partner9: require("@/assets/logors/350x350-09.png"),
+        partner1: require("@/assets/partners/idi.jpg"),
+        partner2: require("@/assets/partners/persi.jpg"),
+        partner3: require("@/assets/partners/mahaloka.png"),
+        partner4: require("@/assets/partners/bmta.jpg"),
       },
       loc: {
         lat: "",

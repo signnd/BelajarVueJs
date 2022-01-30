@@ -187,7 +187,7 @@ export default {
         console.log(value_kabupaten);
         if (value_kabupaten == "Lokasi" || value_kabupaten == "Location" || value_search) {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
-          let items = axios.get(baseUrl + this.apipage + `&search=${value_search}`)
+          axios.get(baseUrl + this.apipage + `&search=${value_search}`)
             .then((response) => {
               console.log(value_search);
               this.items.push(...response.data.data.items);
@@ -196,7 +196,6 @@ export default {
               this.getimg = x.office;
               this.img = this.getimg;
               this.apilastpage = response.data.data.paging.total_page;
-              console.log(this.apilastpage);
               this.loading= "false";
             })
             .catch(error => {
@@ -208,10 +207,12 @@ export default {
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
               console.log(value_search);
-              this.bahan = response.data.data.items;
-              var x = this.bahan;
+              this.items.push(...response.data.data.items);
+              this.bahanimg = response.data.data.items;
+              var x = this.bahanimg;
               this.getimg = x.office;
               this.img = this.getimg;
+              this.apilastpage = response.data.data.paging.total_page;
               this.loading= "false";
             })
             .catch(error => {
