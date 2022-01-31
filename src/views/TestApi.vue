@@ -23,7 +23,7 @@
             <p></p>
             <p class="card-text">{{$filters.str_limit(item.office.address,70)}}</p>
             <div class="pt-2"></div>
-            <div class="row">
+            <div class="row mt-auto">
               <div class="col">
                 <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>

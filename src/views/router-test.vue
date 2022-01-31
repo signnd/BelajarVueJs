@@ -68,7 +68,7 @@ export default {
           var template =
               `
             <div class="col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card-group">
+                <div class="card-group h-100 container-fluid">
                   <div class="card card-members">
                     <img class="card-img-top" src="${this.isi.images[0]}" style="max-width:auto;" alt="Card image">
                       <div class="card-body d-flex flex-column">

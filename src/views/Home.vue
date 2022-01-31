@@ -325,7 +325,7 @@
 
   <!-- Our Team -->
   <section>
-    <h2 class="font-weight-bold">
+    <h2 class="font-weight-bold py-3">
       {{ $translate(["Team Kami", "Our Team"]) }}
     </h2>
     <!-- Carousel for bigger screen -->
@@ -679,7 +679,7 @@
             <div class="row">
               <div class="col">
                 <img
-                  class="partner-carousel"
+                  class="partner-carousel img-thumbnail"
                   :src="images.partner1"
                   alt="Partner logo"
                 />
@@ -687,7 +687,7 @@
 
               <div class="col">
                 <img
-                  class="partner-carousel"
+                  class="partner-carousel img-thumbnail"
                   :src="images.partner2"
                   alt="Partner logo"
                 />
@@ -702,7 +702,7 @@
             <div class="row">
               <div class="col">
                 <img
-                  class="partner-carousel"
+                  class="partner-carousel img-thumbnail"
                   :src="images.partner3"
                   alt="Partner logo"
                 />
@@ -710,7 +710,7 @@
 
               <div class="col">
                 <img
-                  class="partner-carousel"
+                  class="partner-carousel img-thumbnail"
                   :src="images.partner4"
                   alt="Partner logo"
                 />
@@ -761,7 +761,7 @@
             <div class="row">
               <div class="col">
                 <img
-                  class="partner-carousel"
+                  class="partner-carousel img-thumbnail"
                   :src="images.partner1"
                   alt="Partner logo"
                 />
@@ -775,7 +775,7 @@
             <div class="row">
               <div class="col">
                 <img
-                  class="partner-carousel"
+                  class="partner-carousel img-thumbnail"
                   :src="images.partner2"
                   alt="Partner logo"
                 />
@@ -789,7 +789,7 @@
             <div class="row">
               <div class="col">
                 <img
-                  class="partner-carousel"
+                  class="partner-carousel img-thumbnail"
                   :src="images.partner3"
                   alt="Partner logo"
                 />
@@ -803,7 +803,7 @@
             <div class="row">
               <div class="col">
                 <img
-                  class="partner-carousel"
+                  class="partner-carousel img-thumbnail"
                   :src="images.partner4"
                   alt="Partner logo"
                 />
@@ -918,19 +918,19 @@ export default {
   },
 
   created() {
-    // let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/random_offices.php?limit=1';
-    //       axios.get(baseUrl)
-    //         .then((response) => {
-    //         this.nama = response.data.data.items[0].name;
-    //         this.img = response.data.data.items[0].images[1];
-    //         this.deskripsi = response.data.data.items[0].description;
-    //         document.getElementById('ranimg').src = this.img;
-    //         document.getElementById('ranimg1').src = this.img;
-    //         })
-    //         .catch(error => {
-    //           document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
-    //           console.log(error);
-    //         })
+    let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/random_offices.php?limit=1';
+          axios.get(baseUrl)
+            .then((response) => {
+            this.nama = response.data.data.items[0].name;
+            this.img = response.data.data.items[0].images[1];
+            this.deskripsi = response.data.data.items[0].description;
+            document.getElementById('ranimg').src = this.img;
+            document.getElementById('ranimg1').src = this.img;
+            })
+            .catch(error => {
+              document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
+              console.log(error);
+            })
   },
 
   computed: {
