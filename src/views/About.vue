@@ -1,6 +1,6 @@
 <template>
   <nav class="container pt-5 mt-5">
-    <ol class="breadcrumb">
+    <ol class="breadcrumb" >
       <li class="breadcrumb-item"><a href="/">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">
         {{ $translate(["Tentang", "About"]) }}
@@ -9,15 +9,16 @@
 
     <section class="p-4">
       <div class="text-justify px-5">
-        <h3 class="text-center">
-          {{ $translate(["Tentang", "About"]) }} Oobad
-        </h3>
+        
+    <h2 class="font-weight-bold text-center pb-3">
+      {{ $translate(["Tentang", "About"]) }}
+    </h2>
         <hr />
         <p>
           {{ $translate(["Yang terpenting dalam hidup adalah waktu. Bisa panjang umur dalam konsidi sehat adalah impian semua orang. Karena sehat adalah satu-satunya syarat untuk bersyukur dan pada akhirnya bahagia. Mari berlibur bersama keluarga sambil merawat kesehatan fisik, mental dan spiritual.", "The most important thing in life is time. Being able to live a long life in a healthy condition is everyone's dream. Because being healthy is the only condition for being grateful and ultimately happy. Let's take a vacation with family while taking care of our physical, mental and spiritual health."]) }}
         </p>
         <br>
-        <p>
+        <p class="pb-5 mb-5">
           {{ $translate(["Yang terpenting dalam hidup adalah waktu. Bisa panjang umur dalam konsidi sehat adalah impian semua orang. Karena sehat adalah satu-satunya syarat untuk bersyukur dan pada akhirnya bahagia. Mari berlibur bersama keluarga sambil merawat kesehatan fisik, mental dan spiritual.", "Oobad is a health tourism information and reservation center on the Island of the Gods, Bali. With the development of the Health SEZ in Sanur Bali, triggering the growth of industries related to health care, both medical and wellness. Find the best talent for your health, invest in the most important asset in our life, namely: HEALTHY and PEACEFUL"]) }}
 
         </p>

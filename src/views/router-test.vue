@@ -4,9 +4,13 @@
       <nav aria-label="breadcrumb" class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Destination</li>
+          <li class="breadcrumb-item active" aria-current="page">{{ $translate(["Destinasi", "Destination"]) }}</li>
         </ol>
       </nav>
+
+      <h2 class="font-weight-bold text-center pb-3">
+        {{ $translate(["Destinasi", "Destination"]) }}
+      </h2>
       
 <section v-if="errored">
     <p class="text-center p-5">Mohon maaf, terjadi kesalahan saat mengambil data. Silakan coba beberapa saat lagi.</p>

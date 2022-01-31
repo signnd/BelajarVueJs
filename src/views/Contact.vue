@@ -1,18 +1,5 @@
 <template>
-  <section>
-    <div class="contact">
-      <!--Section heading-->
-      <div class="contacthead" id="contacthead">
-        <div class="container-fluid px-0">
-          <img :src="images.cover1" alt="contacthead" class="w-100">
-          <h1 class="d-block d-sm-block d-md-block d-lg-block pb-5 mt-5 pt-3 centered text-black style fw-bold" style="font-size:3vw;">Contact us</h1>
-          <!-- Header Small Screen -->
-          <p class="d-block d-lg-none text-center my-2"></p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+<div class="pt-5 mt-5"></div>  
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
@@ -22,7 +9,7 @@
 
   <section>
     <!-- Whole Card -->
-    <h4 class="text-center font-weight-bold">{{$translate(['Kantor Oobad','Oobad Office'])}}</h4>
+    <h3 class="text-center font-weight-bold">{{$translate(['Kantor Oobad','Oobad Office'])}}</h3>
     <div class="container">
         <div class="card-body">
           <div class="row">

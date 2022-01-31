@@ -1,11 +1,16 @@
 <template>
-  <section>
-    <div class="blog" id="blog">
-      <div class="container-fluid p-0">
-        <img :src="images.cover1" alt="habout" class="w-100">
-        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">BMTA Blog</h1>
-      </div>
-    </div>
+<div class="pt-5 mt-5"></div>  
+<nav aria-label="breadcrumb" class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Blog','Blog'])}}</li>
+  </ol>
+</nav>
+
+<section>
+    <h2 class="font-weight-bold text-center pb-3">
+      {{ $translate(["Oobad Blog", "Oobad Blog"]) }}
+    </h2>
   </section>
   <section>
     <ul class="nav nav-pills justify-content-center my-3 d-none d-sm-none d-md-flex">

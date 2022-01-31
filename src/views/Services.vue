@@ -6,7 +6,7 @@
   </ol>
 </nav>
 
-<section>
+  <section>
     <h2 class="font-weight-bold text-center pb-3">
       {{ $translate(["Layanan Terbaik", "Best Services"]) }}
     </h2>
