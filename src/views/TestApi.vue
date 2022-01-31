@@ -10,8 +10,7 @@
 <div class="container" >
   <div class="row" id="results">
     <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in items" :key="item.id">
-      <div class="card">
-        <div class="card h-100">
+        <div class="card h-100 container-fluid">
           <div class="pt-4">
             <img class="card-img-top container-fluid rounded-circle mx-auto d-block" style="width: 200px; height:200px;" :src="item.logo" alt="Card image">
           </div>
@@ -21,7 +20,8 @@
             <br>
             <h4 class="card-text">{{item.person}}</h4>
             <p class="card-text">{{item.office.whatsapp}}</p>
-            <p class="card-text">{{item.office.address}}</p>
+            <p></p>
+            <p class="card-text">{{$filters.str_limit(item.office.address,70)}}</p>
             <div class="pt-2"></div>
             <div class="row">
               <div class="col">
@@ -39,10 +39,6 @@
       </div>
     </div>
   </div>
-</div>
-
-
-
 
 <div v-if="loading" class="justify-content-center">
   <div class="spinner-border" role="status">

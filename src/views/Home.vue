@@ -37,7 +37,7 @@
             :src="images.cover1"
             alt="Second slide"
           />
-          <div class="carousel-caption text-dark">
+          <div class="carousel-caption text-white">
             <div class="mt-5">
               <h1 class="font-weight-bold" style="font-size: 5vw; width: 900px">
                 {{ $translate(["Healthy & Peaceful", "Healthy & Peaceful"]) }}
@@ -59,7 +59,7 @@
             :src="images.cover4"
             alt="Third slide"
           />
-          <div class="carousel-caption text-dark">
+          <div class="carousel-caption text-white">
             <div class="mt-5">
               <h1 class="font-weight-bold" style="font-size: 5vw; width: 900px">
                 {{ $translate(["Senyum Pasien", "Patient's Smile"]) }}
@@ -81,7 +81,7 @@
             :src="images.cover3"
             alt="Forth slide"
           />
-          <div class="carousel-caption text-dark">
+          <div class="carousel-caption text-white">
             <div class="mt-5">
               <h1 class="font-weight-bold" style="font-size: 5vw">
                 {{ $translate(["Ayo Mulai!", "Let's Start!"]) }}
@@ -1127,6 +1127,10 @@ export default {
   bottom: 0;
   right: 0;
   background: #a1ffc8;
+}
+
+.item.active {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
 }
 
 @media (min-width: 670px) {
