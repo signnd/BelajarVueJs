@@ -22,7 +22,7 @@
               data-target="#navbarSupportedContent">{{$translate(['Tentang','About'])}}</router-link>
              <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">{{$translate(['Layanan','Services'])}}</router-link>
-            <router-link to="/Destination-new" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+            <router-link to="/destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">{{$translate(['Destinasi','Destination'])}}</router-link>
             <router-link to="/Blog" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">Blog</router-link>
@@ -65,17 +65,17 @@
           <div class="col-1"><a class="text-dark" href="https://instagram.com"><i class="bi bi-instagram"></i></a></div>
         </div>
       <div class="py-2"></div>
-      <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Bali Medical Tourism Association<br><br>
-        <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • 
+      <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Oobad<br><br>
+        <router-link to="/">Home</router-link> • <router-link to="/destination">Destination</router-link> • 
         <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
       </div>
       <div class="d-none d-sm-block d-md-block d-lg-none">
-        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Bali Medical Tourism Association<br>
-          <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Oobad<br>
+          <router-link to="/">Home</router-link> • <router-link to="/destination">Destination</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
         </div>
       </div>
       <div class="d-none d-lg-block d-xl-block d-xxl-block">
-        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Bali Medical Tourism Association</div>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Oobad</div>
       </div>
     </div>
   </section>

@@ -9,7 +9,7 @@
 
 <div class="container" >
   <div class="row" id="results">
-    <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in this.bahan" :key="item.id">
+    <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in items" :key="item.id">
       <div class="card">
         <div class="card h-100">
           <div class="pt-4">
@@ -37,9 +37,11 @@
           </div>
         </div>
       </div>
-    </div>`
+    </div>
   </div>
 </div>
+
+
 
 
 <div v-if="loading" class="justify-content-center">
@@ -140,7 +142,9 @@ import axios from "axios";
 export default {
     data() {
     return {
+      items: [],
       bahan: null,
+      bahanimg: null,
       modal: false,
       template: null,
       operational: null,
@@ -166,6 +170,7 @@ export default {
         speedid: require('@/assets/modal/SpeedID.png')
       },
         apipage: 1,
+        apilastpage: 1,
         repositories: [],
         loading: true,
         perPage: 20
@@ -185,10 +190,12 @@ export default {
           axios.get(baseUrl + this.apipage + `&search=${value_search}`)
             .then((response) => {
               console.log(value_search);
-              this.bahan = response.data.data.items;
-              var x = this.bahan;
+              this.items.push(...response.data.data.items);
+              this.bahanimg = response.data.data.items;
+              var x = this.bahanimg;
               this.getimg = x.office;
               this.img = this.getimg;
+              this.apilastpage = response.data.data.paging.total_page;
               this.loading= "false";
             })
             .catch(error => {
@@ -200,10 +207,12 @@ export default {
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
               console.log(value_search);
-              this.bahan = response.data.data.items;
-              var x = this.bahan;
+              this.items.push(...response.data.data.items);
+              this.bahanimg = response.data.data.items;
+              var x = this.bahanimg;
               this.getimg = x.office;
               this.img = this.getimg;
+              this.apilastpage = response.data.data.paging.total_page;
               this.loading= "false";
             })
             .catch(error => {
@@ -227,27 +236,15 @@ export default {
         })
       },
 
-      prevPage() {
-        this.page--;
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      },
-
-      nextPage() {
-        this.githubPage++;
-        this.cari();
-        this.page++;
-      },
-
       getNextData() {
       window.onscroll = () => {
+        if (this.apipage >= this.apilastpage) {
+          return
+        }
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
           console.log("load more")
           this.apipage++;
           this.cari();
-
         }
       }
     }
