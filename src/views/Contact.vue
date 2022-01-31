@@ -24,7 +24,6 @@
     <!-- Whole Card -->
     <h4 class="text-center font-weight-bold">{{$translate(['Kantor Oobad','Oobad Office'])}}</h4>
     <div class="container">
-      <div class="card container-fluid">
         <div class="card-body">
           <div class="row">
             <div class="col d-none d-lg-block">
@@ -101,7 +100,6 @@
                 </div>
           </div>
         </div>
-      </div>
   </section>
 </template>
 
