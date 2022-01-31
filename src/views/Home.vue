@@ -185,7 +185,7 @@
       {{ $translate(["Mengapa Memilih Kami?", "Why choose us?"]) }}
     </h2>
     <div class="container d-flex">
-      <div class="container my-5 align-items-center" style="width: 900px">
+      <div class="container my-5 align-items-center" style="width: 900px;">
         <div class="card-group">
           <div class="card" style="width: auto">
             <img class="card-img-top" :src="images.card1" alt="Card image 1" />
@@ -213,7 +213,7 @@
             <img class="card-img-top" :src="images.card2" alt="Card image 2" />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">
-                {{ $translate(["Kesehatan dalam Arti Luas", "Health in General"]) }}
+                {{ $translate(["Kesehatan Holistik", "Holistic Health"]) }}
               </h5>
               <p class="card-text">
                 {{
@@ -1125,7 +1125,7 @@ export default {
 
 .gradient1 {
     background-image:
-    linear-gradient(to left, rgba(255, 255, 255, 0.52), rgba(41, 41, 41, 0.603)),
+    linear-gradient(to left, rgba(255, 255, 255, 0.301), rgba(41, 41, 41, 0.603)),
     url("../assets/hero/hero.png");
     width: 100vw;
     height: 45vw;
@@ -1135,7 +1135,7 @@ export default {
 
 .gradient2 {
     background-image:
-    linear-gradient(to left, rgba(255, 255, 255, 0.52), rgba(41, 41, 41, 0.603)),
+    linear-gradient(to left, rgba(255, 255, 255, 0.301), rgba(41, 41, 41, 0.603)),
     url("../assets/hero/hero2.jpg");
     width: 100vw;
     height: 45vw;
@@ -1145,7 +1145,7 @@ export default {
 
 .gradient3 {
     background:
-    linear-gradient(to left, rgba(255, 255, 255, 0.52), rgba(41, 41, 41, 0.603)), 
+    linear-gradient(to left, rgba(255, 255, 255, 0.301), rgba(41, 41, 41, 0.603)), 
     url("../assets/hero/hero3.jpg");
     width: 100vw;
     height: 45vw;
@@ -1155,7 +1155,7 @@ export default {
 
 .gradient4 {
     background:
-    linear-gradient(to left, rgba(255, 255, 255, 0.39), rgba(41, 41, 41, 0.603)),
+    linear-gradient(to left, rgba(255, 255, 255, 0.301), rgba(41, 41, 41, 0.603)),
     url("../assets/hero/hero4.png");
     width: 100vw;
     height: 45vw;
