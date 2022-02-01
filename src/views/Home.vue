@@ -802,7 +802,7 @@ export default {
       val_search = document.getElementById("search").value;
       localStorage.setItem("val_kabupaten", val_kabupaten);
       localStorage.setItem("val_search", val_search);
-      location.href = "/api";
+      location.href = "/search";
     },
     scrollBottom() {
         window.scrollTo(0,document.body.scrollHeight);

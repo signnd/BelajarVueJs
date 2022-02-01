@@ -5,7 +5,7 @@ import {
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
-import TestApi from '../views/TestApi.vue'
+import Search from '../views/search.vue'
 import Blog from '../views/Blog.vue'
 import Rumahsakit from '../views/Blog/Rumahsakit.vue'
 import Services from '../views/Services.vue'
@@ -32,9 +32,9 @@ const routes =
       component: Contact
   },
     {
-      path: '/api',
-      name: 'api',
-      component: TestApi
+      path: '/search',
+      name: 'search',
+      component: Search
     },
     {
       path: '/blog',
