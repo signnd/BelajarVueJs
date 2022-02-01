@@ -27,14 +27,14 @@
 
   <div class="container">
     <div class="row" id="sip">
-      <div class="col-lg-4 mb-4 d-flex align-items-stretch" v-for="item in items" :key="item.id">
+      <div class="col-lg-4 mb-4 d-flex align-items-stretch" v-for="(item, index) in items" :key="item.id">
         <div class="card-group h-100 container-fluid">
           <div class="card card-members">
             <img class="card-img-top" :src="item.images[0]" style="max-width:auto;" alt="Card image">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title text-center">{{item.name}}</h5>
               <p class="card-text">{{item.address}}</p>
-              <button href="/destination/" class="btn d-block btn-outline-primary mt-auto" @click="cariJadwal(item.id)">Detail</button>
+              <button class="btn w-100 btn-primary align-self-end mt-auto" @click="cariDetail(index)">Detail</button>
             </div>
           </div>
         </div>
@@ -80,8 +80,10 @@ export default {
     banyak: null,
     loading: true,
     errored: false,
+    link: 0,
     page: 1,
     total_page: null,
+    total_item: null,
   }),
     created(){
         this.cari()
@@ -90,9 +92,10 @@ export default {
       methods: {
       cari() {
         this.loading = true;
-        let baseUrl = 'https://kimiafarmadenpasar.co.id/api';
+        let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?lat=-8.6649188&long=115.2384802&page=${this.page}`)
       .then((response) => {
+        this.total_item = response.data.data.total_item;
         this.items = response.data.data.items;
         this.page = response.data.data.paging.page;
         this.total_page = response.data.data.paging.total_page;
@@ -117,18 +120,9 @@ export default {
         window.scrollTo({top: 0, behavior: 'smooth'});
       },
 
-      cariDetail(id_counter, id_office){
-        var cid = id_counter;
-        var oid = id_office;
-
-        // console.log("counter id :", cid);
-        // console.log("office id :", oid);
-
-        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
-        axios.get(baseUrl + cid + `&office_id=${oid}`)
-        .then((response) => {
-          this.operational = response.data.data.items;
-        })
+      cariDetail(id_link){
+        var id = id_link;
+        location.href = "/destination/"+ id;
       },
     }
 }

@@ -11,10 +11,8 @@ import Rumahsakit from '../views/Blog/Rumahsakit.vue'
 import Services from '../views/Services.vue'
 import Kesehatan from '../views/Blog/Kesehatan.vue'
 import Olahraga from '../views/Blog/Olahraga.vue'
-import RouterTest from '../views/router-test.vue'
-import MemberOne from '../views/id-01.vue'
-import MemberTwo from '../views/id-02.vue'
-import MemberThree from '../views/id-03.vue'
+import RouterTest from '../views/destination.vue'
+import MemberTwo from '../views/destdetail.vue'
 
 const routes = 
 [

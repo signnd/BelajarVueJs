@@ -699,7 +699,7 @@
   <div class="container-fluid">
     <div class="background-video-sm text-center d-block d-md-none">
       <h2 class="text-white font-weight-bold">Video</h2>
-      <p class="h4 text-white">Cara Kerja Oobad</p>
+      <p class="h4 text-white">Pelayanan Bersahabat Oobad</p>
     </div>
     <div class="embed-responsive embed-responsive-16by9 d-block d-md-none">
       <iframe
@@ -1125,7 +1125,7 @@ export default {
 
 .gradient1 {
     background-image:
-    linear-gradient(to left, rgba(255, 255, 255, 0.301), rgba(41, 41, 41, 0.603)),
+    linear-gradient(to left, rgba(255, 255, 255, 0), rgba(41, 41, 41, 0.603)),
     url("../assets/hero/hero.png");
     width: 100vw;
     height: 45vw;
@@ -1135,7 +1135,7 @@ export default {
 
 .gradient2 {
     background-image:
-    linear-gradient(to left, rgba(255, 255, 255, 0.301), rgba(41, 41, 41, 0.603)),
+    linear-gradient(to left, rgba(255, 255, 255, 0), rgba(41, 41, 41, 0.603)),
     url("../assets/hero/hero2.jpg");
     width: 100vw;
     height: 45vw;
@@ -1145,7 +1145,7 @@ export default {
 
 .gradient3 {
     background:
-    linear-gradient(to left, rgba(255, 255, 255, 0.301), rgba(41, 41, 41, 0.603)), 
+    linear-gradient(to left, rgba(255, 255, 255, 0), rgba(41, 41, 41, 0.603)), 
     url("../assets/hero/hero3.jpg");
     width: 100vw;
     height: 45vw;
@@ -1155,7 +1155,7 @@ export default {
 
 .gradient4 {
     background:
-    linear-gradient(to left, rgba(255, 255, 255, 0.301), rgba(41, 41, 41, 0.603)),
+    linear-gradient(to left, rgba(255, 255, 255, 0), rgba(41, 41, 41, 0.603)),
     url("../assets/hero/hero4.png");
     width: 100vw;
     height: 45vw;
