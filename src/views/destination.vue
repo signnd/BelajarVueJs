@@ -1,5 +1,5 @@
 <template>
-<div class="pt-5">
+  <div class="pt-5">
     <div class="container pt-5">
       <nav aria-label="breadcrumb" class="container">
         <ol class="breadcrumb">
@@ -12,60 +12,56 @@
         {{ $translate(["Destinasi", "Destination"]) }}
       </h2>
     </div>
-      
-<section v-if="errored">
-    <p class="text-center p-5">Mohon maaf, terjadi kesalahan saat mengambil data. Silakan coba beberapa saat lagi.</p>
-</section>
 
-<section v-else>
-  <div v-if="loading" class="text-center p-5">
-    <div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <br><br>Loading...
-  </div>
+    <section v-if="errored">
+      <p class="text-center p-5">Mohon maaf, terjadi kesalahan saat mengambil data. Silakan coba beberapa saat lagi.</p>
+    </section>
 
-  <div class="container">
-    <div class="row" id="sip">
-      <div class="col-lg-4 mb-4 d-flex align-items-stretch" v-for="(item, index) in items" :key="item.id">
-        <div class="card-group h-100 container-fluid">
-          <div class="card card-members">
-            <img class="card-img-top" :src="item.images[0]" style="max-width:auto;" alt="Card image">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title text-center">{{item.name}}</h5>
-              <p class="card-text">{{item.address}}</p>
-              <button class="btn w-100 btn-primary align-self-end mt-auto" @click="cariDetail(index)">Detail</button>
+    <div v-else>
+      <div v-if="loading" class="text-center p-5">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <br><br>Loading...
+      </div>
+
+      <div class="container">
+        <div class="row" id="sip">
+          <div class="col-lg-4 mb-4 d-flex align-items-stretch" v-for="(item, index) in items" :key="item.id">
+            <div class="card-group h-100 container-fluid">
+              <div class="card card-members">
+                <img class="card-img-top" :src="item.images[0]" style="max-width:auto;" alt="Card image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-center">{{item.name}}</h5>
+                  <p class="card-text">{{item.address}}</p>
+                  <button class="btn w-100 btn-primary align-self-end mt-auto"
+                    @click="cariDetail(index)">Detail</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+    </div>
+    <div class="my-4">
+      <ul class="pagination pagination-md justify-content-center text-center">
+        <li class="page-item" :class="page === 1 ? 'disabled' : ''">
+          <a class="page-link" @click="prevPage">
+            Previous
+          </a>
+        </li>
+        <li class="page-link" style="background-color: inherit">
+          {{ page }} of {{ total_page }}
+        </li>
+        <li class="page-item" :class="page === total_page ? 'disabled' : ''">
+          <a class="page-link" @click="nextPage">
+            Next
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-</section>
-
-</div>
-<div class="my-4">
-            <ul class="pagination pagination-md justify-content-center text-center">
-                <li class="page-item" :class="page === 1 ? 'disabled' : ''">
-                    <a
-                            class="page-link"
-                            @click="prevPage"
-                    >
-                        Previous
-                    </a>
-                </li>
-                <li class="page-link" style="background-color: inherit">
-                    {{ page }} of {{ total_page }}
-                </li>
-                <li class="page-item" :class="page === total_page ? 'disabled' : ''">
-                    <a class="page-link"
-                       @click="nextPage"
-                    >
-                        Next
-                    </a>
-                </li>
-            </ul>
-        </div>
 </template>
 
 <script>
