@@ -20,8 +20,6 @@
     
     <!-- Whole Card -->
     <div class="container">
-      <div class="card my-3">
-        <div class="card-body">
           <div class="row">
             <div id="slideshow" class="carousel d-lg-block slide" data-ride="carousel">
               <ol class="carousel-indicators">
@@ -93,8 +91,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
         <!-- Card in smaller screen -->
         <div class="d-block d-lg-none container">
           <div class="card my-3">

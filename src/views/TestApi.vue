@@ -10,8 +10,7 @@
 <div class="container" >
   <div class="row" id="results">
     <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in items" :key="item.id">
-      <div class="card">
-        <div class="card h-100">
+        <div class="card h-100 container-fluid">
           <div class="pt-4">
             <img class="card-img-top container-fluid rounded-circle mx-auto d-block" style="width: 200px; height:200px;" :src="item.logo" alt="Card image">
           </div>
@@ -21,9 +20,10 @@
             <br>
             <h4 class="card-text">{{item.person}}</h4>
             <p class="card-text">{{item.office.whatsapp}}</p>
-            <p class="card-text">{{item.office.address}}</p>
+            <p></p>
+            <p class="card-text">{{$filters.str_limit(item.office.address,70)}}</p>
             <div class="pt-2"></div>
-            <div class="row">
+            <div class="row mt-auto">
               <div class="col">
                 <button class="btn w-100 btn-primary align-self-end" data-toggle="modal"
                   data-target="#Reservasi">Reservasi</button>
@@ -39,10 +39,6 @@
       </div>
     </div>
   </div>
-</div>
-
-
-
 
 <div v-if="loading" class="justify-content-center">
   <div class="spinner-border" role="status">
@@ -184,12 +180,12 @@ export default {
       cari() {
         var value_search = localStorage.getItem("val_search");
         var value_kabupaten = localStorage.getItem("val_kabupaten");
-        console.log(value_kabupaten);
+        // console.log(value_kabupaten);
         if (value_kabupaten == "Lokasi" || value_kabupaten == "Location" || value_search) {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage + `&search=${value_search}`)
             .then((response) => {
-              console.log(value_search);
+              // console.log(value_search);
               this.items.push(...response.data.data.items);
               this.bahanimg = response.data.data.items;
               var x = this.bahanimg;
@@ -200,13 +196,13 @@ export default {
             })
             .catch(error => {
               document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
-              console.log(error);
+              // console.log(error);
             })
         } else {
           let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
           axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
             .then((response) => {
-              console.log(value_search);
+              // console.log(value_search);
               this.items.push(...response.data.data.items);
               this.bahanimg = response.data.data.items;
               var x = this.bahanimg;
@@ -216,7 +212,7 @@ export default {
               this.loading= "false";
             })
             .catch(error => {
-              console.log(error);
+              // console.log(error);
               document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
             })
         }
@@ -226,8 +222,8 @@ export default {
         var cid = id_counter;
         var oid = id_office;
 
-        console.log("counter id :", cid);
-        console.log("office id :", oid);
+        // console.log("counter id :", cid);
+        // console.log("office id :", oid);
 
         let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
         axios.get(baseUrl + cid + `&office_id=${oid}`)
@@ -242,7 +238,7 @@ export default {
           return
         }
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-          console.log("load more")
+          // console.log("load more")
           this.apipage++;
           this.cari();
         }

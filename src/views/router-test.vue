@@ -4,9 +4,13 @@
       <nav aria-label="breadcrumb" class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Destination</li>
+          <li class="breadcrumb-item active" aria-current="page">{{ $translate(["Destinasi", "Destination"]) }}</li>
         </ol>
       </nav>
+
+      <h2 class="font-weight-bold text-center pb-3">
+        {{ $translate(["Destinasi", "Destination"]) }}
+      </h2>
       
 <section v-if="errored">
     <p class="text-center p-5">Mohon maaf, terjadi kesalahan saat mengambil data. Silakan coba beberapa saat lagi.</p>
@@ -68,7 +72,7 @@ export default {
           var template =
               `
             <div class="col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card-group">
+                <div class="card-group h-100 container-fluid">
                   <div class="card card-members">
                     <img class="card-img-top" src="${this.isi.images[0]}" style="max-width:auto;" alt="Card image">
                       <div class="card-body d-flex flex-column">
