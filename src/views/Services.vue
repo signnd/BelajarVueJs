@@ -1,7 +1,7 @@
 <template>
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb pt-5 mt-5">
-    <li class="breadcrumb-item"><a href="/">{{ $translate(["Rumah", "Home"]) }}</a></li>
+    <li class="breadcrumb-item"><router-link to="/">{{ $translate(["Beranda", "Home"]) }}</router-link></li>
     <li class="breadcrumb-item active" aria-current="page">{{ $translate(["Layanan", "Services"]) }}</li>
   </ol>
 </nav>

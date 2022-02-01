@@ -3,7 +3,7 @@
     <div class="container pt-5">
       <nav aria-label="breadcrumb" class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><router-link to="/">{{ $translate(["Beranda", "Home"]) }}</router-link></li>
           <li class="breadcrumb-item active" aria-current="page">{{ $translate(["Destinasi", "Destination"]) }}</li>
         </ol>
       </nav>

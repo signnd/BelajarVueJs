@@ -6,9 +6,9 @@
     <nav class="navbar navbar-expand-xl navbar-light bg-white fixed-top shadow">
       <div class="container">
         <nav class="navbar navbar-white bg-white">
-          <a class="navbar-brand my-0" href="/">
+          <router-link class="navbar-brand my-0" to="/">
             <img :src="images.logo" height="45" alt="logo">
-          </a>
+          </router-link>
         </nav>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>

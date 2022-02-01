@@ -2,14 +2,14 @@
 <div class="pt-5 mt-5"></div>  
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
+    <li class="breadcrumb-item"><router-link to="/">{{$translate(['Beranda','Home'])}}</router-link></li>
     <li class="breadcrumb-item active" aria-current="page">{{$translate(['Blog','Blog'])}}</li>
   </ol>
 </nav>
 
 <section>
     <h2 class="font-weight-bold text-center pb-3">
-      {{ $translate(["Oobad Blog", "Oobad Blog"]) }}
+      Oobad Blog
     </h2>
   </section>
   <section>
@@ -27,7 +27,7 @@
           <div class="card">
             <div class="row">
               <div class="col-4">
-                <img :src="images.gambar1" class="card-img-blog" alt="Card image 1" /></div>
+                <img :src="images.gambar1" class="card-img-blog" alt="Card image 1"/></div>
                 <div class="blog-break col-8 text-justify">
                   <router-link to="/Blog/Rumahsakit"><b class="text-black">{{$translate(['Kewajiban Rumah Sakit kepada Pasien dan Masyarakat','Hospital Obligations to Patients and Society'])}}</b>
                   </router-link>
@@ -60,7 +60,7 @@
                   </div>
                 </div>
               </div>
-            <div class="pt-2 d-lg-none"></div>
+            <div class="pt-3"></div>
               <div class="card">
                 <div class="row">
                   <div class="col-4">
@@ -273,8 +273,8 @@
 
 .blog-break{
   font-family:'Segoe UI', Verdana, sans-serif;
-  padding-block: 1vw;
   padding-inline-end: 4vw;
+  padding-block: 1vw;
 }
 
 .blog-break-sm{

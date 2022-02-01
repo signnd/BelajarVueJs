@@ -2,7 +2,7 @@
 <div class="pt-5 mt-5"></div>  
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
+    <li class="breadcrumb-item"><router-link to="/">{{$translate(['Beranda','Home'])}}</router-link></li>
     <li class="breadcrumb-item active" aria-current="page">{{$translate(['Kontak','Contact'])}}</li>
   </ol>
 </nav>
@@ -18,28 +18,28 @@
               <div class="card my-3">
                 <div class="card-body">
                 <div class="row align-center">
-                  <div class="col-2 mr-3"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="col-2 mx-2"><i class="bi bi-geo-alt-fill"></i></div>
                   <div class="col my-auto">Jl. Merdeka No.45, Renon, Denpasar Selatan, Kota Denpasar, Bali</div>
                 </div></div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-2 mr-3"><i class="bi bi-envelope-fill"></i></div>
+                  <div class="col-2 mx-2"><i class="bi bi-envelope-fill"></i></div>
                   <div class="col my-auto">oobad@gmail.com</div></div>
                 </div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-2 mr-3"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="col-2 mx-2"><i class="bi bi-telephone-fill"></i></div>
                   <div class="col my-auto">0361 265521</div></div>
                 </div>
               </div>
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-2 mr-3"><i class="bi bi-whatsapp"></i></div>
+                  <div class="col-2 mx-2"><i class="bi bi-whatsapp"></i></div>
                   <div class="col my-auto">0821 4663 3466</div></div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export default {
 
 <style>
 .bi {
-  font-size:2rem;
+  font-size:2.5rem;
   align-self: center;
 }
 
