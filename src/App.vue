@@ -115,8 +115,8 @@ export default {
       setLanguage: function (val){
         localStorage.setItem('language', val)
         location.reload()
-      }
-    }
+      },
+    },
   }
 
 $(function(){ 

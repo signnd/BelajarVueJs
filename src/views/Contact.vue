@@ -99,6 +99,9 @@ export default {
                 cover2: require('@/assets/gallery/section_bg01.png')
             }
         }
+    },
+    mounted() {
+      //document.title = "Contact - Oobad"
     }
 }
 </script>

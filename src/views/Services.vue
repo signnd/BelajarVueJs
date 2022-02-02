@@ -76,6 +76,9 @@ export default {
                 placeholder: require('@/assets/placeholder.png'),  
             }
         }
+    },
+    mounted(){
+       //document.title = "Services - Oobad";
     }
 }
 </script>
