@@ -1,4 +1,75 @@
 <template>
+<!-- Search Destination & Categories Lg -->
+  <form class="pt-5 mt-3 d-none d-md-block">
+    <div class="container-fluid form-row f-color px-5">
+      <div class="col-3 ml-5">
+        <select class="form-control form-control-md" id="kabupaten">
+          <option hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
+          <option>Denpasar</option>
+          <option>Tabanan</option>
+          <option>Klungkung</option>
+          <option>Gianyar</option>
+          <option>Buleleng</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <select class="form-control form-control-md">
+          <option hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
+          <option v-for="kategori in poli" :key="kategori.id">
+            {{ kategori.name }}
+          </option>
+        </select>
+      </div>
+      <div class="col-3">
+        <input
+          class="form-control mr-2"
+          type="search"
+          placeholder="Search"
+          id="search"
+        />
+      </div>
+      <div class="col-2">
+        <button
+          type="button"
+          class="btn btn-md btn-block btn-primary font-weight-bold"
+          @click="valueSender()"
+          id="search_home"
+        >
+          {{ $translate(["Cari", "Search"]) }}
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Search Destination & Categories SM -->
+  <div class="container d-block d-md-none pt-5 mt-5 pb-4">
+    <select class="form-control form-control-md">
+      <option hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
+      <option>Denpasar</option>
+      <option>Tabanan</option>
+      <option>Klungkung</option>
+      <option>Gianyar</option>
+      <option>Buleleng</option>
+    </select>
+    <select class="form-control form-control-md my-3">
+      <option hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
+      <option v-for="kategori in poli" :key="kategori.id">
+        {{ kategori.name }}
+      </option>
+    </select>
+    <input class="form-control mb-3" type="search" placeholder="Search" />
+    <router-link :to="{ name: 'destination' }">
+      <button
+        type="button"
+        class="btn btn-md btn-block btn-primary font-weight-bold"
+        @click="valueSender()"
+        id="search_home"
+      >
+        {{ $translate(["Cari", "Search"]) }}
+      </button>
+    </router-link>
+  </div>
+
   <!-- Slideshow -->
   <section>
     <div id="slideshow" class="carousel slide" data-ride="carousel">
@@ -10,17 +81,14 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <a
-            class="d-block mt-5 pt-2 w-100 gradient2"
-            alt="First slide"
-          />
+          <a class="d-block w-100 gradient2" alt="First slide" />
           <div class="carousel-caption text-white">
             <div class="mt-5">
               <h1 class="font-weight-bold" style="font-size: 5vw; width: 900px">
                 {{ $translate(["Selamat Datang", "Welcome"]) }}
               </h1>
             </div>
-            <p style="font-size: 2vw">
+            <p style="font-size: 3vw; width: 1000px">
               {{
                 $translate([
                   "Layanan Wisata Medis Anda di Bali",
@@ -31,59 +99,64 @@
           </div>
         </div>
         <div class="carousel-item">
-          <a
-            class="d-block mt-5 pt-2 w-100 h-3 gradient1"
-            alt="Second slide"
-          />
+          <a class="d-block w-100 h-3 gradient1" alt="Second slide" />
           <div class="carousel-caption text-white">
             <div class="mt-5">
               <h1 class="font-weight-bold" style="font-size: 5vw; width: 900px">
                 {{ $translate(["Healthy & Peaceful", "Healthy & Peaceful"]) }}
               </h1>
             </div>
-            <p style="font-size: 2vw; width: 800px">
+            <p style="font-size: 3vw; width: 1000px">
               {{
                 $translate([
-                  "Makan Sehat dan Kesehatan Pikiran Adalah Kunci Kesehatan",
-                  "Health Talent, Good Food, Mind Fullness is The Key of Health",
+                  "Makan Sehat dan Kesehatan Pikiran",
+                  "Health Talent, Good Food, Mind Fullness",
+                ])
+              }}
+              <span><br></span>
+              {{
+                $translate([
+                  "Adalah Kunci Kesehatan",
+                  "is The Key of Health",
                 ])
               }}
             </p>
           </div>
         </div>
         <div class="carousel-item">
-          <a
-            class="d-block mt-5 pt-2 w-100 h-3 gradient4"
-            alt="Third slide"
-          />
+          <a class="d-block w-100 h-3 gradient4" alt="Third slide" />
           <div class="carousel-caption text-white">
             <div class="mt-5">
               <h1 class="font-weight-bold" style="font-size: 5vw; width: 900px">
                 {{ $translate(["Senyum Pasien", "Patient's Smile"]) }}
               </h1>
             </div>
-            <p style="font-size: 2vw; width: 800px">
+            <p style="font-size: 3vw; width: 1000px">
               {{
                 $translate([
-                  "Kesenangan Pasien Adalah Prioritas Kami",
-                  "Patient's Satisfaction is Our Top Priority",
+                  "Kesenangan Pasien Adalah",
+                  "Patient's Satisfaction is",
+                ])
+              }}
+              <span><br></span>
+              {{
+                $translate([
+                  "Prioritas Kami",
+                  "Our Top Priority",
                 ])
               }}
             </p>
           </div>
         </div>
         <div class="carousel-item">
-          <a
-            class="d-block mt-5 pt-2 w-100 h-3 gradient3"
-            alt="Forth slide"
-          />
+          <a class="d-block w-100 h-3 gradient3" alt="Forth slide" />
           <div class="carousel-caption text-white">
             <div class="mt-5">
               <h1 class="font-weight-bold" style="font-size: 5vw">
                 {{ $translate(["Ayo Mulai!", "Let's Start!"]) }}
               </h1>
             </div>
-            <p class="" style="font-size: 2vw; width: 800px">
+            <p class="" style="font-size: 3vw; width: 1000px">
               {{
                 $translate([
                   "Hidup Indah Dimulai Dari Kesehatan",
@@ -115,157 +188,93 @@
     </div>
   </section>
 
-  <!-- Search Destination & Categories Lg -->
-  <form class="d-none d-md-block">
-    <div class="container-fluid form-row f-color px-5">
-      <div class="col-3 ml-5">
-        <select class="form-control form-control-md" id="kabupaten">
-          <option hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
-          <option>Denpasar</option>
-          <option>Tabanan</option>
-          <option>Klungkung</option>
-          <option>Gianyar</option>
-          <option>Buleleng</option>
-        </select>
-      </div>
-      <div class="col-3">
-        <select class="form-control form-control-md">
-          <option hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
-          <option v-for="kategori in poli" :key="kategori.id">
-            {{ kategori.name }}
-          </option>
-        </select>
-      </div>
-      <div class="col-3">
-        <input
-          class="form-control mr-2"
-          type="search"
-          placeholder="Search"
-          id="search"
-        />
-      </div>
-      <div class="col-2">
-        <button
-          type="button"
-          class="btn btn-md btn-block btn-primary"
-          @click="valueSender()"
-          id="search_home"
-        >
-          {{ $translate(["Cari", "Search"]) }}
-        </button>
-      </div>
-    </div>
-  </form>
-  <!-- Search Destination & Categories SM -->
-  <div class="container d-block d-md-none pt-3">
-    <select class="form-control form-control-md">
-      <option hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
-      <option>Denpasar</option>
-      <option>Tabanan</option>
-      <option>Klungkung</option>
-      <option>Gianyar</option>
-      <option>Buleleng</option>
-    </select>
-    <select class="form-control form-control-md my-3">
-      <option hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
-      <option v-for="kategori in poli" :key="kategori.id">
-        {{ kategori.name }}
-      </option>
-    </select>
-    <input class="form-control mb-3" type="search" placeholder="Search" />
-    <router-link :to="{ name: 'destination' }">
-      <button type="button" class="btn btn-md btn-block btn-primary">
-        {{ $translate(["Cari", "Search"]) }}
-      </button>
-    </router-link>
-  </div>
-
-<section>
-      <h2 class="pt-5 pb-4 font-weight-bold">
+  <section>
+    <h2 class="pt-5 pb-4 font-weight-bold">
       {{ $translate(["Mengapa Memilih Kami?", "Why choose us?"]) }}
     </h2>
 
-<div class="row container-fluid">
-    <div class="col mb-3">
+    <div class="row container-fluid">
+      <div class="col mb-3">
         <div class="card h-100">
-            <img class="card-img-top" :src="images.card1" alt="Card image">
+          <img class="card-img-top" :src="images.card1" alt="Card image" />
           <div class="card-body d-flex flex-column">
-              <h5 class="card-title">
-                {{ $translate(["Kemudahan", "Convinience"]) }}
-              </h5>
-            <p class="card-text">
-                {{
-                  $translate([
-                    "Cepat dalam memilih layanan dokter terbaik dari berbagai Fasilitas kesehatan dalam 1 kali search",
-                    "Find doctor services and many facilities on a click of a button.",
-                  ])
-                }}
-              </p>
-              <router-link
-                to="/destination"
-                class="btn d-block btn-outline-primary text-wrap mt-auto"
-              >
-                {{ $translate(["Lihat Destinasi", "Available Destinations"]) }}
-              </router-link>
-          </div>
-        </div>
-    </div>
-    <div class="col mb-3">
-                <div class="card h-100">
-            <img class="card-img-top" :src="images.card2" alt="Card image">
-          <div class="card-body">
             <h5 class="card-title">
-                {{ $translate(["Kesehatan Holistik", "Holistic Health"]) }}
-              </h5>
+              {{ $translate(["Kemudahan", "Convinience"]) }}
+            </h5>
             <p class="card-text">
-                {{
-                  $translate([
-                    "Menyeimbangkan kesehatan medis dan holistik untuk kesehatan yang paripurna.",
-                    "Balance between medical and holysm for a better health.",
-                  ])
-                }}
-              </p>
-              <router-link
-                to="/about"
-                class="btn d-block btn-outline-primary text-wrap mt-auto"
-              >
-                {{ $translate(["Tentang Oobad", "About Oobad"]) }}
-              </router-link>
+              {{
+                $translate([
+                  "Cepat dalam memilih layanan dokter terbaik dari berbagai Fasilitas kesehatan dalam 1 kali search.",
+                  "Find doctor services and many facilities on a click of a button.",
+                ])
+              }}
+            </p>
+            <router-link
+              to="/destination"
+              class="btn d-block btn-outline-primary text-wrap mt-auto"
+            >
+              {{ $translate(["Lihat Destinasi", "Available Destinations"]) }}
+            </router-link>
           </div>
         </div>
-    </div>
-    <div class="col mb-3">
-                <div class="card h-100">
-            <img class="card-img-top container-fluid mx-auto d-block" :src="images.card3" alt="Card image">
+      </div>
+      <div class="col mb-3">
+        <div class="card h-100">
+          <img class="card-img-top" :src="images.card2" alt="Card image" />
           <div class="card-body d-flex flex-column">
-                          <h5 class="card-title">
-                {{
-                  $translate(["Pelayanan Bersahabat", "Friendly Services"])
-                }}
-              </h5>
+            <h5 class="card-title">
+              {{ $translate(["Kesehatan Holistik", "Holistic Health"]) }}
+            </h5>
             <p class="card-text">
-                {{
-                  $translate([
-                    "Oobad menggunakan SpeedQ untuk melayani pasien dengan lebih baik tanpa kerumunan.",
-                    "Oobad uses SpeedQ to better serve patients without crowds.",
-                  ])
-                }}
-              </p>
-              <button
-                class="btn d-block btn-outline-primary text-wrap mt-auto"
-                @click="scrollBottom()"
-              >
-                {{ $translate(["Crowd Control", "Crowd Control"]) }}
-              </button>
+              {{
+                $translate([
+                  "Menyeimbangkan kesehatan medis dan holistik untuk kesehatan yang paripurna.",
+                  "Balance between medical and holysm for a better health.",
+                ])
+              }}
+            </p>
+            <router-link
+              to="/about"
+              class="btn d-block btn-outline-primary text-wrap mt-auto"
+            >
+              {{ $translate(["Tentang Oobad", "About Oobad"]) }}
+            </router-link>
           </div>
         </div>
+      </div>
+      <div class="col mb-3">
+        <div class="card h-100">
+          <img
+            class="card-img-top container-fluid mx-auto d-block"
+            :src="images.card3"
+            alt="Card image"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">
+              {{ $translate(["Pelayanan Bersahabat", "Friendly Services"]) }}
+            </h5>
+            <p class="card-text">
+              {{
+                $translate([
+                  "Oobad menggunakan SpeedQ untuk melayani pasien dengan lebih baik tanpa kerumunan.",
+                  "Oobad uses SpeedQ to better serve patients without crowds.",
+                ])
+              }}
+            </p>
+            <button
+              class="btn d-block btn-outline-primary text-wrap mt-auto"
+              @click="scrollBottom()"
+            >
+              {{ $translate(["Crowd Control", "Crowd Control"]) }}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <section>
-    <h2 class="font-weight-bold text-center pb-3 pt-4">
+    <h2 class="pt-5 pb-4 font-weight-bold">
       {{ $translate(["Layanan Terbaik", "Best Services"]) }}
     </h2>
   </section>
@@ -273,7 +282,7 @@
   <section>
     <div class="container">
       <div class="row d-flex py-5">
-        <div class="col-4">
+        <div class="col">
           <i class="fas fa-stethoscope d-flex justify-content-center"></i>
           <h5 class="service-title text-center">
             {{ $translate(["Dokter Terpilih", "Specialized Doctors"]) }}
@@ -287,7 +296,7 @@
             }}
           </p>
         </div>
-        <div class="col-4 mb-3">
+        <div class="col mb-3">
           <i class="fas bi-house-door-fill d-flex justify-content-center"></i>
           <h5 class="service-title text-center">
             {{ $translate(["Rumah Yoga", "Yoga House"]) }}
@@ -301,7 +310,7 @@
             }}
           </p>
         </div>
-                <div class="col-4">
+        <div class="col">
           <i class="fas fa-notes-medical d-flex justify-content-center"></i>
           <div>
             <h5 class="service-title text-center">
@@ -325,7 +334,7 @@
 
   <!-- Our Team -->
   <section>
-    <h2 class="font-weight-bold py-3">
+    <h2 class="pt-5 pb-4 font-weight-bold">
       {{ $translate(["Team Kami", "Our Team"]) }}
     </h2>
     <!-- Carousel for bigger screen -->
@@ -335,10 +344,10 @@
       data-ride="carousel"
     >
       <!-- Controls -->
-      <div class="carousel-inner pb-4">
+      <div class="carousel-inner">
         <div class="d-flex justify-content-center position-center">
           <a
-            class="carousel-control-prev"
+            class="carousel-control-prev" style="left: 8vw; bottom: 4vw"
             type="button"
             data-target="#carouselMultiItemTeam"
             data-slide="prev"
@@ -347,7 +356,7 @@
             <span class="visually-hidden">Previous</span>
           </a>
           <a
-            class="carousel-control-next"
+            class="carousel-control-next" style="right: 8vw; bottom: 4vw"
             type="button"
             data-target="#carouselMultiItemTeam"
             data-slide="next"
@@ -358,12 +367,13 @@
         </div>
         <!-- Single item -->
         <div class="carousel-item active">
-          <div class="container">
+          <div class="container d-flex justify-content-center">
             <div class="row">
-              <div class="col-3 mx-auto" style="float: left">
+              <div class="col-lg-4 mb-3 d-flex align-items-stretch" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 200px; height: 200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -373,10 +383,11 @@
                 </div>
               </div>
 
-              <div class="col-3 mx-auto" style="float: left">
+              <div class="col-lg-4 mb-3 d-flex align-items-stretch" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 200px; height: 200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -386,10 +397,11 @@
                 </div>
               </div>
 
-              <div class="col-3 mx-auto" style="float: left">
+              <div class="col-lg-4 mb-3 d-flex align-items-stretch" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 200px; height: 200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -404,30 +416,32 @@
 
         <!-- Single item -->
         <div class="carousel-item">
-          <div class="container">
+          <div class="container d-flex justify-content-center">
             <div class="row">
-              <div class="col-3 mx-auto" style="float: left">
+              <div class="col mb-3 d-flex align-items-stretch" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 200px; height: 200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Marcel</h4>
+                    <h4 class="card-title text-center">Satya</h4>
                   </div>
                 </div>
               </div>
 
-              <div class="col-3 mx-auto" style="float: left">
-                <div class="card mb-2 ">
+              <div class="col mb-3 d-flex align-items-stretch" style="float: left">
+                <div class="card mb-2">
                   <img
-                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 200px; height: 200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Dini</h4>
+                    <h4 class="card-title text-center">Satya</h4>
                   </div>
                 </div>
               </div>
@@ -440,7 +454,7 @@
     <!-- Carousel wrapper -->
   </section>
 
-  <!-- Carousel smaller screen-->
+  <!-- Team Kami smaller screen-->
   <section>
     <div
       id="carouselMultiItemTeamSmall"
@@ -455,7 +469,8 @@
       <div class="carousel-inner pb-4">
         <div class="d-flex justify-content-center position-center">
           <a
-            class="carousel-control-prev"
+            class="carousel-control-prev" 
+            style="left: 50px; bottom: 50px;"
             type="button"
             data-target="#carouselMultiItemTeamSmall"
             data-slide="prev"
@@ -465,6 +480,7 @@
           </a>
           <a
             class="carousel-control-next"
+            style="right: 50px; bottom: 50px;"
             type="button"
             data-target="#carouselMultiItemTeamSmall"
             data-slide="next"
@@ -475,12 +491,13 @@
         </div>
         <!-- Single item -->
         <div class="carousel-item active">
-          <div class="container">
-            <div class="row">
-              <div class="col" style="float: left">
+          <div class="container d-flex justify-content-center">
+            <div class="row justify-content-center">
+              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 150px; height: 150px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -494,17 +511,18 @@
         </div>
 
         <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col" style="float: left">
+          <div class="container d-flex justify-content-center">
+            <div class="row justify-content-center">
+              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 150px; height: 150px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Ryandika</h4>
+                    <h4 class="card-title text-center">Ryan</h4>
                   </div>
                 </div>
               </div>
@@ -513,12 +531,13 @@
         </div>
 
         <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col" style="float: left">
+          <div class="container d-flex justify-content-center">
+            <div class="row justify-content-center">
+              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 150px; height: 150px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -532,12 +551,13 @@
         </div>
 
         <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col" style="float: left">
+          <div class="container d-flex justify-content-center">
+            <div class="row justify-content-center">
+              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 150px; height: 150px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -551,12 +571,13 @@
         </div>
 
         <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col" style="float: left">
+          <div class="container d-flex justify-content-center">
+            <div class="row justify-content-center">
+              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top"
+                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
+                    style="width: 150px; height: 150px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -574,7 +595,7 @@
 
   <!-- Popular Destination -->
   <section>
-    <h2 class="font-weight-bold py-3">
+    <h2 class="pt-5 pb-4 font-weight-bold">
       {{ $translate(["Destinasi Populer", "Popular Destinations"]) }}
     </h2>
 
@@ -637,42 +658,44 @@
   <!-- Our Partner -->
   <section>
     <div class="container-fluid text-center">
-    <h2 class="font-weight-bold py-3 text-center pt-5 mt-4 mb-4">
-      {{ $translate(["Mitra Kami", "Our Partners"]) }}
-    </h2>
-    <div class="pb-5">
-      <div class="row pb-5">
-        <div class="col">
-          <img
-            class="partner-carousel img-thumbnail img-partner"
-            :src="images.partner1"
-            alt="Partner logo"
-          />
-        </div>
-        <div class="col">
-          <img
-            class="partner-carousel img-thumbnail img-partner"
-            :src="images.partner2"
-            alt="Partner logo"
-          />
-        </div>
-        <div class="col">
-          <img
-            class="partner-carousel img-thumbnail img-partner"
-            :src="images.partner3"
-            alt="Partner logo"
-          />
-        </div>
-        <div class="col">
-          <img
-            class="partner-carousel img-thumbnail img-partner"
-            :src="images.partner4"
-            alt="Partner logo"
-          />
-        </div>
-      </div>
+      <h2 class="pt-5 mt-4 pb-3 font-weight-bold">
+        {{ $translate(["Mitra Kami", "Our Partners"]) }}
+      </h2>
     </div>
-    </div>
+      <div class="container pb-5 text-center">
+        <div class="logo-list">
+            <div class="row ">
+              <div class="col-lg-2 col-md-4 col-6 mx-auto">
+              <img
+              class="partner-carousel img-partner img-fluid"
+              :src="images.partner1"
+              alt="Partner logo"
+            />
+            </div>
+              <div class="col-lg-2 col-md-4 col-6 mx-auto">
+            <img
+              class="partner-carousel img-partner img-fluid"
+              :src="images.partner2"
+              alt="Partner logo"
+            />
+              </div>
+              <div class="col-lg-2 col-md-4 col-6 mx-auto">
+            <img
+              class="partner-carousel img-partner img-fluid"
+              :src="images.partner3"
+              alt="Partner logo"
+            />
+              </div>
+              <div class="col-lg-2 col-md-4 col-6 mx-auto">
+            <img
+              class="partner-carousel img-partner img-fluid"
+              :src="images.partner4"
+              alt="Partner logo"
+            />
+              </div>
+            </div>
+          </div>
+        </div>
   </section>
 
   <!-- Video -->
@@ -771,21 +794,21 @@ export default {
   },
 
   created() {
-    let baseUrl =
-      "https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/random_offices.php?limit=1";
-    axios
-      .get(baseUrl)
-      .then((response) => {
-        this.nama = response.data.data.items[0].name;
-        this.img = response.data.data.items[0].images[1];
-        this.deskripsi = response.data.data.items[0].description;
-        document.getElementById("ranimg").src = this.img;
-        document.getElementById("ranimg1").src = this.img;
-      })
-      .catch((error) => {
-        document.getElementById("error").innerHTML = "Data Tidak Ditemukan";
-        console.log(error);
-      });
+    // let baseUrl =
+    //   "https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/random_offices.php?limit=1";
+    // axios
+    //   .get(baseUrl)
+    //   .then((response) => {
+    //     this.nama = response.data.data.items[0].name;
+    //     this.img = response.data.data.items[0].images[1];
+    //     this.deskripsi = response.data.data.items[0].description;
+    //     document.getElementById("ranimg").src = this.img;
+    //     document.getElementById("ranimg1").src = this.img;
+    //   })
+    //   .catch((error) => {
+    //     document.getElementById("error").innerHTML = "Data Tidak Ditemukan";
+    //     console.log(error);
+    //   });
   },
 
   computed: {
@@ -806,8 +829,8 @@ export default {
       location.href = "/search";
     },
     scrollBottom() {
-        window.scrollTo(0,document.body.scrollHeight);
-      },
+      window.scrollTo(0, document.body.scrollHeight);
+    },
   },
 };
 </script>
@@ -996,123 +1019,15 @@ export default {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
 }
 
-@media (min-width: 670px) {
-  #stripes {
-    height: 80%;
-  }
-
-  #stripes span {
-    height: 150px;
-  }
-
-  #stripes :nth-child(1) {
-    top: 0;
-  }
-
-  #stripes :nth-child(2) {
-    width: 16.66667%;
-    top: 300px;
-    bottom: auto;
-    background: #0dcfff;
-  }
-
-  #stripes :nth-child(3) {
-    width: 33.33333%;
-    right: auto;
-    background: #11bdff;
-  }
+.logo-list {
+    padding: 20px 0;
+    text-align: center;
 }
-
-@media only screen and (max-width: 1600px) {
-  #stripes {
-    height: 75%;
-  }
-
-  #stripes :nth-child(1) {
-    top: 0;
-  }
-
-  #stripes :nth-child(2) {
-    width: 16.66667%;
-    top: 300px;
-    bottom: auto;
-    background: #0dcfff;
-  }
-
-  #stripes :nth-child(3) {
-    width: 33.33333%;
-    right: auto;
-    background: #11bdff;
-  }
-}
-
-@media only screen and (max-width: 1450px) {
-  #stripes {
-    height: 65%;
-  }
-
-  #stripes :nth-child(1) {
-    top: 0;
-  }
-
-  #stripes :nth-child(2) {
-    width: 16.66667%;
-    top: 300px;
-    bottom: auto;
-    background: #0dcfff;
-  }
-
-  #stripes :nth-child(3) {
-    width: 33.33333%;
-    right: auto;
-    background: #11bdff;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  #stripes {
-    height: 55%;
-  }
-
-  #stripes :nth-child(1) {
-    top: 0;
-  }
-
-  #stripes :nth-child(2) {
-    width: 16.66667%;
-    top: 300px;
-    bottom: auto;
-    background: #0dcfff;
-  }
-
-  #stripes :nth-child(3) {
-    width: 33.33333%;
-    right: auto;
-    background: #11bdff;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  #stripes {
-    height: 50%;
-  }
-
-  #stripes :nth-child(1) {
-    top: 0;
-  }
-
-  #stripes :nth-child(2) {
-    width: 16.66667%;
-    top: 300px;
-    bottom: auto;
-    background: #0dcfff;
-  }
-
-  #stripes :nth-child(3) {
-    width: 33.33333%;
-    right: auto;
-    background: #11bdff;
-  }
+.logo-list img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
 }
 
 .background-video {
@@ -1125,42 +1040,54 @@ export default {
 }
 
 .gradient1 {
-    background-image:
-    linear-gradient(to left, rgba(255, 255, 255, 0), rgba(41, 41, 41, 0.603)),
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgba(41, 41, 41, 0.603)
+    ),
     url("../assets/hero/hero.png");
-    width: 100vw;
-    height: 45vw;
-    background-size: cover;
-    color: white;
+  width: 100vw;
+  height: 45vw;
+  background-size: cover;
+  color: white;
 }
 
 .gradient2 {
-    background-image:
-    linear-gradient(to left, rgba(255, 255, 255, 0), rgba(41, 41, 41, 0.603)),
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgba(41, 41, 41, 0.603)
+    ),
     url("../assets/hero/hero2.jpg");
-    width: 100vw;
-    height: 45vw;
-    background-size: cover;
-    color: white;
+  width: 100vw;
+  height: 45vw;
+  background-size: cover;
+  color: white;
 }
 
 .gradient3 {
-    background:
-    linear-gradient(to left, rgba(255, 255, 255, 0), rgba(41, 41, 41, 0.603)), 
+  background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgba(41, 41, 41, 0.603)
+    ),
     url("../assets/hero/hero3.jpg");
-    width: 100vw;
-    height: 45vw;
-    background-size: cover;
-    color: white;
+  width: 100vw;
+  height: 45vw;
+  background-size: cover;
+  color: white;
 }
 
 .gradient4 {
-    background:
-    linear-gradient(to left, rgba(255, 255, 255, 0), rgba(41, 41, 41, 0.603)),
+  background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgba(41, 41, 41, 0.603)
+    ),
     url("../assets/hero/hero4.png");
-    width: 100vw;
-    height: 45vw;
-    background-size: cover;
-    color: white;
+  width: 100vw;
+  height: 45vw;
+  background-size: cover;
+  color: white;
 }
 </style>
