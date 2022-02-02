@@ -7,6 +7,18 @@
   </ol>
 </nav>
 
+<section v-if="errored">
+    <p class="text-center p-5">Mohon maaf, terjadi kesalahan saat mengambil data. Silakan coba beberapa saat lagi.</p>
+</section>
+
+<section v-else>
+<div v-if="loading" class="text-center p-5">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <br><br>Loading...
+</div>
+
 <div class="container" >
   <div class="row" id="results">
     <div class="col-lg-4 mb-3 d-flex align-items-stretch" v-for="item in items" :key="item.id">
@@ -39,14 +51,11 @@
       </div>
     </div>
   </div>
+ </section> 
+ 
+ <div id="loadmore">
 
-<div v-if="loading" class="justify-content-center">
-  <div class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
 </div>
-
-<div class="error pb-5" id="error"></div>
 
 
 
@@ -138,6 +147,8 @@ import axios from "axios";
 export default {
     data() {
     return {
+      errored: false,
+      loading: true,
       items: [],
       bahan: null,
       bahanimg: null,
@@ -157,7 +168,7 @@ export default {
       days: null,
       op_hours: null,
       ed_hours: null,
-      loading: true,
+
 
       total_item: null,
       images:{
@@ -177,68 +188,77 @@ export default {
 
   },
   methods: {
-      cari() {
-        var value_search = localStorage.getItem("val_search");
-        var value_kabupaten = localStorage.getItem("val_kabupaten");
-        // console.log(value_kabupaten);
-        if (value_kabupaten == "Lokasi" || value_kabupaten == "Location" || value_search) {
-          let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
-          axios.get(baseUrl + this.apipage + `&search=${value_search}`)
-            .then((response) => {
-              // console.log(value_search);
-              this.items.push(...response.data.data.items);
-              this.bahanimg = response.data.data.items;
-              var x = this.bahanimg;
-              this.getimg = x.office;
-              this.img = this.getimg;
-              this.apilastpage = response.data.data.paging.total_page;
-              this.loading= "false";
-            })
-            .catch(error => {
-              document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
-              // console.log(error);
-            })
-        } else {
-          let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
-          axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
-            .then((response) => {
-              // console.log(value_search);
-              this.items.push(...response.data.data.items);
-              this.bahanimg = response.data.data.items;
-              var x = this.bahanimg;
-              this.getimg = x.office;
-              this.img = this.getimg;
-              this.apilastpage = response.data.data.paging.total_page;
-              this.loading= "false";
-            })
-            .catch(error => {
-              // console.log(error);
-              document.getElementById('error').innerHTML = "Data Tidak Ditemukan";
-            })
-        }
-      },
+    cari() {
+      this.loading = true;
+      var value_search = localStorage.getItem("val_search");
+      var value_kabupaten = localStorage.getItem("val_kabupaten");
+      // console.log(value_kabupaten);
+      if (value_kabupaten == "Lokasi" || value_kabupaten == "Location" || value_search) {
+        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
+        axios.get(baseUrl + this.apipage + `&search=${value_search}`)
+          .then((response) => {
+            // console.log(value_search);
+            this.items.push(...response.data.data.items);
+            this.bahanimg = response.data.data.items;
+            var x = this.bahanimg;
+            this.getimg = x.office;
+            this.img = this.getimg;
+            this.apilastpage = response.data.data.paging.total_page;
+            this.loading = "false";
+          })
+          .catch(error => {
+            console.log(error);
+            this.errored = true;
+          })
+          .finally(() => this.loading = false);
 
-      cariJadwal(id_counter, id_office){
-        var cid = id_counter;
-        var oid = id_office;
+      } else {
+        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
+        axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
+          .then((response) => {
+            // console.log(value_search);
+            this.items.push(...response.data.data.items);
+            this.bahanimg = response.data.data.items;
+            var x = this.bahanimg;
+            this.getimg = x.office;
+            this.img = this.getimg;
+            this.apilastpage = response.data.data.paging.total_page;
+            this.loading = "false";
+          })
+          .catch(error => {
+            console.log(error);
+            this.errored = true;
+          })
+          .finally(() => this.loading = false);
+      }
+    },
 
-        // console.log("counter id :", cid);
-        // console.log("office id :", oid);
+    cariJadwal(id_counter, id_office) {
+      var cid = id_counter;
+      var oid = id_office;
 
-        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
-        axios.get(baseUrl + cid + `&office_id=${oid}`)
+      // console.log("counter id :", cid);
+      // console.log("office id :", oid);
+
+      let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
+      axios.get(baseUrl + cid + `&office_id=${oid}`)
         .then((response) => {
           this.operational = response.data.data.items;
         })
-      },
+    },
 
-      getNextData() {
+    getNextData() {
       window.onscroll = () => {
         if (this.apipage >= this.apilastpage) {
+          document.getElementById("loadmore").innerHTML = '';
           return
         }
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-          // console.log("load more")
+          var template = `    
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div> <br><br>`
+          document.getElementById("loadmore").innerHTML = template;
           this.apipage++;
           this.cari();
         }
