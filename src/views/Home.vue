@@ -180,20 +180,20 @@
     </router-link>
   </div>
 
-  <section>
-    <h2 class="pt-5 font-weight-bold">
+<section>
+      <h2 class="pt-5 pb-4 font-weight-bold">
       {{ $translate(["Mengapa Memilih Kami?", "Why choose us?"]) }}
     </h2>
-    <div class="container d-flex">
-      <div class="container my-5 align-items-center" style="width: 900px;">
-        <div class="card-group">
-          <div class="card" style="width: auto">
-            <img class="card-img-top" :src="images.card1" alt="Card image 1" />
-            <div class="card-body d-flex flex-column">
+
+<div class="row container-fluid">
+    <div class="col mb-3">
+        <div class="card h-100">
+            <img class="card-img-top" :src="images.card1" alt="Card image">
+          <div class="card-body d-flex flex-column">
               <h5 class="card-title">
                 {{ $translate(["Kemudahan", "Convinience"]) }}
               </h5>
-              <p class="card-text">
+            <p class="card-text">
                 {{
                   $translate([
                     "Cepat dalam memilih layanan dokter terbaik dari berbagai Fasilitas kesehatan dalam 1 kali search",
@@ -207,15 +207,17 @@
               >
                 {{ $translate(["Lihat Destinasi", "Available Destinations"]) }}
               </router-link>
-            </div>
           </div>
-          <div class="card" style="width: auto">
-            <img class="card-img-top" :src="images.card2" alt="Card image 2" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">
+        </div>
+    </div>
+    <div class="col mb-3">
+                <div class="card h-100">
+            <img class="card-img-top" :src="images.card2" alt="Card image">
+          <div class="card-body">
+            <h5 class="card-title">
                 {{ $translate(["Kesehatan Holistik", "Holistic Health"]) }}
               </h5>
-              <p class="card-text">
+            <p class="card-text">
                 {{
                   $translate([
                     "Menyeimbangkan kesehatan medis dan holistik untuk kesehatan yang paripurna.",
@@ -229,17 +231,19 @@
               >
                 {{ $translate(["Tentang Oobad", "About Oobad"]) }}
               </router-link>
-            </div>
           </div>
-          <div class="card" style="width: auto">
-            <img class="card-img-top" :src="images.card3" alt="Card image 2" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">
+        </div>
+    </div>
+    <div class="col mb-3">
+                <div class="card h-100">
+            <img class="card-img-top container-fluid mx-auto d-block" :src="images.card3" alt="Card image">
+          <div class="card-body d-flex flex-column">
+                          <h5 class="card-title">
                 {{
                   $translate(["Pelayanan Bersahabat", "Friendly Services"])
                 }}
               </h5>
-              <p class="card-text">
+            <p class="card-text">
                 {{
                   $translate([
                     "Oobad menggunakan SpeedQ untuk melayani pasien dengan lebih baik tanpa kerumunan.",
@@ -253,15 +257,15 @@
               >
                 {{ $translate(["Crowd Control", "Crowd Control"]) }}
               </button>
-            </div>
           </div>
         </div>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section>
-    <h2 class="font-weight-bold text-center pb-3">
+    <h2 class="font-weight-bold text-center pb-3 pt-4">
       {{ $translate(["Layanan Terbaik", "Best Services"]) }}
     </h2>
   </section>
@@ -359,7 +363,7 @@
               <div class="col-3 mx-auto" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -372,7 +376,7 @@
               <div class="col-3 mx-auto" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -385,7 +389,7 @@
               <div class="col-3 mx-auto" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -405,7 +409,7 @@
               <div class="col-3 mx-auto" style="float: left">
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
@@ -418,7 +422,7 @@
               <div class="col-3 mx-auto" style="float: left">
                 <div class="card mb-2 ">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block" style="width: 200px; height:200px;"
+                    class="card-img-top mx-auto d-block" style="width: 200px; height:200px;"
                     src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                     alt="Card image cap"
                   />
