@@ -60,9 +60,9 @@
   <section>
     <div class="footer">
         <div class="d-flex justify-content-center">
-          <div class="col-1"><a class="text-dark" href="https://facebook.com"><i class="bi bi-facebook"></i></a></div>
-          <div class="col-1"><a class="text-dark" href="https://whatsapp.com"><i class="bi bi-whatsapp"></i></a></div>
-          <div class="col-1"><a class="text-dark" href="https://instagram.com"><i class="bi bi-instagram"></i></a></div>
+          <div class="col-1 px-2"><a class="text-dark" href="https://facebook.com"><i class="bi bi-facebook"></i></a></div>
+          <div class="col-1 px-2"><a class="text-dark" href="https://whatsapp.com"><i class="bi bi-whatsapp"></i></a></div>
+          <div class="col-1 px-2"><a class="text-dark" href="https://instagram.com"><i class="bi bi-instagram"></i></a></div>
         </div>
       <div class="py-2"></div>
       <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Oobad<br><br>
@@ -174,6 +174,7 @@ $(function(){
   color: black;
   background-color: #6ec3ff;
   padding-block: 2em;
+margin-top:auto; 
 }
 
 .fsma {
