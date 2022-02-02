@@ -5,16 +5,14 @@ import {
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
-import TestApi from '../views/TestApi.vue'
+import Search from '../views/search.vue'
 import Blog from '../views/Blog.vue'
 import Rumahsakit from '../views/Blog/Rumahsakit.vue'
 import Services from '../views/Services.vue'
 import Kesehatan from '../views/Blog/Kesehatan.vue'
 import Olahraga from '../views/Blog/Olahraga.vue'
-import RouterTest from '../views/router-test.vue'
-import MemberOne from '../views/id-01.vue'
-import MemberTwo from '../views/id-02.vue'
-import MemberThree from '../views/id-03.vue'
+import RouterTest from '../views/destination.vue'
+import MemberTwo from '../views/destdetail.vue'
 
 const routes = 
 [
@@ -34,9 +32,9 @@ const routes =
       component: Contact
   },
     {
-      path: '/api',
-      name: 'api',
-      component: TestApi
+      path: '/search',
+      name: 'search',
+      component: Search
     },
     {
       path: '/blog',
