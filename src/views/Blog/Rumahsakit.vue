@@ -11,8 +11,8 @@
   <!-- Content -->
   <nav aria-label="breadcrumb" class="container">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/Blog">Blog</a></li>
+      <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
+      <li class="breadcrumb-item"><router-link to="/Blog">Blog</router-link></li>
       <li class="breadcrumb-item active" aria-current="page">Rumah Sakit</li>
     </ol>
     <div class="pr-5 text-right">

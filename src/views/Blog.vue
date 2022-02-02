@@ -2,7 +2,7 @@
 <div class="pt-5 mt-5"></div>  
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
+    <li class="breadcrumb-item"><router-link to="/">{{$translate(['Beranda','Home'])}}</router-link></li>
     <li class="breadcrumb-item active" aria-current="page">{{$translate(['Blog','Blog'])}}</li>
   </ol>
 </nav>
@@ -21,7 +21,7 @@
   </section>
     <!-- Desktop -->
     <section>
-    <div class="tab-content d-none d-sm-none d-md-block" id="nav-tabContent">
+    <div class="tab-content d-none d-sm-none d-md-block d-md-inline-flex" id="nav-tabContent">
       <div class="tab-pane fade show active" id="infors" role="tabpanel" aria-labelledby="list-infors-list">
         <div class="container pt-3 d-none d-sm-block">
           <div class="card">
@@ -44,7 +44,6 @@
       <!-- Tab Kesehatan-->
         <div class="tab-pane fade" id="kesehatan" role="tabpanel" aria-labelledby="list-kesehatan-list">
           <div class="container pt-3">
-            <div class="row">
               <div class="card">
                 <div class="row">
                   <div class="col-4">
@@ -60,7 +59,7 @@
                   </div>
                 </div>
               </div>
-            <div class="pt-2 d-lg-none"></div>
+            <div class="pt-3"></div>
               <div class="card">
                 <div class="row">
                   <div class="col-4">
@@ -105,7 +104,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
 
       <!-- Tab Lingkungan -->
@@ -258,6 +256,9 @@
           gambar6: require('@/assets/logo/jantung.jpg')
         }
       }
+    },
+    mounted() {
+      //document.title = "Blog - Oobad";
     }
   }
 </script>
