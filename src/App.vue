@@ -6,9 +6,9 @@
     <nav class="navbar navbar-expand-xl navbar-light bg-white fixed-top shadow">
       <div class="container">
         <nav class="navbar navbar-white bg-white">
-          <a class="navbar-brand my-0" href="/">
+          <router-link class="navbar-brand my-0" to="/">
             <img :src="images.logo" height="45" alt="logo">
-          </a>
+          </router-link>
         </nav>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
               data-target="#navbarSupportedContent">{{$translate(['Tentang','About'])}}</router-link>
              <router-link to="/Services" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">{{$translate(['Layanan','Services'])}}</router-link>
-            <router-link to="/Destination-new" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
+            <router-link to="/destination" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">{{$translate(['Destinasi','Destination'])}}</router-link>
             <router-link to="/Blog" class="nav-item nav-link navbar-collapse fs-4 mx-3" 
               data-target="#navbarSupportedContent">Blog</router-link>
@@ -60,22 +60,22 @@
   <section>
     <div class="footer">
         <div class="d-flex justify-content-center">
-          <div class="col-1"><a class="text-dark" href="https://facebook.com"><i class="bi bi-facebook"></i></a></div>
-          <div class="col-1"><a class="text-dark" href="https://whatsapp.com"><i class="bi bi-whatsapp"></i></a></div>
-          <div class="col-1"><a class="text-dark" href="https://instagram.com"><i class="bi bi-instagram"></i></a></div>
+          <div class="col-1 px-2"><a class="text-dark" href="https://facebook.com"><i class="bi bi-facebook"></i></a></div>
+          <div class="col-1 px-2"><a class="text-dark" href="https://whatsapp.com"><i class="bi bi-whatsapp"></i></a></div>
+          <div class="col-1 px-2"><a class="text-dark" href="https://instagram.com"><i class="bi bi-instagram"></i></a></div>
         </div>
       <div class="py-2"></div>
-      <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Bali Medical Tourism Association<br><br>
-        <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • 
+      <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Oobad<br><br>
+        <router-link to="/">Home</router-link> • <router-link to="/destination">Destination</router-link> • 
         <router-link to="/Contact">Contact</router-link>  • <router-link to="/About">About</router-link>
       </div>
       <div class="d-none d-sm-block d-md-block d-lg-none">
-        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Bali Medical Tourism Association<br>
-          <router-link to="/">Home</router-link> • <router-link to="/Destination">Destination</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Oobad<br>
+          <router-link to="/">Home</router-link> • <router-link to="/destination">Destination</router-link> • <router-link to="/Contact">Contact</router-link> • <router-link to="/About">About</router-link>
         </div>
       </div>
       <div class="d-none d-lg-block d-xl-block d-xxl-block">
-        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Bali Medical Tourism Association</div>
+        <div class="text-center">© 2021 - {{new Date().getFullYear()}} Oobad</div>
       </div>
     </div>
   </section>
@@ -115,8 +115,8 @@ export default {
       setLanguage: function (val){
         localStorage.setItem('language', val)
         location.reload()
-      }
-    }
+      },
+    },
   }
 
 $(function(){ 
@@ -174,6 +174,7 @@ $(function(){
   color: black;
   background-color: #6ec3ff;
   padding-block: 2em;
+margin-top:auto; 
 }
 
 .fsma {

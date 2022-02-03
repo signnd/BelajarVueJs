@@ -1,48 +1,69 @@
 <template>
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb pt-5 mt-5">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Destination</li>
+    <li class="breadcrumb-item"><router-link to="/">{{ $translate(["Beranda", "Home"]) }}</router-link></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ $translate(["Layanan", "Services"]) }}</li>
   </ol>
 </nav>
 
-<section>
-  <div class="container">
-        <div class="row d-flex">
-          <div class="col-5">
-          <i class="fas fa-plane-departure"></i>
-              <h5 class="service-title">Medical Tourism Guidelines</h5>
-              <p class="service-text">
-                {{$translate(['Panduan untuk seseorang yang membutuhkan perawatan medis.',
-                'A guide for someone who needs medical care.'])}}</p>
-          </div>
-          <div class="col-5">
-          <i class="fas fa-notes-medical"></i>
+  <section>
+    <h2 class="font-weight-bold text-center pb-3">
+      {{ $translate(["Layanan Terbaik", "Best Services"]) }}
+    </h2>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row d-flex py-5 mb-5">
+        <div class="col-4">
+          <i class="fas fa-notes-medical d-flex justify-content-center"></i>
           <div>
-            <h5 class="service-title">Medical training</h5>
+            <h5 class="service-title text-center">
+              {{
+                $translate(["Penyembuhan Tradisional", "Traditional Healing"])
+              }}
+            </h5>
             <p class="service-text">
-              {{$translate(['Seminar dan Lokakarya Pelatihan untuk Pemerintah, Cluster Kesehatan, Rumah Sakit, Penyedia Asuransi, Perhotelan, dan pihak-pihak lain yang berkepentingan.',
-              'Seminars and Training Workshops for Government, Health Clusters, Hospitals, Insurance Providers, Hospitality, and other interested parties.'])}}</p>
-          </div>
-          </div>
-          <div class="col-5">
-          <i class="fas fa-stethoscope"></i>
-              <h5 class="service-title">Medical research</h5>
-              <p class="service-text">
-                {{$translate(['Informasi dan penelitian yang diperoleh dari melakukan penelitian dan survei secara signifikan meningkatkan kesadaran dalam pariwisata medis melalui temuan kami dan informasi terkini.',
-                'The information and research gleaned from conducting research and surveys significantly raises awareness in medical tourism through our findings and up-to-date information.'])}}</p>
-          </div>
-          <div class="col-5 mb-3">
-          <i class="fas fa-heart"></i>
-              <h5 class="service-title">Medical advisor</h5>
-              <p class="service-text">
-                {{$translate(['Membantu memberikan penilaian, review atau audit medik terhadap praktik medis yang diberikan oleh provider atau non-provider dari asuransi atau perusahaan yang menyelenggarakan jaminan kesehatan pekerjanya.',
-                'Help provide medical assessments, reviews or audits of medical practices provided by providers or non-providers from insurance or companies that provide health insurance for their workers.'])}}
-              </p>
+              {{
+                $translate([
+                  "Kami memberi pilihan penyembuhan holistik untuk kesehatan yang paripurna.",
+                  "We can give many options for health hospitality",
+                ])
+              }}
+            </p>
           </div>
         </div>
+        <div class="col-4">
+          <i class="fas fa-stethoscope d-flex justify-content-center"></i>
+          <h5 class="service-title text-center">
+            {{ $translate(["Dokter Terpilih", "Specialized Doctors"]) }}
+          </h5>
+          <p class="service-text">
+            {{
+              $translate([
+                "Kami memilih dokter-dokter terbaik dan layanan unggulan rumah sakit yang ada di Bali.",
+                "We select the best doctors from top quality hospital that are available in Bali.",
+              ])
+            }}
+          </p>
+        </div>
+        <div class="col-4 mb-3">
+          <i class="fas bi-house-door-fill d-flex justify-content-center"></i>
+          <h5 class="service-title text-center">
+            {{ $translate(["Rumah Yoga", "Yoga House"]) }}
+          </h5>
+          <p class="service-text">
+            {{
+              $translate([
+                "Kami menghubungkan anda dengan pembimbing Yoga terbaik di Bali",
+                "We have many connection with the best Yoga trainer in Bali",
+              ])
+            }}
+          </p>
+        </div>
       </div>
-</section>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -55,6 +76,9 @@ export default {
                 placeholder: require('@/assets/placeholder.png'),  
             }
         }
+    },
+    mounted(){
+       //document.title = "Services - Oobad";
     }
 }
 </script>

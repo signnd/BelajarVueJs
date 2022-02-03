@@ -1,11 +1,16 @@
 <template>
-  <section>
-    <div class="blog" id="blog">
-      <div class="container-fluid p-0">
-        <img :src="images.cover1" alt="habout" class="w-100">
-        <h1 class="mt-5 centered text-black style fw-bold" style="font-size:3vw;">BMTA Blog</h1>
-      </div>
-    </div>
+<div class="pt-5 mt-5"></div>  
+<nav aria-label="breadcrumb" class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><router-link to="/">{{$translate(['Beranda','Home'])}}</router-link></li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Blog','Blog'])}}</li>
+  </ol>
+</nav>
+
+<section>
+    <h2 class="font-weight-bold text-center pb-3">
+      {{ $translate(["Oobad Blog", "Oobad Blog"]) }}
+    </h2>
   </section>
   <section>
     <ul class="nav nav-pills justify-content-center my-3 d-none d-sm-none d-md-flex">
@@ -16,7 +21,7 @@
   </section>
     <!-- Desktop -->
     <section>
-    <div class="tab-content d-none d-sm-none d-md-block" id="nav-tabContent">
+    <div class="tab-content d-none d-sm-none d-md-block d-md-inline-flex" id="nav-tabContent">
       <div class="tab-pane fade show active" id="infors" role="tabpanel" aria-labelledby="list-infors-list">
         <div class="container pt-3 d-none d-sm-block">
           <div class="card">
@@ -39,7 +44,6 @@
       <!-- Tab Kesehatan-->
         <div class="tab-pane fade" id="kesehatan" role="tabpanel" aria-labelledby="list-kesehatan-list">
           <div class="container pt-3">
-            <div class="row">
               <div class="card">
                 <div class="row">
                   <div class="col-4">
@@ -55,7 +59,7 @@
                   </div>
                 </div>
               </div>
-            <div class="pt-2 d-lg-none"></div>
+            <div class="pt-3"></div>
               <div class="card">
                 <div class="row">
                   <div class="col-4">
@@ -100,7 +104,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
 
       <!-- Tab Lingkungan -->
@@ -253,6 +256,9 @@
           gambar6: require('@/assets/logo/jantung.jpg')
         }
       }
+    },
+    mounted() {
+      //document.title = "Blog - Oobad";
     }
   }
 </script>
