@@ -1,4 +1,5 @@
 <template>
+<div class="page">
 <div class="pt-5 mt-5"></div>  
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
@@ -60,50 +61,6 @@
                   </div>
                 </div>
               </div>
-            <div class="pt-2 d-lg-none"></div>
-              <div class="card">
-                <div class="row">
-                  <div class="col-4">
-                    <img :src="images.gambar4" class="card-img-blog" alt="Card image 4"></div>
-                  <div class="col-8 blog-break">
-                    <router-link class="text-black" to="/about"><b>{{$translate(['5 Cara Tetap Produktif Saat Bekerja Dari Rumah','Destination'])}}</b></router-link>
-                    <br>
-                    {{$translate(['Sebagai langkah mencegah penyebaran COVID-19, pemerintah mengimbau masyarakat untuk membatasi aktivitas dengan tetap berada di rumah. Imbauan ini mendorong banyak perusahaan menerapkan sistem kerja dari rumah atau work from home.',
-                    'As a measure to prevent the spread of COVID-19, the government urges the public to limit their activities by staying at home. This appeal has encouraged many companies to implement a work from home system.'])}}
-                    <div class="p-2"></div>
-                    <router-link to="/about" type="button" class="btn d-block btn-dark">{{$translate(['Lebih Lanjut','Furthermore'])}}</router-link>
-                  </div>
-                </div>
-              </div>
-            <div class="pt-3"></div>
-              <div class="card">
-                <div class="row">
-                  <div class="col-4">
-                    <img :src="images.gambar6" class="card-img-blog" alt="Card image 6"></div>
-                  <div class="col-8 blog-break">
-                    <router-link class="text-black" to="/about"><b>{{$translate(['Kapankah Kita Periksakan Kesehatan Jantung?','When Should We Check Heart Health?'])}}</b>
-                    </router-link>
-                    <p class="card-text">{{$translate(['Risiko penyakit jantung terbagi dalam 4 kategori, mulai dari rendah, sedang, tinggi, dan sangat tinggi. Yang termasuk dalam risiko SANGAT TINGGI meliputi mereka yang memiliki riwayat serangan jantung, operasi jantung, stroke, gangguan peredaran darah pada anggota gerak, hasil pemeriksaan kateterisasi jantung atau CT-scan pembuluh darah dengan penyempitan bermakna, diabetes melitus lebih dari 20 tahun atau dengan komplikasi, gangguan ginjal berat, gangguan kolesterol genetik.',
-                    'The risk of heart disease is divided into 4 categories, ranging from low, medium, high, and very high. Included in the VERY HIGH risk include those who have a history of heart attack, heart surgery, stroke, circulatory disorders in the limbs, the results of cardiac catheterization or CT-scan blood vessels with significant narrowing, diabetes mellitus more than 20 years or with complications, severe kidney disorders, genetic cholesterol disorders.'])}}</p>
-                    <router-link to="/about" type="button" class="btn d-block btn-dark">{{$translate(['Lebih Lanjut','Furthermore'])}}</router-link>
-                  </div>
-                </div>
-              </div>
-            <div class="pt-3">
-              <div class="card">
-                <div class="row">
-                  <div class="col-4">
-                    <img :src="images.gambar3" class="card-img-blog" alt="Card image 3"> </div>
-                  <div class="col-8 blog-break">
-                    <router-link class="text-black" to="/Blog/Olahraga"><b>{{$translate(['Beragam Manfaat Olahraga untuk Kesehatan Fisik dan Mental','Various Benefits of Sports for Physical and Mental Health'])}}</b></router-link> 
-                    <p class="blog-break">{{$translate(['Ada beragam manfaat olahraga yang bisa Anda peroleh, mulai dari memelihara fungsi organ hingga meningkatkan stamina dan daya tahan tubuh. Tak hanya bermanfaat untuk kesehatan fisik, olahraga juga baik untuk kesehatan mental Anda.',
-                    'There are various benefits of exercise that you can get, ranging from maintaining organ function to increase stamina and endurance. Not only useful for physical health, exercise is also good for your mental health.'])}}</p>
-                    <router-link to="/Blog/Olahraga" type="button" class="btn d-block btn-dark">{{$translate(['Lebih Lanjut','Furthermore'])}}        
-                    </router-link>            
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -238,7 +195,8 @@
         </div>
       </div>
 
-  <div class="py-2"></div>
+  <div class="pt-5 mt-5"></div>
+</div>
 </template>
 
 <script>
@@ -263,6 +221,15 @@
 </script>
 
 <style>
+#footer { 
+  position:absolute; 
+  width:100%; 
+  height:150px; 
+  color: black;
+  background-color: #6ec3ff;
+  padding-block: 2em;
+  }
+
 .card-img-blog {
   width: 88%;
   height: 88%;

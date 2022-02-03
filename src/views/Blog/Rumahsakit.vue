@@ -1,4 +1,5 @@
 <template>
+<div class="page">
   <!-- Header Rumahsakit -->
   <section>
     <div class="rumahsakit" id="rumahsakit">
@@ -82,6 +83,7 @@
   </section>
   <section>
   </section>
+</div>
 </template>
 
 <script>
@@ -98,6 +100,12 @@ export default {
         }
     }
 }
+
+  if ($(".Page").height()<$(window).height()){
+        $(".footer_wrapper").addClass("fixed");
+    }else{
+        $(".footer_wrapper").removeClass("fixed");
+    }
 </script>
 
 <style>

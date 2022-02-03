@@ -1,24 +1,25 @@
 <template>
+<div class="Page">
   <!-- Search Destination & Categories Lg -->
   <form class="pt-5 mt-3 d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
         <select class="form-control form-control-md" id="kabupaten">
-          <option hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
-          <option>Denpasar</option>
-          <option>Tabanan</option>
-          <option>Klungkung</option>
-          <option>Gianyar</option>
-          <option>Buleleng</option>
+          <option value="" hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
+          <option value="32">Denpasar</option>
+          <option value="31">Tabanan</option>
+          <option value="30">Klungkung</option>
+          <option value="27">Gianyar</option>
+          <option value="26">Buleleng</option>
         </select>
       </div>
       <div class="col-3">
-        <select class="form-control form-control-md">
-          <option hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
-          <option v-for="kategori in poli" :key="kategori.id">
-            {{ kategori.name }}
-          </option>
-        </select>
+        <div>
+          <select class="form-control form-control-md" id="counter">
+            <option value="" hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
+            <option v-for="counter in counters" :key="counter.id" :value="counter.value"> {{ counter.name }}</option>
+          </select>
+        </div>
       </div>
       <div class="col-3">
         <input
@@ -43,26 +44,24 @@
 
   <!-- Search Destination & Categories SM -->
   <div class="container d-block d-md-none pt-5 mt-4 pb-4">
-    <select class="form-control form-control-md" id="kabupaten1">
-      <option hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
-      <option>Denpasar</option>
-      <option>Tabanan</option>
-      <option>Klungkung</option>
-      <option>Gianyar</option>
-      <option>Buleleng</option>
+    <select class="form-control form-control-md" id="kabupatenM">
+      <option value="" hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
+      <option value="32">Denpasar</option>
+      <option value="31">Tabanan</option>
+      <option value="30">Klungkung</option>
+      <option value="27">Gianyar</option>
+      <option value="26">Buleleng</option>
     </select>
-    <select class="form-control form-control-md my-3">
-      <option hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
-      <option v-for="kategori in poli" :key="kategori.id">
-        {{ kategori.name }}
-      </option>
+    <select class="form-control form-control-md my-3" id="counterM">
+      <option value="" hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
+      <option v-for="counter in counters" :key="counter.id" :value="counter.value"> {{ counter.name }}</option>
     </select>
-    <input class="form-control mb-3" type="search" placeholder="Search" />
+    <input class="form-control mb-3" type="search" placeholder="Search" id="searchM"/>
     <button
       type="button"
       class="btn btn-md btn-block btn-primary font-weight-bold"
-      @click="valueSender()"
-      id="search_home"
+      @click="valueSenderM()"
+      id="search_homeM"
     >
       {{ $translate(["Cari", "Search"]) }}
     </button>
@@ -463,7 +462,7 @@
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Satya</h4>
+                    <h4 class="card-title text-center">Marcel</h4>
                   </div>
                 </div>
               </div>
@@ -486,7 +485,7 @@
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Satya</h4>
+                    <h4 class="card-title text-center">Dini</h4>
                   </div>
                 </div>
               </div>
@@ -833,17 +832,17 @@
 
   <br />
   <br />
+</div>
 </template>
 
 
 <script>
-import json from "@/api/poliRs.json";
 import axios from "axios";
 
 export default {
   data() {
     return {
-      poli: json.data.items,
+      counters: null,
       random_offices: null,
       nama: null,
       img: "",
@@ -870,6 +869,8 @@ export default {
         const { latitude: lat, longitude: lng } = pos.coords;
         this.loc.lat = lat;
         this.loc.long = lng;
+        localStorage.setItem("val_lat", lat);
+        localStorage.setItem("val_long", lng);
         // console.log(this.loc);
       },
       (err) => {
@@ -885,9 +886,8 @@ export default {
 
   created() {
     let baseUrl =
-      "https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/random_offices.php?limit=1";
-    axios
-      .get(baseUrl)
+      "https://oobad.id/api_bmta/";
+    axios.get(baseUrl + 'random_offices.php?limit=1')
       .then((response) => {
         this.nama = response.data.data.items[0].name;
         this.img = response.data.data.items[0].images[1];
@@ -895,8 +895,15 @@ export default {
         document.getElementById("ranimg").src = this.img;
         document.getElementById("ranimg1").src = this.img;
       })
+     .catch((error) => {
+        console.log(error);
+      });
+
+    axios.get(baseUrl + 'grouped_counters.php')
+      .then((response) => {
+        this.counters = response.data.data.items;
+      })
       .catch((error) => {
-        document.getElementById("error").innerHTML = "Data Tidak Ditemukan";
         console.log(error);
       });
   },
@@ -911,14 +918,26 @@ export default {
   methods: {
     valueSender: function () {
       var val_kabupaten;
-      var val_kabupaten1;
       var val_search;
+      var val_counter;
       val_kabupaten = document.getElementById("kabupaten").value;
       val_search = document.getElementById("search").value;
-      val_kabupaten1 = document.getElementById("kabupaten1").value;
+      val_counter = document.getElementById("counter").value;
       localStorage.setItem("val_kabupaten", val_kabupaten);
-      localStorage.setItem("val_kabupaten1", val_kabupaten1);
       localStorage.setItem("val_search", val_search);
+      localStorage.setItem("val_counter", val_counter);
+      location.href = "/search";
+    },
+    valueSenderM: function () {
+      var val_kabupaten;
+      var val_search;
+      var val_counter;
+      val_kabupaten = document.getElementById("kabupatenM").value;
+      val_search = document.getElementById("searchM").value;
+      val_counter = document.getElementById("counterM").value;
+      localStorage.setItem("val_kabupaten", val_kabupaten);
+      localStorage.setItem("val_search", val_search);
+      localStorage.setItem("val_counter", val_counter);
       location.href = "/search";
     },
     scrollBottom() {
@@ -1124,6 +1143,7 @@ export default {
 }
 
 .background-video {
+  background-repeat: inherit;
   background: url("../assets/gallery/section_bg02.png");
 }
 

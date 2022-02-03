@@ -1,4 +1,5 @@
 <template>
+<div class="page">
   <div class="pt-5">
     <div class="container pt-5">
       <nav aria-label="breadcrumb" class="container">
@@ -44,7 +45,7 @@
       </div>
 
     </div>
-    <div class="my-4">
+    <div class="my-4 pb-4">
       <ul class="pagination pagination-md justify-content-center text-center">
         <li class="page-item" :class="page === 1 ? 'disabled' : ''">
           <a class="page-link" @click="prevPage">
@@ -52,9 +53,9 @@
           </a>
         </li>
         <li class="page-link" style="background-color: inherit">
-          {{ page }} of {{ total_page }}
+          {{ page }} of {{ this.apilastpage }}
         </li>
-        <li class="page-item" :class="page === total_page ? 'disabled' : ''">
+        <li class="page-item" :class="page === this.apilastpage ? 'disabled' : ''">
           <a class="page-link" @click="nextPage">
             Next
           </a>
@@ -62,6 +63,7 @@
       </ul>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -79,7 +81,7 @@ export default {
     link: 0,
     page: 1,
     total_page: null,
-    total_item: null,
+    apilastpage: 1,
   }),
     created(){
         this.cari()
@@ -88,10 +90,11 @@ export default {
       methods: {
       cari() {
         this.loading = true;
-        let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?lat=-8.6649188&long=115.2384802&page=${this.page}`)
+        let baseUrl =
+      "https://oobad.id/api_bmta/";
+      axios.get(baseUrl + `offices.php?lat=-8.6649188&long=115.2384802&page=${this.page}`)
       .then((response) => {
-        this.total_item = response.data.data.total_item;
+        this.apilastpage = response.data.data.paging.total_page;
         this.items = response.data.data.items;
         this.page = response.data.data.paging.page;
         this.total_page = response.data.data.paging.total_page;
@@ -123,6 +126,11 @@ export default {
     }
 }
 
+  if ($(".Page").height()<$(window).height()){
+        $(".footer_wrapper").addClass("fixed");
+    }else{
+        $(".footer_wrapper").removeClass("fixed");
+    }
 </script>
 
 <style>

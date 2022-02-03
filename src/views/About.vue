@@ -1,4 +1,5 @@
 <template>
+<div class="Page">
   <nav class="container pt-5 mt-5">
     <ol class="breadcrumb" >
       <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -26,6 +27,7 @@
     </section>
     <br />
   </nav>
+</div>
 </template>
 
 
@@ -41,22 +43,6 @@ export default {
       },
     };
   },
-  methods: {
-    cari() {
-      console.log("Cari");
-    },
-    getNextData() {
-      window.onscroll = () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-          console.log("success");
-          this.cari();
-        }
-      };
-    },
-  },
-  mounted() {
-    this.getNextData();
-  },
 };
 </script>
 
@@ -71,6 +57,15 @@ export default {
   text-align: left;
   width: 100%;
 }
+
+#footer { 
+  position:absolute; 
+  width:100%; 
+  height:150px; 
+  color: black;
+  background-color: #6ec3ff;
+  padding-block: 2em;
+  }
 
 .img-about {
   max-width: 100%;
