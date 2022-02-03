@@ -30,7 +30,7 @@
           <div class="col-lg-4 mb-4 d-flex align-items-stretch" v-for="(item, index) in items" :key="item.id">
             <div class="card-group h-100 container-fluid">
               <div class="card card-members">
-                <img class="card-img-top" :src="item.images[0]" style="max-width:auto;" alt="Card image">
+                <img class="card-img-top" :src="item.images[0]" style="max-width:auto; height: 100%" alt="Card image">
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title text-center">{{item.name}}</h5>
                   <p class="card-text">{{item.address}}</p>

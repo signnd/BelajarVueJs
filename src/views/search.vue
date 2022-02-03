@@ -3,7 +3,7 @@
 <nav class="container pt-5 mt-5">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Search','Pencarian'])}}</li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Pencarian','Search'])}}</li>
   </ol>
 </nav>
 
@@ -192,8 +192,9 @@ export default {
       this.loading = true;
       var value_search = localStorage.getItem("val_search");
       var value_kabupaten = localStorage.getItem("val_kabupaten");
-      // console.log(value_kabupaten);
-      if (value_kabupaten == "Lokasi" || value_kabupaten == "Location" || value_search) {
+      var value_kabupaten1 = localStorage.getItem("val_kabupaten1");
+      console.log(value_search);
+      if (value_kabupaten == "Lokasi" && value_kabupaten == "Location") {
         let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
         axios.get(baseUrl + this.apipage + `&search=${value_search}`)
           .then((response) => {
@@ -212,9 +213,28 @@ export default {
           })
           .finally(() => this.loading = false);
 
-      } else {
+      } else if (value_kabupaten){
         let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
         axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
+          .then((response) => {
+            // console.log(value_search);
+            this.items.push(...response.data.data.items);
+            this.bahanimg = response.data.data.items;
+            var x = this.bahanimg;
+            this.getimg = x.office;
+            this.img = this.getimg;
+            this.apilastpage = response.data.data.paging.total_page;
+            this.loading = "false";
+          })
+          .catch(error => {
+            console.log(error);
+            this.errored = true;
+          })
+          .finally(() => this.loading = false);
+      }
+      else if (value_kabupaten1){
+        let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
+        axios.get(baseUrl + this.apipage + `&search=${value_kabupaten1}`)
           .then((response) => {
             // console.log(value_search);
             this.items.push(...response.data.data.items);
