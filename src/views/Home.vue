@@ -346,7 +346,7 @@
         <div class="d-flex justify-content-center position-center">
           <a
             class="carousel-control-prev"
-            style="left: 8vw; bottom: 4vw"
+            style="left: 8vw; bottom: 1vw"
             type="button"
             data-target="#carouselMultiItemTeam"
             data-slide="prev"
@@ -356,7 +356,7 @@
           </a>
           <a
             class="carousel-control-next"
-            style="right: 8vw; bottom: 4vw"
+            style="right: 8vw; bottom: 1vw"
             type="button"
             data-target="#carouselMultiItemTeam"
             data-slide="next"
@@ -991,13 +991,13 @@ export default {
 .carousel-control-prev {
   margin-top: auto;
   width: 10%;
-  height: 80%;
+  height: 100%;
 }
 
 .carousel-control-next {
   margin-top: auto;
   width: 10%;
-  height: 80%;
+  height: 100%;
 }
 
 .card-img-top {
@@ -1045,8 +1045,8 @@ export default {
 }
 
 .img-partner {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 .dest-text {
@@ -1138,7 +1138,7 @@ export default {
       rgba(255, 255, 255, 0),
       rgba(41, 41, 41, 0.603)
     ),
-    url("../assets/hero/hero.png");
+    url("../assets/hero/hero.jpg");
   width: 100vw;
   height: 45vw;
   background-size: cover;
@@ -1177,7 +1177,7 @@ export default {
       rgba(255, 255, 255, 0),
       rgba(41, 41, 41, 0.603)
     ),
-    url("../assets/hero/hero4.png");
+    url("../assets/hero/hero4.jpg");
   width: 100vw;
   height: 45vw;
   background-size: cover;

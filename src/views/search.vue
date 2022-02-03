@@ -191,12 +191,15 @@ export default {
     cari() {
       this.loading = true;
       var value_search = localStorage.getItem("val_search");
+      var value_search1 = localStorage.getItem("val_search1");
       var value_kabupaten = localStorage.getItem("val_kabupaten");
       var value_kabupaten1 = localStorage.getItem("val_kabupaten1");
       console.log(value_search);
-      if (value_kabupaten == "Lokasi" && value_kabupaten == "Location") {
+      console.log(value_kabupaten);
+      console.log(value_kabupaten1);
+      if (value_kabupaten == "Lokasi" || value_kabupaten == "Location") {
         let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
-        axios.get(baseUrl + this.apipage + `&search=${value_search}`)
+        axios.get(baseUrl + this.apipage + `&search=${value_kabupaten1}`)
           .then((response) => {
             // console.log(value_search);
             this.items.push(...response.data.data.items);
@@ -213,7 +216,7 @@ export default {
           })
           .finally(() => this.loading = false);
 
-      } else if (value_kabupaten){
+      } else if (value_kabupaten1 == "Lokasi" || value_kabupaten1 == "Location"){
         let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
         axios.get(baseUrl + this.apipage + `&search=${value_kabupaten}`)
           .then((response) => {
@@ -232,9 +235,9 @@ export default {
           })
           .finally(() => this.loading = false);
       }
-      else if (value_kabupaten1){
+      else{
         let baseUrl = 'https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/counters_with_office.php?&lat=-8.6649188&long=115.2384802&page=';
-        axios.get(baseUrl + this.apipage + `&search=${value_kabupaten1}`)
+        axios.get(baseUrl + this.apipage + `&search=${value_search}`)
           .then((response) => {
             // console.log(value_search);
             this.items.push(...response.data.data.items);
