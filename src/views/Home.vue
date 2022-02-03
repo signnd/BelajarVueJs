@@ -382,7 +382,7 @@
                       d-block
                     "
                     style="width: 200px; height: 200px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    :src="images.team1"
                     alt="Card image cap"
                   />
                   <div class="card-body">
@@ -405,11 +405,11 @@
                       d-block
                     "
                     style="width: 200px; height: 200px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    :src="images.team2"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Ryandika</h4>
+                    <h4 class="card-title text-center">Andi</h4>
                   </div>
                 </div>
               </div>
@@ -428,11 +428,11 @@
                       d-block
                     "
                     style="width: 200px; height: 200px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    :src="images.team3"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Ngurah</h4>
+                    <h4 class="card-title text-center">Budha</h4>
                   </div>
                 </div>
               </div>
@@ -458,11 +458,11 @@
                       d-block
                     "
                     style="width: 200px; height: 200px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    :src="images.team4"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Marcel</h4>
+                    <h4 class="card-title text-center">Dini</h4>
                   </div>
                 </div>
               </div>
@@ -481,11 +481,11 @@
                       d-block
                     "
                     style="width: 200px; height: 200px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    :src="images.team5"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Dini</h4>
+                    <h4 class="card-title text-center">Yogi</h4>
                   </div>
                 </div>
               </div>
@@ -538,7 +538,7 @@
           <div class="container d-flex justify-content-center">
             <div class="row justify-content-center">
               <div
-                class="col mb-3 d-flex align-items-stretch mx-auto"
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
                 style="float: left"
               >
                 <div class="card mb-2">
@@ -550,8 +550,8 @@
                       mx-auto
                       d-block
                     "
-                    style="width: 150px; height: 150px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    style="width: 200px; height: 200px"
+                    :src="images.team1"
                     alt="Card image cap"
                   />
                   <div class="card-body">
@@ -567,7 +567,7 @@
           <div class="container d-flex justify-content-center">
             <div class="row justify-content-center">
               <div
-                class="col mb-3 d-flex align-items-stretch mx-auto"
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
                 style="float: left"
               >
                 <div class="card mb-2">
@@ -579,12 +579,12 @@
                       mx-auto
                       d-block
                     "
-                    style="width: 150px; height: 150px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    style="width: 200px; height: 200px"
+                    :src="images.team2"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Ryan</h4>
+                    <h4 class="card-title text-center">Andi</h4>
                   </div>
                 </div>
               </div>
@@ -596,7 +596,7 @@
           <div class="container d-flex justify-content-center">
             <div class="row justify-content-center">
               <div
-                class="col mb-3 d-flex align-items-stretch mx-auto"
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
                 style="float: left"
               >
                 <div class="card mb-2">
@@ -608,12 +608,12 @@
                       mx-auto
                       d-block
                     "
-                    style="width: 150px; height: 150px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    style="width: 200px; height: 200px"
+                    :src="images.team3"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Ngurah</h4>
+                    <h4 class="card-title text-center">Budha</h4>
                   </div>
                 </div>
               </div>
@@ -625,7 +625,7 @@
           <div class="container d-flex justify-content-center">
             <div class="row justify-content-center">
               <div
-                class="col mb-3 d-flex align-items-stretch mx-auto"
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
                 style="float: left"
               >
                 <div class="card mb-2">
@@ -637,41 +637,41 @@
                       mx-auto
                       d-block
                     "
-                    style="width: 150px; height: 150px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h4 class="card-title text-center">Marcel</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="container d-flex justify-content-center">
-            <div class="row justify-content-center">
-              <div
-                class="col mb-3 d-flex align-items-stretch mx-auto"
-                style="float: left"
-              >
-                <div class="card mb-2">
-                  <img
-                    class="
-                      card-img-top
-                      container-fluid
-                      rounded-circle
-                      mx-auto
-                      d-block
-                    "
-                    style="width: 150px; height: 150px"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    style="width: 200px; height: 200px"
+                    :src="images.team4"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <h4 class="card-title text-center">Dini</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="container d-flex justify-content-center">
+            <div class="row justify-content-center">
+              <div
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
+                <div class="card mb-2">
+                  <img
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team5"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title text-center">Yogi</h4>
                   </div>
                 </div>
               </div>
@@ -855,6 +855,11 @@ export default {
         partner2: require("@/assets/partners/persi.jpg"),
         partner3: require("@/assets/partners/mahaloka.png"),
         partner4: require("@/assets/partners/bmta.jpg"),
+        team1: require("@/assets/team/Satya.jpg"),
+        team2: require("@/assets/team/Andi.jpg"),
+        team3: require("@/assets/team/Budha.jpg"),
+        team4: require("@/assets/team/Dini.jpg"),
+        team5: require("@/assets/team/Yogi.jpg"),
       },
       loc: {
         lat: "",
