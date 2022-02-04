@@ -890,7 +890,7 @@ export default {
 
   created() {
     let baseUrl =
-      "http://localhost:8080/api_bmta/";
+      "https://oobad.id/api/";
     axios.get(baseUrl + 'random_offices.php?limit=1')
       .then((response) => {
         this.nama = response.data.data.items[0].name;

@@ -91,7 +91,7 @@ export default {
       cari() {
         this.loading = true;
         let baseUrl =
-      "http://localhost:8080/api_bmta/";
+      "https://oobad.id/api/";
       axios.get(baseUrl + `offices.php?lat=-8.6649188&long=115.2384802&page=${this.page}`)
       .then((response) => {
         this.apilastpage = response.data.data.paging.total_page;

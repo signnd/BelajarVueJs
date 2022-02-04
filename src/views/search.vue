@@ -199,7 +199,7 @@ export default {
       var value_counter = localStorage.getItem("val_counter");
       var value_lat = localStorage.getItem("val_lat");
       var value_long = localStorage.getItem("val_long");
-        let baseUrl = 'http://localhost:8080/api_bmta/counters_with_office.php?page=';
+        let baseUrl = 'https://oobad.id/api/counters_with_office.php?page=';
         axios.get(baseUrl + this.apipage + `&lat=${value_lat}` + `&long=${value_long}` +`&kab_id=${value_kabupaten}` + `&counter=${value_counter}` + `&search=${value_search}`)
           .then((response) => {
             this.apilastpage = response.data.data.paging.total_page;
@@ -223,7 +223,7 @@ export default {
       var cid = id_counter;
       var oid = id_office;
 
-      let baseUrl = 'http://localhost:8080/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
+      let baseUrl = 'https://oobad.id/api/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
       axios.get(baseUrl + cid + `&office_id=${oid}`)
         .then((response) => {
           

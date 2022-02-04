@@ -1,5 +1,5 @@
-module.exports = {
-    devServer: {
-        proxy: 'https://kimiafarmadenpasar.co.id'
-      }
-}
+// module.exports = {
+//     devServer: {
+//         proxy: 'https://kimiafarmadenpasar.co.id'
+//       }
+// }
