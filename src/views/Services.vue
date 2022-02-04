@@ -52,7 +52,7 @@
                 $translate(["Penyembuhan Tradisional", "Traditional Healing"])
               }}
             </h5>
-            <p class="service-text">
+            <p class="service-text pb-5 mb-5">
               {{
                 $translate([
                   "Kami memberi pilihan penyembuhan holistik untuk kesehatan yang paripurna.",

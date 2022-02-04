@@ -11,8 +11,10 @@
 </section>
 
 <section v-else-if="this.apilastpage == 0">
+  <div class="min-vh-100 d-inline-block pt-5 mt-5">
   <h2 class="font-weight-bold pt-5">{{$translate(['Data Tidak Ditemukan','Data Not Found.'])}}</h2>
   <a href="/">{{$translate(['Kembali ke halaman utama','Back to home'])}}</a>
+  </div>
 </section>
 
 <section v-else>
@@ -36,8 +38,8 @@
             <br>
             <h4 class="card-text">{{item.person}}</h4>
             <p class="card-text">{{item.office.whatsapp}}</p>
-            <p></p>
-            <p class="card-text">{{$filters.str_limit(item.office.address,70)}}</p>
+            <!-- <a class="card-text mt-auto pb-2" :href="`https://www.google.com/maps/search/?api=1&query=${item.office.lat},${item.office.long}`" target="_blank">{{$filters.str_limit(item.office.address,70)}}</a> -->
+            <a class="card-text mt-auto pb-2">{{$filters.str_limit(item.office.address,70)}}</a>
             <div class="pt-2"></div>
             <div class="row mt-auto">
               <div class="col">
@@ -125,6 +127,12 @@
             {{$translate(['Jadwal Tersedia','Available Schedule'])}}
           </h4>
           <br>
+          <div v-if="loadingj" class="text-center pt-5">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <br><br>Loading...
+          </div>
             <div v-for="op in this.operational" :key="op.id">
               <div class="row">
                 <div class="col-5 text-left">
@@ -153,8 +161,8 @@ export default {
     return {
       errored: false,
       loading: true,
+      loadingj: true,
       items: [],
-      bahan: null,
       bahanimg: null,
       modal: false,
       template: null,
@@ -166,15 +174,7 @@ export default {
       alamat: null,
       deskripsi: null,
       waktu: null,
-      bahan: null,
-      total: null,
-      jadwal: null,
-      days: null,
-      op_hours: null,
-      ed_hours: null,
-
-
-      total_item: null,
+  
       images:{
         apple: require('@/assets/modal/apple.png'),
         playstore: require('@/assets/modal/playstore.png'),
@@ -209,7 +209,7 @@ export default {
             this.getimg = x.office;
             this.img = this.getimg;
             this.apilastpage = response.data.data.paging.total_page;
-            this.loading = "false";
+            this.loading = false;
           })
           .catch(error => {
             console.log(error);
@@ -219,16 +219,18 @@ export default {
     },
 
     cariJadwal(id_counter, id_office) {
+      this.loadingj = true;
       var cid = id_counter;
       var oid = id_office;
 
       let baseUrl = 'http://localhost:8080/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
       axios.get(baseUrl + cid + `&office_id=${oid}`)
         .then((response) => {
+          
           this.operational = response.data.data.items;
+          this.loadingj = false;
         })
     },
-
     getNextData() {
       window.onscroll = () => {
         if (this.apipage >= this.apilastpage) {

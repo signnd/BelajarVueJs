@@ -865,7 +865,6 @@ export default {
         lat: "",
         long: "",
       },
-      selectedBanner: "",
     };
   },
   mounted() {
@@ -914,11 +913,6 @@ export default {
   },
 
   computed: {
-    heroImage() {
-      return {
-        backgroundImage: `url${require("../assets/gallery/section_bg02.png")}`,
-      };
-    },
   },
   methods: {
     valueSender: function () {

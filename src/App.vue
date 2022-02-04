@@ -59,7 +59,7 @@
 </div>
 
 <section>
-    <div class="footer">
+    <div class="footer pt-5">
         <div class="d-flex justify-content-center">
           <div class="col-1 px-2"><a class="text-dark" href="https://facebook.com"><i class="bi bi-facebook"></i></a></div>
           <div class="col-1 px-2"><a class="text-dark" href="https://whatsapp.com"><i class="bi bi-whatsapp"></i></a></div>
