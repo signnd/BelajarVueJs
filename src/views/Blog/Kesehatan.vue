@@ -54,6 +54,7 @@
   </section>
   <section>
   </section>
+
 </template>
 
 
@@ -71,6 +72,12 @@ export default {
         }
     }
 }
+
+  if ($(".Page").height()<$(window).height()){
+        $(".footer_wrapper").addClass("fixed");
+    }else{
+        $(".footer_wrapper").removeClass("fixed");
+    }
 </script>
 
 <style>

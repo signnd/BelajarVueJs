@@ -1,24 +1,25 @@
 <template>
-<!-- Search Destination & Categories Lg -->
+<div class="Page">
+  <!-- Search Destination & Categories Lg -->
   <form class="pt-5 mt-3 d-none d-md-block">
     <div class="container-fluid form-row f-color px-5">
       <div class="col-3 ml-5">
         <select class="form-control form-control-md" id="kabupaten">
-          <option hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
-          <option>Denpasar</option>
-          <option>Tabanan</option>
-          <option>Klungkung</option>
-          <option>Gianyar</option>
-          <option>Buleleng</option>
+          <option value="" hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
+          <option value="32">Denpasar</option>
+          <option value="31">Tabanan</option>
+          <option value="30">Klungkung</option>
+          <option value="27">Gianyar</option>
+          <option value="26">Buleleng</option>
         </select>
       </div>
       <div class="col-3">
-        <select class="form-control form-control-md">
-          <option hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
-          <option v-for="kategori in poli" :key="kategori.id">
-            {{ kategori.name }}
-          </option>
-        </select>
+        <div>
+          <select class="form-control form-control-md" id="counter">
+            <option value="" hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
+            <option v-for="counter in counters" :key="counter.id" :value="counter.value"> {{ counter.name }}</option>
+          </select>
+        </div>
       </div>
       <div class="col-3">
         <input
@@ -42,32 +43,28 @@
   </form>
 
   <!-- Search Destination & Categories SM -->
-  <div class="container d-block d-md-none pt-5 mt-5 pb-4">
-    <select class="form-control form-control-md">
-      <option hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
-      <option>Denpasar</option>
-      <option>Tabanan</option>
-      <option>Klungkung</option>
-      <option>Gianyar</option>
-      <option>Buleleng</option>
+  <div class="container d-block d-md-none pt-5 mt-4 pb-4">
+    <select class="form-control form-control-md" id="kabupatenM">
+      <option value="" hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
+      <option value="32">Denpasar</option>
+      <option value="31">Tabanan</option>
+      <option value="30">Klungkung</option>
+      <option value="27">Gianyar</option>
+      <option value="26">Buleleng</option>
     </select>
-    <select class="form-control form-control-md my-3">
-      <option hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
-      <option v-for="kategori in poli" :key="kategori.id">
-        {{ kategori.name }}
-      </option>
+    <select class="form-control form-control-md my-3" id="counterM">
+      <option value="" hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
+      <option v-for="counter in counters" :key="counter.id" :value="counter.value"> {{ counter.name }}</option>
     </select>
-    <input class="form-control mb-3" type="search" placeholder="Search" />
-    <router-link :to="{ name: 'destination' }">
-      <button
-        type="button"
-        class="btn btn-md btn-block btn-primary font-weight-bold"
-        @click="valueSender()"
-        id="search_home"
-      >
-        {{ $translate(["Cari", "Search"]) }}
-      </button>
-    </router-link>
+    <input class="form-control mb-3" type="search" placeholder="Search" id="searchM"/>
+    <button
+      type="button"
+      class="btn btn-md btn-block btn-primary font-weight-bold"
+      @click="valueSenderM()"
+      id="search_homeM"
+    >
+      {{ $translate(["Cari", "Search"]) }}
+    </button>
   </div>
 
   <!-- Slideshow -->
@@ -92,9 +89,11 @@
               {{
                 $translate([
                   "Layanan Wisata Medis Anda di Bali",
-                  "Your Go To Medical Tourism Services in Bali",
+                  "Your Go To Medical Tourism Services",
                 ])
               }}
+              <br />
+              {{ $translate(["", "in Bali"]) }}
             </p>
           </div>
         </div>
@@ -113,12 +112,9 @@
                   "Health Talent, Good Food, Mind Fullness",
                 ])
               }}
-              <span><br></span>
+              <span><br /></span>
               {{
-                $translate([
-                  "Adalah Kunci Kesehatan",
-                  "is The Key of Health",
-                ])
+                $translate(["Adalah Kunci Kesehatan", "is The Key of Health"])
               }}
             </p>
           </div>
@@ -138,13 +134,8 @@
                   "Patient's Satisfaction is",
                 ])
               }}
-              <span><br></span>
-              {{
-                $translate([
-                  "Prioritas Kami",
-                  "Our Top Priority",
-                ])
-              }}
+              <span><br /></span>
+              {{ $translate(["Prioritas Kami", "Our Top Priority"]) }}
             </p>
           </div>
         </div>
@@ -173,7 +164,8 @@
         role="button"
         data-slide="prev"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon" aria-hidden="true" 
+        style="left: 8vw; bottom: 5vw"></span>
         <span class="sr-only">Previous</span>
       </a>
       <a
@@ -182,21 +174,25 @@
         role="button"
         data-slide="next"
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="carousel-control-next-icon" aria-hidden="true" 
+        style="right: 8vw; bottom: 5vw"></span>
         <span class="sr-only">Next</span>
       </a>
     </div>
   </section>
 
   <section>
-    <h2 class="pt-5 pb-4 font-weight-bold">
-      {{ $translate(["Mengapa Memilih Kami?", "Why choose us?"]) }}
-    </h2>
+    <div class="container">
+      <h3 class="pt-5 pb-5 font-weight-bold text-center">
+        {{ $translate(["Mengapa Memilih Kami?", "Why choose us?"]) }}
+      </h3>
+    </div>
+
 
     <div class="row container-fluid">
-      <div class="col mb-3">
+      <div class="col-md-4 col mx-auto mb-3">
         <div class="card h-100">
-          <img class="card-img-top" :src="images.card1" alt="Card image" />
+          <img class="card-img-top" :src="images.card1" alt="Card image" style="height: 100%;"/>
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">
               {{ $translate(["Kemudahan", "Convinience"]) }}
@@ -218,9 +214,9 @@
           </div>
         </div>
       </div>
-      <div class="col mb-3">
+      <div class="col-md-4 col mx-auto mb-3">
         <div class="card h-100">
-          <img class="card-img-top" :src="images.card2" alt="Card image" />
+          <img class="card-img-top" :src="images.card2" alt="Card image" style="height: 100%;"/>
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">
               {{ $translate(["Kesehatan Holistik", "Holistic Health"]) }}
@@ -242,10 +238,11 @@
           </div>
         </div>
       </div>
-      <div class="col mb-3">
+      <div class="col-md-4 col mx-auto mb-3">
         <div class="card h-100">
           <img
             class="card-img-top container-fluid mx-auto d-block"
+            style="height: 100%"
             :src="images.card3"
             alt="Card image"
           />
@@ -274,7 +271,7 @@
   </section>
 
   <section>
-    <h2 class="pt-5 pb-4 font-weight-bold">
+    <h2 class="pt-5 pb-4 font-weight-bold text-center">
       {{ $translate(["Layanan Terbaik", "Best Services"]) }}
     </h2>
   </section>
@@ -334,7 +331,7 @@
 
   <!-- Our Team -->
   <section>
-    <h2 class="pt-5 pb-4 font-weight-bold">
+    <h2 class="pt-5 pb-4 font-weight-bold text-center">
       {{ $translate(["Team Kami", "Our Team"]) }}
     </h2>
     <!-- Carousel for bigger screen -->
@@ -347,7 +344,8 @@
       <div class="carousel-inner">
         <div class="d-flex justify-content-center position-center">
           <a
-            class="carousel-control-prev" style="left: 8vw; bottom: 4vw"
+            class="carousel-control-prev"
+            style="left: 8vw; bottom: 1vw"
             type="button"
             data-target="#carouselMultiItemTeam"
             data-slide="prev"
@@ -356,7 +354,8 @@
             <span class="visually-hidden">Previous</span>
           </a>
           <a
-            class="carousel-control-next" style="right: 8vw; bottom: 4vw"
+            class="carousel-control-next"
+            style="right: 8vw; bottom: 1vw"
             type="button"
             data-target="#carouselMultiItemTeam"
             data-slide="next"
@@ -369,12 +368,21 @@
         <div class="carousel-item active">
           <div class="container d-flex justify-content-center">
             <div class="row">
-              <div class="col-lg-4 mb-3 d-flex align-items-stretch" style="float: left">
+              <div
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 200px; height: 200px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team1"
                     alt="Card image cap"
                   />
                   <div class="card-body">
@@ -383,30 +391,48 @@
                 </div>
               </div>
 
-              <div class="col-lg-4 mb-3 d-flex align-items-stretch" style="float: left">
+              <div
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 200px; height: 200px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team2"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Ryandika</h4>
+                    <h4 class="card-title text-center">Andi</h4>
                   </div>
                 </div>
               </div>
 
-              <div class="col-lg-4 mb-3 d-flex align-items-stretch" style="float: left">
+              <div
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 200px; height: 200px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team3"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Ngurah</h4>
+                    <h4 class="card-title text-center">Budha</h4>
                   </div>
                 </div>
               </div>
@@ -418,30 +444,48 @@
         <div class="carousel-item">
           <div class="container d-flex justify-content-center">
             <div class="row">
-              <div class="col mb-3 d-flex align-items-stretch" style="float: left">
+              <div
+                class="col mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 200px; height: 200px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team4"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Satya</h4>
+                    <h4 class="card-title text-center">Dini</h4>
                   </div>
                 </div>
               </div>
 
-              <div class="col mb-3 d-flex align-items-stretch" style="float: left">
+              <div
+                class="col mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 200px; height: 200px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team5"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Satya</h4>
+                    <h4 class="card-title text-center">Yogi</h4>
                   </div>
                 </div>
               </div>
@@ -469,8 +513,8 @@
       <div class="carousel-inner pb-4">
         <div class="d-flex justify-content-center position-center">
           <a
-            class="carousel-control-prev" 
-            style="left: 50px; bottom: 50px;"
+            class="carousel-control-prev"
+            style="left: 50px; bottom: 50px"
             type="button"
             data-target="#carouselMultiItemTeamSmall"
             data-slide="prev"
@@ -480,7 +524,7 @@
           </a>
           <a
             class="carousel-control-next"
-            style="right: 50px; bottom: 50px;"
+            style="right: 50px; bottom: 50px"
             type="button"
             data-target="#carouselMultiItemTeamSmall"
             data-slide="next"
@@ -493,12 +537,21 @@
         <div class="carousel-item active">
           <div class="container d-flex justify-content-center">
             <div class="row justify-content-center">
-              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
+              <div
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 150px; height: 150px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team1"
                     alt="Card image cap"
                   />
                   <div class="card-body">
@@ -513,16 +566,25 @@
         <div class="carousel-item">
           <div class="container d-flex justify-content-center">
             <div class="row justify-content-center">
-              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
+              <div
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 150px; height: 150px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team2"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Ryan</h4>
+                    <h4 class="card-title text-center">Andi</h4>
                   </div>
                 </div>
               </div>
@@ -533,16 +595,25 @@
         <div class="carousel-item">
           <div class="container d-flex justify-content-center">
             <div class="row justify-content-center">
-              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
+              <div
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 150px; height: 150px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team3"
                     alt="Card image cap"
                   />
                   <div class="card-body">
-                    <h4 class="card-title text-center">Ngurah</h4>
+                    <h4 class="card-title text-center">Budha</h4>
                   </div>
                 </div>
               </div>
@@ -553,36 +624,54 @@
         <div class="carousel-item">
           <div class="container d-flex justify-content-center">
             <div class="row justify-content-center">
-              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
+              <div
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
                 <div class="card mb-2">
                   <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 150px; height: 150px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h4 class="card-title text-center">Marcel</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="container d-flex justify-content-center">
-            <div class="row justify-content-center">
-              <div class="col mb-3 d-flex align-items-stretch mx-auto" style="float: left">
-                <div class="card mb-2">
-                  <img
-                    class="card-img-top container-fluid rounded-circle mx-auto d-block"
-                    style="width: 150px; height: 150px;"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team4"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <h4 class="card-title text-center">Dini</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="container d-flex justify-content-center">
+            <div class="row justify-content-center">
+              <div
+                class="col-lg-4 mb-3 d-flex align-items-stretch"
+                style="float: left"
+              >
+                <div class="card mb-2">
+                  <img
+                    class="
+                      card-img-top
+                      container-fluid
+                      rounded-circle
+                      mx-auto
+                      d-block
+                    "
+                    style="width: 200px; height: 200px"
+                    :src="images.team5"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title text-center">Yogi</h4>
                   </div>
                 </div>
               </div>
@@ -595,7 +684,7 @@
 
   <!-- Popular Destination -->
   <section>
-    <h2 class="pt-5 pb-4 font-weight-bold">
+    <h2 class="pt-5 pb-4 font-weight-bold text-center">
       {{ $translate(["Destinasi Populer", "Popular Destinations"]) }}
     </h2>
 
@@ -605,7 +694,7 @@
           <div class="col">
             <img class="dest-img ranimg" id="ranimg" src="" />
           </div>
-          <div class="col-4 mt-3 pt-3 text-left mr-5 destination">
+          <div class="col-6 mt-3 pt-3 text-left mr-5 destination">
             <h2 class="text-black font-weight-bold mx-3 dest-text ranoffices">
               {{ this.nama }}
             </h2>
@@ -662,40 +751,40 @@
         {{ $translate(["Mitra Kami", "Our Partners"]) }}
       </h2>
     </div>
-      <div class="container pb-5 text-center">
-        <div class="logo-list">
-            <div class="row ">
-              <div class="col-lg-2 col-md-4 col-6 mx-auto">
-              <img
+    <div class="container pb-5 text-center">
+      <div class="logo-list">
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-6 mx-auto">
+            <img
               class="partner-carousel img-partner img-fluid"
               :src="images.partner1"
               alt="Partner logo"
             />
-            </div>
-              <div class="col-lg-2 col-md-4 col-6 mx-auto">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mx-auto">
             <img
               class="partner-carousel img-partner img-fluid"
               :src="images.partner2"
               alt="Partner logo"
             />
-              </div>
-              <div class="col-lg-2 col-md-4 col-6 mx-auto">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mx-auto">
             <img
               class="partner-carousel img-partner img-fluid"
               :src="images.partner3"
               alt="Partner logo"
             />
-              </div>
-              <div class="col-lg-2 col-md-4 col-6 mx-auto">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 mx-auto">
             <img
               class="partner-carousel img-partner img-fluid"
               :src="images.partner4"
               alt="Partner logo"
             />
-              </div>
-            </div>
           </div>
         </div>
+      </div>
+    </div>
   </section>
 
   <!-- Video -->
@@ -743,17 +832,17 @@
 
   <br />
   <br />
+</div>
 </template>
 
 
 <script>
-import json from "@/api/poliRs.json";
 import axios from "axios";
 
 export default {
   data() {
     return {
-      poli: json.data.items,
+      counters: null,
       random_offices: null,
       nama: null,
       img: "",
@@ -766,12 +855,16 @@ export default {
         partner2: require("@/assets/partners/persi.jpg"),
         partner3: require("@/assets/partners/mahaloka.png"),
         partner4: require("@/assets/partners/bmta.jpg"),
+        team1: require("@/assets/team/Satya.jpg"),
+        team2: require("@/assets/team/Andi.jpg"),
+        team3: require("@/assets/team/Budha.jpg"),
+        team4: require("@/assets/team/Dini.jpg"),
+        team5: require("@/assets/team/Yogi.jpg"),
       },
       loc: {
         lat: "",
         long: "",
       },
-      selectedBanner: "",
     };
   },
   mounted() {
@@ -780,6 +873,8 @@ export default {
         const { latitude: lat, longitude: lng } = pos.coords;
         this.loc.lat = lat;
         this.loc.long = lng;
+        localStorage.setItem("val_lat", lat);
+        localStorage.setItem("val_long", lng);
         // console.log(this.loc);
       },
       (err) => {
@@ -795,38 +890,54 @@ export default {
   },
 
   created() {
-    // let baseUrl =
-    //   "https://cors-anywhere.herokuapp.com/https://kimiafarmadenpasar.co.id/api_bmta/random_offices.php?limit=1";
-    // axios
-    //   .get(baseUrl)
-    //   .then((response) => {
-    //     this.nama = response.data.data.items[0].name;
-    //     this.img = response.data.data.items[0].images[1];
-    //     this.deskripsi = response.data.data.items[0].description;
-    //     document.getElementById("ranimg").src = this.img;
-    //     document.getElementById("ranimg1").src = this.img;
-    //   })
-    //   .catch((error) => {
-    //     document.getElementById("error").innerHTML = "Data Tidak Ditemukan";
-    //     console.log(error);
-    //   });
+    let baseUrl =
+      "https://oobad.id/api/";
+    axios.get(baseUrl + 'random_offices.php?limit=1')
+      .then((response) => {
+        this.nama = response.data.data.items[0].name;
+        this.img = response.data.data.items[0].images[1];
+        this.deskripsi = response.data.data.items[0].description;
+        document.getElementById("ranimg").src = this.img;
+        document.getElementById("ranimg1").src = this.img;
+      })
+     .catch((error) => {
+        console.log(error);
+      });
+
+    axios.get(baseUrl + 'grouped_counters.php')
+      .then((response) => {
+        this.counters = response.data.data.items;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 
   computed: {
-    heroImage() {
-      return {
-        backgroundImage: `url${require("../assets/gallery/section_bg02.png")}`,
-      };
-    },
   },
   methods: {
     valueSender: function () {
       var val_kabupaten;
       var val_search;
+      var val_counter;
       val_kabupaten = document.getElementById("kabupaten").value;
       val_search = document.getElementById("search").value;
+      val_counter = document.getElementById("counter").value;
       localStorage.setItem("val_kabupaten", val_kabupaten);
       localStorage.setItem("val_search", val_search);
+      localStorage.setItem("val_counter", val_counter);
+      location.href = "/search";
+    },
+    valueSenderM: function () {
+      var val_kabupaten;
+      var val_search;
+      var val_counter;
+      val_kabupaten = document.getElementById("kabupatenM").value;
+      val_search = document.getElementById("searchM").value;
+      val_counter = document.getElementById("counterM").value;
+      localStorage.setItem("val_kabupaten", val_kabupaten);
+      localStorage.setItem("val_search", val_search);
+      localStorage.setItem("val_counter", val_counter);
       location.href = "/search";
     },
     scrollBottom() {
@@ -899,13 +1010,13 @@ export default {
 .carousel-control-prev {
   margin-top: auto;
   width: 10%;
-  height: 80%;
+  height: 100%;
 }
 
 .carousel-control-next {
   margin-top: auto;
   width: 10%;
-  height: 80%;
+  height: 100%;
 }
 
 .card-img-top {
@@ -953,8 +1064,8 @@ export default {
 }
 
 .img-partner {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 .dest-text {
@@ -1021,17 +1132,18 @@ export default {
 }
 
 .logo-list {
-    padding: 20px 0;
-    text-align: center;
+  padding: 20px 0;
+  text-align: center;
 }
 .logo-list img {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease-in-out;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .background-video {
+  background-repeat: inherit;
   background: url("../assets/gallery/section_bg02.png");
 }
 
@@ -1046,7 +1158,7 @@ export default {
       rgba(255, 255, 255, 0),
       rgba(41, 41, 41, 0.603)
     ),
-    url("../assets/hero/hero.png");
+    url("../assets/hero/hero.jpg");
   width: 100vw;
   height: 45vw;
   background-size: cover;
@@ -1085,7 +1197,7 @@ export default {
       rgba(255, 255, 255, 0),
       rgba(41, 41, 41, 0.603)
     ),
-    url("../assets/hero/hero4.png");
+    url("../assets/hero/hero4.jpg");
   width: 100vw;
   height: 45vw;
   background-size: cover;

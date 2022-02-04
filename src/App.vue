@@ -1,4 +1,5 @@
 <template>
+<div class="page">
   <!-- Navbar atas -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <section>
@@ -55,10 +56,10 @@
     </div>
   </transition>
   </section>
+</div>
 
-
-  <section>
-    <div class="footer">
+<section>
+    <div class="footer pt-5">
         <div class="d-flex justify-content-center">
           <div class="col-1 px-2"><a class="text-dark" href="https://facebook.com"><i class="bi bi-facebook"></i></a></div>
           <div class="col-1 px-2"><a class="text-dark" href="https://whatsapp.com"><i class="bi bi-whatsapp"></i></a></div>
@@ -126,6 +127,7 @@ $(function(){
      });
   });
 
+
 </script>
 
 <style>
@@ -135,6 +137,13 @@ $(function(){
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.footer {
+  color: black;
+  background-color: #6ec3ff;
+  padding-block: 2em;
+  margin-top:auto; 
 }
 
 #pagetop {
@@ -168,13 +177,6 @@ $(function(){
 
 .container {
   color:white;
-}
-
-.footer {
-  color: black;
-  background-color: #6ec3ff;
-  padding-block: 2em;
-margin-top:auto; 
 }
 
 .fsma {
