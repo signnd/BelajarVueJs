@@ -4,7 +4,7 @@
     <div class="container pt-5">
       <nav aria-label="breadcrumb" class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
+          <li class="breadcrumb-item"><router-link to="/"><li class="breadcrumb-item"><router-link to="/">{{ $translate(["Beranda", "Home"]) }}</router-link></li></router-link></li>
           <li class="breadcrumb-item active" aria-current="page">{{ $translate(["Destinasi", "Destination"]) }}</li>
         </ol>
       </nav>
@@ -123,6 +123,9 @@ export default {
         var id = id_link;
         location.href = "/destination/"+ id;
       },
+    },
+    mounted(){
+       //document.title = "Destination - Oobad";
     }
 }
 </script>
