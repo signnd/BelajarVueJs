@@ -163,7 +163,7 @@ console.log();
       var arrayke = this.$route.params.id.toString()
       console.log(arrayke);
       let baseUrl =
-      "https://oobad.id/api_bmta/";
+      "http://localhost:8080/api_bmta/";
       axios.get(baseUrl + '/offices.php?page=1&lat=-8.6649188&long=115.2384802')
       .then((response) => {
         this.lat = response.data.data.items[arrayke].lat;

@@ -4,7 +4,7 @@
     <div class="container pt-5">
       <nav aria-label="breadcrumb" class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
           <li class="breadcrumb-item active" aria-current="page">{{ $translate(["Destinasi", "Destination"]) }}</li>
         </ol>
       </nav>
@@ -91,7 +91,7 @@ export default {
       cari() {
         this.loading = true;
         let baseUrl =
-      "https://oobad.id/api_bmta/";
+      "http://localhost:8080/api_bmta/";
       axios.get(baseUrl + `offices.php?lat=-8.6649188&long=115.2384802&page=${this.page}`)
       .then((response) => {
         this.apilastpage = response.data.data.paging.total_page;
@@ -125,12 +125,6 @@ export default {
       },
     }
 }
-
-  if ($(".Page").height()<$(window).height()){
-        $(".footer_wrapper").addClass("fixed");
-    }else{
-        $(".footer_wrapper").removeClass("fixed");
-    }
 </script>
 
 <style>

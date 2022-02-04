@@ -1,7 +1,7 @@
 <template>
 <nav class="container pt-5 mt-5">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
     <li class="breadcrumb-item active" aria-current="page">{{$translate(['Pencarian','Search'])}}</li>
   </ol>
 </nav>
@@ -11,7 +11,7 @@
 </section>
 
 <section v-else-if="this.apilastpage == 0">
-    <h2 class="font-weight-bold pt-5">{{$translate(['Data Tidak Ditemukan','Data Not Found.'])}}</h2>
+  <h2 class="font-weight-bold pt-5">{{$translate(['Data Tidak Ditemukan','Data Not Found.'])}}</h2>
   <a href="/">{{$translate(['Kembali ke halaman utama','Back to home'])}}</a>
 </section>
 
@@ -199,7 +199,7 @@ export default {
       var value_counter = localStorage.getItem("val_counter");
       var value_lat = localStorage.getItem("val_lat");
       var value_long = localStorage.getItem("val_long");
-        let baseUrl = 'https://oobad.id/api_bmta/counters_with_office.php?page=';
+        let baseUrl = 'http://localhost:8080/api_bmta/counters_with_office.php?page=';
         axios.get(baseUrl + this.apipage + `&lat=${value_lat}` + `&long=${value_long}` +`&kab_id=${value_kabupaten}` + `&counter=${value_counter}` + `&search=${value_search}`)
           .then((response) => {
             this.apilastpage = response.data.data.paging.total_page;
@@ -222,7 +222,7 @@ export default {
       var cid = id_counter;
       var oid = id_office;
 
-      let baseUrl = 'https://oobad.id/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
+      let baseUrl = 'http://localhost:8080/api_bmta/operational_days.php?lat=-8.6649188&long=115.2384802&counter_id=';
       axios.get(baseUrl + cid + `&office_id=${oid}`)
         .then((response) => {
           this.operational = response.data.data.items;
