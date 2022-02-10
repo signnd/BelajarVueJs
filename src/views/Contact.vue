@@ -3,7 +3,7 @@
 <div class="pt-5 mt-5"></div>  
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
+    <li class="breadcrumb-item"><router-link to="/">{{$translate(['Beranda','Home'])}}</router-link></li>
     <li class="breadcrumb-item active" aria-current="page">{{$translate(['Kontak','Contact'])}}</li>
   </ol>
 </nav>
@@ -101,6 +101,9 @@ export default {
                 cover2: require('@/assets/gallery/section_bg01.png')
             }
         }
+    },
+    mounted() {
+      //document.title = "Contact - Oobad"
     }
 }
 </script>

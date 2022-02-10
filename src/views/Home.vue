@@ -884,7 +884,8 @@ export default {
         enableHighAccuracy: true,
         timeout: 5000,
         maximumAge: 0,
-      }
+      },
+      //document.title = "Home - Oobad"
     );
   },
 

@@ -7,8 +7,8 @@
 
   <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
-    <li class="breadcrumb-item"><a href="/Destination">{{$translate(['Destinasi','Destination'])}}</a></li>
+    <li class="breadcrumb-item"><router-link to="/">{{$translate(['Beranda','Home'])}}</router-link></li>
+    <li class="breadcrumb-item"><router-link to="/Destination">{{$translate(['Destinasi','Destination'])}}</router-link></li>
     <li class="breadcrumb-item active" aria-current="page">{{this.nama}}</li>
   </ol>
 </nav>
@@ -77,7 +77,7 @@
               <div class="card my-3">
                 <div class="card-body">
                   <div class="row align-center">
-                  <div class="col-2 my-auto"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="col-2 my-auto"><i class="bi bi-whatsapp"></i></div>
                   <div class="col my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://wa.me/+${ this.whatsapp }`" class="text-black">{{this.whatsapp}}</a></div>
                   
                   </div>
@@ -111,7 +111,7 @@
           <div class="card my-3">
             <div class="card-body">
               <div class="row align-center">
-              <div class="col-1 mr-3"><i class="bi bi-telephone-fill"></i></div>
+              <div class="col-1 mr-3"><i class="bi bi-whatsappl"></i></div>
               <div class="col-auto my-auto"><div v-if="loading">Loading...</div><a v-bind:href="`https://wa.me/+${ this.whatsapp }`" class="text-black">{{this.whatsapp}}</a></div></div>
             </div>
           </div>
@@ -187,6 +187,7 @@ console.log();
         console.log(this.alamat);
         console.log(this.img);
         console.log(this.deskripsi);
+        document.title = this.nama + " - Oobad";
         document.getElementById("img1-desktop").src = this.img1;
         document.getElementById("img2-desktop").src = this.img2;
         document.getElementById("img3-desktop").src = this.img3;

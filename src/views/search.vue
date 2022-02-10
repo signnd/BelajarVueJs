@@ -1,8 +1,8 @@
 <template>
 <nav class="container pt-5 mt-5">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">{{$translate(['Beranda','Home'])}}</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Pencarian','Search'])}}</li>
+    <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
+    <li class="breadcrumb-item active" aria-current="page">{{$translate(['Search','Pencarian'])}}</li>
   </ol>
 </nav>
 
