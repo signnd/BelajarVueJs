@@ -15,7 +15,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav">
+          <div class="navbar-nav font-weight-bold">
             <!-- Nav Link -->
             <router-link to="/" class="nav-item nav-link navbar-collapse fs-4 mx-3 nav-fill active"
               data-target="#navbarSupportedContent">{{$translate(['Beranda','Home'])}}</router-link>
@@ -61,9 +61,9 @@
 <section>
     <div class="footer pt-5">
         <div class="d-flex justify-content-center">
+          <div class="col-1 px-2"><a class="text-dark" href="https://instagram.com"><i class="bi bi-instagram"></i></a></div>
           <div class="col-1 px-2"><a class="text-dark" href="https://facebook.com"><i class="bi bi-facebook"></i></a></div>
           <div class="col-1 px-2"><a class="text-dark" href="https://whatsapp.com"><i class="bi bi-whatsapp"></i></a></div>
-          <div class="col-1 px-2"><a class="text-dark" href="https://instagram.com"><i class="bi bi-instagram"></i></a></div>
         </div>
       <div class="py-2"></div>
       <div class="d-block d-sm-none">© 2021 - {{new Date().getFullYear()}} Oobad<br><br>
@@ -132,7 +132,7 @@ $(function(){
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -153,9 +153,7 @@ $(function(){
 }
 
 #nav a {
-  font-weight: bold;
   color: #2c3e50;
-
 }
 
 #nav a.router-link-exact-active {

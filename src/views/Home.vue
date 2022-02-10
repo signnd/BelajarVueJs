@@ -43,7 +43,7 @@
   </form>
 
   <!-- Search Destination & Categories SM -->
-  <div class="container d-block d-md-none pt-5 mt-4 pb-4">
+  <div class="container d-block d-md-none pt-4 mt-5 pb-4">
     <select class="form-control form-control-md" id="kabupatenM">
       <option value="" hidden>{{ $translate(["Lokasi", "Location"]) }}</option>
       <option value="32">Denpasar</option>
@@ -81,7 +81,7 @@
           <a class="d-block w-100 gradient2" alt="First slide" />
           <div class="carousel-caption text-white">
             <div class="mt-5">
-              <h1 class="font-weight-bold" style="font-size: 5vw; width: 900px">
+              <h1 style="font-size: 5vw; width: 900px">
                 {{ $translate(["Selamat Datang", "Welcome"]) }}
               </h1>
             </div>
@@ -101,7 +101,7 @@
           <a class="d-block w-100 h-3 gradient1" alt="Second slide" />
           <div class="carousel-caption text-white">
             <div class="mt-5">
-              <h1 class="font-weight-bold" style="font-size: 5vw; width: 900px">
+              <h1 style="font-size: 5vw; width: 900px">
                 {{ $translate(["Healthy & Peaceful", "Healthy & Peaceful"]) }}
               </h1>
             </div>
@@ -123,7 +123,7 @@
           <a class="d-block w-100 h-3 gradient4" alt="Third slide" />
           <div class="carousel-caption text-white">
             <div class="mt-5">
-              <h1 class="font-weight-bold" style="font-size: 5vw; width: 900px">
+              <h1 style="font-size: 5vw; width: 900px">
                 {{ $translate(["Senyum Pasien", "Patient's Smile"]) }}
               </h1>
             </div>
@@ -143,7 +143,7 @@
           <a class="d-block w-100 h-3 gradient3" alt="Forth slide" />
           <div class="carousel-caption text-white">
             <div class="mt-5">
-              <h1 class="font-weight-bold" style="font-size: 5vw">
+              <h1 style="font-size: 5vw">
                 {{ $translate(["Ayo Mulai!", "Let's Start!"]) }}
               </h1>
             </div>
@@ -183,7 +183,7 @@
 
   <section>
     <div class="container">
-      <h3 class="pt-5 pb-5 font-weight-bold text-center">
+      <h3 class="pt-5 pb-5 text-center">
         {{ $translate(["Mengapa Memilih Kami?", "Why choose us?"]) }}
       </h3>
     </div>
@@ -271,7 +271,7 @@
   </section>
 
   <section>
-    <h2 class="pt-5 pb-4 font-weight-bold text-center">
+    <h2 class="pt-5 pb-4 text-center">
       {{ $translate(["Layanan Terbaik", "Best Services"]) }}
     </h2>
   </section>
@@ -293,7 +293,7 @@
             }}
           </p>
         </div>
-        <div class="col mb-3">
+        <div class="col">
           <i class="fas bi-house-door-fill d-flex justify-content-center"></i>
           <h5 class="service-title text-center">
             {{ $translate(["Rumah Yoga", "Yoga House"]) }}
@@ -331,7 +331,7 @@
 
   <!-- Our Team -->
   <section>
-    <h2 class="pt-5 pb-4 font-weight-bold text-center">
+    <h2 class="pt-5 pb-4 text-center">
       {{ $translate(["Team Kami", "Our Team"]) }}
     </h2>
     <!-- Carousel for bigger screen -->
@@ -684,7 +684,7 @@
 
   <!-- Popular Destination -->
   <section>
-    <h2 class="pt-5 pb-4 font-weight-bold text-center">
+    <h2 class="pt-5 pb-4 text-center">
       {{ $translate(["Destinasi Populer", "Popular Destinations"]) }}
     </h2>
 
@@ -747,7 +747,7 @@
   <!-- Our Partner -->
   <section>
     <div class="container-fluid text-center">
-      <h2 class="pt-5 mt-4 pb-3 font-weight-bold">
+      <h2 class="pt-5 mt-4 pb-3">
         {{ $translate(["Mitra Kami", "Our Partners"]) }}
       </h2>
     </div>
@@ -891,6 +891,7 @@ export default {
   created() {
     let baseUrl =
       "https://oobad.id/api/";
+    let baseUrl2 = "https://kimiafarmadenpasar.co.id/api_oobad/grouped_counters.php";
     axios.get(baseUrl + 'random_offices.php?limit=1')
       .then((response) => {
         this.nama = response.data.data.items[0].name;
@@ -903,7 +904,7 @@ export default {
         console.log(error);
       });
 
-    axios.get(baseUrl + 'grouped_counters.php')
+    axios.get(baseUrl2)
       .then((response) => {
         this.counters = response.data.data.items;
       })
@@ -1159,7 +1160,7 @@ export default {
     ),
     url("../assets/hero/hero.jpg");
   width: 100vw;
-  height: 45vw;
+  height: 39vw;
   background-size: cover;
   color: white;
 }
@@ -1172,7 +1173,7 @@ export default {
     ),
     url("../assets/hero/hero2.jpg");
   width: 100vw;
-  height: 45vw;
+  height: 39vw;
   background-size: cover;
   color: white;
 }
@@ -1185,7 +1186,7 @@ export default {
     ),
     url("../assets/hero/hero3.jpg");
   width: 100vw;
-  height: 45vw;
+  height: 39vw;
   background-size: cover;
   color: white;
 }
@@ -1198,7 +1199,7 @@ export default {
     ),
     url("../assets/hero/hero4.jpg");
   width: 100vw;
-  height: 45vw;
+  height: 39vw;
   background-size: cover;
   color: white;
 }

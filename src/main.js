@@ -15,7 +15,7 @@ app.config.globalProperties.$filters = {
   
       if (value.length <= size) {
         return value;
-      }
+      }``
       return value.substr(0, size) + '...';
     }
   }
