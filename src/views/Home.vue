@@ -17,7 +17,7 @@
         <div>
           <select class="form-control form-control-md" id="counter">
             <option value="" hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
-            <option v-for="counter in counters" :key="counter.id" :value="counter.value"> {{ counter.name }}</option>
+            <option v-for="kategori in poli" :key="kategori.id" :value="kategori.value"> {{ kategori.name }}</option>
           </select>
         </div>
       </div>
@@ -54,7 +54,7 @@
     </select>
     <select class="form-control form-control-md my-3" id="counterM">
       <option value="" hidden>{{ $translate(["Kategori", "Categories"]) }}</option>
-      <option v-for="counter in counters" :key="counter.id" :value="counter.value"> {{ counter.name }}</option>
+      <option v-for="kategori in poli" :key="kategori.id" :value="kategori.value"> {{ kategori.name }}</option>
     </select>
     <input class="form-control mb-3" type="search" placeholder="Search" id="searchM"/>
     <button
@@ -838,10 +838,12 @@
 
 <script>
 import axios from "axios";
+import json from "@/api/grouped_counters.json";
 
 export default {
   data() {
     return {
+      poli: json.data.items,
       counters: null,
       random_offices: null,
       nama: null,
@@ -892,7 +894,6 @@ export default {
   created() {
     let baseUrl =
       "https://oobad.id/api/";
-    let baseUrl2 = "https://kimiafarmadenpasar.co.id/api_oobad/grouped_counters.php";
     axios.get(baseUrl + 'random_offices.php?limit=1')
       .then((response) => {
         this.nama = response.data.data.items[0].name;
@@ -903,15 +904,7 @@ export default {
       })
      .catch((error) => {
         console.log(error);
-      });
-
-    axios.get(baseUrl2)
-      .then((response) => {
-        this.counters = response.data.data.items;
       })
-      .catch((error) => {
-        console.log(error);
-      });
   },
 
   computed: {

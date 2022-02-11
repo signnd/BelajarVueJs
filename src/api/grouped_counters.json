@@ -1,0 +1,97 @@
+{
+    "status": "OK",
+    "data": {
+        "items": [
+            {
+                "id": "1",
+                "name": "Poli Anak",
+                "value": "Poli Anak"
+            },
+            {
+                "id": "2",
+                "name": "Poli Kandungan",
+                "value": "Poli Kandungan"
+            },
+            {
+                "id": "3",
+                "name": "Poli Bedah",
+                "value": "Poli Bedah"
+            },
+            {
+                "id": "4",
+                "name": "Poli Saraf",
+                "value": "Poli Saraf"
+            },
+            {
+                "id": "5",
+                "name": "Poli THT",
+                "value": "Poli THT"
+            },
+            {
+                "id": "7",
+                "name": "Poli Mata",
+                "value": "Poli Mata"
+            },
+            {
+                "id": "8",
+                "name": "Poli Bedah Tulang",
+                "value": "Poli Bedah Tulang"
+            },
+            {
+                "id": "9",
+                "name": "Poli Bedah Urologi",
+                "value": "Poli Bedah Urologi"
+            },
+            {
+                "id": "10",
+                "name": "Poli Radiologi",
+                "value": "Poli Radiologi"
+            },
+            {
+                "id": "12",
+                "name": "Poli Kulit dan Kelamin",
+                "value": "Poli Kulit dan Kelamin"
+            },
+            {
+                "id": "13",
+                "name": "Poli Penyakit Dalam",
+                "value": "Poli Penyakit Dalam"
+            },
+            {
+                "id": "14",
+                "name": "Poli Jantung",
+                "value": "Poli Jantung"
+            },
+            {
+                "id": "15",
+                "name": "Poli Patologi Anatomi",
+                "value": "Poli Patologi Anatomi"
+            },
+            {
+                "id": "16",
+                "name": "Poli Kesehatan Jiwa",
+                "value": "Poli Kesehatan Jiwa"
+            },
+            {
+                "id": "17",
+                "name": "Poli Rehab Medik",
+                "value": "Poli Rehab Medik"
+            },
+            {
+                "id": "18",
+                "name": "Poli Gigi",
+                "value": "Poli Gigi"
+            },
+            {
+                "id": "19",
+                "name": "Poli Geriatri",
+                "value": "Poli Geriatri"
+            },
+            {
+                "id": "20",
+                "name": "Healing",
+                "value": "Healing"
+            }
+        ]
+    }
+}
