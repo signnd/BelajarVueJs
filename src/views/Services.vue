@@ -1,4 +1,5 @@
 <template>
+<div class="app">
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb pt-5 mt-5">
     <li class="breadcrumb-item"><router-link to="/">{{ $translate(["Beranda", "Home"]) }}</router-link></li>
@@ -7,33 +8,15 @@
 </nav>
 
   <section>
-    <h2 class="font-weight-bold text-center pb-3">
+    <h2 class="font-weight-bold text-center pb-3 pt-5">
       {{ $translate(["Layanan Terbaik", "Best Services"]) }}
     </h2>
   </section>
 
-  <section>
+<section>
     <div class="container">
-      <div class="row d-flex py-5 mb-5">
-        <div class="col-4">
-          <i class="fas fa-notes-medical d-flex justify-content-center"></i>
-          <div>
-            <h5 class="service-title text-center">
-              {{
-                $translate(["Penyembuhan Tradisional", "Traditional Healing"])
-              }}
-            </h5>
-            <p class="service-text">
-              {{
-                $translate([
-                  "Kami memberi pilihan penyembuhan holistik untuk kesehatan yang paripurna.",
-                  "We can give many options for health hospitality",
-                ])
-              }}
-            </p>
-          </div>
-        </div>
-        <div class="col-4">
+      <div class="row d-flex">
+        <div class="col">
           <i class="fas fa-stethoscope d-flex justify-content-center"></i>
           <h5 class="service-title text-center">
             {{ $translate(["Dokter Terpilih", "Specialized Doctors"]) }}
@@ -47,7 +30,7 @@
             }}
           </p>
         </div>
-        <div class="col-4 mb-3">
+        <div class="col mb-3">
           <i class="fas bi-house-door-fill d-flex justify-content-center"></i>
           <h5 class="service-title text-center">
             {{ $translate(["Rumah Yoga", "Yoga House"]) }}
@@ -61,9 +44,28 @@
             }}
           </p>
         </div>
+        <div class="col">
+          <i class="fas fa-notes-medical d-flex justify-content-center"></i>
+          <div>
+            <h5 class="service-title text-center">
+              {{
+                $translate(["Penyembuhan Tradisional", "Traditional Healing"])
+              }}
+            </h5>
+            <p class="service-text pb-5 mb-5">
+              {{
+                $translate([
+                  "Kami memberi pilihan penyembuhan holistik untuk kesehatan yang paripurna.",
+                  "We can give many options for health hospitality",
+                ])
+              }}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+</div>
 </template>
 
 <script>
@@ -84,6 +86,12 @@ export default {
 </script>
 
 <style>
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .container{
   position: relative;
   display:inline-block;

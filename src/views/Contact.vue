@@ -1,4 +1,5 @@
 <template>
+<div class="page">
 <div class="pt-5 mt-5"></div>  
 <nav aria-label="breadcrumb" class="container">
   <ol class="breadcrumb">
@@ -88,6 +89,7 @@
           </div>
         </div>
   </section>
+</div>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+<div class="page">
   <section>
     <section>
     <div class="p-5"></div>
@@ -133,6 +134,7 @@
         </div>
 </section>
   </section>
+</div>
 </template>
 
 <script>
@@ -160,8 +162,9 @@ console.log();
     created(){
       var arrayke = this.$route.params.id.toString()
       console.log(arrayke);
-      let baseUrl = 'https://kimiafarmadenpasar.co.id/api_bmta';
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}${baseUrl}/offices.php?page=1&lat=-8.6649188&long=115.2384802`)
+      let baseUrl =
+      "https://oobad.id/api/";
+      axios.get(baseUrl + 'offices.php?page=1&lat=-8.6649188&long=115.2384802')
       .then((response) => {
         this.lat = response.data.data.items[arrayke].lat;
         this.long = response.data.data.items[arrayke].long;
@@ -198,6 +201,12 @@ console.log();
       .finally(() => this.loading = false)
     }
   }
+
+  if ($(".Page").height()<$(window).height()){
+        $(".footer_wrapper").addClass("fixed");
+    }else{
+        $(".footer_wrapper").removeClass("fixed");
+    }
 </script>
 
 <style>
